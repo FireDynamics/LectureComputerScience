@@ -1,2 +1,2 @@
-# LectureInformaticsForEngineers
-Lecture and exercises of informatics for engineers
+# Lecture Computer Science
+Lecture and exercises 
