@@ -1,0 +1,1450 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schleifen &#8212; Vorlesung Ingenieurinformatik</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Abzweigungen" href="0232_abzweigungen.html" />
+    <link rel="prev" title="Flusskontrolle" href="023_flusskontrolle.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/cce_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Ingenieurinformatik
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Overview/informatik.html">
+   Informatik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Overview/cce.html">
+   Computational Civil Engineering (CCE)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Vorlesungsskript
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../01_computer/00_einleitung.html">
+   Computer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../01_computer/01_digitalisierung.html">
+     Digitalisierung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/011_analoge_informationen.html">
+       Analoge Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/012_digitale_informationen.html">
+       Digitale Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/013_zahlendarstellung.html">
+       Digitale Zahlendarstellung
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_computer/02_algorithmen.html">
+     Algorithmen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_computer/02_algorithmen.html#beispiele">
+     Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../01_computer/02_algorithmen.html#kapitelubersicht">
+     Kapitelübersicht
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/021_sortieralgorithmen.html">
+       Sortieralgorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/022_eigenschaften.html">
+       Eigenschaften
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/023_numerische_algorithmen.html">
+       Numerische Algorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/024_smp.html">
+       Stable Marriage Problem
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../01_computer/03_hardware.html">
+     Hardware
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/031_geschichte.html">
+       Geschichte der Computer
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/032_komponenten.html">
+       Aufbau eines Computers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/033_funktionsweise_computer.html">
+       Arbeitsweise eines Computers
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../01_computer/04_software.html">
+     Software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/041_betriebssysteme.html">
+       Betriebssysteme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/042_softwareentwicklung.html">
+       Softwareentwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../01_computer/043_dateisystem.html">
+       Dateisystem
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="02_einleitung.html">
+   Python
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="021_sprache.html">
+     Sprache
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="0211_arbeiten.html">
+       Arbeiten mit Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0212_jupyter.html">
+       JupyterLab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0213_syntax.html">
+       Syntax
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="022_grundlagen.html">
+     Grundlagen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="0221_zahlen.html">
+       Zahlen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0222_operationen.html">
+       Operationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0223_variablen.html">
+       Variablen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0224_funktionen.html">
+       Funktionen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0225_zeichenketten.html">
+       Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0226_listen.html">
+       Listen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0227_sammeltypen.html">
+       Sammeltypen
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="023_flusskontrolle.html">
+     Flusskontrolle
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Schleifen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0232_abzweigungen.html">
+       Abzweigungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0233_funktionen.html">
+       Funktionen
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="024_weiteres.html">
+     Weitere Themen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="0241_module.html">
+       Module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0242_formattierte_strings.html">
+       Formatierte Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="0243_dateien.html">
+       Dateien
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../03_datenanalyse/03_einleitung.html">
+   Datenanalyse
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../03_datenanalyse/031_visualisierung.html">
+     Visualisierung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0311_matplotlib.html">
+       matplotlib-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0312_1d_plots.html">
+       Eindimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0313_beschriftung.html">
+       Beschriftung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0314_farben.html">
+       Farben
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0315_skalierung.html">
+       Skalierung
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../03_datenanalyse/032_verarbeitung.html">
+     Verarbeitung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0321_numpy.html">
+       numpy-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0322_arrays.html">
+       numpy-Arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0323_referenzen.html">
+       Referenzen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0324_dateien.html">
+       Dateien
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0325_mehrdimensional.html">
+       Mehrdimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0326_bilder.html">
+       Bilddaten
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../03_datenanalyse/033_modellierung.html">
+     Modellierung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0331_interpolation.html">
+       Polynominterpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0332_fitting.html">
+       Fitting
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../03_datenanalyse/0333_splines.html">
+       Splines
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../04_numerik/04_einleitung.html">
+   Numerik
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../04_numerik/041_integrale.html">
+     Integration
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0411_oberuntersumme.html">
+       Ober- und Untersumme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0412_interpolation.html">
+       Interpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0413_montecarlo.html">
+       Monte-Carlo
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../04_numerik/042_ableitungen.html">
+     Differentiation
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0421_taylor.html">
+       Taylor-Entwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0422_differenzenquotienten.html">
+       Differenzenformeln
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0423_konvergenz.html">
+       Fehlerbetrachtung
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../04_numerik/043_dgl.html">
+     Differentialgleichungen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0431_fdm.html">
+       Finite-Differenzen-Methode
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0432_ode.html">
+       Gewöhnliche DGL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../04_numerik/0433_pde.html">
+       Partielle DGL
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Aufgabensammlung
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Exercises/01_computer/uebersicht.html">
+   Computer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html#losung">
+     Lösung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html">
+     Algorithmus zur Bestimmung des ggT:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html#beispiel">
+     Beispiel:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html#losung">
+     Lösung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Exercises/02_python/uebersicht.html">
+   Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/01_markdown/markdown.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/01_markdown/markdown.html#aufgabenteil-a">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/01_markdown/markdown.html#aufgabenteil-b-optional">
+     Aufgabenteil B — Optional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/02_operationen/operationen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/02_operationen/operationen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/02_operationen/operationen.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/03_variablen/variablen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/03_variablen/variablen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/04_listen/listen.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/04_listen/listen.html#aufgabenteil-a">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/04_listen/listen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/05_schleifen/schleifen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/05_schleifen/schleifen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/06_abzweigungen/abzweigungen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/06_abzweigungen/abzweigungen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/09_fstrings/fstrings.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/09_fstrings/fstrings.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/10_einwohner_europa/einwohner_europa.html">
+     Aufgabenteil A – Auslesen der Datei
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/10_einwohner_europa/einwohner_europa.html#aufgabenteil-c-filtern-und-verwenden-optional">
+     Aufgabenteil C – Filtern und Verwenden – Optional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/02_python/11_temperaturdaten/temperaturdaten.html">
+     2.11 – Temperaturdaten
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Exercises/03_datenanalyse/uebersicht.html">
+   Datenanalyse
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten.html">
+     3.1 – Funktionen Plotten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/02_daten_plotten/daten_plotten.html">
+     3.2 – Daten aus Datei Plotten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/03_numpy_arrays/arrays.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/03_numpy_arrays/arrays.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2.html">
+     3.4 - Temperaturdaten II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/05_interpolation/interpolation.html">
+     Aufgabenteil A1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/05_interpolation/interpolation.html#aufgabenteil-a2">
+     Aufgabenteil A2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/05_interpolation/interpolation.html#aufgabenteil-b1">
+     Aufgabenteil B1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/05_interpolation/interpolation.html#aufgabenteil-b2">
+     Aufgabenteil B2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Exercises/04_numerik/uebersicht.html">
+   Numerik
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/01_trapez/trapez.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/01_trapez/trapez.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/02_pi_mc/pi_mc.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/02_pi_mc/pi_mc.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/03_abl_analytisch/abl_analytisch.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/03_abl_analytisch/abl_analytisch.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/04_abl_num/abl_num.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/04_abl_num/abl_num.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/04_abl_num/abl_num.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/04_abl_num/abl_num.html#aufgabenteil-d">
+     Aufgabenteil D
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-d">
+     Aufgabenteil D
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-e">
+     Aufgabenteil E
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html#aufgabenteil-d">
+     Aufgabenteil D
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content/Script/02_python/0231_schleifen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        
+        <a class="edit-button" href="https://github.com/FireDynamics/LectureFireSimulation/edit/main/book/content/Script/02_python/0231_schleifen.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/FireDynamics/LectureFireSimulation/main?urlpath=tree/book/content/Script/02_python/0231_schleifen.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://io.cce.uni-wuppertal.de/firesim_ss2020//hub/user-redirect/git-pull?repo=https://github.com/FireDynamics/LectureFireSimulation&urlpath=tree/LectureFireSimulation/book/content/Script/02_python/0231_schleifen.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typen-von-schleifen">
+   Typen von Schleifen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-schleifen">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   -Schleifen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-schleifen">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   -Schleifen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verschachtelte-schleifen">
+   Verschachtelte Schleifen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="schleifen">
+<h1>Schleifen<a class="headerlink" href="#schleifen" title="Permalink to this headline">¶</a></h1>
+<p>Schleifen ermöglichen das systematische Iterieren bzw. Wiederholen von Anweisungen.</p>
+<p>Im Maximum-Algorithmus, werden Schleifen benutzt um alle Elemente der Eingabeliste durchzulaufen und deren Wert zu evaluieren.</p>
+<div class="section" id="typen-von-schleifen">
+<h2>Typen von Schleifen<a class="headerlink" href="#typen-von-schleifen" title="Permalink to this headline">¶</a></h2>
+<p>In Python können zwei Arten von Schleifen definiert werden: <code class="docutils literal notranslate"><span class="pre">while</span></code>- und <code class="docutils literal notranslate"><span class="pre">for</span></code>-Schleifen. Beide benötigen zwei Definitionen:</p>
+<ul class="simple">
+<li><p><strong>Schleifenkopf</strong>, welcher die Ausführung des Anweisungsblocks steuert, und</p></li>
+<li><p><strong>Anweisungsblock</strong>, Gruppe von Anweisungen, welche bei jedem Schleifendurchlauf ausgeführt werden.</p></li>
+</ul>
+<p>Welcher der beiden Typen verwendet wird, hängt von der jeweiligen Aufgabe ab. Die allgemeinere von beiden ist die <code class="docutils literal notranslate"><span class="pre">while</span></code>-Schleife, d.h. jede <code class="docutils literal notranslate"><span class="pre">for</span></code>-Schleife kann als eine <code class="docutils literal notranslate"><span class="pre">while</span></code>-Schleife umgeschrieben werden.</p>
+</div>
+<div class="section" id="while-schleifen">
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code>-Schleifen<a class="headerlink" href="#while-schleifen" title="Permalink to this headline">¶</a></h2>
+<p>Eine <code class="docutils literal notranslate"><span class="pre">while</span></code>-Schleife für den Anweisungsblock immer wieder aus solange die Ausführbedingung wahr ist. Formal sieht eine solche Schleife wie folgt aus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">Bedingung</span><span class="p">:</span>
+    <span class="n">Anweisungsblock</span>
+</pre></div>
+</div>
+<p>Die Schleife wird mit dem Schlüsselwort <code class="docutils literal notranslate"><span class="pre">while</span></code> eingeleitet, gefolgt von der Ausführbedingung. Dieser Schleifenkopf wird mit einem Doppelpunkt <code class="docutils literal notranslate"><span class="pre">:</span></code> abgeschlossen. Darunter wird der eingerückte Anweisungsblock definiert, d.h. die Gruppe von Ausdrücken, welche kontinuierlich ausgeführt werden. Beim Beginn der Schleife und nach jedem Durchlauf wird die Bedingung geprüft. Ist sie wahr, so wird der Anweisungsblock ausgeführt, wenn nicht, ist die Schleife beendet und die nächste Anweisung außerhalb der Schleife ausgeführt.</p>
+<p>Folgende Beispiele verdeutlichen die Funktionsweise der <code class="docutils literal notranslate"><span class="pre">while</span></code>-Schleife. Im ersten Fall wird eine Variable kontinuierlich erhöht bis sie einen Grenzwert erreicht und im zweiten Beispiel werden die Elemente einer Liste einzeln ausgegeben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 1: Erhöhen eines Variablenwertes</span>
+
+<span class="c1"># Setzte Startwert</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># Definiere Schleife, welche solange ausgeführt </span>
+<span class="c1"># wird, wie a kleiner als 10 ist</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="c1"># Anweisungsblock der Schleife:</span>
+    
+    <span class="c1"># 1. Ausgabe des aktuellen Werts von a </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;aktueller Wert von a&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    
+    <span class="c1"># 2. Erhöhung von a um Eins</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Ausgabe des Wertes nach der Schleife</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wert von a nach der Schleife&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aktueller Wert von a 5
+aktueller Wert von a 6
+aktueller Wert von a 7
+aktueller Wert von a 8
+aktueller Wert von a 9
+aktueller Wert von a 10
+Wert von a nach der Schleife 11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 2: Einzelausgabe von Listenelementen</span>
+
+<span class="c1"># Definiere eine Liste</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="o">-</span><span class="mf">12.4</span><span class="p">,</span> <span class="s1">&#39;feuer&#39;</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="c1"># Definiere eine Laufvariable</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Schleife, welche solgange durchlaufen wird, wie</span>
+<span class="c1"># die Laufvariable kleiner als die Länge der Liste ist</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">l1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Beginn des Ausführungsblocks, Wert der Laufvariablen:&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="c1"># Ausgabe des Elements mit dem Index i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Element mit dem Index&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;hat den Wert:&#39;</span><span class="p">,</span> <span class="n">l1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="c1"># Erhöhung der Laufvariablen</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Beginn des Ausführungsblocks, Wert der Laufvariablen: 0
+Element mit dem Index 0 hat den Wert: 34
+
+Beginn des Ausführungsblocks, Wert der Laufvariablen: 1
+Element mit dem Index 1 hat den Wert: -12.4
+
+Beginn des Ausführungsblocks, Wert der Laufvariablen: 2
+Element mit dem Index 2 hat den Wert: feuer
+
+Beginn des Ausführungsblocks, Wert der Laufvariablen: 3
+Element mit dem Index 3 hat den Wert: 0.3
+
+Beginn des Ausführungsblocks, Wert der Laufvariablen: 4
+Element mit dem Index 4 hat den Wert: 12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="for-schleifen">
+<h2><code class="docutils literal notranslate"><span class="pre">for</span></code>-Schleifen<a class="headerlink" href="#for-schleifen" title="Permalink to this headline">¶</a></h2>
+<p>Während die <code class="docutils literal notranslate"><span class="pre">while</span></code>-Schleifen ausgeführt werden, solange eine Bedingung erfüllt ist, werden <code class="docutils literal notranslate"><span class="pre">for</span></code>-Schleifen alle Elemente einer Sequenz, z.B. einer Liste, ausgeführt. Dazu wird eine Laufvariable generiert, welche bei jedem Durchlauf des Anweisungsblocks den aktuellen Wert aus der Sequenz einnimmt. Die Syntax sieht wie folgt aus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">Laufvariable</span> <span class="ow">in</span> <span class="n">Sequenz</span><span class="p">:</span>
+    <span class="n">Anweisungsblock</span>
+</pre></div>
+</div>
+<p>Zur Definition des Schleifenkopfes gehören die beiden Schlüsselworte <code class="docutils literal notranslate"><span class="pre">for</span></code> und <code class="docutils literal notranslate"><span class="pre">in</span></code> und der Kopf wird mit einem Doppelpunkt <code class="docutils literal notranslate"><span class="pre">:</span></code> abgeschlossen. Auch hier wird der Anweisungsblock eingerückt.</p>
+<p>Als Sequenz können beispielsweise Listen, Ranges (Datenstrukturen, welche durch die <code class="docutils literal notranslate"><span class="pre">range</span></code>-Funktion erzeugt werden), Zeichenketten oder Dateien verwendet werden.</p>
+<p>Die obigen Beispiele können auch mit einer <code class="docutils literal notranslate"><span class="pre">for</span></code>-Schleife programmiert werden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 3: Erhöhen eines Variablenwertes</span>
+
+<span class="c1"># Definiere Schleife, welche eine passende Range durchläuft</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+    <span class="c1"># Anweisungsblock der Schleife:</span>
+    
+    <span class="c1"># Ausgabe des aktuellen Werts von a </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;aktueller Wert von a&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aktueller Wert von a 5
+aktueller Wert von a 6
+aktueller Wert von a 7
+aktueller Wert von a 8
+aktueller Wert von a 9
+aktueller Wert von a 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 4: Einzelausgabe von Listenelementen</span>
+
+<span class="c1"># Definiere eine Liste</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="o">-</span><span class="mf">12.4</span><span class="p">,</span> <span class="s1">&#39;feuer&#39;</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="c1"># Schleife, welche für alle Elemente der Liste l1 ausgeführt wird</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Wert der Laufvariablen:&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Wert der Laufvariablen: 34
+Wert der Laufvariablen: -12.4
+Wert der Laufvariablen: feuer
+Wert der Laufvariablen: 0.3
+Wert der Laufvariablen: 12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="verschachtelte-schleifen">
+<h2>Verschachtelte Schleifen<a class="headerlink" href="#verschachtelte-schleifen" title="Permalink to this headline">¶</a></h2>
+<p>Es können mehrere Schleifen kombiniert werden. Dazu befindet sich die innere Schleife im Anweisungsblock der äußeren Schleife.</p>
+<p>Folgendes Beispiel verdeutlicht diesen Einsatz beim Zugriff auf eine Liste mit Listenelementen. Dabei iteriert die äußere Schleife über die Elemente der Liste, welche selbst wieder Listen sind.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">],</span> <span class="p">[</span><span class="mi">111</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">333</span><span class="p">]]</span>
+
+<span class="k">for</span> <span class="n">el_l2</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">:</span>
+    
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Beginn der inneren Schleife für die Liste:&quot;</span><span class="p">,</span> <span class="n">el_l2</span> <span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">el_l2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Element:&quot;</span><span class="p">,</span> <span class="n">el</span> <span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Ende der inneren Schleife&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Beginn der inneren Schleife für die Liste: [1, 2]
+Element: 1
+Element: 2
+Ende der inneren Schleife
+
+Beginn der inneren Schleife für die Liste: [11, 22, 33, 44]
+Element: 11
+Element: 22
+Element: 33
+Element: 44
+Ende der inneren Schleife
+
+Beginn der inneren Schleife für die Liste: [111, 222, 333]
+Element: 111
+Element: 222
+Element: 333
+Ende der inneren Schleife
+</pre></div>
+</div>
+</div>
+</div>
+<p>Im obigen Beispiel kann bequem auf die Elemente zugegriffen werden, jedoch sind die Indizes nicht verfügbar. Eine alternative Möglickeit des Zugriffs ist der Einsatz von Indizes, welche über den jeweiligen Indexbereich laufen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;== Beginn der äußeren Schleife&quot;</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l2</span><span class="p">)):</span>
+    
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Äußerer Index: &quot;</span><span class="p">,</span> <span class="n">i</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Beginn der inneren Schleife für die Liste:&quot;</span><span class="p">,</span> <span class="n">l2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l2</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Element mit dem Index &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s2">&quot;hat den Wert&quot;</span><span class="p">,</span> <span class="n">l2</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Ende der inneren Schleife&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;== Ende der äußeren Schleife&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>== Beginn der äußeren Schleife
+
+Äußerer Index:  0
+Beginn der inneren Schleife für die Liste: [1, 2]
+Element mit dem Index  0 0 hat den Wert 1
+Element mit dem Index  0 1 hat den Wert 2
+Ende der inneren Schleife
+
+Äußerer Index:  1
+Beginn der inneren Schleife für die Liste: [11, 22, 33, 44]
+Element mit dem Index  1 0 hat den Wert 11
+Element mit dem Index  1 1 hat den Wert 22
+Element mit dem Index  1 2 hat den Wert 33
+Element mit dem Index  1 3 hat den Wert 44
+Ende der inneren Schleife
+
+Äußerer Index:  2
+Beginn der inneren Schleife für die Liste: [111, 222, 333]
+Element mit dem Index  2 0 hat den Wert 111
+Element mit dem Index  2 1 hat den Wert 222
+Element mit dem Index  2 2 hat den Wert 333
+Ende der inneren Schleife
+
+== Ende der äußeren Schleife
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/Script/02_python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="023_flusskontrolle.html" title="previous page">Flusskontrolle</a>
+    <a class='right-next' id="next-link" href="0232_abzweigungen.html" title="next page">Abzweigungen</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Team Fire | CCE@BUW + IAS-7@FZJ<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

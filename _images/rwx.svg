@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7 -->
+<!-- CreationDate: 2020-05-07 01:53:08 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="271pt" height="56pt"
+	viewBox="1767 2303 4296 880">
+<g fill="none">
+<!-- Line -->
+<rect x="1800" y="2700" width="450" height="450"
+	stroke="#008f00" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2250" y="2700" width="450" height="450"
+	stroke="#008f00" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2700" y="2700" width="450" height="450"
+	stroke="#008f00" stroke-width="30px"/>
+<!-- Text -->
+<text xml:space="preserve" x="2003" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">r</text>
+<!-- Text -->
+<text xml:space="preserve" x="2407" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">w</text>
+<!-- Text -->
+<text xml:space="preserve" x="2880" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">x</text>
+<!-- Line -->
+<rect x="3240" y="2700" width="450" height="450"
+	stroke="#0000ff" stroke-width="30px"/>
+<!-- Line -->
+<rect x="3690" y="2700" width="450" height="450"
+	stroke="#0000ff" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4140" y="2700" width="450" height="450"
+	stroke="#0000ff" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4680" y="2700" width="450" height="450"
+	stroke="#ff0000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5130" y="2700" width="450" height="450"
+	stroke="#ff0000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5580" y="2700" width="450" height="450"
+	stroke="#ff0000" stroke-width="30px"/>
+<!-- Text -->
+<text xml:space="preserve" x="3443" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">r</text>
+<!-- Text -->
+<text xml:space="preserve" x="3847" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">w</text>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">x</text>
+<!-- Text -->
+<text xml:space="preserve" x="4883" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">r</text>
+<!-- Text -->
+<text xml:space="preserve" x="5287" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">w</text>
+<!-- Text -->
+<text xml:space="preserve" x="5760" y="2993" fill="#000000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">x</text>
+<!-- Text -->
+<text xml:space="preserve" x="1890" y="2528" fill="#008f00" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">Benutzer</text>
+<!-- Text -->
+<text xml:space="preserve" x="3420" y="2528" fill="#0000ff" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">Gruppe</text>
+<!-- Text -->
+<text xml:space="preserve" x="4875" y="2513" fill="#ff0000" font-family="Times" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">Andere</text>
+</g>
+</svg>

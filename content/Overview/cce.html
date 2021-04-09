@@ -1,0 +1,1182 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computational Civil Engineering (CCE) &#8212; Vorlesung Ingenieurinformatik</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Computer" href="../Script/01_computer/00_einleitung.html" />
+    <link rel="prev" title="Informatik" href="informatik.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/cce_logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <p class="caption collapsible-parent">
+ <span class="caption-text">
+  Ingenieurinformatik
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="informatik.html">
+   Informatik
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Computational Civil Engineering (CCE)
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Vorlesungsskript
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Script/01_computer/00_einleitung.html">
+   Computer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/01_computer/01_digitalisierung.html">
+     Digitalisierung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/011_analoge_informationen.html">
+       Analoge Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/012_digitale_informationen.html">
+       Digitale Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/013_zahlendarstellung.html">
+       Digitale Zahlendarstellung
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Script/01_computer/02_algorithmen.html">
+     Algorithmen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Script/01_computer/02_algorithmen.html#beispiele">
+     Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/01_computer/02_algorithmen.html#kapitelubersicht">
+     Kapitelübersicht
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/021_sortieralgorithmen.html">
+       Sortieralgorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/022_eigenschaften.html">
+       Eigenschaften
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/023_numerische_algorithmen.html">
+       Numerische Algorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/024_smp.html">
+       Stable Marriage Problem
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/01_computer/03_hardware.html">
+     Hardware
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/031_geschichte.html">
+       Geschichte der Computer
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/032_komponenten.html">
+       Aufbau eines Computers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/033_funktionsweise_computer.html">
+       Arbeitsweise eines Computers
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/01_computer/04_software.html">
+     Software
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/041_betriebssysteme.html">
+       Betriebssysteme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/042_softwareentwicklung.html">
+       Softwareentwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/01_computer/043_dateisystem.html">
+       Dateisystem
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Script/02_python/02_einleitung.html">
+   Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/02_python/021_sprache.html">
+     Sprache
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0211_arbeiten.html">
+       Arbeiten mit Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0212_jupyter.html">
+       JupyterLab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0213_syntax.html">
+       Syntax
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/02_python/022_grundlagen.html">
+     Grundlagen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0221_zahlen.html">
+       Zahlen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0222_operationen.html">
+       Operationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0223_variablen.html">
+       Variablen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0224_funktionen.html">
+       Funktionen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0225_zeichenketten.html">
+       Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0226_listen.html">
+       Listen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0227_sammeltypen.html">
+       Sammeltypen
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/02_python/023_flusskontrolle.html">
+     Flusskontrolle
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0231_schleifen.html">
+       Schleifen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0232_abzweigungen.html">
+       Abzweigungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0233_funktionen.html">
+       Funktionen
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/02_python/024_weiteres.html">
+     Weitere Themen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0241_module.html">
+       Module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0242_formattierte_strings.html">
+       Formatierte Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/02_python/0243_dateien.html">
+       Dateien
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Script/03_datenanalyse/03_einleitung.html">
+   Datenanalyse
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/03_datenanalyse/031_visualisierung.html">
+     Visualisierung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0311_matplotlib.html">
+       matplotlib-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0312_1d_plots.html">
+       Eindimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0313_beschriftung.html">
+       Beschriftung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0314_farben.html">
+       Farben
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0315_skalierung.html">
+       Skalierung
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/03_datenanalyse/032_verarbeitung.html">
+     Verarbeitung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0321_numpy.html">
+       numpy-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0322_arrays.html">
+       numpy-Arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0323_referenzen.html">
+       Referenzen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0324_dateien.html">
+       Dateien
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0325_mehrdimensional.html">
+       Mehrdimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0326_bilder.html">
+       Bilddaten
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/03_datenanalyse/033_modellierung.html">
+     Modellierung
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0331_interpolation.html">
+       Polynominterpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0332_fitting.html">
+       Fitting
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/03_datenanalyse/0333_splines.html">
+       Splines
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Script/04_numerik/04_einleitung.html">
+   Numerik
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/04_numerik/041_integrale.html">
+     Integration
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0411_oberuntersumme.html">
+       Ober- und Untersumme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0412_interpolation.html">
+       Interpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0413_montecarlo.html">
+       Monte-Carlo
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/04_numerik/042_ableitungen.html">
+     Differentiation
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0421_taylor.html">
+       Taylor-Entwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0422_differenzenquotienten.html">
+       Differenzenformeln
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0423_konvergenz.html">
+       Fehlerbetrachtung
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Script/04_numerik/043_dgl.html">
+     Differentialgleichungen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0431_fdm.html">
+       Finite-Differenzen-Methode
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0432_ode.html">
+       Gewöhnliche DGL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Script/04_numerik/0433_pde.html">
+       Partielle DGL
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Aufgabensammlung
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Exercises/01_computer/uebersicht.html">
+   Computer
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html#losung">
+     Lösung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/04_eratosthenes/eratosthenes.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/04_eratosthenes/eratosthenes.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/04_eratosthenes/eratosthenes.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/05_ggt/ggt.html">
+     Algorithmus zur Bestimmung des ggT:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/05_ggt/ggt.html#beispiel">
+     Beispiel:
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/05_ggt/ggt.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/05_ggt/ggt.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/05_ggt/ggt.html#losung">
+     Lösung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/06_majoritaet/majoritaet.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/06_majoritaet/majoritaet.html#aufgabenstellung">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/06_majoritaet/majoritaet.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/06_majoritaet/majoritaet.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/07_architekturen/architekturen.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/07_architekturen/architekturen.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/07_architekturen/architekturen.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Exercises/02_python/uebersicht.html">
+   Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/01_markdown/markdown.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/01_markdown/markdown.html#aufgabenteil-a">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/01_markdown/markdown.html#aufgabenteil-b-optional">
+     Aufgabenteil B — Optional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/02_operationen/operationen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/02_operationen/operationen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/02_operationen/operationen.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/03_variablen/variablen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/03_variablen/variablen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/04_listen/listen.html">
+     Grundlagen und Beispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/04_listen/listen.html#aufgabenteil-a">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/04_listen/listen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/05_schleifen/schleifen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/05_schleifen/schleifen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/06_abzweigungen/abzweigungen.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/06_abzweigungen/abzweigungen.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/09_fstrings/fstrings.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/09_fstrings/fstrings.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/10_einwohner_europa/einwohner_europa.html">
+     Aufgabenteil A – Auslesen der Datei
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/10_einwohner_europa/einwohner_europa.html#aufgabenteil-c-filtern-und-verwenden-optional">
+     Aufgabenteil C – Filtern und Verwenden – Optional
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/02_python/11_temperaturdaten/temperaturdaten.html">
+     2.11 – Temperaturdaten
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Exercises/03_datenanalyse/uebersicht.html">
+   Datenanalyse
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten.html">
+     3.1 – Funktionen Plotten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/02_daten_plotten/daten_plotten.html">
+     3.2 – Daten aus Datei Plotten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/03_numpy_arrays/arrays.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/03_numpy_arrays/arrays.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2.html">
+     3.4 - Temperaturdaten II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/05_interpolation/interpolation.html">
+     Aufgabenteil A1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/05_interpolation/interpolation.html#aufgabenteil-a2">
+     Aufgabenteil A2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/05_interpolation/interpolation.html#aufgabenteil-b1">
+     Aufgabenteil B1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/05_interpolation/interpolation.html#aufgabenteil-b2">
+     Aufgabenteil B2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Exercises/04_numerik/uebersicht.html">
+   Numerik
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/01_trapez/trapez.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/01_trapez/trapez.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/02_pi_mc/pi_mc.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/02_pi_mc/pi_mc.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/03_abl_analytisch/abl_analytisch.html">
+     Aufgabenstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/03_abl_analytisch/abl_analytisch.html#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/04_abl_num/abl_num.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/04_abl_num/abl_num.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/04_abl_num/abl_num.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/04_abl_num/abl_num.html#aufgabenteil-d">
+     Aufgabenteil D
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-d">
+     Aufgabenteil D
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html#aufgabenteil-e">
+     Aufgabenteil E
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html#aufgabenteil-c">
+     Aufgabenteil C
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html#aufgabenteil-d">
+     Aufgabenteil D
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/Overview/cce.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        
+        
+        <a class="edit-button" href="https://github.com/FireDynamics/LectureFireSimulation/edit/main/book/content/Overview/cce.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="computational-civil-engineering-cce">
+<h1>Computational Civil Engineering (CCE)<a class="headerlink" href="#computational-civil-engineering-cce" title="Permalink to this headline">¶</a></h1>
+<p>Der Lehrstuhl <a class="reference external" href="https://cce.uni-wuppertal.de/">Computational Civil Engineering</a> beschäftigt sich hauptsächlich mit der Erforschung und Entwicklung neuer computergestützter Modelle. Im Zentrum der Anwendung steht hier die Brand- und Rauchausbreitung in Gebäuden.</p>
+<p>In der Lehre fokussieren wir uns auf die Informatik und Numerik. Die von uns angebotenen Hauptvorlesungen sind <a class="reference external" href="https://cce.uni-wuppertal.de/index.php?id=4178&amp;L=0">Ingenieurinformatik</a> und <a class="reference external" href="https://cce.uni-wuppertal.de/index.php?id=4185&amp;L=0">Numerische Brandsimulationen</a>. Zusätzlich dazu bieten wir regelmäßig Workshops zu den Themen <em>Datenanalyse</em> und <em>Raspberry Pi</em> an.</p>
+<p>Die von uns entwickelten und eingesetzten Simulationsmodelle beruhen meist auf der numerische Strömungsdynamik (CFD, engl. computational fluid dynamics). Hinzu kommten genetische Optimierungsalgorithmen und Bildverarbeitungsmethoden. Allen gemein ist der Einsatz von Parallelrechnern, wie z.B. dem Supercomputer <a class="reference external" href="https://www.fz-juelich.de/ias/jsc/EN/Expertise/Supercomputers/JURECA/JURECA_node.html">JURECA</a> am <a class="reference external" href="https://fz-juelich.de/portal/DE/Home/home_node.html">Forschungszentrum Jülich</a>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><img alt="JURECA" src="https://www.fz-juelich.de/SharedDocs/Bilder/IAS/JSC/EN/galeries/JURECA/JURECA.jpg?__blob=poster" /></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>JURECA Supercomputer, Bildquelle: Forschungszentrum Jülich</p></td>
+</tr>
+</tbody>
+</table>
+<p>Zu unseren Forschungsaktivitäten zählt zum Einen der Einsatz und Weiterentwicklung von <a class="reference external" href="https://pages.nist.gov/fds-smv/">FDS</a> (Fire Dynamics Simulator), welches genutzten werden kann zur Berechnung der Rauch- und Brandausbreitung in Gebäuden. Zum Anderen die Entwicklung neuer Simulationswerkzeuge. Dazu zählt beispielsweise die Simulationssoftware <a class="reference external" href="https://github.com/FireDynamics/ARTSS">ARTSS</a> (Accelerator-based Real-Time Smoke Simulator) oder <a class="reference external" href="https://github.com/FireDynamics/propti">PROPTI</a>. Die Forschung erfolgt in enger Zusammenarbeit mit der Abteilung <a class="reference external" href="https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html">Fire Dynamics</a> am Forschungszentrum Jülich.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><video controls> <source src="https://uni-wuppertal.sciebo.de/s/L8WzAy7adlX45Yk/download" type="video/mp4"> </video></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Simulation von Bränden in einer U-Bahnstation mit der Software <a class="reference external" href="https://pages.nist.gov/fds-smv/">FDS</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><video controls> <source src="https://uni-wuppertal.sciebo.de/s/muvLoJ1qgmJgBHT/download" type="video/mp4"> </video></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Simulation eines Flüssigkeitsbrandes mit der Software <a class="reference external" href="https://www.openfoam.com/">OpenFoam</a></p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><video controls> <source src="https://uni-wuppertal.sciebo.de/s/mBzgUtDRcZfYJRb/download" type="video/mp4"> </video></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Selbstkonsistente Simulation der Brandausbreitung entlang einer Kabeltrasse. Berechnet mit <a class="reference external" href="https://pages.nist.gov/fds-smv/">FDS</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/Overview"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="informatik.html" title="previous page">Informatik</a>
+    <a class='right-next' id="next-link" href="../Script/01_computer/00_einleitung.html" title="next page">Computer</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Team Fire | CCE@BUW + IAS-7@FZJ<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
