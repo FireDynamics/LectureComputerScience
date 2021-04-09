@@ -1,0 +1,36 @@
+\documentclass[convert=pdf2svg]{standalone}
+\usepackage{tikz,pgfplots}
+\usepackage{xcolor}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{sansmath} % sans serif math
+\sansmath % if you use it globaly
+
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+	\definecolor{border_color}{RGB}{80,116,172}
+	\definecolor{fill_color}{RGB}{162,203,240}
+	\definecolor{dot_color}{RGB}{60,60,60}
+
+    \begin{tikzpicture}[scale=3]
+
+        \tikzstyle{every node}=[font=\fontsize{35}{0}\selectfont]
+        \tikzstyle{boxes_style}=[draw=border_color,fill=fill_color, line width=1.5mm]
+        
+        \draw node[above] at (-0.5, 1.25) {Bit};
+        \draw node at (-0.5, 0.5) {5 = };         
+        
+        \draw[boxes_style] (0,0) rectangle (1,1); \draw node at (0.5, 0.5) {0}; \draw node[above] at (0.5, 1.25) {7};
+        \draw[boxes_style] (1,0) rectangle (2,1); \draw node at (1.5, 0.5) {0}; \draw node[above] at (1.5, 1.25) {6};
+        \draw[boxes_style] (2,0) rectangle (3,1); \draw node at (2.5, 0.5) {0}; \draw node[above] at (2.5, 1.25) {5};
+        \draw[boxes_style] (3,0) rectangle (4,1); \draw node at (3.5, 0.5) {0}; \draw node[above] at (3.5, 1.25) {4};
+        \draw[boxes_style] (4,0) rectangle (5,1); \draw node at (4.5, 0.5) {0}; \draw node[above] at (4.5, 1.25) {3};
+        \draw[boxes_style] (5,0) rectangle (6,1); \draw node at (5.5, 0.5) {1}; \draw node[above] at (5.5, 1.25) {2};
+        \draw[boxes_style] (6,0) rectangle (7,1); \draw node at (6.5, 0.5) {0}; \draw node[above] at (6.5, 1.25) {1};
+        \draw[boxes_style] (7,0) rectangle (8,1); \draw node at (7.5, 0.5) {1}; \draw node[above] at (7.5, 1.25) {0};           
+
+    \end{tikzpicture}
+\end{document}

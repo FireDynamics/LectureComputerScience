@@ -1,0 +1,248 @@
+####################
+####################
+# INTRODUCTION
+
+- file: content/Overview/uebersicht
+- part: Ingenieurinformatik
+  numbered: False
+  chapters:
+    - file: content/Overview/informatik
+    - file: content/Overview/cce
+
+########################################
+########################################
+# Kapitel VORLESUNGSSKRIPT
+- part: Vorlesungsskript
+  numbered: false
+  chapters:
+
+########################################
+# Kapitel COMPUTER
+    - file: content/Script/01_computer/00_einleitung
+      sections:
+
+      - file: content/Script/01_computer/01_digitalisierung
+        sections:
+        - file: content/Script/01_computer/011_analoge_informationen
+        - file: content/Script/01_computer/012_digitale_informationen
+        - file: content/Script/01_computer/013_zahlendarstellung
+
+      - file: content/Script/01_computer/02_algorithmen
+        sections:
+        - file: content/Script/01_computer/021_sortieralgorithmen
+        - file: content/Script/01_computer/022_eigenschaften
+        - file: content/Script/01_computer/023_numerische_algorithmen
+        - file: content/Script/01_computer/024_smp
+
+      - file: content/Script/01_computer/03_hardware
+        sections:
+        - file: content/Script/01_computer/031_geschichte
+        - file: content/Script/01_computer/032_komponenten
+        - file: content/Script/01_computer/033_funktionsweise_computer
+
+      - file: content/Script/01_computer/04_software
+        sections:
+        - file: content/Script/01_computer/041_betriebssysteme
+        - file: content/Script/01_computer/042_softwareentwicklung
+        - file: content/Script/01_computer/043_dateisystem
+
+########################################
+# Kapitel PYTHON
+
+    - file: content/Script/02_python/02_einleitung
+      sections:
+
+        - file: content/Script/02_python/021_sprache
+          sections:
+
+          - file: content/Script/02_python/0211_arbeiten
+          - file: content/Script/02_python/0212_jupyter
+          - file: content/Script/02_python/0213_syntax
+
+        - file: content/Script/02_python/022_grundlagen
+          sections:
+          - file: content/Script/02_python/0221_zahlen
+          - file: content/Script/02_python/0222_operationen
+          - file: content/Script/02_python/0223_variablen
+          - file: content/Script/02_python/0224_funktionen
+          - file: content/Script/02_python/0225_zeichenketten
+          - file: content/Script/02_python/0226_listen
+          - file: content/Script/02_python/0227_sammeltypen
+
+        - file: content/Script/02_python/023_flusskontrolle
+          sections:
+          - file: content/Script/02_python/0231_schleifen
+          - file: content/Script/02_python/0232_abzweigungen
+          - file: content/Script/02_python/0233_funktionen
+
+        - file: content/Script/02_python/024_weiteres
+          sections:
+          - file: content/Script/02_python/0241_module
+          - file: content/Script/02_python/0242_formattierte_strings
+          - file: content/Script/02_python/0243_dateien
+
+########################################
+# Kapitel DATENANALYSE
+
+    - file: content/Script/03_datenanalyse/03_einleitung
+      sections:
+
+        - file: content/Script/03_datenanalyse/031_visualisierung
+          sections:
+          - file: content/Script/03_datenanalyse/0311_matplotlib
+          - file: content/Script/03_datenanalyse/0312_1d_plots
+          - file: content/Script/03_datenanalyse/0313_beschriftung
+          - file: content/Script/03_datenanalyse/0314_farben
+          - file: content/Script/03_datenanalyse/0315_skalierung
+
+        - file: content/Script/03_datenanalyse/032_verarbeitung
+          sections:
+          - file: content/Script/03_datenanalyse/0321_numpy
+          - file: content/Script/03_datenanalyse/0322_arrays
+          - file: content/Script/03_datenanalyse/0323_referenzen
+          - file: content/Script/03_datenanalyse/0324_dateien
+          - file: content/Script/03_datenanalyse/0325_mehrdimensional
+          - file: content/Script/03_datenanalyse/0326_bilder
+
+        - file: content/Script/03_datenanalyse/033_modellierung
+          sections:
+          - file: content/Script/03_datenanalyse/0331_interpolation
+          - file: content/Script/03_datenanalyse/0332_fitting
+          - file: content/Script/03_datenanalyse/0333_splines
+
+########################################
+# Kapitel NUMERIK
+
+    - file: content/Script/04_numerik/04_einleitung
+      sections:
+
+        - file: content/Script/04_numerik/041_integrale
+          sections:
+          - file: content/Script/04_numerik/0411_oberuntersumme
+          - file: content/Script/04_numerik/0412_interpolation
+          - file: content/Script/04_numerik/0413_montecarlo
+
+        - file: content/Script/04_numerik/042_ableitungen
+          sections:
+          - file: content/Script/04_numerik/0421_taylor
+          - file: content/Script/04_numerik/0422_differenzenquotienten
+          - file: content/Script/04_numerik/0423_konvergenz
+
+        - file: content/Script/04_numerik/043_dgl
+          sections:
+          - file: content/Script/04_numerik/0431_fdm
+          - file: content/Script/04_numerik/0432_ode
+          - file: content/Script/04_numerik/0433_pde
+
+########################################
+########################################
+# Kapitel AUFGABENSAMMLUNG
+- part: Aufgabensammlung
+  numbered: false
+  chapters:
+
+########################################
+# AUFGABENSAMMLUNG COMPUTER
+
+    - file: content/Exercises/01_computer/uebersicht
+      sections:
+      - title: 1.1 – Zahlendarstellung
+        file: content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung
+      - title: 1.2 – Darstellung von Zeichen
+        file: content/Exercises/01_computer/02_zeichendarstellung/zeichendarstellung
+      - title: 1.3 – Intervallschachtelung
+        file: content/Exercises/01_computer/03_intervallschachtelung/intervallschachtelung
+      - title: 1.4 – Sieb des Eratosthenes
+        file: content/Exercises/01_computer/04_eratosthenes/eratosthenes
+      - title: 1.5 – Größter gemeinsamer Teiler
+        file: content/Exercises/01_computer/05_ggt/ggt
+      - title: 1.6 – Majorität
+        file: content/Exercises/01_computer/06_majoritaet/majoritaet
+      - title: 1.7 – Prozessorarchitekturen
+        file: content/Exercises/01_computer/07_architekturen/architekturen
+      - title: 1.8 – Betriebssysteme
+        file: content/Exercises/01_computer/08_betriebssysteme/betriebssysteme
+
+########################################
+# AUFGABENSAMMLUNG PYTHON
+
+    - file: content/Exercises/02_python/uebersicht
+      sections:
+      - title: 2.1 – Markdown
+        file: content/Exercises/02_python/01_markdown/markdown
+      - title: 2.2 – Operationen
+        file: content/Exercises/02_python/02_operationen/operationen
+      - title: 2.3 – Variablen
+        file: content/Exercises/02_python/03_variablen/variablen
+      - title: 2.4 – Listen
+        file: content/Exercises/02_python/04_listen/listen
+      - title: 2.5 – Anwendung von Schleifen
+        file: content/Exercises/02_python/05_schleifen/schleifen
+      - title: 2.6 – Abzweigungen
+        file: content/Exercises/02_python/06_abzweigungen/abzweigungen
+      - title: 2.7 – Näherungsformel für π
+        file: content/Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi
+      - title: 2.8 – Sortieralgorithmus
+        file: content/Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus
+      - title: 2.9 – Formatierte Zeichenketten
+        file: content/Exercises/02_python/09_fstrings/fstrings
+      - title: 2.10 – Einwohnerzahl Europa
+        file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
+      - title: 2.11 – Temperaturdaten
+        file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
+
+########################################
+# AUFGABENSAMMLUNG DATENANALYSE
+
+    - file: content/Exercises/03_datenanalyse/uebersicht
+      sections:
+      - title: 3.1 – Funktionen Plotten
+        file: content/Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten
+      - title: 3.2 – Daten aus Datei Plotten
+        file: content/Exercises/03_datenanalyse/02_daten_plotten/daten_plotten
+      - title: 3.3 - Numpy Arrays
+        file: content/Exercises/03_datenanalyse/03_numpy_arrays/arrays
+      - title: 3.4 - Temperaturdaten II
+        file: content/Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2
+      - title: 3.5 - Fitting und Interpolation
+        file: content/Exercises/03_datenanalyse/05_interpolation/interpolation
+      - title: 3.6 - Ballonfahrt
+        file: content/Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt
+
+########################################
+# AUFGABENSAMMLUNG Numerik
+
+    - file: content/Exercises/04_numerik/uebersicht
+      sections:
+      - title: 4.1 – Trapezfunktion
+        file: content/Exercises/04_numerik/01_trapez/trapez
+      - title: 4.2 – Monte Carlo Integration
+        file: content/Exercises/04_numerik/02_pi_mc/pi_mc
+      - title: 4.3 - 2. Ableitung 2. Ordnung
+        file: content/Exercises/04_numerik/03_abl_analytisch/abl_analytisch
+      - title: 4.4 - Ableitung und Genauigkeit
+        file: content/Exercises/04_numerik/04_abl_num/abl_num
+      - title: 4.5 - Ableitungsfunktion
+        file: content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion
+      - title: 4.6 - Temperaturgleichung
+        file: content/Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung
+
+#######################################
+#######################################
+# Kapitel AUFGABENSAMMLUNG NUMERIK
+
+# - part: Seminar Data Analysis
+#   numbered: false
+#   chapters:
+#     - title: Basics
+#       file: content/Excursion_Data_Analysis/01_introduction/01_Python_Basics
+#     - title: Flow Control
+#       file: content/Excursion_Data_Analysis/02_flow_control/02_flow_control
+#     - title: Matplotlib Basics
+#       file: content/Excursion_Data_Analysis/03_matplotlib/03_matplotlib_basics
+#     - title: NumPy Basics
+#       file: content/Excursion_Data_Analysis/04_numpy/04_numpy_basics
+#     - title: Optimisation
+#       file: content/Excursion_Data_Analysis/05_optimisation/05_optimisation
+#     - title: Image Processing
+#       file: content/Excursion_Data_Analysis/06_image_processing/06_image_processing

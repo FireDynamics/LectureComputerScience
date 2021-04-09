@@ -1,0 +1,75 @@
+\documentclass[tikz, convert={density=300,size=1920x1080,outext=.png}, margin=1mm]{standalone}
+%\documentclass{standalone}
+\usepackage{tikz,pgfplots}
+\usepackage{xcolor}
+
+\usepackage[ngerman]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\usepackage{sansmath} % sans serif math
+\sansmath % if you use it globaly
+
+\usetikzlibrary{mindmap, shadows}
+\usetikzlibrary{decorations.pathreplacing}
+
+
+\begin{document}
+
+	\definecolor{my_blue}{RGB}{80,116,172}
+	\definecolor{my_blue_light}{RGB}{163,203,240}
+	\definecolor{my_orange}{RGB}{217,132,92}
+	\definecolor{my_orange_light}{RGB}{251,180,139}
+	\definecolor{my_green}{RGB}{91,166,108}
+	\definecolor{my_green_light}{RGB}{148,228,167}
+	\definecolor{my_red}{RGB}{192,80,86}
+	\definecolor{my_red_light}{RGB}{251,159,158}	
+	\definecolor{my_gray_dark}{RGB}{60,60,60}
+
+    \begin{tikzpicture}[mindmap]
+  		\begin{scope}[every node/.style={concept, circular drop shadow,
+  										 execute at begin node=\hskip0pt}, 
+  					  root concept/.append style={concept color=my_gray_dark, fill=white, 
+  					  							  line width=1ex, text=my_gray_dark,
+  					  							  font=\Large\scshape\sf},
+  					  T1/.style={concept color=my_blue_light, fill=black}, 
+  					  T2/.style={concept color=my_orange_light}, 
+  					  T3/.style={concept color=my_green_light}, 
+  					  T4/.style={concept color=my_red_light}, 
+  					  grow cyclic, 
+  					  level 1/.append style={level distance=4.5cm, fill=white, 
+  					  					     sibling angle=90, font=\large\sf},
+  					  level 2/.append style={level distance=3cm, fill=my_blue_light, 
+  					  					     sibling angle=55,font=\small\sf}] 
+\node [root concept] {Ingenieurinformatik} % root
+	  child [T1] { node {Numerik} 
+	  	child { node {Ableitungen} } 
+	  	child { node {Integrale} } 
+	  	child { node {ODE} } 
+	  	child { node {PDE} } 
+	  }
+	  child [T2] { node {Datenanalyse} 
+	  	child { node {Optimierung} } 
+	  	child { node {Analyse} } 
+	  	child { node {Visualisierung} } 
+	  	child { node {Einlesen} }
+	  }
+	  child [T3] { node {Python} 
+	  	child { node {Funktionen} } 
+	  	child { node {Flusskontrolle} }
+	  	child { node {JupyterLab} } 
+	  	child { node {Grundlagen} } 	  	
+	  }
+      child [T4] { node {Computer}
+        child { node {Digitalisierung} }
+        child { node {Algorithmen} }
+        child { node {Hardware} }
+        child { node {Software} }
+      }
+	  ;
+
+  		\end{scope}
+	\end{tikzpicture}
+
+\end{document}

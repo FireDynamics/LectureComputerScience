@@ -1,0 +1,8 @@
+**/.ipynb_checkpoints
+**/.DS_Store
+.venv
+*~
+book/_build
+data/**/rundir
+data/**/*log
+data/**/*.zip

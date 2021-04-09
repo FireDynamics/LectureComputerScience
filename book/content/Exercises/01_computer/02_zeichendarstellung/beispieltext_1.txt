@@ -1,0 +1,4 @@
+"Die Gefahr, dass der Computer so wird wie der Mensch, 
+ist nicht so gros wie die Gefahr, dass der Mensch so wird wie der Computer."
+
+	-- Konrad Zuse

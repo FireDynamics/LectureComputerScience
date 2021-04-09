@@ -1,0 +1,45 @@
+\documentclass[convert=pdf2svg]{standalone}
+\usepackage{tikz, pgfplots}
+\usepackage{xcolor}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{sansmath} % sans serif math                                                                                                                               
+\sansmath % if you use it globaly                                                                                                                           
+
+\usetikzlibrary{shapes, arrows, fit, backgrounds}
+
+\begin{document}
+\begin{tikzpicture}[node distance = 4cm and 6cm, auto]
+
+	\input{my_flowchart.tex}
+
+	\node [blockio] (eingabe) {Werteliste\\$A=A_0, \dots A_{n-1}$};
+  
+	\node [block, right of=eingabe, node distance=5cm] (init) {$m=A_0$};
+  
+	\node [cloud, below of=init] (loop) {für alle $a\in A$};
+	\node [decision, below of=loop] (check_max) {$a>m$};
+	\node [block, below of=check_max] (set_max) {$m=a$};
+
+	\node [blockio, right of=set_max] (ausgabe) {Maximum $m$};
+	\node [coordinate, left of=check_max, node distance=2.5cm] (c1) {};
+
+	\begin{scope}[on background layer]
+		\node[back_box, fit=(init) (loop) (check_max) (set_max) (c1), label=below:Algorithmus] (algo_box) {};
+		\node[back_box, fit=(eingabe), label=above:Eingabe] (input) {};
+		\node[back_box, fit=(ausgabe), label=below:Ausgabe] (output) {};
+	\end{scope}
+
+	\path [line, ->] (eingabe) -- (init);
+	\path [line, ->] (init) -- (loop);  
+	\path [line, ->] (loop) -| node [near start] {fertig}  (ausgabe);  
+	\path [line, ->] (loop) -- node [near start] {$a=A_i$} (check_max);
+	\path [line, ->] (check_max) -- node [near start] {wahr} (set_max);     
+	\draw [line] (check_max) -- node [midway] {falsch} (c1);
+	\draw [line] (set_max) -| (c1);
+	\draw [line, ->] (c1) |- (loop);
+	
+
+\end{tikzpicture}
+\end{document}

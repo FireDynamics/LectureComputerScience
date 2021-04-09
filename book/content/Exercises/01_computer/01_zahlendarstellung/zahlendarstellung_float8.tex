@@ -1,0 +1,36 @@
+\documentclass[convert={density=300,size=1920x1080,outext=.png}]{standalone}
+\usepackage{tikz,pgfplots}
+\usepackage{xcolor}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{sansmath} % sans serif math
+\sansmath % if you use it globaly
+
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+
+	\definecolor{border_color}{RGB}{80,116,172}
+	\definecolor{fill_color}{RGB}{162,203,240}
+	\definecolor{dot_color}{RGB}{60,60,60}
+
+    \begin{tikzpicture}[scale=3]
+
+        \tikzstyle{every node}=[font=\fontsize{35}{0}\selectfont]
+        \tikzstyle{boxes_style}=[draw=border_color,fill=fill_color, line width=1.5mm]
+        
+        \draw node[above] at (-0.5, 1.25) {Bit}; 
+        
+        \foreach \x in {0,...,7} {
+            \pgfmathtruncatemacro\label{7-\x};
+            \draw[boxes_style] (\x,0) rectangle (\x+1,1); \draw node[above] at (\x+0.5, 1.25) {\label};   
+        }
+    
+        \def\yshift{-0.05}
+        \draw[line width=1mm,decorate,decoration={brace,amplitude=22pt,mirror},yshift=0pt] (1,\yshift) -- (4,\yshift) node [black,midway,yshift=-2.0cm,below] {Bin\"are Darstellung des Exponenten $e$};
+        \draw[line width=1mm,decorate,decoration={brace,amplitude=22pt,mirror},yshift=0pt] (4,\yshift) -- (8,\yshift) node [black,midway,yshift=-0.8cm,below] {Bin\"are Darstellung der Mantisse $m$};
+        
+        \draw[line width=1mm] (0.5,\yshift) -- (0.5,\yshift-0.25) node[below] {Vorzeichen $s$};
+    \end{tikzpicture}
+\end{document}

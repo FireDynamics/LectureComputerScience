@@ -1,0 +1,9 @@
+wheel
+setuptools
+jupyter-book
+jupyterlab
+typing_extensions
+matplotlib
+numpy
+pandas
+scipy
