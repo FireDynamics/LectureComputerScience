@@ -13,7 +13,7 @@
 ########################################
 # Kapitel VORLESUNGSSKRIPT
 - part: Vorlesungsskript
-  numbered: false
+  numbered: 3
   chapters:
 
 ########################################
@@ -138,7 +138,7 @@
 ########################################
 # Kapitel AUFGABENSAMMLUNG
 - part: Aufgabensammlung
-  numbered: false
+  numbered: 2
   chapters:
 
 ########################################
@@ -146,86 +146,60 @@
 
     - file: content/Exercises/01_computer/uebersicht
       sections:
-      - title: 1.1 – Zahlendarstellung
-        file: content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung
-      - title: 1.2 – Darstellung von Zeichen
-        file: content/Exercises/01_computer/02_zeichendarstellung/zeichendarstellung
-      - title: 1.3 – Intervallschachtelung
-        file: content/Exercises/01_computer/03_intervallschachtelung/intervallschachtelung
-      - title: 1.4 – Sieb des Eratosthenes
-        file: content/Exercises/01_computer/04_eratosthenes/eratosthenes
-      - title: 1.5 – Größter gemeinsamer Teiler
-        file: content/Exercises/01_computer/05_ggt/ggt
-      - title: 1.6 – Majorität
-        file: content/Exercises/01_computer/06_majoritaet/majoritaet
-      - title: 1.7 – Prozessorarchitekturen
-        file: content/Exercises/01_computer/07_architekturen/architekturen
-      - title: 1.8 – Betriebssysteme
-        file: content/Exercises/01_computer/08_betriebssysteme/betriebssysteme
+      - file: content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung
+      - file: content/Exercises/01_computer/02_zeichendarstellung/zeichendarstellung
+      - file: content/Exercises/01_computer/03_intervallschachtelung/intervallschachtelung
+      - file: content/Exercises/01_computer/04_eratosthenes/eratosthenes
+      - file: content/Exercises/01_computer/05_ggt/ggt
+      - file: content/Exercises/01_computer/06_majoritaet/majoritaet
+      - file: content/Exercises/01_computer/07_architekturen/architekturen
+      - file: content/Exercises/01_computer/08_betriebssysteme/betriebssysteme
+      
+      - file: content/Exercises/01_computer/zusatzaufgaben/uebersicht
+        numbered: false
+        sections:
+        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen
 
 ########################################
 # AUFGABENSAMMLUNG PYTHON
 
     - file: content/Exercises/02_python/uebersicht
       sections:
-      - title: 2.1 – Markdown
-        file: content/Exercises/02_python/01_markdown/markdown
-      - title: 2.2 – Operationen
-        file: content/Exercises/02_python/02_operationen/operationen
-      - title: 2.3 – Variablen
-        file: content/Exercises/02_python/03_variablen/variablen
-      - title: 2.4 – Listen
-        file: content/Exercises/02_python/04_listen/listen
-      - title: 2.5 – Anwendung von Schleifen
-        file: content/Exercises/02_python/05_schleifen/schleifen
-      - title: 2.6 – Abzweigungen
-        file: content/Exercises/02_python/06_abzweigungen/abzweigungen
-      - title: 2.7 – Näherungsformel für π
-        file: content/Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi
-      - title: 2.8 – Sortieralgorithmus
-        file: content/Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus
-      - title: 2.9 – Formatierte Zeichenketten
-        file: content/Exercises/02_python/09_fstrings/fstrings
-      - title: 2.10 – Einwohnerzahl Europa
-        file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
-      - title: 2.11 – Temperaturdaten
-        file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
+      - file: content/Exercises/02_python/01_markdown/markdown
+      - file: content/Exercises/02_python/02_operationen/operationen
+      - file: content/Exercises/02_python/03_variablen/variablen
+      - file: content/Exercises/02_python/04_listen/listen
+      - file: content/Exercises/02_python/05_schleifen/schleifen
+      - file: content/Exercises/02_python/06_abzweigungen/abzweigungen
+      - file: content/Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi
+      - file: content/Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus
+      - file: content/Exercises/02_python/09_fstrings/fstrings
+      - file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
+      - file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
 
 ########################################
 # AUFGABENSAMMLUNG DATENANALYSE
 
     - file: content/Exercises/03_datenanalyse/uebersicht
       sections:
-      - title: 3.1 – Funktionen Plotten
-        file: content/Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten
-      - title: 3.2 – Daten aus Datei Plotten
-        file: content/Exercises/03_datenanalyse/02_daten_plotten/daten_plotten
-      - title: 3.3 - Numpy Arrays
-        file: content/Exercises/03_datenanalyse/03_numpy_arrays/arrays
-      - title: 3.4 - Temperaturdaten II
-        file: content/Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2
-      - title: 3.5 - Fitting und Interpolation
-        file: content/Exercises/03_datenanalyse/05_interpolation/interpolation
-      - title: 3.6 - Ballonfahrt
-        file: content/Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt
+      - file: content/Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten
+      - file: content/Exercises/03_datenanalyse/02_daten_plotten/daten_plotten
+      - file: content/Exercises/03_datenanalyse/03_numpy_arrays/arrays
+      - file: content/Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2
+      - file: content/Exercises/03_datenanalyse/05_interpolation/interpolation
+      - file: content/Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt
 
 ########################################
 # AUFGABENSAMMLUNG Numerik
 
     - file: content/Exercises/04_numerik/uebersicht
       sections:
-      - title: 4.1 – Trapezfunktion
-        file: content/Exercises/04_numerik/01_trapez/trapez
-      - title: 4.2 – Monte Carlo Integration
-        file: content/Exercises/04_numerik/02_pi_mc/pi_mc
-      - title: 4.3 - 2. Ableitung 2. Ordnung
-        file: content/Exercises/04_numerik/03_abl_analytisch/abl_analytisch
-      - title: 4.4 - Ableitung und Genauigkeit
-        file: content/Exercises/04_numerik/04_abl_num/abl_num
-      - title: 4.5 - Ableitungsfunktion
-        file: content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion
-      - title: 4.6 - Temperaturgleichung
-        file: content/Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung
+      - file: content/Exercises/04_numerik/01_trapez/trapez
+      - file: content/Exercises/04_numerik/02_pi_mc/pi_mc
+      - file: content/Exercises/04_numerik/03_abl_analytisch/abl_analytisch
+      - file: content/Exercises/04_numerik/04_abl_num/abl_num
+      - file: content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion
+      - file: content/Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung
 
 #######################################
 #######################################
