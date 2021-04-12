@@ -1,2 +1,2 @@
 # Lecture Computer Science
-Lecture and exercises 
+Lecture and exercises. 
