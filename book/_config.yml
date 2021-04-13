@@ -35,6 +35,16 @@ notebook_interface : "notebook"
 sphinx:
   config:
     html_show_copyright : false
+    
+###############################################################################
+# MyST extensions
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - linkify
+    - substitution
+    - colon_fence
+    - html_image
 
 ###############################################################################
 # Launch button settings
