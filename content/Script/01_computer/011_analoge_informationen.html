@@ -52,6 +52,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/01_computer/011_analoge_informationen.html" />
+    <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="1.1.2. Digitale Informationen" href="012_digitale_informationen.html" />
@@ -60,6 +62,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://firedynamics.github.io/LectureComputerScience/content/Script/01_computer/011_analoge_informationen.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Analoge Informationen" />
+<meta property="og:description" content="Analoge Informationen  In der Natur sind – auf makroskopischer Skala – alle Informationen kontinuierlich. Das bedeutet, dass alle Werte, z.B. bei einer Messung," />
+<meta property="og:image"       content="https://firedynamics.github.io/LectureComputerScience/_static/cce_logo.png" />
+
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -792,9 +803,15 @@
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
-        
-        
-        <a class="edit-button" href="https://github.com/FireDynamics/LectureFireSimulation/edit/main/book/content/Script/01_computer/011_analoge_informationen.ipynb"><button
+        <a class="repository-button"
+            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/01_computer/011_analoge_informationen.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/01_computer/011_analoge_informationen.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -808,29 +825,6 @@
                         class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/FireDynamics/LectureFireSimulation/main?urlpath=tree/book/content/Script/01_computer/011_analoge_informationen.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://io.cce.uni-wuppertal.de/firesim_ss2020//hub/user-redirect/git-pull?repo=https://github.com/FireDynamics/LectureFireSimulation&urlpath=tree/LectureFireSimulation/book/content/Script/01_computer/011_analoge_informationen.ipynb&branch=main"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../../../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -903,19 +897,13 @@
 <div class="section" id="temperaturmessung">
 <h3>Temperaturmessung<a class="headerlink" href="#temperaturmessung" title="Permalink to this headline">¶</a></h3>
 <p>Die Temperatur, z.B. der Luft, kann mit einem Thermometer gemessen werden. Bei einem <a class="reference external" href="https://de.wikipedia.org/wiki/Fl%C3%BCssigkeitsthermometer">Flüssigkeitsthermometer</a> beruht das Messprinzip auf der Ausdehnung einer Flüssigkeit mit zunehmender Temperatur. Die Änderung des Volumens führt zu einer Änderung des Füllstands, welcher wiederum abgelesen und anhand einer Skala die Temperatur angibt, siehe folgende Abbildung. Die Volumenänderung kann grundsätzlich beliebig klein sein und stellt einen kontinuierlichen Messwert dar. Natülich kann in der Praxis die Temperatur nur im Rahmen der durch die Skala vorgegebenen Genauigkeit abgelesen werden.</p>
+<div class="figure align-default" id="fig-thermometer">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mercury_Thermometer.jpg/277px-Mercury_Thermometer.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mercury_Thermometer.jpg/277px-Mercury_Thermometer.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mercury_Thermometer.jpg/277px-Mercury_Thermometer.jpg" style="width: 20%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Bild: Quecksilberthermometer, Quelle: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Mercury_Thermometer.jpg">Anonimski, Mercury Thermometer, CC BY-SA 3.0</a></span><a class="headerlink" href="#fig-thermometer" title="Permalink to this image">¶</a></p>
+</div>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Thermometer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Mercury_Thermometer.jpg/277px-Mercury_Thermometer.jpg" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Bild: Quecksilberthermometer, Quelle: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Mercury_Thermometer.jpg">Anonimski, Mercury Thermometer, CC BY-SA 3.0</a></p></td>
-</tr>
-</tbody>
-</table>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><video controls> <source src="https://uni-wuppertal.sciebo.de/s/aPPAWLrOhqHtyy2/download" type="video/mp4"> </video></p></th>
+<tr class="row-odd"><th class="text-align:center head"><p><video controls width="40%"> <source src="https://uni-wuppertal.sciebo.de/s/aPPAWLrOhqHtyy2/download" type="video/mp4"> </video></p></th>
 </tr>
 </thead>
 <tbody>
@@ -927,16 +915,10 @@
 <div class="section" id="gewichstmessung">
 <h3>Gewichstmessung<a class="headerlink" href="#gewichstmessung" title="Permalink to this headline">¶</a></h3>
 <p>Um die Masse eines Gegenstandes zu messen, kann dessen Gewichtskraft mit einer <a class="reference external" href="https://de.wikipedia.org/wiki/Waage">Waage</a> gemessen und daraus auf die Masse geschlossen werden. Die vom Körper ausgeübte Kraft kann z.B. mechanisch mit einer Feder gemessen werden. Die Ausdehnung der Feder ist kontinuierlich, so dass auch der Messwert beliebige Werte innerhalb des Messbereichs annehmen kann. Folgende Abbildung zeigt eine Briefwaage als Beispiel.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Briefwaage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Letterbalancemk.jpg/450px-Letterbalancemk.jpg" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p>Bild: Quecksilberthermometer, Quelle: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Letterbalancemk.jpg"> Mondmann, Letterbalancemk, CC BY-SA 3.0</a></p></td>
-</tr>
-</tbody>
-</table>
+<div class="figure align-default" id="fig-jureca">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Letterbalancemk.jpg/450px-Letterbalancemk.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Letterbalancemk.jpg/450px-Letterbalancemk.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Letterbalancemk.jpg/450px-Letterbalancemk.jpg" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Bild: Quecksilberthermometer, Quelle: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Letterbalancemk.jpg"> Mondmann, Letterbalancemk, CC BY-SA 3.0</a></span><a class="headerlink" href="#fig-jureca" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="analoges-signal">
