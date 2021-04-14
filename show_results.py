@@ -1,5 +1,22 @@
 """
-Hide or reveal the solutions to the exercies. 
+Hide or reveal the solutions to the exercies by adding or removing the remove_cell tag for each cell labeled loesung.
+
+Demo:
+to reveal solutions start the program:
+	python show_results.py 
+
+and specify a path when prompted:
+	01_computer/01_zahlendarstellung
+	
+press return again when the path is correct or cancel with strg + c
+
+
+Demo 2:
+to hide solutions just run:
+	python show_results.py hide
+	
+then same steps like above
+
 """
 
 
@@ -30,10 +47,11 @@ for ipath in notebooks:
         if 'loesung' in cell_tags:
             if hide and 'remove_cell' not in cell_tags:
                 cell_tags.append('remove_cell')
+                print('Hid cell in ' + ipath)
             elif not hide:
                 if 'remove_cell' in cell_tags:
                     cell_tags.remove('remove_cell')
-            print(cell_tags)
+                    print('Revealed cell in' + ipath)
         if len(cell_tags) > 0:
             cell['metadata']['tags'] = cell_tags
 
