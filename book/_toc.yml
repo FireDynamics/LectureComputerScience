@@ -159,6 +159,9 @@
         numbered: false
         sections:
         - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen
+        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung
+        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_architekturen
+        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme
 
 ########################################
 # AUFGABENSAMMLUNG PYTHON
