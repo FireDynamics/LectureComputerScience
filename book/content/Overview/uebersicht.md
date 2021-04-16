@@ -8,7 +8,7 @@ Die Vorlesung *Ingenieurinformatik* an der Bergischen Universität Wuppertal wur
 ![Themen](./bilder/fire_banner.png)
 
 
-Dies ist zweite Jahr in dem wir dieses Skript anbieten. Die Motivation zur Erstellung dieses Skriptes ist zum Einen den Teilnehmern der Vorlesung eine Möglichkeit zum Nachlesen der Inhalte zu geben. Und zum Anderen auch Externen bzw. ehemaligen Teilnehmen diese Inhalte frei zur Verfügung zu stellen.
+Dieses Skript wird seit 2020 von uns angeboten. Die Motivation zur Erstellung dieses Skriptes ist zum Einen den Teilnehmern der Vorlesung eine Möglichkeit zum Nachlesen der Inhalte zu geben. Und zum Anderen auch Externen bzw. ehemaligen Teilnehmen diese Inhalte frei zur Verfügung zu stellen.
 
 Jedoch, dieses Skript ist sehr kurz gefasst und wird es auch so bleiben. Viele der Inhalte sind in größerer Tiefe bereits frei zugänglich, so dass auf die entsprechenden Stellen verwiesen wird – anstatt diese einfach zu kopieren.  
 
@@ -33,13 +33,12 @@ An der Ausarbeitung des Skripts und der Übungen sind beteiligt (in alphabetisch
 
 * Lukas Arnold
 * Alexander Belt
+* Kristian Börger
+* Karen De Lannoye
+* Tristan Hehnen
+* Keyvan Najarianeraghi
 * Sven Orzel
 * My Linh Würzburger
-* Kristian Börger
-* Keyvan Najarianeraghi
-* Tristan Hehnen
-* Karen De Lannoye
-
 
 ## Danksagung
 
@@ -53,7 +52,7 @@ Die in der Vorlesung und der Erstellung der Materiallien verwendeten Softwarewer
 ## Kontakt
 
 So erreichen Sie uns:
-* Als Teilnehmer der Vorlesung: am besten über den zugehörigen [Moodle-Kurs](https://moodle.uni-wuppertal.de/course/view.php?id=25250)
+* Als Teilnehmer der Vorlesung: am besten über den zugehörigen [Moodle-Kurs](https://moodle.uni-wuppertal.de/course/view.php?id=25250) an der Bergischen Universität Wuppertal
 * Externe Interessenten benutzten am besten unsere <a href="mailto:cce-inginf@lists.uni-wuppertal.de">Emailliste</a>
 * Kontaktmöglichkeiten zu einzelnen Personen finden Sie auf der [Mitarbeiterwebseite](https://cce.uni-wuppertal.de/index.php?id=4186&L=0)
 
