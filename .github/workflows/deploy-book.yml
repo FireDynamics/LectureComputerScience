@@ -21,7 +21,7 @@ jobs:
 
     # Install dependencies
     - name: Install LaTeX dependencies
-      run: sudo apt install texlive texlive-latex-extra texlive-fonts-recommended dvipng
+      run: sudo apt install texlive texlive-latex-extra texlive-fonts-recommended cm-super dvipng
       
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
