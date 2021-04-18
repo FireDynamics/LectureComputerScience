@@ -939,9 +939,10 @@
 <li><p><span class="math notranslate nohighlight">\(\sf f_2(n) = 2^{n+1} \approx \mathcal{O}(2^n) = g_2(n)\)</span></p></li>
 </ul>
 <div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<img alt="../../../_images/022_eigenschaften_13_0.png" src="../../../_images/022_eigenschaften_13_0.png" />
 </div>
+<div class="figure align-default" id="fig-algorithmus-komplexitaet">
+<a class="reference internal image-reference" href="../../../_images/komplexitaet.svg"><img alt="../../../_images/komplexitaet.svg" src="../../../_images/komplexitaet.svg" width="75%" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.19 </span><span class="caption-text">Komplexität eines Algorithmus durch Vergleich einer Aufwandfunktion mit einer Vergleichsfunktion</span><a class="headerlink" href="#fig-algorithmus-komplexitaet" title="Permalink to this image">¶</a></p>
 </div>
 <p>Um sich ein besseres Bild zu den Auswirkungen hoher Kompexitäten zu machen, sei folgendes Beispiel gegeben.</p>
 <ul class="simple">
@@ -962,9 +963,10 @@
 \[ \sf f(n) = \sum_{i=0}^n i = \frac{n(n-1)}{2} \approx \mathcal{O}(n^2) \]</div>
 <p>Damit hat der Selectionsort eine Komplexität von <span class="math notranslate nohighlight">\(\sf \mathcal{O}(n^2)\)</span>. Die folgende Abbildung verdeutlicht dies nochmals.</p>
 <div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<img alt="../../../_images/022_eigenschaften_20_0.png" src="../../../_images/022_eigenschaften_20_0.png" />
 </div>
+<div class="figure align-default" id="fig-algorithmus-selectionsort">
+<a class="reference internal image-reference" href="../../../_images/sort_selection.svg"><img alt="../../../_images/sort_selection.svg" src="../../../_images/sort_selection.svg" width="75%" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.20 </span><span class="caption-text">Abschätzung der Koplexität des Selectionsort-Algorithmus</span><a class="headerlink" href="#fig-algorithmus-selectionsort" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="komplexitat-bubblesort">
@@ -977,14 +979,16 @@
 </ul>
 <p>Der best case ergibt sich zum Beispiel, falls die Eingabeliste bereits sortiert ist, da der Algorithmus nur einmal durch die Liste gehen muss, entsprechend n-Mal. Folgende Abbildung verdeutlicht die Anzahl der durchgeführten Operationen im Falle einer vollständig zufälligen Liste und einer, bei welcher 95% der Werte bereits sortiert ist. Dabei wurden für jedes <span class="math notranslate nohighlight">\(\sf n\)</span> jeweils 10000 Listen sortiert. Es ist der Mittelwert und die minimalen und maximalen Operationen dargestellt.</p>
 <div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<img alt="../../../_images/022_eigenschaften_24_0.png" src="../../../_images/022_eigenschaften_24_0.png" />
 </div>
+<div class="figure align-default" id="fig-algorithmus-bubble-p000">
+<a class="reference internal image-reference" href="../../../_images/sort_bubble_p000.svg"><img alt="../../../_images/sort_bubble_p000.svg" src="../../../_images/sort_bubble_p000.svg" width="75%" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.21 </span><span class="caption-text">Abschätzung der Koplexität des Bubblesort-Algorithmus ohne Vorsortierung</span><a class="headerlink" href="#fig-algorithmus-bubble-p000" title="Permalink to this image">¶</a></p>
 </div>
 <div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<img alt="../../../_images/022_eigenschaften_26_0.png" src="../../../_images/022_eigenschaften_26_0.png" />
 </div>
+<div class="figure align-default" id="fig-algorithmus-bubble-p095">
+<a class="reference internal image-reference" href="../../../_images/sort_bubble_p095.svg"><img alt="../../../_images/sort_bubble_p095.svg" src="../../../_images/sort_bubble_p095.svg" width="75%" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.22 </span><span class="caption-text">Abschätzung der Koplexität des Bubblesort-Algorithmus mit einer 95%-igen Vorsortierung</span><a class="headerlink" href="#fig-algorithmus-bubble-p095" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
