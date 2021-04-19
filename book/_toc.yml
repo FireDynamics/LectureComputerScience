@@ -157,7 +157,9 @@
       - file: content/Exercises/01_computer/zusatzaufgaben/uebersicht
         numbered: false
         sections:
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen
+        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen
+        - file: content/Exercises/01_computer/zusatzaufgaben/perfekte_zahlen/perfekte_zahlen
+
 
 ########################################
 # AUFGABENSAMMLUNG PYTHON
