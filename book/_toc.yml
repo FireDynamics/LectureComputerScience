@@ -32,7 +32,6 @@
         - file: content/Script/01_computer/021_sortieralgorithmen
         - file: content/Script/01_computer/022_eigenschaften
         - file: content/Script/01_computer/023_numerische_algorithmen
-        - file: content/Script/01_computer/024_smp
 
       - file: content/Script/01_computer/03_hardware
         sections:

@@ -12,7 +12,8 @@ exclude_patterns : [.venv/*]
 ###############################################################################
 # Execution settings
 execute:
-  execute_notebooks : auto
+  execute_notebooks : cache
+  timeout           : 120
 
 ###############################################################################
 # TOC settings
