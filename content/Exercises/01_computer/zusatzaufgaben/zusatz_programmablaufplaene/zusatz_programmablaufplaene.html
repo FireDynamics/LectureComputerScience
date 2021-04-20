@@ -56,7 +56,7 @@
     <link rel="shortcut icon" href="../../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <link rel="next" title="2. Python" href="../../../02_python/uebersicht.html" />
+    <link rel="next" title="Intervallschachtelung" href="../zusatz_intervallschachtelung/zusatz_intervallschachtelung.html" />
     <link rel="prev" title="Perfekte (volkommene) Zahlen" href="../zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -67,7 +67,7 @@
 <meta property="og:url"         content="https://firedynamics.github.io/LectureComputerScience/content/Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Programmablaufpläne" />
-<meta property="og:description" content="Programmablaufpläne  Erstellen Sie ein Flussdiagramm, welches das Minimum bestimmt  Erstellen Sie ein Flussdiagramm, welches das Minimum aller positiven Zahlen " />
+<meta property="og:description" content="Programmablaufpläne  Aufgabe 1  Erstellen Sie einen Programmablaufplan, welcher das Minimum bestimmt  Erstellen Sie einen Programmablaufplan, welcher das Minimu" />
 <meta property="og:image"       content="https://firedynamics.github.io/LectureComputerScience/_static/cce_logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -608,6 +608,21 @@
        Programmablaufpläne
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">
+       Intervallschachtelung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zusatz_architekturen/zusatz_architekturen.html">
+       Prozessorarchitekturen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zusatz_betriebssysteme/zusatz_betriebssysteme.html">
+       Betriebssysteme
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -848,9 +863,16 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
+  <a class="reference internal nav-link" href="#aufgabe-1">
+   Aufgabe 1
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losung">
+     Lösung
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -866,13 +888,15 @@
                 
   <div class="section" id="programmablaufplane">
 <h1>Programmablaufpläne<a class="headerlink" href="#programmablaufplane" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aufgabe-1">
+<h2>Aufgabe 1<a class="headerlink" href="#aufgabe-1" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Erstellen Sie ein Flussdiagramm, welches das Minimum bestimmt</p></li>
-<li><p>Erstellen Sie ein Flussdiagramm, welches das Minimum aller positiven Zahlen bestimmt</p></li>
-<li><p>Erstelle Sie EIN Flussdiagramm, welches sowohl Minimum aller positiven Zahlen als auch Maximum aller negativen Zahlen zurück gibt</p></li>
+<li><p>Erstellen Sie einen Programmablaufplan, welcher das Minimum bestimmt</p></li>
+<li><p>Erstellen Sie einen Programmablaufplan, welcher das Minimum aller positiven Zahlen bestimmt</p></li>
+<li><p>Erstelle Sie EINEN Programmablaufplan, welcher sowohl Minimum aller positiven Zahlen als auch Maximum aller negativen Zahlen zurück gibt</p></li>
 </ol>
-<div class="section" id="losungsvorschlag">
-<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="losung">
+<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">¶</a></h3>
 <div class="toggle docutils container">
 <p><u>Zu 1.</u></p>
 <table class="colwidths-auto table">
@@ -881,7 +905,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>Möglicher Programmlaufplan zur Bestimmung des Minumums</p></td>
+<tr class="row-even"><td class="text-align:center"><p>Möglicher Programmablaufplan zur Bestimmung des Minumums</p></td>
 </tr>
 </tbody>
 </table>
@@ -892,7 +916,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>Möglicher Programmlaufplan zur Bestimmung des Minumums aller positiven Zahlen</p></td>
+<tr class="row-even"><td class="text-align:center"><p>Möglicher Programmablaufplan zur Bestimmung des Minumums aller positiven Zahlen</p></td>
 </tr>
 </tbody>
 </table>
@@ -903,10 +927,11 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:center"><p>Möglicher Programmlaufplan zur Bestimmung Minimums aller positiven Zahlen als auch Maximums aller negativen Zahlen</p></td>
+<tr class="row-even"><td class="text-align:center"><p>Möglicher Programmablaufplan zur Bestimmung Minimums aller positiven Zahlen als auch des Maximums aller negativen Zahlen</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 </div>
@@ -937,7 +962,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html" title="previous page">Perfekte (volkommene) Zahlen</a>
-    <a class='right-next' id="next-link" href="../../../02_python/uebersicht.html" title="next page"><span class="section-number">2. </span>Python</a>
+    <a class='right-next' id="next-link" href="../zusatz_intervallschachtelung/zusatz_intervallschachtelung.html" title="next page">Intervallschachtelung</a>
 
         </div>
         

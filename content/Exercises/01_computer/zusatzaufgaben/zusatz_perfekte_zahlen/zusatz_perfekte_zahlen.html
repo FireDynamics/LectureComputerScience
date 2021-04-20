@@ -69,7 +69,7 @@
 <meta property="og:url"         content="https://firedynamics.github.io/LectureComputerScience/content/Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Perfekte (volkommene) Zahlen" />
-<meta property="og:description" content="Perfekte (volkommene) Zahlen  Eine perfekte (vollkommene) Zahl ist eine natürliche Zahl, die gleich der Summe aller ihrer (positiven) Teiler, &lt;u&gt;ausgenommen sic" />
+<meta property="og:description" content="Perfekte (volkommene) Zahlen  Aufgabe 1  Eine perfekte (vollkommene) Zahl ist eine natürliche Zahl, die gleich der Summe aller ihrer (positiven) Teiler, &lt;u&gt;ausg" />
 <meta property="og:image"       content="https://firedynamics.github.io/LectureComputerScience/_static/cce_logo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -610,6 +610,21 @@
        Programmablaufpläne
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">
+       Intervallschachtelung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zusatz_architekturen/zusatz_architekturen.html">
+       Prozessorarchitekturen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../zusatz_betriebssysteme/zusatz_betriebssysteme.html">
+       Betriebssysteme
+      </a>
+     </li>
     </ul>
     <i class="fas fa-chevron-down">
     </i>
@@ -850,14 +865,21 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungshinweise">
-   Lösungshinweise
+  <a class="reference internal nav-link" href="#aufgabe-1">
+   Aufgabe 1
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungshinweise">
+     Lösungshinweise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losung">
+     Lösung
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -873,6 +895,8 @@
                 
   <div class="section" id="perfekte-volkommene-zahlen">
 <h1>Perfekte (volkommene) Zahlen<a class="headerlink" href="#perfekte-volkommene-zahlen" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aufgabe-1">
+<h2>Aufgabe 1<a class="headerlink" href="#aufgabe-1" title="Permalink to this headline">¶</a></h2>
 <p>Eine perfekte (vollkommene) Zahl ist eine natürliche Zahl, die gleich der Summe aller ihrer (positiven) Teiler, <u>ausgenommen sich selbst</u> ist. Entsprechend ist sie auch eine Zahl, die halb so groß ist wie die Summe aller ihrer positiven Teiler (<u>sie selbst eingeschlossen</u>). Beispielsweise ist <span class="math notranslate nohighlight">\(28 = 1 + 2 + 4 + 7 + 14\)</span> eine vollkommene Zahl.</p>
 <p>Entwickeln Sie einen einen Algorithmus, welcher für eine gegebene Zahl <span class="math notranslate nohighlight">\(n\)</span> überprüft, ob sie vollkommen ist. Bearbeiten Sie dabei folgende Aufgabenstellungen:</p>
 <ol class="simple">
@@ -881,7 +905,7 @@
 <li><p>Stellen Sie alternativ eine analytische Formelbeziehung her und verifizieren Sie anschließend Ihr Ergebnis anhand dieser. Ermitteln sie darauf aufbauend alle perfekten Zahlen zwischen 1 und 500. Hinweis: Eine mögliche Formelbeziehung kann den Lösungshinweisen entnommen werden.</p></li>
 </ol>
 <div class="section" id="losungshinweise">
-<h2>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Permalink to this headline">¶</a></h2>
+<h3>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Permalink to this headline">¶</a></h3>
 <div class="toggle docutils container">
 <ol class="simple">
 <li><p>Definieren sie zunächst eine Variable <span class="math notranslate nohighlight">\(x\)</span> welche die Summe ihrer eigenen Teiler darstellt. In einer Schleife von 1 bis <span class="math notranslate nohighlight">\(n\)</span> kann über eine Modulofunktion geprüft werden, ob der Zähler <span class="math notranslate nohighlight">\(k\)</span> ein echter Teiler von <span class="math notranslate nohighlight">\(n\)</span> (<span class="math notranslate nohighlight">\(n \bmod k = 0\)</span>) ist. Wenn dies der Fall ist, wird der Zähler <span class="math notranslate nohighlight">\(k\)</span> zu <span class="math notranslate nohighlight">\(x\)</span> addiert.</p></li>
@@ -890,8 +914,8 @@
 </ol>
 </div>
 </div>
-<div class="section" id="losungsvorschlag">
-<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="losung">
+<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">¶</a></h3>
 <div class="toggle docutils container">
 <p>Zu 1.</p>
 <table class="colwidths-auto table">
@@ -931,6 +955,7 @@
 <p><span class="math notranslate nohighlight">\(n(2) = 2^{2-1}(2^2 - 1) = 6 = 1 + 2 + 3\)</span></p>
 <p><span class="math notranslate nohighlight">\(n(3)=2^{3-1}(2^3 - 1) = 28 = 1 + 2 + 4 + 7 + 14\)</span></p>
 <p><span class="math notranslate nohighlight">\(n(4) = 2^{4-1}(2^4 - 1) = 496 = 1 + 2 + 4 + 8 + 16 + 31 + 62 + 12 + 248\)</span></p>
+</div>
 </div>
 </div>
 </div>
