@@ -158,8 +158,8 @@
         numbered: false
         sections:
         - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen
         - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene
+        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen
         - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung
         - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen
         - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme
