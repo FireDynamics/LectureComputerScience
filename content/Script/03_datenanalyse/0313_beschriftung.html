@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3.1.3. Beschriftung &#8212; Vorlesung Ingenieurinformatik</title>
     
-  <link rel="stylesheet" href="../../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -58,23 +55,14 @@
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3.1.4. Farben" href="0314_farben.html" />
     <link rel="prev" title="3.1.2. Eindimensionale Daten" href="0312_1d_plots.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://firedynamics.github.io/LectureComputerScience/content/Script/03_datenanalyse/0313_beschriftung.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Beschriftung" />
-<meta property="og:description" content="Beschriftung  Im matplotlib-Modul stehen viele Möglichkeiten zur Beschriftung der einzelnen Graphikelemente zur Verfügung. In diesem Kapitel wird eine kleine Au" />
-<meta property="og:image"       content="https://firedynamics.github.io/LectureComputerScience/_static/cce_logo.png" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -83,25 +71,25 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../../index.html">
-  
-  <img src="../../../_static/cce_logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/cce_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <p class="caption collapsible-parent">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
  <span class="caption-text">
   Ingenieurinformatik
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../Overview/informatik.html">
    Informatik
@@ -113,22 +101,32 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Vorlesungsskript
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../01_computer/00_einleitung.html">
    1. Computer
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2 collapsible-parent">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../01_computer/01_digitalisierung.html">
      1.1. Digitalisierung
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../01_computer/011_analoge_informationen.html">
        1.1.1. Analoge Informationen
@@ -145,14 +143,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../01_computer/02_algorithmen.html">
      1.2. Algorithmen
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../01_computer/021_sortieralgorithmen.html">
        1.2.1. Sortieralgorithmen
@@ -169,14 +170,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../01_computer/03_hardware.html">
      1.3. Hardware
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../01_computer/031_geschichte.html">
        1.3.1. Geschichte der Computer
@@ -193,14 +197,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../01_computer/04_software.html">
      1.4. Software
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../01_computer/041_betriebssysteme.html">
        1.4.1. Betriebssysteme
@@ -217,23 +224,29 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../02_python/02_einleitung.html">
    2. Python
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2 collapsible-parent">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../02_python/021_sprache.html">
      2.1. Sprache
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../02_python/0211_arbeiten.html">
        2.1.1. Arbeiten mit Python
@@ -250,14 +263,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../02_python/022_grundlagen.html">
      2.2. Grundlagen
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../02_python/0221_zahlen.html">
        2.2.1. Zahlen
@@ -294,14 +310,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../02_python/023_flusskontrolle.html">
      2.3. Flusskontrolle
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../02_python/0231_schleifen.html">
        2.3.1. Schleifen
@@ -318,14 +337,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../02_python/024_weiteres.html">
      2.4. Weitere Themen
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../02_python/0241_module.html">
        2.4.1. Module
@@ -342,23 +364,29 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="03_einleitung.html">
    3. Datenanalyse
   </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2 current active collapsible-parent">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="031_visualisierung.html">
      3.1. Visualisierung
     </a>
-    <ul class="current collapse-ul">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="0311_matplotlib.html">
        3.1.1. matplotlib-Modul
@@ -385,14 +413,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="032_verarbeitung.html">
      3.2. Verarbeitung
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="0321_numpy.html">
        3.2.1. numpy-Modul
@@ -424,14 +455,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="033_modellierung.html">
      3.3. Modellierung
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="0331_interpolation.html">
        3.3.1. Polynominterpolation
@@ -448,23 +482,29 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../04_numerik/04_einleitung.html">
    4. Numerik
   </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2 collapsible-parent">
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../04_numerik/041_integrale.html">
      4.1. Integration
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../04_numerik/0411_oberuntersumme.html">
        4.1.1. Ober- und Untersumme
@@ -481,14 +521,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../04_numerik/042_ableitungen.html">
      4.2. Differentiation
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../04_numerik/0421_taylor.html">
        4.2.1. Taylor-Entwicklung
@@ -505,14 +548,17 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../04_numerik/043_dgl.html">
      4.3. Differentialgleichungen
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../04_numerik/0431_fdm.html">
        4.3.1. Finite-Differenzen-Methode
@@ -529,25 +575,26 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Aufgabensammlung
  </span>
 </p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../Exercises/01_computer/uebersicht.html">
    1. Computer
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html">
      1.1. Zahlendarstellung
@@ -588,11 +635,16 @@
      1.8. Betriebssysteme
     </a>
    </li>
-   <li class="toctree-l2 collapsible-parent">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">
      1.9. Zusatzaufgaben
     </a>
-    <ul class="collapse-ul">
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">
        Algorithmen
@@ -624,18 +676,19 @@
       </a>
      </li>
     </ul>
-    <i class="fas fa-chevron-down">
-    </i>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../Exercises/02_python/uebersicht.html">
    2. Python
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Exercises/02_python/01_markdown/markdown.html">
      2.1. Markdown
@@ -692,14 +745,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../Exercises/03_datenanalyse/uebersicht.html">
    3. Datenanalyse
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+  <label for="toctree-checkbox-22">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten.html">
      3.1. Plotten von Funktionen
@@ -731,14 +787,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../Exercises/04_numerik/uebersicht.html">
    4. Numerik
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../Exercises/04_numerik/01_trapez/trapez.html">
      4.1. Trapezfunktion
@@ -770,11 +829,10 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -842,12 +900,12 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -856,12 +914,11 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#achsenbeschriftung">
    Achsenbeschriftung
@@ -889,8 +946,7 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -1081,9 +1137,8 @@
 
       </div>
     </div>
-
     
-  <script src="../../../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
