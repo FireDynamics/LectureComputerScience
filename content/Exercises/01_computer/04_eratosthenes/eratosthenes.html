@@ -960,7 +960,7 @@
 <li><p>Wiederholen Sie diese Schritte, bis alle Zahlen entweder markiert oder durchgestrichen sind</p></li>
 </ul>
 <p>a) Erstellen Sie eine Liste mit den Zahlen von 2 bis 100 und wenden Sie den Algorithmus auf diese Liste an<br>
-b) Versuchen Sie die Ordnung des Algorithmus abzuschätzen und begründen Sie ihre Wahl</p>
+b) Versuchen Sie die Komplexität des Algorithmus abzuschätzen und begründen Sie ihre Wahl</p>
 </div>
 <div class="section" id="losungshinweise">
 <h2>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Permalink to this headline">¶</a></h2>
@@ -994,8 +994,8 @@ b) Versuchen Sie die Ordnung des Algorithmus abzuschätzen und begründen Sie ih
 </div>
 </div>
 </div>
-<p>b) Das größte Problem beim Abschätzen der Ordnung ist, dass man nicht sagen kann, wie viele von n Zahlen tatsächlich Primzahlen sind. Was man jedoch sicher sagen kann ist, dass höchstens jede Zahl eine Primzahl ist. Mit dieser Abschätzung können wir den Algorithmus analysieren.
-Die simpelste Abschätzung der Ordnung wäre, dass wir für jede Primzahl schauen, ob jede andere Zahl durch sie teilbar ist. Bei n Zahlen ergibt sich eine Ordnung von</p>
+<p>b) Das größte Problem beim Abschätzen der Komplexität ist, dass man nicht sagen kann, wie viele von n Zahlen tatsächlich Primzahlen sind. Was man jedoch sicher sagen kann ist, dass höchstens jede Zahl eine Primzahl ist. Mit dieser Abschätzung können wir den Algorithmus analysieren.
+Die simpelste Abschätzung der Komplexität wäre, dass wir für jede Primzahl schauen, ob jede andere Zahl durch sie teilbar ist. Bei n Zahlen ergibt sich eine Komplexität von</p>
 <p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot (n-1)) = \mathcal{O}(n^2).\)</span></p>
 <p>Allerdings muss man nicht für jede der Zahlen jede andere überprüfen. Es reicht, wenn explizit die Vielfachen überprüft und gelöscht werden.
 Addiert man alle Überprüfungen zusammen, erhält man</p>
@@ -1003,7 +1003,7 @@ Addiert man alle Überprüfungen zusammen, erhält man</p>
 <p><span class="math notranslate nohighlight">\(\sum_{i=1}^{n}\frac{1}{i}\)</span> ist die Harmonische Reihe und divergiert mit <span class="math notranslate nohighlight">\(\mathcal{O}(\ln(n))\)</span>. Dies erlaubt eine genauere Abschätzung zu</p>
 <p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot \mathcal{O}(\ln(n))) =  \mathcal{O}(n \cdot \ln(n)).\)</span></p>
 <p><strong>Bonus:</strong>
-Der Algorithmus kann noch weiter optimiert werden, wenn man berücksichtigt, dass jede Zahl als Produkt von Primzahlen darstellbar ist. Nach den ersten <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> Zahlen wurden alle Zahlen aus der Liste gestrichen, deren Primfaktorzerlegung mindestens eine der darin enthaltenen Primzahlen enthällt. Das bedeutet aber, dass die Primfaktorzerlegungen aller folgenden, nicht gestrichenen Zahlen nur aus Primzahlen größer als <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> bestehen können. Da jedoch das Produkt von zwei dieser Zahlen immer größer als <span class="math notranslate nohighlight">\(n\)</span> ist, muss jede noch nicht gestrichene Zahl in der Liste eine Primzahl sein. Folglich kann der Algorithmus beendet werden, sobald die Vielfachen der Zahlen kleiner-gleich <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> überprüft wurden. Für die Ordnung heißt dies:</p>
+Der Algorithmus kann noch weiter optimiert werden, wenn man berücksichtigt, dass jede Zahl als Produkt von Primzahlen darstellbar ist. Nach den ersten <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> Zahlen wurden alle Zahlen aus der Liste gestrichen, deren Primfaktorzerlegung mindestens eine der darin enthaltenen Primzahlen enthällt. Das bedeutet aber, dass die Primfaktorzerlegungen aller folgenden, nicht gestrichenen Zahlen nur aus Primzahlen größer als <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> bestehen können. Da jedoch das Produkt von zwei dieser Zahlen immer größer als <span class="math notranslate nohighlight">\(n\)</span> ist, muss jede noch nicht gestrichene Zahl in der Liste eine Primzahl sein. Folglich kann der Algorithmus beendet werden, sobald die Vielfachen der Zahlen kleiner-gleich <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> überprüft wurden. Für die Komplexität heißt dies:</p>
 <p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot \ln(\sqrt{n})).\)</span></p>
 </div>
 </div>
