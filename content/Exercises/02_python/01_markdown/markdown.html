@@ -1012,8 +1012,11 @@ print( mein_text )
 <li><p>als Teil einer Zeile, eingeschlossen durch <code class="docutils literal notranslate"><span class="pre">$</span></code></p></li>
 <li><p>oder als eigenständige Zeile, eingeschlossen durch <code class="docutils literal notranslate"><span class="pre">$$</span></code>.</p></li>
 </ul>
-<p>Beispiel einer eingebetteten Gleichung, wie <span class="math notranslate nohighlight">\(a=b^2\)</span>, oder einer eigenständigen Zeile
-$<span class="math notranslate nohighlight">\( a^2 + b^2 = c^2. \)</span>$</p>
+<p>Beispiel einer eingebetteten Gleichung, wie <span class="math notranslate nohighlight">\(a=b^2\)</span>, oder einer eigenständigen Zeile</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+a^2 + b^2 = c^2.
+\end{equation*}\]</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Beispiel einer eingebetteten Gleichung, wie $a=b^2$, oder 
 einer eigenständigen Zeile
 $$ a^2 + b^2 = c^2. $$ 
@@ -1022,11 +1025,11 @@ $$ a^2 + b^2 = c^2. $$
 <p>Sonderzeichen oder mathematische Objekte, werden mit einem <code class="docutils literal notranslate"><span class="pre">\</span></code> eingeleitet und Gruppen von Anweisungen mit <code class="docutils literal notranslate"><span class="pre">{}</span></code> eingeschlossen. Die <a class="reference external" href="https://de.wikibooks.org/wiki/LaTeX-Kompendium%3a%5C%5fF%C3%BCr%5fMathematiker">Kurzeinführung in mathematische Ausdrücke in LaTex</a> kann hierzu einen Einstiegspunkt liefern.</p>
 <p>Einige häufig eingesetzte Befehle:</p>
 <ul class="simple">
-<li><p>Textposition, <code class="docutils literal notranslate"><span class="pre">^</span></code> und <code class="docutils literal notranslate"><span class="pre">_</span></code>, z.B. <code class="docutils literal notranslate"><span class="pre">a^{n+1}_k</span></code> wird zu $<span class="math notranslate nohighlight">\(a^{n+1}_k\)</span>$</p></li>
-<li><p>griechische Buchstaben, <code class="docutils literal notranslate"><span class="pre">\alpha</span></code>, <code class="docutils literal notranslate"><span class="pre">\beta</span></code>, etc.: $<span class="math notranslate nohighlight">\(\alpha, \beta\)</span>$</p></li>
-<li><p>Pfeile und Punkte, z.B. <code class="docutils literal notranslate"><span class="pre">\rightarrow</span></code>, <code class="docutils literal notranslate"><span class="pre">\cdot</span></code>: $<span class="math notranslate nohighlight">\( a \rightarrow b \cdot c\)</span>$</p></li>
-<li><p>Summe, Integral, <code class="docutils literal notranslate"><span class="pre">\sum</span></code>, <code class="docutils literal notranslate"><span class="pre">\int</span></code>: $<span class="math notranslate nohighlight">\(\int_0^{x_n} \phi\ d\phi \approx \sum_{i=0}^\infty x^i\)</span>$</p></li>
-<li><p>Brüche, <code class="docutils literal notranslate"><span class="pre">\frac{}{}</span></code>: $<span class="math notranslate nohighlight">\(\frac{a}{b} = \frac{\alpha}{1 + \frac{1}{n}} \)</span>$</p></li>
+<li><p>Textposition, <code class="docutils literal notranslate"><span class="pre">^</span></code> und <code class="docutils literal notranslate"><span class="pre">_</span></code>, z.B. <code class="docutils literal notranslate"><span class="pre">a^{n+1}_k</span></code> wird zu <span class="math notranslate nohighlight">\(a^{n+1}_k\)</span></p></li>
+<li><p>griechische Buchstaben, <code class="docutils literal notranslate"><span class="pre">\alpha</span></code>, <code class="docutils literal notranslate"><span class="pre">\beta</span></code>, etc.: <span class="math notranslate nohighlight">\(\alpha, \beta\)</span></p></li>
+<li><p>Pfeile und Punkte, z.B. <code class="docutils literal notranslate"><span class="pre">\rightarrow</span></code>, <code class="docutils literal notranslate"><span class="pre">\cdot</span></code>: <span class="math notranslate nohighlight">\(a \rightarrow b \cdot c\)</span></p></li>
+<li><p>Summe, Integral, <code class="docutils literal notranslate"><span class="pre">\sum</span></code>, <code class="docutils literal notranslate"><span class="pre">\int</span></code>: <span class="math notranslate nohighlight">\(\int_0^{x_n} \phi\ d\phi \approx \sum_{i=0}^\infty x^i\)</span></p></li>
+<li><p>Brüche, <code class="docutils literal notranslate"><span class="pre">\frac{}{}</span></code>: <span class="math notranslate nohighlight">\(\frac{a}{b} = \frac{\alpha}{1 + \frac{1}{n}} \)</span></p></li>
 </ul>
 <p>Benutzten Sie LaTeX um folgende Formel darzustellen:</p>
 <p><img alt="" src="../../../../_images/latex_example.png" /></p>
