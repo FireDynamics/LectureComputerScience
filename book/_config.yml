@@ -49,6 +49,7 @@ parse:
     - substitution
     - colon_fence
     - html_image
+    - amsmath
 
 ###############################################################################
 # Launch button settings
