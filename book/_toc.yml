@@ -180,6 +180,12 @@
       - file: content/Exercises/02_python/09_fstrings/fstrings
       - file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
       - file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
+      
+      - file: content/Exercises/02_python/zusatzaufgaben/uebersicht
+        numbered: false
+        sections:
+        - file: content/Exercises/02_python/zusatzaufgaben/zusatz_grundlagen
+        - file: content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle
 
 ########################################
 # AUFGABENSAMMLUNG DATENANALYSE
