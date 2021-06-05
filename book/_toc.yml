@@ -10,15 +10,15 @@ parts:
   chapters:
   - file: content/Overview/informatik
   - file: content/Overview/cce
-  
+
 ########################################
 ########################################
-# Kapitel VORLESUNGSSKRIPT  
+# Kapitel VORLESUNGSSKRIPT
 
 - caption: Vorlesungsskript
   numbered: 3
   chapters:
-  
+
 ########################################
 # Kapitel COMPUTER
 
@@ -47,7 +47,7 @@ parts:
 
 ########################################
 # Kapitel PYTHON
-      
+
   - file: content/Script/02_python/02_einleitung
     sections:
     - file: content/Script/02_python/021_sprache
@@ -77,7 +77,7 @@ parts:
 
 ########################################
 # Kapitel DATENANALYSE
-      
+
   - file: content/Script/03_datenanalyse/03_einleitung
     sections:
     - file: content/Script/03_datenanalyse/031_visualisierung
@@ -103,7 +103,7 @@ parts:
 
 ########################################
 # Kapitel NUMERIK
-      
+
   - file: content/Script/04_numerik/04_einleitung
     sections:
     - file: content/Script/04_numerik/041_integrale
@@ -121,16 +121,16 @@ parts:
       - file: content/Script/04_numerik/0431_fdm
       - file: content/Script/04_numerik/0432_ode
       - file: content/Script/04_numerik/0433_pde
-      
+
 
 ########################################
 ########################################
-# Kapitel AUFGABENSAMMLUNG   
-   
+# Kapitel AUFGABENSAMMLUNG
+
 - caption: Aufgabensammlung
   numbered: 2
   chapters:
-  
+
 ########################################
 # AUFGABENSAMMLUNG COMPUTER
 
@@ -155,7 +155,7 @@ parts:
 
 ########################################
 # AUFGABENSAMMLUNG PYTHON
-      
+
   - file: content/Exercises/02_python/uebersicht
     sections:
     - file: content/Exercises/02_python/01_markdown/markdown
@@ -176,7 +176,7 @@ parts:
 
 ########################################
 # AUFGABENSAMMLUNG DATENANALYSE
-      
+
   - file: content/Exercises/03_datenanalyse/uebersicht
     sections:
     - file: content/Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten
@@ -190,11 +190,11 @@ parts:
       - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung
       - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_verarbeitung
       - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_modellierung
-
+      - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung
 
 ########################################
 # AUFGABENSAMMLUNG NUMERIK
-    
+
   - file: content/Exercises/04_numerik/uebersicht
     sections:
     - file: content/Exercises/04_numerik/01_trapez/trapez
@@ -203,8 +203,8 @@ parts:
     - file: content/Exercises/04_numerik/04_abl_num/abl_num
     - file: content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion
     - file: content/Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung
-    
-    
+
+
 #######################################
 #######################################
 # Kapitel AUFGABENSAMMLUNG NUMERIK
