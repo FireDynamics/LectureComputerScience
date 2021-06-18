@@ -951,6 +951,11 @@
      Lösungshinweis
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -977,6 +982,49 @@
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <img alt="../../../../_images/daten_plotten_6_0.png" src="../../../../_images/daten_plotten_6_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">monat</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">regen</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">datafile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;niederschlag_rom.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ueberspringen der 3 Kommentarzeilen</span>
+<span class="n">datafile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">datafile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">datafile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+<span class="c1"># Aufteilen der Messwerte in zwei listen</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">datafile</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>
+    <span class="n">monat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">regen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">datafile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plotten der Messwerte</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">monat</span><span class="p">,</span> <span class="n">regen</span><span class="p">,</span> <span class="s1">&#39;bo-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Regen in Rom&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Zeit / Monat&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Regen / mm&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Regen in Rom gemittelt von 1782 bis 1970&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">ymin</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">monat</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Jan.&#39;</span><span class="p">,</span><span class="s1">&#39;Feb.&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar.&#39;</span><span class="p">,</span> <span class="s1">&#39;Apr.&#39;</span><span class="p">,</span> <span class="s1">&#39;Mai&#39;</span><span class="p">,</span> <span class="s1">&#39;Jun.&#39;</span><span class="p">,</span> <span class="s1">&#39;Jul.&#39;</span><span class="p">,</span> <span class="s1">&#39;Aug.&#39;</span><span class="p">,</span> <span class="s1">&#39;Sep.&#39;</span><span class="p">,</span> <span class="s1">&#39;Okt.&#39;</span><span class="p">,</span> <span class="s1">&#39;Nov.&#39;</span><span class="p">,</span> <span class="s1">&#39;Dez.&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/daten_plotten_8_0.png" src="../../../../_images/daten_plotten_8_0.png" />
 </div>
 </div>
 </div>
