@@ -1,216 +1,205 @@
+format: jb-book
+
 ####################
 ####################
 # INTRODUCTION
 
-- file: content/Overview/uebersicht
-- part: Ingenieurinformatik
-  numbered: False
+root: content/Overview/uebersicht
+parts:
+- caption: Ingenieurinformatik
   chapters:
-    - file: content/Overview/informatik
-    - file: content/Overview/cce
+  - file: content/Overview/informatik
+  - file: content/Overview/cce
+  
+########################################
+########################################
+# Kapitel VORLESUNGSSKRIPT  
 
-########################################
-########################################
-# Kapitel VORLESUNGSSKRIPT
-- part: Vorlesungsskript
+- caption: Vorlesungsskript
   numbered: 3
   chapters:
-
+  
 ########################################
 # Kapitel COMPUTER
-    - file: content/Script/01_computer/00_einleitung
+
+  - file: content/Script/01_computer/00_einleitung
+    sections:
+    - file: content/Script/01_computer/01_digitalisierung
       sections:
-
-      - file: content/Script/01_computer/01_digitalisierung
-        sections:
-        - file: content/Script/01_computer/011_analoge_informationen
-        - file: content/Script/01_computer/012_digitale_informationen
-        - file: content/Script/01_computer/013_zahlendarstellung
-
-      - file: content/Script/01_computer/02_algorithmen
-        sections:
-        - file: content/Script/01_computer/021_sortieralgorithmen
-        - file: content/Script/01_computer/022_eigenschaften
-        - file: content/Script/01_computer/023_numerische_algorithmen
-
-      - file: content/Script/01_computer/03_hardware
-        sections:
-        - file: content/Script/01_computer/031_geschichte
-        - file: content/Script/01_computer/032_komponenten
-        - file: content/Script/01_computer/033_funktionsweise_computer
-
-      - file: content/Script/01_computer/04_software
-        sections:
-        - file: content/Script/01_computer/041_betriebssysteme
-        - file: content/Script/01_computer/042_softwareentwicklung
-        - file: content/Script/01_computer/043_dateisystem
+      - file: content/Script/01_computer/011_analoge_informationen
+      - file: content/Script/01_computer/012_digitale_informationen
+      - file: content/Script/01_computer/013_zahlendarstellung
+    - file: content/Script/01_computer/02_algorithmen
+      sections:
+      - file: content/Script/01_computer/021_sortieralgorithmen
+      - file: content/Script/01_computer/022_eigenschaften
+      - file: content/Script/01_computer/023_numerische_algorithmen
+    - file: content/Script/01_computer/03_hardware
+      sections:
+      - file: content/Script/01_computer/031_geschichte
+      - file: content/Script/01_computer/032_komponenten
+      - file: content/Script/01_computer/033_funktionsweise_computer
+    - file: content/Script/01_computer/04_software
+      sections:
+      - file: content/Script/01_computer/041_betriebssysteme
+      - file: content/Script/01_computer/042_softwareentwicklung
+      - file: content/Script/01_computer/043_dateisystem
 
 ########################################
 # Kapitel PYTHON
-
-    - file: content/Script/02_python/02_einleitung
+      
+  - file: content/Script/02_python/02_einleitung
+    sections:
+    - file: content/Script/02_python/021_sprache
       sections:
-
-        - file: content/Script/02_python/021_sprache
-          sections:
-
-          - file: content/Script/02_python/0211_arbeiten
-          - file: content/Script/02_python/0212_jupyter
-          - file: content/Script/02_python/0213_syntax
-
-        - file: content/Script/02_python/022_grundlagen
-          sections:
-          - file: content/Script/02_python/0221_zahlen
-          - file: content/Script/02_python/0222_operationen
-          - file: content/Script/02_python/0223_variablen
-          - file: content/Script/02_python/0224_funktionen
-          - file: content/Script/02_python/0225_zeichenketten
-          - file: content/Script/02_python/0226_listen
-          - file: content/Script/02_python/0227_sammeltypen
-
-        - file: content/Script/02_python/023_flusskontrolle
-          sections:
-          - file: content/Script/02_python/0231_schleifen
-          - file: content/Script/02_python/0232_abzweigungen
-          - file: content/Script/02_python/0233_funktionen
-
-        - file: content/Script/02_python/024_weiteres
-          sections:
-          - file: content/Script/02_python/0241_module
-          - file: content/Script/02_python/0242_formattierte_strings
-          - file: content/Script/02_python/0243_dateien
+      - file: content/Script/02_python/0211_arbeiten
+      - file: content/Script/02_python/0212_jupyter
+      - file: content/Script/02_python/0213_syntax
+    - file: content/Script/02_python/022_grundlagen
+      sections:
+      - file: content/Script/02_python/0221_zahlen
+      - file: content/Script/02_python/0222_operationen
+      - file: content/Script/02_python/0223_variablen
+      - file: content/Script/02_python/0224_funktionen
+      - file: content/Script/02_python/0225_zeichenketten
+      - file: content/Script/02_python/0226_listen
+      - file: content/Script/02_python/0227_sammeltypen
+    - file: content/Script/02_python/023_flusskontrolle
+      sections:
+      - file: content/Script/02_python/0231_schleifen
+      - file: content/Script/02_python/0232_abzweigungen
+      - file: content/Script/02_python/0233_funktionen
+    - file: content/Script/02_python/024_weiteres
+      sections:
+      - file: content/Script/02_python/0241_module
+      - file: content/Script/02_python/0242_formattierte_strings
+      - file: content/Script/02_python/0243_dateien
 
 ########################################
 # Kapitel DATENANALYSE
-
-    - file: content/Script/03_datenanalyse/03_einleitung
+      
+  - file: content/Script/03_datenanalyse/03_einleitung
+    sections:
+    - file: content/Script/03_datenanalyse/031_visualisierung
       sections:
-
-        - file: content/Script/03_datenanalyse/031_visualisierung
-          sections:
-          - file: content/Script/03_datenanalyse/0311_matplotlib
-          - file: content/Script/03_datenanalyse/0312_1d_plots
-          - file: content/Script/03_datenanalyse/0313_beschriftung
-          - file: content/Script/03_datenanalyse/0314_farben
-          - file: content/Script/03_datenanalyse/0315_skalierung
-
-        - file: content/Script/03_datenanalyse/032_verarbeitung
-          sections:
-          - file: content/Script/03_datenanalyse/0321_numpy
-          - file: content/Script/03_datenanalyse/0322_arrays
-          - file: content/Script/03_datenanalyse/0323_referenzen
-          - file: content/Script/03_datenanalyse/0324_dateien
-          - file: content/Script/03_datenanalyse/0325_mehrdimensional
-          - file: content/Script/03_datenanalyse/0326_bilder
-
-        - file: content/Script/03_datenanalyse/033_modellierung
-          sections:
-          - file: content/Script/03_datenanalyse/0331_interpolation
-          - file: content/Script/03_datenanalyse/0332_fitting
-          - file: content/Script/03_datenanalyse/0333_splines
+      - file: content/Script/03_datenanalyse/0311_matplotlib
+      - file: content/Script/03_datenanalyse/0312_1d_plots
+      - file: content/Script/03_datenanalyse/0313_beschriftung
+      - file: content/Script/03_datenanalyse/0314_farben
+      - file: content/Script/03_datenanalyse/0315_skalierung
+    - file: content/Script/03_datenanalyse/032_verarbeitung
+      sections:
+      - file: content/Script/03_datenanalyse/0321_numpy
+      - file: content/Script/03_datenanalyse/0322_arrays
+      - file: content/Script/03_datenanalyse/0323_referenzen
+      - file: content/Script/03_datenanalyse/0324_dateien
+      - file: content/Script/03_datenanalyse/0325_mehrdimensional
+      - file: content/Script/03_datenanalyse/0326_bilder
+    - file: content/Script/03_datenanalyse/033_modellierung
+      sections:
+      - file: content/Script/03_datenanalyse/0331_interpolation
+      - file: content/Script/03_datenanalyse/0332_fitting
+      - file: content/Script/03_datenanalyse/0333_splines
 
 ########################################
 # Kapitel NUMERIK
-
-    - file: content/Script/04_numerik/04_einleitung
+      
+  - file: content/Script/04_numerik/04_einleitung
+    sections:
+    - file: content/Script/04_numerik/041_integrale
       sections:
-
-        - file: content/Script/04_numerik/041_integrale
-          sections:
-          - file: content/Script/04_numerik/0411_oberuntersumme
-          - file: content/Script/04_numerik/0412_interpolation
-          - file: content/Script/04_numerik/0413_montecarlo
-
-        - file: content/Script/04_numerik/042_ableitungen
-          sections:
-          - file: content/Script/04_numerik/0421_taylor
-          - file: content/Script/04_numerik/0422_differenzenquotienten
-          - file: content/Script/04_numerik/0423_konvergenz
-
-        - file: content/Script/04_numerik/043_dgl
-          sections:
-          - file: content/Script/04_numerik/0431_fdm
-          - file: content/Script/04_numerik/0432_ode
-          - file: content/Script/04_numerik/0433_pde
+      - file: content/Script/04_numerik/0411_oberuntersumme
+      - file: content/Script/04_numerik/0412_interpolation
+      - file: content/Script/04_numerik/0413_montecarlo
+    - file: content/Script/04_numerik/042_ableitungen
+      sections:
+      - file: content/Script/04_numerik/0421_taylor
+      - file: content/Script/04_numerik/0422_differenzenquotienten
+      - file: content/Script/04_numerik/0423_konvergenz
+    - file: content/Script/04_numerik/043_dgl
+      sections:
+      - file: content/Script/04_numerik/0431_fdm
+      - file: content/Script/04_numerik/0432_ode
+      - file: content/Script/04_numerik/0433_pde
+      
 
 ########################################
 ########################################
-# Kapitel AUFGABENSAMMLUNG
-- part: Aufgabensammlung
+# Kapitel AUFGABENSAMMLUNG   
+   
+- caption: Aufgabensammlung
   numbered: 2
   chapters:
-
+  
 ########################################
 # AUFGABENSAMMLUNG COMPUTER
 
-    - file: content/Exercises/01_computer/uebersicht
+  - file: content/Exercises/01_computer/uebersicht
+    sections:
+    - file: content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung
+    - file: content/Exercises/01_computer/02_zeichendarstellung/zeichendarstellung
+    - file: content/Exercises/01_computer/03_intervallschachtelung/intervallschachtelung
+    - file: content/Exercises/01_computer/04_eratosthenes/eratosthenes
+    - file: content/Exercises/01_computer/05_ggt/ggt
+    - file: content/Exercises/01_computer/06_majoritaet/majoritaet
+    - file: content/Exercises/01_computer/07_architekturen/architekturen
+    - file: content/Exercises/01_computer/08_betriebssysteme/betriebssysteme
+    - file: content/Exercises/01_computer/zusatzaufgaben/uebersicht
       sections:
-      - file: content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung
-      - file: content/Exercises/01_computer/02_zeichendarstellung/zeichendarstellung
-      - file: content/Exercises/01_computer/03_intervallschachtelung/intervallschachtelung
-      - file: content/Exercises/01_computer/04_eratosthenes/eratosthenes
-      - file: content/Exercises/01_computer/05_ggt/ggt
-      - file: content/Exercises/01_computer/06_majoritaet/majoritaet
-      - file: content/Exercises/01_computer/07_architekturen/architekturen
-      - file: content/Exercises/01_computer/08_betriebssysteme/betriebssysteme
-      
-      - file: content/Exercises/01_computer/zusatzaufgaben/uebersicht
-        numbered: false
-        sections:
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen
-        - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme
 
 ########################################
 # AUFGABENSAMMLUNG PYTHON
-
-    - file: content/Exercises/02_python/uebersicht
-      sections:
-      - file: content/Exercises/02_python/01_markdown/markdown
-      - file: content/Exercises/02_python/02_operationen/operationen
-      - file: content/Exercises/02_python/03_variablen/variablen
-      - file: content/Exercises/02_python/04_listen/listen
-      - file: content/Exercises/02_python/05_schleifen/schleifen
-      - file: content/Exercises/02_python/06_abzweigungen/abzweigungen
-      - file: content/Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi
-      - file: content/Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus
-      - file: content/Exercises/02_python/09_fstrings/fstrings
-      - file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
-      - file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
       
-      - file: content/Exercises/02_python/zusatzaufgaben/uebersicht
-        numbered: false
-        sections:
-        - file: content/Exercises/02_python/zusatzaufgaben/zusatz_grundlagen
-        - file: content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle
+  - file: content/Exercises/02_python/uebersicht
+    sections:
+    - file: content/Exercises/02_python/01_markdown/markdown
+    - file: content/Exercises/02_python/02_operationen/operationen
+    - file: content/Exercises/02_python/03_variablen/variablen
+    - file: content/Exercises/02_python/04_listen/listen
+    - file: content/Exercises/02_python/05_schleifen/schleifen
+    - file: content/Exercises/02_python/06_abzweigungen/abzweigungen
+    - file: content/Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi
+    - file: content/Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus
+    - file: content/Exercises/02_python/09_fstrings/fstrings
+    - file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
+    - file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
+    - file: content/Exercises/02_python/zusatzaufgaben/uebersicht
+      sections:
+      - file: content/Exercises/02_python/zusatzaufgaben/zusatz_grundlagen
+      - file: content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle
 
 ########################################
 # AUFGABENSAMMLUNG DATENANALYSE
+      
+  - file: content/Exercises/03_datenanalyse/uebersicht
+    sections:
+    - file: content/Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten
+    - file: content/Exercises/03_datenanalyse/02_daten_plotten/daten_plotten
+    - file: content/Exercises/03_datenanalyse/03_numpy_arrays/arrays
+    - file: content/Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2
+    - file: content/Exercises/03_datenanalyse/05_interpolation/interpolation
+    - file: content/Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt
 
-    - file: content/Exercises/03_datenanalyse/uebersicht
-      sections:
-      - file: content/Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten
-      - file: content/Exercises/03_datenanalyse/02_daten_plotten/daten_plotten
-      - file: content/Exercises/03_datenanalyse/03_numpy_arrays/arrays
-      - file: content/Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2
-      - file: content/Exercises/03_datenanalyse/05_interpolation/interpolation
-      - file: content/Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt
 
 ########################################
-# AUFGABENSAMMLUNG Numerik
-
-    - file: content/Exercises/04_numerik/uebersicht
-      sections:
-      - file: content/Exercises/04_numerik/01_trapez/trapez
-      - file: content/Exercises/04_numerik/02_pi_mc/pi_mc
-      - file: content/Exercises/04_numerik/03_abl_analytisch/abl_analytisch
-      - file: content/Exercises/04_numerik/04_abl_num/abl_num
-      - file: content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion
-      - file: content/Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung
-
+# AUFGABENSAMMLUNG NUMERIK
+    
+  - file: content/Exercises/04_numerik/uebersicht
+    sections:
+    - file: content/Exercises/04_numerik/01_trapez/trapez
+    - file: content/Exercises/04_numerik/02_pi_mc/pi_mc
+    - file: content/Exercises/04_numerik/03_abl_analytisch/abl_analytisch
+    - file: content/Exercises/04_numerik/04_abl_num/abl_num
+    - file: content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion
+    - file: content/Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung
+    
+    
 #######################################
 #######################################
 # Kapitel AUFGABENSAMMLUNG NUMERIK
