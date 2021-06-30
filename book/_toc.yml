@@ -185,6 +185,11 @@ parts:
     - file: content/Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2
     - file: content/Exercises/03_datenanalyse/05_interpolation/interpolation
     - file: content/Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt
+    - file: content/Exercises/03_datenanalyse/zusatzaufgaben/uebersicht
+      sections:
+      - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung
+      - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_verarbeitung
+      - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_modellierung
 
 
 ########################################
