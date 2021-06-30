@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualisierung &#8212; Vorlesung Ingenieurinformatik</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung.html" />
+    <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Verarbeitung" href="zusatz_verarbeitung.html" />
+    <link rel="prev" title="3.7. Zusatzaufgaben" href="uebersicht.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      <img src="../../../../_static/cce_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Ingenieurinformatik
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Overview/informatik.html">
+   Informatik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Overview/cce.html">
+   Computational Civil Engineering (CCE)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vorlesungsskript
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/01_computer/00_einleitung.html">
+   1. Computer
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/01_digitalisierung.html">
+     1.1. Digitalisierung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/011_analoge_informationen.html">
+       1.1.1. Analoge Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/012_digitale_informationen.html">
+       1.1.2. Digitale Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/013_zahlendarstellung.html">
+       1.1.3. Digitale Zahlendarstellung
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/02_algorithmen.html">
+     1.2. Algorithmen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/021_sortieralgorithmen.html">
+       1.2.1. Sortieralgorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/022_eigenschaften.html">
+       1.2.2. Eigenschaften
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/023_numerische_algorithmen.html">
+       1.2.3. Numerische Algorithmen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/03_hardware.html">
+     1.3. Hardware
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/031_geschichte.html">
+       1.3.1. Geschichte der Computer
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/032_komponenten.html">
+       1.3.2. Aufbau eines Computers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/033_funktionsweise_computer.html">
+       1.3.3. Arbeitsweise eines Computers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/04_software.html">
+     1.4. Software
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/041_betriebssysteme.html">
+       1.4.1. Betriebssysteme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/042_softwareentwicklung.html">
+       1.4.2. Softwareentwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/043_dateisystem.html">
+       1.4.3. Dateisystem
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/02_python/02_einleitung.html">
+   2. Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/021_sprache.html">
+     2.1. Sprache
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0211_arbeiten.html">
+       2.1.1. Arbeiten mit Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0212_jupyter.html">
+       2.1.2. JupyterLab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0213_syntax.html">
+       2.1.3. Syntax
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/022_grundlagen.html">
+     2.2. Grundlagen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0221_zahlen.html">
+       2.2.1. Zahlen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0222_operationen.html">
+       2.2.2. Operationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0223_variablen.html">
+       2.2.3. Variablen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0224_funktionen.html">
+       2.2.4. Funktionen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0225_zeichenketten.html">
+       2.2.5. Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0226_listen.html">
+       2.2.6. Listen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0227_sammeltypen.html">
+       2.2.7. Sammeltypen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/023_flusskontrolle.html">
+     2.3. Flusskontrolle
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0231_schleifen.html">
+       2.3.1. Schleifen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0232_abzweigungen.html">
+       2.3.2. Abzweigungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0233_funktionen.html">
+       2.3.3. Funktionen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/024_weiteres.html">
+     2.4. Weitere Themen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0241_module.html">
+       2.4.1. Module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0242_formattierte_strings.html">
+       2.4.2. Formatierte Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0243_dateien.html">
+       2.4.3. Dateien
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/03_datenanalyse/03_einleitung.html">
+   3. Datenanalyse
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/03_datenanalyse/031_visualisierung.html">
+     3.1. Visualisierung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0311_matplotlib.html">
+       3.1.1. matplotlib-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0312_1d_plots.html">
+       3.1.2. Eindimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0313_beschriftung.html">
+       3.1.3. Beschriftung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0314_farben.html">
+       3.1.4. Farben
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0315_skalierung.html">
+       3.1.5. Skalierung
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/03_datenanalyse/032_verarbeitung.html">
+     3.2. Verarbeitung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0321_numpy.html">
+       3.2.1. numpy-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0322_arrays.html">
+       3.2.2. numpy-Arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0323_referenzen.html">
+       3.2.3. Referenzen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0324_dateien.html">
+       3.2.4. Dateien
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0325_mehrdimensional.html">
+       3.2.5. Mehrdimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0326_bilder.html">
+       3.2.6. Bilddaten
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/03_datenanalyse/033_modellierung.html">
+     3.3. Modellierung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0331_interpolation.html">
+       3.3.1. Polynominterpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0332_fitting.html">
+       3.3.2. Fitting
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0333_splines.html">
+       3.3.3. Splines
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/04_numerik/04_einleitung.html">
+   4. Numerik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/04_numerik/041_integrale.html">
+     4.1. Integration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0411_oberuntersumme.html">
+       4.1.1. Ober- und Untersumme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0412_interpolation.html">
+       4.1.2. Interpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0413_montecarlo.html">
+       4.1.3. Monte-Carlo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/04_numerik/042_ableitungen.html">
+     4.2. Differentiation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0421_taylor.html">
+       4.2.1. Taylor-Entwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0422_differenzenquotienten.html">
+       4.2.2. Differenzenformeln
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0423_konvergenz.html">
+       4.2.3. Fehlerbetrachtung
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/04_numerik/043_dgl.html">
+     4.3. Differentialgleichungen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0431_fdm.html">
+       4.3.1. Finite-Differenzen-Methode
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0432_ode.html">
+       4.3.2. Gewöhnliche DGL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0433_pde.html">
+       4.3.3. Partielle DGL
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Aufgabensammlung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_computer/uebersicht.html">
+   1. Computer
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/01_zahlendarstellung/zahlendarstellung.html">
+     1.1. Zahlendarstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/02_zeichendarstellung/zeichendarstellung.html">
+     1.2. Darstellung von Zeichen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/03_intervallschachtelung/intervallschachtelung.html">
+     1.3. Intervallschachtelung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/04_eratosthenes/eratosthenes.html">
+     1.4. Sieb von Eratosthenes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/05_ggt/ggt.html">
+     1.5. Größter gemeinsamer Teiler (ggT)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/06_majoritaet/majoritaet.html">
+     1.6. Majorität
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/07_architekturen/architekturen.html">
+     1.7. Prozessorarchitekturen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/08_betriebssysteme/betriebssysteme.html">
+     1.8. Betriebssysteme
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01_computer/zusatzaufgaben/uebersicht.html">
+     1.9. Zusatzaufgaben
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">
+       Algorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">
+       Programmablaufpläne
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">
+       Perfekte (volkommene) Zahlen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">
+       Intervallschachtelung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">
+       Prozessorarchitekturen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">
+       Betriebssysteme
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_python/uebersicht.html">
+   2. Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/01_markdown/markdown.html">
+     2.1. Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/02_operationen/operationen.html">
+     2.2. Operationen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/03_variablen/variablen.html">
+     2.3. Variablen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/04_listen/listen.html">
+     2.4. Listen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/05_schleifen/schleifen.html">
+     2.5. Anwendung von Schleifen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/06_abzweigungen/abzweigungen.html">
+     2.6. Abzweigungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/07_naeherungsformel_pi/naeherungsformel_pi.html">
+     2.7. Funktion für π-Näherungsformel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/08_sortieralgorithmus/sortieralgorithmus.html">
+     2.8. Sortieralgorithmus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/09_fstrings/fstrings.html">
+     2.9. Formattierte Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/10_einwohner_europa/einwohner_europa.html">
+     2.10. Einwohnerzahl Europa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/11_temperaturdaten/temperaturdaten.html">
+     2.11. Temperaturdaten
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../02_python/zusatzaufgaben/uebersicht.html">
+     2.12. Zusatzaufgaben
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_python/zusatzaufgaben/zusatz_grundlagen.html">
+       Grundlagen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_python/zusatzaufgaben/zusatz_flusskontrolle.html">
+       Flusskontrolle
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../uebersicht.html">
+   3. Datenanalyse
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_funktionen_plotten/funktionen_plotten.html">
+     3.1. Plotten von Funktionen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_daten_plotten/daten_plotten.html">
+     3.2. Daten aus Datei plotten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_numpy_arrays/arrays.html">
+     3.3. Numpy Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_Temperaturdaten_2/temperaturdaten_2.html">
+     3.4. Temperaturdaten II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05_interpolation/interpolation.html">
+     3.5. Fitting und Interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06_ballonfahrt/ballonfahrt.html">
+     3.6. Ballonfahrt
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="uebersicht.html">
+     3.7. Zusatzaufgaben
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Visualisierung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zusatz_verarbeitung.html">
+       Verarbeitung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zusatz_modellierung.html">
+       Modellierung
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_numerik/uebersicht.html">
+   4. Numerik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+  <label for="toctree-checkbox-25">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/01_trapez/trapez.html">
+     4.1. Trapezfunktion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/02_pi_mc/pi_mc.html">
+     4.2. Monte Carlo Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/03_abl_analytisch/abl_analytisch.html">
+     4.3. 2. Ableitung 2. Ordnung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/04_abl_num/abl_num.html">
+     4.4. Ableitung und Genauigkeit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/05_ableitungsfunktion/ableitungsfunktion.html">
+     4.5. Ableitungsfunktion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/06_temperaturgleichung/temperaturgleichung.html">
+     4.6. Temperaturgleichung
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kunst">
+   Kunst
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="visualisierung">
+<h1>Visualisierung<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="kunst">
+<h2>Kunst<a class="headerlink" href="#kunst" title="Permalink to this headline">¶</a></h2>
+<p>Schreiben Sie ein Programm, das mithilfe unterschiedlicher Matplotlibbefehlen etwas kreatives darstellt. Benutzen Sie auch unterschiedliche Farben. Inspiration können Sie sich <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">hier</a> holen.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patheffects</span> <span class="k">as</span> <span class="nn">path_effects</span>
+
+<span class="k">def</span> <span class="nf">draw_background</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">sun_pos</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">150.1</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">100.1</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.0001</span><span class="o">*</span><span class="p">(</span><span class="n">X</span><span class="o">-</span><span class="n">sun_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.0001</span><span class="o">*</span><span class="p">(</span><span class="n">Y</span><span class="o">-</span><span class="n">sun_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmax</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">vmin</span><span class="o">=-</span><span class="nb">abs</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+    <span class="n">cset1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Purples&#39;</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">draw_sun</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">draw_mountain</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw_tree_crown</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">pos</span><span class="o">-</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">+</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">bottom</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">bottom</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">path_effects</span><span class="o">=</span><span class="p">[</span><span class="n">path_effects</span><span class="o">.</span><span class="n">withTickedStroke</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="mi">155</span><span class="p">)])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">path_effects</span><span class="o">=</span><span class="p">[</span><span class="n">path_effects</span><span class="o">.</span><span class="n">withTickedStroke</span><span class="p">(</span><span class="n">angle</span><span class="o">=</span><span class="mi">25</span><span class="p">)])</span>
+    
+<span class="k">def</span> <span class="nf">draw_forest</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">pos_trees</span><span class="p">,</span> <span class="n">bottom_trees</span><span class="p">,</span> <span class="n">top_trees</span><span class="p">,</span> <span class="n">width_trees</span><span class="p">):</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">pos_trees</span><span class="p">,</span> <span class="n">bottom_trees</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># tree trunks as bar plots</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos_trees</span><span class="p">)):</span>
+        <span class="n">draw_tree_crown</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">pos_trees</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">bottom_trees</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">top_trees</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">width_trees</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    
+    
+<span class="n">sun_position</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">70</span><span class="p">]</span>   
+<span class="n">mountains_x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span><span class="mi">50</span> <span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">140</span><span class="p">,</span><span class="mi">150</span><span class="p">]</span>
+<span class="n">mountains_y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="n">pos_trees</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">120</span><span class="p">]</span>
+<span class="n">bottom_trees</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="n">top_trees</span> <span class="o">=</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
+<span class="n">width_trees</span><span class="o">=</span><span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+    
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Am Abend&#39;</span><span class="p">)</span>
+<span class="n">draw_background</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">sun_position</span><span class="p">)</span>
+<span class="n">draw_sun</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">sun_position</span><span class="p">)</span>
+<span class="n">draw_mountain</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">mountains_x</span><span class="p">,</span> <span class="n">mountains_y</span><span class="p">)</span>
+<span class="n">draw_forest</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">pos_trees</span><span class="p">,</span> <span class="n">bottom_trees</span><span class="p">,</span> <span class="n">top_trees</span><span class="p">,</span> <span class="n">width_trees</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_visualisierung_2_0.png" src="../../../../_images/zusatz_visualisierung_2_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/Exercises/03_datenanalyse/zusatzaufgaben"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="uebersicht.html" title="previous page"><span class="section-number">3.7. </span>Zusatzaufgaben</a>
+    <a class='right-next' id="next-link" href="zusatz_verarbeitung.html" title="next page">Verarbeitung</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Team Fire | CCE@BUW + IAS-7@FZJ<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
