@@ -1,0 +1,1446 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bildverarbeitung &#8212; Vorlesung Ingenieurinformatik</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.html" />
+    <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="4. Numerik" href="../../04_numerik/uebersicht.html" />
+    <link rel="prev" title="Modellierung" href="zusatz_modellierung.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      <img src="../../../../_static/cce_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Ingenieurinformatik
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Overview/informatik.html">
+   Informatik
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../Overview/cce.html">
+   Computational Civil Engineering (CCE)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vorlesungsskript
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/01_computer/00_einleitung.html">
+   1. Computer
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/01_digitalisierung.html">
+     1.1. Digitalisierung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/011_analoge_informationen.html">
+       1.1.1. Analoge Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/012_digitale_informationen.html">
+       1.1.2. Digitale Informationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/013_zahlendarstellung.html">
+       1.1.3. Digitale Zahlendarstellung
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/02_algorithmen.html">
+     1.2. Algorithmen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/021_sortieralgorithmen.html">
+       1.2.1. Sortieralgorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/022_eigenschaften.html">
+       1.2.2. Eigenschaften
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/023_numerische_algorithmen.html">
+       1.2.3. Numerische Algorithmen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/03_hardware.html">
+     1.3. Hardware
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/031_geschichte.html">
+       1.3.1. Geschichte der Computer
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/032_komponenten.html">
+       1.3.2. Aufbau eines Computers
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/033_funktionsweise_computer.html">
+       1.3.3. Arbeitsweise eines Computers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/01_computer/04_software.html">
+     1.4. Software
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/041_betriebssysteme.html">
+       1.4.1. Betriebssysteme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/042_softwareentwicklung.html">
+       1.4.2. Softwareentwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/01_computer/043_dateisystem.html">
+       1.4.3. Dateisystem
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/02_python/02_einleitung.html">
+   2. Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/021_sprache.html">
+     2.1. Sprache
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0211_arbeiten.html">
+       2.1.1. Arbeiten mit Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0212_jupyter.html">
+       2.1.2. JupyterLab
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0213_syntax.html">
+       2.1.3. Syntax
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/022_grundlagen.html">
+     2.2. Grundlagen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0221_zahlen.html">
+       2.2.1. Zahlen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0222_operationen.html">
+       2.2.2. Operationen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0223_variablen.html">
+       2.2.3. Variablen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0224_funktionen.html">
+       2.2.4. Funktionen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0225_zeichenketten.html">
+       2.2.5. Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0226_listen.html">
+       2.2.6. Listen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0227_sammeltypen.html">
+       2.2.7. Sammeltypen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/023_flusskontrolle.html">
+     2.3. Flusskontrolle
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0231_schleifen.html">
+       2.3.1. Schleifen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0232_abzweigungen.html">
+       2.3.2. Abzweigungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0233_funktionen.html">
+       2.3.3. Funktionen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/02_python/024_weiteres.html">
+     2.4. Weitere Themen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0241_module.html">
+       2.4.1. Module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0242_formattierte_strings.html">
+       2.4.2. Formatierte Zeichenketten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/02_python/0243_dateien.html">
+       2.4.3. Dateien
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/03_datenanalyse/03_einleitung.html">
+   3. Datenanalyse
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/03_datenanalyse/031_visualisierung.html">
+     3.1. Visualisierung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0311_matplotlib.html">
+       3.1.1. matplotlib-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0312_1d_plots.html">
+       3.1.2. Eindimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0313_beschriftung.html">
+       3.1.3. Beschriftung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0314_farben.html">
+       3.1.4. Farben
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0315_skalierung.html">
+       3.1.5. Skalierung
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/03_datenanalyse/032_verarbeitung.html">
+     3.2. Verarbeitung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0321_numpy.html">
+       3.2.1. numpy-Modul
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0322_arrays.html">
+       3.2.2. numpy-Arrays
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0323_referenzen.html">
+       3.2.3. Referenzen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0324_dateien.html">
+       3.2.4. Dateien
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0325_mehrdimensional.html">
+       3.2.5. Mehrdimensionale Daten
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0326_bilder.html">
+       3.2.6. Bilddaten
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/03_datenanalyse/033_modellierung.html">
+     3.3. Modellierung
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0331_interpolation.html">
+       3.3.1. Polynominterpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0332_fitting.html">
+       3.3.2. Fitting
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/03_datenanalyse/0333_splines.html">
+       3.3.3. Splines
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../Script/04_numerik/04_einleitung.html">
+   4. Numerik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/04_numerik/041_integrale.html">
+     4.1. Integration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0411_oberuntersumme.html">
+       4.1.1. Ober- und Untersumme
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0412_interpolation.html">
+       4.1.2. Interpolation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0413_montecarlo.html">
+       4.1.3. Monte-Carlo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/04_numerik/042_ableitungen.html">
+     4.2. Differentiation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0421_taylor.html">
+       4.2.1. Taylor-Entwicklung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0422_differenzenquotienten.html">
+       4.2.2. Differenzenformeln
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0423_konvergenz.html">
+       4.2.3. Fehlerbetrachtung
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../Script/04_numerik/043_dgl.html">
+     4.3. Differentialgleichungen
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0431_fdm.html">
+       4.3.1. Finite-Differenzen-Methode
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0432_ode.html">
+       4.3.2. Gewöhnliche DGL
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../Script/04_numerik/0433_pde.html">
+       4.3.3. Partielle DGL
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Aufgabensammlung
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01_computer/uebersicht.html">
+   1. Computer
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/01_zahlendarstellung/zahlendarstellung.html">
+     1.1. Zahlendarstellung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/02_zeichendarstellung/zeichendarstellung.html">
+     1.2. Darstellung von Zeichen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/03_intervallschachtelung/intervallschachtelung.html">
+     1.3. Intervallschachtelung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/04_eratosthenes/eratosthenes.html">
+     1.4. Sieb von Eratosthenes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/05_ggt/ggt.html">
+     1.5. Größter gemeinsamer Teiler (ggT)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/06_majoritaet/majoritaet.html">
+     1.6. Majorität
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/07_architekturen/architekturen.html">
+     1.7. Prozessorarchitekturen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01_computer/08_betriebssysteme/betriebssysteme.html">
+     1.8. Betriebssysteme
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../01_computer/zusatzaufgaben/uebersicht.html">
+     1.9. Zusatzaufgaben
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">
+       Algorithmen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">
+       Programmablaufpläne
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">
+       Perfekte (volkommene) Zahlen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">
+       Intervallschachtelung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">
+       Prozessorarchitekturen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">
+       Betriebssysteme
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02_python/uebersicht.html">
+   2. Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+  <label for="toctree-checkbox-21">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/01_markdown/markdown.html">
+     2.1. Markdown
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/02_operationen/operationen.html">
+     2.2. Operationen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/03_variablen/variablen.html">
+     2.3. Variablen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/04_listen/listen.html">
+     2.4. Listen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/05_schleifen/schleifen.html">
+     2.5. Anwendung von Schleifen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/06_abzweigungen/abzweigungen.html">
+     2.6. Abzweigungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/07_naeherungsformel_pi/naeherungsformel_pi.html">
+     2.7. Funktion für π-Näherungsformel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/08_sortieralgorithmus/sortieralgorithmus.html">
+     2.8. Sortieralgorithmus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/09_fstrings/fstrings.html">
+     2.9. Formattierte Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/10_einwohner_europa/einwohner_europa.html">
+     2.10. Einwohnerzahl Europa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02_python/11_temperaturdaten/temperaturdaten.html">
+     2.11. Temperaturdaten
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../02_python/zusatzaufgaben/uebersicht.html">
+     2.12. Zusatzaufgaben
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_python/zusatzaufgaben/zusatz_grundlagen.html">
+       Grundlagen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../02_python/zusatzaufgaben/zusatz_flusskontrolle.html">
+       Flusskontrolle
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../uebersicht.html">
+   3. Datenanalyse
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01_funktionen_plotten/funktionen_plotten.html">
+     3.1. Plotten von Funktionen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02_daten_plotten/daten_plotten.html">
+     3.2. Daten aus Datei plotten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_numpy_arrays/arrays.html">
+     3.3. Numpy Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04_Temperaturdaten_2/temperaturdaten_2.html">
+     3.4. Temperaturdaten II
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05_interpolation/interpolation.html">
+     3.5. Fitting und Interpolation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06_ballonfahrt/ballonfahrt.html">
+     3.6. Ballonfahrt
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="uebersicht.html">
+     3.7. Zusatzaufgaben
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="zusatz_visualisierung.html">
+       Visualisierung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zusatz_verarbeitung.html">
+       Verarbeitung
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="zusatz_modellierung.html">
+       Modellierung
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Bildverarbeitung
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../04_numerik/uebersicht.html">
+   4. Numerik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+  <label for="toctree-checkbox-25">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/01_trapez/trapez.html">
+     4.1. Trapezfunktion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/02_pi_mc/pi_mc.html">
+     4.2. Monte Carlo Integration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/03_abl_analytisch/abl_analytisch.html">
+     4.3. 2. Ableitung 2. Ordnung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/04_abl_num/abl_num.html">
+     4.4. Ableitung und Genauigkeit
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/05_ableitungsfunktion/ableitungsfunktion.html">
+     4.5. Ableitungsfunktion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../04_numerik/06_temperaturgleichung/temperaturgleichung.html">
+     4.6. Temperaturgleichung
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weiszabgleich">
+   Weißabgleich
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aufgabe">
+     Aufgabe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-stacking">
+   Image Stacking
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aufgabenteil-1">
+     Aufgabenteil 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Lösungsvorschlag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aufgabenteil-2">
+     Aufgabenteil 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#freistellen-von-objekten">
+   Freistellen von Objekten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Aufgabe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gammakorrektur">
+   Gammakorrektur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Aufgabe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bildverarbeitung">
+<h1>Bildverarbeitung<a class="headerlink" href="#bildverarbeitung" title="Permalink to this headline">¶</a></h1>
+<p>Die nachfolgenden Aufgaben behandeln das Einlesen und Bearbeiten von Bilddateien. Verwenden das Modul <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> zum Einlesen und Darstellen der Dateien und <code class="docutils literal notranslate"><span class="pre">Numpy</span></code> zur Datenverarbeitung. JPEG Bilder wie sie im Folgenden verwendet werden, können mittels Python als dreidimensionales Array eingelesen werden. Oftmals empfiehlt es sich die Bearbeitung getrennt für die drei Farbkanäle <span class="math notranslate nohighlight">\((R, G, B)\)</span> vorzunehmen. Sämtliche Bilder können zur lokalen Bearbeitung der Aufgaben hier heruntergeladen heruntergeladen werden: <a class="reference download internal" download="" href="../../../../_downloads/6f7d4470ea42fd0ad9606ae2ee192ea9/Bilder.zip"><code class="xref download docutils literal notranslate"><span class="pre">Bilder.zip</span></code></a>.
+Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können wie folgt adressiert werden:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_dir</span> <span class="o">=</span> <span class="s1">&#39;/srv/images/&#39;</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">image_dir</span> <span class="o">+</span> <span class="s1">&#39;imagename.jpg&#39;</span>
+<span class="n">bild_array</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="weiszabgleich">
+<h2>Weißabgleich<a class="headerlink" href="#weiszabgleich" title="Permalink to this headline">¶</a></h2>
+<p>Der Weißabgleich dient der Anpassung der Farbtemperatur eines Fotos an die Lichtbedingungen des Aufnahmeortes. Dies kann erreicht werden, indem die Intensitäten der drei Farbkanäle des Fotos anhand eines Referenzpixels skaliert werden. Der Referenzpixel wird dabei aus einem Bereich des Bildes ausgewählt, der wahrheitsgemäß als weiß oder grau angenommen wird. Für die Übung benötigen Sie das Bild “Weissabgleich.jpg”</p>
+<div class="section" id="aufgabe">
+<h3>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h3>
+<p>Nachfolgendes Foto weist durch einen falschen Weißabgleich einen erheblichen Blaustich auf. Wählen Sie einen Referenzpixel innerhalb des Bildes und korrigieren Sie die Intensitäten der drei Farbkanäle auf ein einheitliches Niveau. Skalieren Sie sämtliche Pixel des Bildes anhand der zuvor bestimmten Korrekturfaktoren.</p>
+<p>Orientieren Sie sich dabei an den folgenden Bearbeitungsschritten:</p>
+<ol class="simple">
+<li><p>Lesen Sie das Bild mit <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> als dreidimensionales <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> ein.</p></li>
+<li><p>Extrahieren Sie die Werte für die drei Farbkanäle für einen einzigen Referenzpixel innerhalb des Bildes, welcher in der Realität idealerweise einen Weiß- oder Grauton aufweist, für den also gilt <span class="math notranslate nohighlight">\(R = G = B\)</span>.</p></li>
+<li><p>Bestimmen Sie die Skalierungsfaktoren, die erforderlich sind um ein Farbgleichgewicht für diesen Pixel zu erreichen. Normieren Sie diese auf den grünen Farbkanal (Kanal 1).</p></li>
+<li><p>Skalieren Sie die Farbwerte sämtlicher Pixel des Bildes mit den Skalierungsfaktoren.</p></li>
+<li><p>Stellen Sie das modifizierte <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> erneut mit <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> dar.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Hinweis</p>
+<p>Beachten Sie, dass die Funktion <code class="docutils literal notranslate"><span class="pre">matplotlib.imshow</span></code> lediglich die Ausgabe von RGB Bildern mit Integerwerten, also Ganzzahlen erlaubt. Floatwerte (Fließkommazahlen) müssen vorab entsprechend gerundet bzw. konvertiert werden.</p>
+</div>
+<div class="figure align-default" id="fig-weiszabgleich">
+<a class="reference internal image-reference" href="../../../../_images/weissabgleich.jpg"><img alt="../../../../_images/weissabgleich.jpg" src="../../../../_images/weissabgleich.jpg" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Foto mit falschem Weißabgleich und starkem Blaustich</span><a class="headerlink" href="#fig-weiszabgleich" title="Permalink to this image">¶</a></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Hinweis</p>
+<p>Die Koordinaten beim Auslesen von Pixeldaten mit Numpy entsprechen den Indizes des <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> und sind demnach gegenüber der Ausgabe mit Matplotlib transponiert.</p>
+</div>
+</div>
+<div class="section" id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
+<div class="toggle docutils container">
+<p>Als Referenzpixel wird ein Punkt mit den Pixel-Koordinaten x = 3900, y = 1300 auf der Mühle gewählt, von dem angenommen wird, dass er in Wirklichkeit annähernd perfekt weiß ist.</p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Laden der Bilddateie als Numpy.array</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;bilder/Weissabgleich.jpg&#39;</span><span class="p">)</span>
+
+<span class="c1"># Auslesen der Farbwerte eines Referenzpixels</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3900</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1300</span>
+<span class="n">ref_pixel</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span>
+
+<span class="c1"># Berechnung der Skalierungsfaktoren und Normierung anhand des grünen Farbkanals</span>
+<span class="n">rgb_scale</span> <span class="o">=</span> <span class="n">ref_pixel</span><span class="o">/</span><span class="n">ref_pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Weißabgleich des gesamten Bildes anhand der Skallierungsfaktoren</span>
+<span class="n">image_wb</span> <span class="o">=</span> <span class="p">(</span><span class="n">image</span><span class="o">/</span><span class="n">rgb_scale</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Darstellen des korrigierten Bildes</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Referenzpixel&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_wb</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_6_0.png" src="../../../../_images/zusatz_bildverarbeitung_6_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="image-stacking">
+<h2>Image Stacking<a class="headerlink" href="#image-stacking" title="Permalink to this headline">¶</a></h2>
+<p>Der Begriff “Image Stacking” bezeichnet allgemein das Überlagern von Bildern um unterschiedliche Effekte und Wirkungen zu erzielen. Neben dem Erzeugen von künstlerischen Effekten können auf diese Weise auch bewegte Objekte aus einer Bildserie des selben Bildausschnittes entfernt werden.</p>
+<p>Für diese Aufgabe benötigen Sie die Bilder “Image_stackig_1.jpg” - “Image_stacking_5.jpg”</p>
+<div class="figure align-default" id="fig-image-stacking">
+<a class="reference internal image-reference" href="../../../../_images/Stacking_bildserie.jpg"><img alt="../../../../_images/Stacking_bildserie.jpg" src="../../../../_images/Stacking_bildserie.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Bildserie des selben Bildauschnittes mit “bewegtem” Objekt</span><a class="headerlink" href="#fig-image-stacking" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="aufgabenteil-1">
+<h3>Aufgabenteil 1<a class="headerlink" href="#aufgabenteil-1" title="Permalink to this headline">¶</a></h3>
+<p>Überlagern Sie alle Bilder der genannten Bildserie, indem Sie den Durchschnitt der Farbwerte eines jeden Pixels bilden. Gehen Sie dazu wie folgt vor:</p>
+<ol class="simple">
+<li><p>Lesen Sie das Bild mit <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> als dreidimensionales <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> ein und separieren Sie die Farbkanäle als zweidimensionale Arrays</p></li>
+<li><p>Bilden Sie die Durschnittswerte der monochromatischen Bildarrays aus den Bildserien unter Anwendung der <code class="docutils literal notranslate"><span class="pre">Numpy.mean</span></code> Funktion. Tip: Verwenden Sie eine Schleife zum Einlesen der Daten und speichern Sie die Arrays in einer Liste zwischen.</p></li>
+<li><p>Fügen Sie die Arrays mit den Durchschnittswerten wieder zu einem dreidimensionalen Array zusammen und plotten Sie das Ergebnis.</p></li>
+</ol>
+</div>
+<div class="section" id="id1">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Anlegen von Listen zum Speichern der `Numpy.array`s aus den einzelnen Bildern</span>
+<span class="n">r_layers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">g_layers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">b_layers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Einlesen der Bilder und Separieren der Farbkanäle</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;bilder/Image_stacking_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">.jpg&#39;</span><span class="p">)</span>
+    <span class="n">r_layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">g_layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">b_layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">])</span>
+    
+<span class="c1"># Berechung der durchschnittlichen Farbwerte</span>
+<span class="n">r_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r_layers</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">g_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">g_layers</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">b_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">b_layers</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Zusammenfassen der eizelnen Farbkanäle </span>
+<span class="n">rgb_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">r_mean</span><span class="p">,</span> <span class="n">g_mean</span><span class="p">,</span> <span class="n">b_mean</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Darstellen der überlagerten Bildserie</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_mean</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Pixel X / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pixel Y / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_9_0.png" src="../../../../_images/zusatz_bildverarbeitung_9_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="aufgabenteil-2">
+<h3>Aufgabenteil 2<a class="headerlink" href="#aufgabenteil-2" title="Permalink to this headline">¶</a></h3>
+<p>Überlagern Sie erneut die einzelnen Bilder und wenden Sie einen Hochpassfilter (z.B. Median) auf die einzelnen Farbkanäle an um stark abweichende Farbwerte aus dem Bild zu eliminieren. Führen Sie hierzu die Arbeitsschritte aus Aufgabenteil 1 aus. Verwenden Sie statt der Funktion zur Berechnung des Durchschnitts z.B. <code class="docutils literal notranslate"><span class="pre">Numpy.median</span></code>. Überlegen Sie vorab, welcher Effekt hierdurch in Bezug auf das überlagerte Bild erzielt wird.</p>
+</div>
+<div class="section" id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Berechung des Medians der Farbwerte</span>
+<span class="n">r_med</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">r_layers</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">g_med</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">g_layers</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">b_med</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">b_layers</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Zusammenfassen der eizelnen Farbkanäle </span>
+<span class="n">rgb_med</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">r_med</span><span class="p">,</span> <span class="n">g_med</span><span class="p">,</span> <span class="n">b_med</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Darstellen der überlagerten Bildserie</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">rgb_med</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Pixel X / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pixel Y / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_12_0.png" src="../../../../_images/zusatz_bildverarbeitung_12_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="freistellen-von-objekten">
+<h2>Freistellen von Objekten<a class="headerlink" href="#freistellen-von-objekten" title="Permalink to this headline">¶</a></h2>
+<p>Das Freistellen von Objekten kann über verschiedene Methoden mit unterschiedlicher Komplexizität erfolgen. Eine einfache, wenn auch äußerst fehleranfällige Methode ist das Maskieren anhand eines Schwellenwertes einer oder mehrerer Farbkanäle.</p>
+<div class="section" id="id3">
+<h3>Aufgabe<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Für die Übung benötigen Sie die Bilder “Freistellen_objekt.jpg” und “Freistellen_hintergrund.jpg”. Maskieren Sie die Bereiche um die Kerze herum anhand von oberen oder unteren Schwellenwerten eines oder mehrerer Farbkanäle. Platzieren Sie die Kerze anschließend innerhalb des zweiten Bildes.</p>
+<p>Orientieren Sie sich an folgenden Arbeitsschritten:</p>
+<ol class="simple">
+<li><p>Definieren Sie einen unteren Schwellenwert zwischen 0 und 255 für den roten Farbkanal. Legen Sie im erste Schritt eine beliebigen Wert fest und iterieren Sie diesen, bis das gewünschte Ergebnis erreicht ist.</p></li>
+<li><p>Bilden Sie das Bild ‘Freistellen_objekt.jpg’ als dreidimensionales <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> ab und separieren Sie die einzelnen Farbkanäle als zweidimensionale Arrays.</p></li>
+<li><p>Erstellen Sie eine Maske, welche nur die Pixelkoordinaten berücksichtigt, in denen der festgelegte Schwellenwert überschritten wird. Nutze Sie hierfür z.B. die Funktion <code class="docutils literal notranslate"><span class="pre">Numpy.where</span></code>.</p></li>
+<li><p>Weisen Sie den maskierten Pixel einen fixen Farbwert zu um einen einfarbigen Hintergrund zu erhalten</p></li>
+<li><p>Weisen Sie den maskierten Pixeln die entsprechenden Pixel mit den selben Koordinaten aus dem Bild “Freistellen_hintergrund.jpg” zu.</p></li>
+</ol>
+<div class="figure align-default" id="fig-image-freistellen">
+<a class="reference internal image-reference" href="../../../../_images/Freistellen_bildserie.jpg"><img alt="../../../../_images/Freistellen_bildserie.jpg" src="../../../../_images/Freistellen_bildserie.jpg" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Objekt und Hintergrund</span><a class="headerlink" href="#fig-image-freistellen" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laden der Bilddateien als Numpy.array</span>
+<span class="n">image_object</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;bilder/freistellen_objekt.jpg&#39;</span><span class="p">)</span>
+<span class="n">image_background</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;bilder/freistellen_hintergrund.jpg&#39;</span><span class="p">)</span>
+
+<span class="c1"># Definition des Schwellenwertes und Erstellen einer Maske anhand des roten Farbkanals</span>
+<span class="n">th_red</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">red_channel</span> <span class="o">=</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">red_channel</span> <span class="o">&gt;</span> <span class="n">th_red</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Maskieren des Bildes anhand des roten Farbkanals; Maskierten Bereichen wird der Wert 255 zugewiesen. Somit ergibt sich in Summe ein weißer Hintergrund</span>
+<span class="n">masked_img_red</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">],</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">masked_img_green</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">],</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">masked_img_blue</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">],</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">masked_img_rgb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">masked_img_red</span><span class="p">,</span> <span class="n">masked_img_green</span><span class="p">,</span> <span class="n">masked_img_blue</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Maskieren des Bildes anhand des roten Farbkanals; Maskierten Bereichen werden die Pixel des Hintergrundbildes zugewiesen.</span>
+<span class="n">new_img_red</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">],</span><span class="n">image_background</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">new_img_green</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">],</span><span class="n">image_background</span><span class="p">[:,:,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">new_img_blue</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="n">image_object</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">],</span><span class="n">image_background</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">new_img_rgb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">new_img_red</span><span class="p">,</span> <span class="n">new_img_green</span><span class="p">,</span> <span class="n">new_img_blue</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Darstellen der überlagerten Bilder</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mf">7.5</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Pixel X / -&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Pixel X / -&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pixel Y / -&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Maskiertes Bild mit weißem Hintergrund&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Maskiertes Bild mit Hintergrund aus anderem Bild&quot;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">masked_img_rgb</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">new_img_rgb</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_15_0.png" src="../../../../_images/zusatz_bildverarbeitung_15_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="gammakorrektur">
+<h2>Gammakorrektur<a class="headerlink" href="#gammakorrektur" title="Permalink to this headline">¶</a></h2>
+<p>In der digitalen Bildverarbeitung dient die Gammakorrektur zur Überführung linearer physikalischer Zusammenhänge in die nichtlineare menschliche Wahrnehmung. Die Gammafunktion ist eine Potenzfunktion, die z.B. im Rahmen der Farbraumumwandlung in den sRGB Standard die Rohdaten eines Bildes, wie die Pixelhelligkeit <span class="math notranslate nohighlight">\(I_{in}\)</span> in eine  entsprechende Ausgabegröße <span class="math notranslate nohighlight">\(I_{out}\)</span> umwandelt.
+Die Gammafunktion kann wie folgt beschrieben werden:</p>
+<div class="math notranslate nohighlight">
+\[I_{out} = {I_{in}}^\gamma\]</div>
+<p>Dabei gilt:
+<span class="math notranslate nohighlight">\(0 \leq I_{in} \leq 1\)</span>
+und
+<span class="math notranslate nohighlight">\(0 \leq I_{out} \leq 1\)</span></p>
+<div class="section" id="id5">
+<h3>Aufgabe<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Führen Sie Gammakorrektur für die Faktoren <span class="math notranslate nohighlight">\(\gamma = 2.2\)</span> und <span class="math notranslate nohighlight">\(\gamma = 0.5\)</span> durch. Gehen Sie dazu wie folgt vor:</p>
+<ol>
+<li><p>Erstellen Sie zuerst zwei “Lookup-Tabellen” (LUT) in der Sie alle möglichen Pixelwerte <span class="math notranslate nohighlight">\(I_{in}\)</span> in einem linearen Wertebereich von 8bit mit den durch die Gamma-Funktion korrigierten Werten <span class="math notranslate nohighlight">\(I_{out}\)</span> verknüpfen. Erstellen die für beide <span class="math notranslate nohighlight">\(\gamma\)</span>-Werte unabhängige LUT.</p></li>
+<li><p>Plotten Sie jeweils die Abhängigkeit zwischen <span class="math notranslate nohighlight">\(I_{in}\)</span> und <span class="math notranslate nohighlight">\(I_{out}\)</span>.</p></li>
+<li><p>Führen Sie anschließend die Gammakorrektur für sämtliche Pixel der drei Farbkanäle des Bildes durch. Verwenden Sie hierzu die Möglichkeit der Indizierung eines <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> nach dem Schema</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I_out</span> <span class="o">=</span> <span class="n">lut</span><span class="p">[</span><span class="n">I_in</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Verwenden Sie das nachfolgende Bild “Gammakorrektur.jpg” für diese Aufgabe:</p>
+<div class="figure align-default" id="fig-image-gammakorrektur">
+<a class="reference internal image-reference" href="../../../../_images/Gammakorrektur.jpg"><img alt="../../../../_images/Gammakorrektur.jpg" src="../../../../_images/Gammakorrektur.jpg" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Bild mit falscher Gammakorrektur.</span><a class="headerlink" href="#fig-image-gammakorrektur" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Gammawerte</span>
+<span class="n">gamma_1</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">gamma_2</span> <span class="o">=</span> <span class="mf">2.2</span>
+
+<span class="c1"># Definition der Farbtiefe</span>
+<span class="n">color_depth</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># Zusammenhang zwischen I_in und I_out über die Gammafunktion</span>
+<span class="n">i_out</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">i_in</span><span class="p">,</span> <span class="n">gamma</span> <span class="p">:</span> <span class="mi">255</span> <span class="o">*</span> <span class="p">(</span><span class="n">i_in</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span><span class="o">**</span><span class="n">gamma</span>
+
+<span class="c1"># Berechung der Lookup Tabellen (LUT)</span>
+<span class="n">gamma_1_lut</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i_out</span><span class="p">(</span><span class="n">i_in</span><span class="p">,</span> <span class="n">gamma_1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i_in</span> <span class="ow">in</span> <span class="n">color_depth</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">gamma_2_lut</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i_out</span><span class="p">(</span><span class="n">i_in</span><span class="p">,</span> <span class="n">gamma_2</span><span class="p">)</span> <span class="k">for</span> <span class="n">i_in</span> <span class="ow">in</span> <span class="n">color_depth</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+
+<span class="c1"># Plot der LUTs</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color_depth</span><span class="p">,</span> <span class="n">color_depth</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$\gamma = 1.0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color_depth</span><span class="p">,</span> <span class="n">gamma_1_lut</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$\gamma = 0.5$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color_depth</span><span class="p">,</span> <span class="n">gamma_2_lut</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$\gamma = 2.2$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$I_</span><span class="si">{in}</span><span class="s2">~/~-$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$I_</span><span class="si">{out}</span><span class="s2">~/~-$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_18_0.png" src="../../../../_images/zusatz_bildverarbeitung_18_0.png" />
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gammakorrektur mit y = 0.5</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;bilder/Gammakorrektur.jpg&#39;</span><span class="p">)</span>
+<span class="n">image_gamma1</span> <span class="o">=</span> <span class="n">gamma_1_lut</span><span class="p">[</span><span class="n">image</span><span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_gamma1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$\gamma = 0.6$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Pixel X / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pixel Y / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_19_0.png" src="../../../../_images/zusatz_bildverarbeitung_19_0.png" />
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Gammakorrektur mit y = 2.2</span>
+<span class="n">image_gamma2</span> <span class="o">=</span> <span class="n">gamma_2_lut</span><span class="p">[</span><span class="n">image</span><span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_gamma2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$\gamma = 2.2$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Pixel X / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pixel Y / -&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/zusatz_bildverarbeitung_20_0.png" src="../../../../_images/zusatz_bildverarbeitung_20_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/Exercises/03_datenanalyse/zusatzaufgaben"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="zusatz_modellierung.html" title="previous page">Modellierung</a>
+    <a class='right-next' id="next-link" href="../../04_numerik/uebersicht.html" title="next page"><span class="section-number">4. </span>Numerik</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Team Fire | CCE@BUW + IAS-7@FZJ<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
