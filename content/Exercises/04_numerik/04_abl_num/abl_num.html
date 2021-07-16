@@ -979,16 +979,37 @@
   <a class="reference internal nav-link" href="#aufgabenteil-a">
    Aufgabenteil A
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-b">
    Aufgabenteil B
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-c">
    Aufgabenteil C
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-d">
@@ -998,6 +1019,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#losungshinweis">
      Lösungshinweis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1020,6 +1046,32 @@
 <h2>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this headline">¶</a></h2>
 <p>Schreiben Sie die Funktion<code class="docutils literal notranslate"><span class="pre">ableitung_o1(funk,</span> <span class="pre">x,</span> <span class="pre">h)</span></code>, die für eine beliebige übergebene Funktion die 1. Ableitung 1. Ordnung der Funktion an allen Stellen des Arrays x berechnet und das Ergebnis als Array wieder zurück gibt. Sie können Funktionen wie Variablen übergeben und dann mit dem zugewiesenen Namen, hier <code class="docutils literal notranslate"><span class="pre">funk</span></code>, auf diese zugreifen.</p>
 <p>Schreiben Sie zusätzlich eine Funktion <code class="docutils literal notranslate"><span class="pre">ableitung_02(funk,</span> <span class="pre">x,</span> <span class="pre">h)</span></code>, die die Ableitung 2. Ordnung berechnet.</p>
+<div class="section" id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">ableitung_o1</span><span class="p">(</span><span class="n">funk</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">funk</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">yh_pos</span> <span class="o">=</span> <span class="n">funk</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">dy</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">yh_pos</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="n">h</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dy</span>
+
+<span class="k">def</span> <span class="nf">ableitung_o2</span><span class="p">(</span><span class="n">funk</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">yh_pos</span> <span class="o">=</span> <span class="n">funk</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span>
+    <span class="n">yh_neg</span> <span class="o">=</span> <span class="n">funk</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">h</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">dy</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">yh_pos</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">yh_neg</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">h</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dy</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">¶</a></h2>
@@ -1027,10 +1079,70 @@
 <span class="math notranslate nohighlight">\(f(x) = x^3 +2x^2\)</span>
 auf jedes Element des Arrays anwendet und alle berechneten Werte wieder als Array zurück gibt.</p>
 <p>Berechnen Sie analytisch die Ableitung der Funktion <span class="math notranslate nohighlight">\(f(x)\)</span> und implementieren Sie diese nach dem gleichen Prinzip.</p>
+<div class="section" id="id1">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="aufgabenteil-c">
 <h2>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this headline">¶</a></h2>
 <p>Schreiben Sie ein Programm, welches die Genauigkeit der numerischen Lösungen mit der analytischen vergleicht. Werten Sie dazu alle drei Ableitungsfunktionen an jeweils 10 beliebigen Stellen für alle <span class="math notranslate nohighlight">\(h \in \{1, 10^{-1}, 10^{-2}, ..., 10^{-15}\}\)</span> aus. Bestimmen Sie die Differenzen zwischen der analytischen Lösung und den numerischen und bilden Sie immer den Mittelwert über die 10 Stellen. Plotten Sie die Differenzen doppelt logaritmisch gegen <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<div class="section" id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">num_abl1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">((</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">num_abl2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">((</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="o">**-</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">num_abl1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ableitung_o1</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">num_abl2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ableitung_o2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    
+<span class="n">ana_abl</span> <span class="o">=</span> <span class="n">df</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">diff1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">num_abl1</span> <span class="o">-</span> <span class="n">ana_abl</span><span class="p">)</span>
+<span class="n">diff2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">num_abl2</span> <span class="o">-</span> <span class="n">ana_abl</span><span class="p">)</span>
+
+<span class="n">diff1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">diff1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">diff2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">diff2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">diff1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;erste Ordn.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">diff2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;zweite Ordn.&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Genauigkeit genäherter Ableitungen&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Genauigkeit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/abl_num_11_0.png" src="../../../../_images/abl_num_11_0.png" />
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="aufgabenteil-d">
 <h2>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this headline">¶</a></h2>
@@ -1041,6 +1153,13 @@ auf jedes Element des Arrays anwendet und alle berechneten Werte wieder als Arra
 <div class="section" id="losungshinweis">
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">¶</a></h3>
 <p>zu 2.:<br> Erinnern Sie sich daran, dass Gleitkommazahlen in der Regel gerundet sind und selbst nur eine begrenzte Genauigkeit aufweisen. Diese Genauigkeit liegt bei c.a. <span class="math notranslate nohighlight">\(10^{-15}\)</span>. Wieso macht sie sich schon bei vergleichsweise großen <span class="math notranslate nohighlight">\(h\)</span> bemerkbar? Schauen Sie sich die Formeln nochmal genau an.</p>
+</div>
+<div class="section" id="id3">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Der Plot zeigt, wie für kleinere <span class="math notranslate nohighlight">\(h\)</span> sich die Genauigkeit der genäherten Ableitungen bis zu einem gewissen Punkt verbessert und dann wieder verschlechtert. Die Ableitung 2. Ordnung ist, für gleiche <span class="math notranslate nohighlight">\(h\)</span>, immer Genauer als die 1. Ordnung und erreicht maximale Genauigkeit ungefähr für <span class="math notranslate nohighlight">\(h=10^{-5}\)</span> während die Ableitung 2. Ordnung maximale Genauigkeit bei ungefähr <span class="math notranslate nohighlight">\(h=10^{-8}\)</span> erreicht.</p></li>
+<li><p>Das die Genauigkeit mit kleineren <span class="math notranslate nohighlight">\(h\)</span> Werten steigt war erwartet, da die benutzten Formeln <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span> und <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> haben. Das Problem liegt darin, dass zwei fast gleich große Zahlen voneinander subtrahiert werden. Dies resultiert in einem Verlust an Genauigkeit, der ab einem gewissen Punkt den Ganauigkeitsgewinn durch das Verkleinern von <span class="math notranslate nohighlight">\(h\)</span> überwiegt.</p></li>
+</ol>
 </div>
 </div>
 </div>

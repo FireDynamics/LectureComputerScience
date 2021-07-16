@@ -985,6 +985,11 @@
      Lösungshinweis
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungsvorschlag">
+     Lösungsvorschlag
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -997,6 +1002,11 @@
      Lösungshinweis
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Lösungsvorschlag
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1005,8 +1015,13 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id3">
      Lösungshinweis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1015,6 +1030,13 @@
   <a class="reference internal nav-link" href="#aufgabenteil-d">
    Aufgabenteil D
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Lösungsvorschlag
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-e">
@@ -1022,8 +1044,13 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id6">
      Lösungshinweis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1053,6 +1080,50 @@
 <p>Die Ausgabe könnte wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil1.png" /></p>
 </div>
+<div class="section" id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
+<p>Die analytische Ableitung der Funktion <span class="math notranslate nohighlight">\(\sf y(x)\)</span> lautet</p>
+<div class="math notranslate nohighlight">
+\[ \sf y'(x) = - 2(x-2)e^{-(x-2)^2} \]</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">yp</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;y(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;y</span><span class="se">\&#39;</span><span class="s1">(x)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ausgabe für den Lösungshinweis</span>
+<span class="c1"># plt.savefig(&#39;teil1.png&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;x&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/ableitungsfunktion_10_1.png" src="../../../../_images/ableitungsfunktion_10_1.png" />
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">¶</a></h2>
@@ -1068,15 +1139,186 @@
 <p>Die Ausgabe könnte wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil2.png" /></p>
 </div>
+<div class="section" id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Anzahl der Stützstellen für die Diskretisierung</span>
+<span class="n">nx</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># Diskretisierung des betrachteten Intervalls</span>
+<span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Funktionswerte an den Stützstellen xi</span>
+<span class="n">yi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">xi</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Graphische Ausgabe, nur zur visuellen Kontrolle</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;diskretisiert&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;analytisch&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/ableitungsfunktion_14_0.png" src="../../../../_images/ableitungsfunktion_14_0.png" />
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Erstellung eines Arrays für die numerische Ableitung</span>
+<span class="n">yip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span>
+
+<span class="c1"># Berechnung der Ableitung im inneren Bereich, d.h.</span>
+<span class="c1"># ohne die Randwerte, mit der zentralen Differenzenformel</span>
+<span class="n">yip</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+
+<span class="c1"># Berechnung der Ableitung an den Randpunkten</span>
+<span class="c1"># mit der Vorwärtsdifferenzenformel</span>
+<span class="n">yip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">dx</span>
+<span class="c1"># mit der Rückwärtsdifferenzenformel</span>
+<span class="n">yip</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="n">dx</span>
+
+<span class="c1"># yip[0] = (-3*yi[0] + 4*yi[1] - yi[2]) / (2*dx)</span>
+<span class="c1"># yip[-1] = (3*yi[-1] - 4*yi[-2] + yi[-3]) / (2*dx)</span>
+
+<span class="c1"># Graphische Ausgabe</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;analytisch&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">yip</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;numerisch&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y</span><span class="se">\&#39;</span><span class="s1">(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="c1"># Ausgabe für den Lösungshinweis </span>
+<span class="c1"># plt.savefig(&#39;teil2.png&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/ableitungsfunktion_15_0.png" src="../../../../_images/ableitungsfunktion_15_0.png" />
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="aufgabenteil-c">
 <h2>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this headline">¶</a></h2>
 <p>Berechnen Sie die Abweichung zwischen der analytischen und numerischen Ableitung an jedem Stützpunkt und stellen Sie diese graphisch dar. Verkleinern Sie den Gitterabstand <span class="math notranslate nohighlight">\(\sf \Delta x\)</span>, z.B. um einen Faktor 4. Was fällt Ihnen auf?</p>
-<div class="section" id="id2">
-<h3>Lösungshinweis<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>Lösungshinweis<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Die Ausgaben könnten wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil3a.png" /></p>
 <p><img alt="" src="../../../../_images/teil3b.png" /></p>
+</div>
+<div class="section" id="id4">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition einer Hilfsfunktion</span>
+<span class="k">def</span> <span class="nf">ableitung_f1</span><span class="p">(</span><span class="n">nx</span><span class="p">):</span>
+    <span class="c1"># Diskretisierung des betrachteten Intervalls</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Funktionswerte an den Stützstellen xi</span>
+    <span class="n">yi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">xi</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># Erstellung eines Arrays für die numerische Ableitung</span>
+    <span class="n">yip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span>
+
+    <span class="c1"># Berechnung der Ableitung im inneren Bereich, d.h.</span>
+    <span class="c1"># ohne die Randwerte, mit der zentralen Differenzenformel</span>
+    <span class="n">yip</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+
+    <span class="c1"># Berechnung der Ableitung an den Randpunkten</span>
+    <span class="c1"># mit der Vorwärtsdifferenzenformel</span>
+    <span class="n">yip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">dx</span>
+    <span class="c1"># mit der Rückwärtsdifferenzenformel</span>
+    <span class="n">yip</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="n">dx</span>
+    
+    <span class="k">return</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analytische Ableitung als Funktion</span>
+<span class="k">def</span> <span class="nf">ableitung_analytisch</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ausgabe für den Lösungshinweis nx = 20</span>
+<span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">yip_analytisch</span> <span class="o">=</span> <span class="n">ableitung_analytisch</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    
+<span class="n">diff</span> <span class="o">=</span> <span class="n">yip</span> <span class="o">-</span> <span class="n">yip_analytisch</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;numerisch - analytisch&#39;</span><span class="p">)</span>
+<span class="c1"># plt.savefig(&#39;teil3a.png&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;numerisch - analytisch&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/ableitungsfunktion_21_1.png" src="../../../../_images/ableitungsfunktion_21_1.png" />
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ausgabe für den Lösungshinweis nx = 80</span>
+<span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">yip_analytisch</span> <span class="o">=</span> <span class="n">ableitung_analytisch</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    
+<span class="n">diff</span> <span class="o">=</span> <span class="n">yip</span> <span class="o">-</span> <span class="n">yip_analytisch</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;numerisch - analytisch&#39;</span><span class="p">)</span>
+<span class="c1"># plt.savefig(&#39;teil3b.png&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;numerisch - analytisch&#39;)
+</pre></div>
+</div>
+<img alt="../../../../_images/ableitungsfunktion_22_1.png" src="../../../../_images/ableitungsfunktion_22_1.png" />
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">nx</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">]:</span>
+    <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="n">nx</span><span class="p">)</span>
+    <span class="n">yip_analytisch</span> <span class="o">=</span> <span class="n">ableitung_analytisch</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">yip</span> <span class="o">-</span> <span class="n">yip_analytisch</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;nx=</span><span class="si">{</span><span class="n">nx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;numerisch - analytisch&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/ableitungsfunktion_23_0.png" src="../../../../_images/ableitungsfunktion_23_0.png" />
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="aufgabenteil-d">
@@ -1085,14 +1327,112 @@
 <p>Die Rückwärtsformel lautet</p>
 <div class="math notranslate nohighlight">
 \[ \sf y'_i = \frac{3y_{i} - 4y_{i-1} + y_{i-2}}{2\Delta x} + \mathcal{O}\left(\Delta x^2\right)\]</div>
+<div class="section" id="id5">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Die Taylor-Entwicklungen an den Stellen <span class="math notranslate nohighlight">\(\sf x_i + \Delta x = x_{i+1}\)</span> bzw. <span class="math notranslate nohighlight">\(\sf x_i + \Delta x = x_{i+1}\)</span> lauten bis zur Ordnung <span class="math notranslate nohighlight">\(\sf \mathcal{O}\left(\Delta x^3\right)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\sf y(x_i + \Delta x) = y_{i+1} = y_i + y'_i\Delta x + \frac{1}{2}y''_i\Delta x^2 +  \mathcal{O}\left(\Delta x^3\right) \]</div>
+<div class="math notranslate nohighlight">
+\[\sf y(x_i + 2\Delta x) = y_{i+2} = y_i + y'_i(2\Delta x) + \frac{1}{2}y''_i(2\Delta x)^2 + \mathcal{O}\left(\Delta x^3\right) \]</div>
+<p>Das Ziel ist die Bestimmung des Terms <span class="math notranslate nohighlight">\(\sf y'\)</span> nur mit Hilfe von den Funktionswerten, d.h. <span class="math notranslate nohighlight">\(\sf y\)</span>. Das bedeutet, dass die Terme der zweiten Ableitungen <span class="math notranslate nohighlight">\(\sf y''\)</span> eliminiert werden müssen. Dies kann errreicht werden indem die erste Gleichung mit vier multipliziert wird und dann die zweite Gleichung davon substrahiert wird.</p>
+<div class="math notranslate nohighlight">
+\[\sf 4y_{i+1} = 4y_i + 4y'_i\Delta x + 2y''_i\Delta x^2 +  \mathcal{O}\left(\Delta x^3\right) \]</div>
+<div class="math notranslate nohighlight">
+\[\sf y_{i+2} = y_i + 2y'_i\Delta x + 2y''_i\Delta x^2 + \mathcal{O}\left(\Delta x^3\right) \]</div>
+<div class="math notranslate nohighlight">
+\[\sf \Rightarrow 4y_{i+1} - y_{i+2} = 3y_i + 2y'_i\Delta x + \mathcal{O}\left(\Delta x^3\right) \]</div>
+<p>Die Auflösung nach <span class="math notranslate nohighlight">\(\sf y'_i\)</span> führt zu</p>
+<div class="math notranslate nohighlight">
+\[ \sf y'_i = \frac{-3y_i + 4y_{i+1} - y_{i+2}}{2\Delta x} + \mathcal{O}\left(\Delta x^2\right) \]</div>
+<p>Dies ist die Vorwärtsdifferenzenformel für die erste Ableitung zweiter Ordnung.</p>
+</div>
 </div>
 <div class="section" id="aufgabenteil-e">
 <h2>Aufgabenteil E<a class="headerlink" href="#aufgabenteil-e" title="Permalink to this headline">¶</a></h2>
 <p>Verwenden Sie die Formeln zweiter Ordnung für die Berechnung der Ableitung am Rand. Wie sieht nun die Abweichung zwischen der analytischen und numerischen Ableitung aus?</p>
-<div class="section" id="id3">
-<h3>Lösungshinweis<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>Lösungshinweis<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>Die Ausgabe könnte wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil5.png" /></p>
+</div>
+<div class="section" id="id7">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition einer Hilfsfunktion, jetzt mit der Randberechnung </span>
+<span class="c1"># zweiter Ordnung</span>
+<span class="k">def</span> <span class="nf">ableitung_f2</span><span class="p">(</span><span class="n">nx</span><span class="p">):</span>
+    <span class="c1"># Diskretisierung des betrachteten Intervalls</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">nx</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">xi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Funktionswerte an den Stützstellen xi</span>
+    <span class="n">yi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">xi</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># Erstellung eines Arrays für die numerische Ableitung</span>
+    <span class="n">yip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span>
+
+    <span class="c1"># Berechnung der Ableitung im inneren Bereich, d.h.</span>
+    <span class="c1"># ohne die Randwerte, mit der zentralen Differenzenformel</span>
+    <span class="n">yip</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">yi</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+
+    <span class="c1"># Berechnung der Ableitung an den Randpunkten</span>
+    <span class="c1"># mit der Vorwärtsdifferenzenformel</span>
+    <span class="n">yip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">yi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">yi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">yi</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+    <span class="c1"># mit der Rückwärtsdifferenzenformel</span>
+    <span class="n">yip</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">yi</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">dx</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yip</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ausgabe für den Lösungshinweis nx = 80</span>
+<span class="n">xi</span><span class="p">,</span> <span class="n">yip</span> <span class="o">=</span> <span class="n">ableitung_f2</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">yip_analytisch</span> <span class="o">=</span> <span class="n">ableitung_analytisch</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    
+<span class="n">diff</span> <span class="o">=</span> <span class="n">yip</span> <span class="o">-</span> <span class="n">yip_analytisch</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;nx=80&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;numerisch - analytisch&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;teil5.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/ableitungsfunktion_31_0.png" src="../../../../_images/ableitungsfunktion_31_0.png" />
+</div>
+</div>
+<div class="cell tag_loesung docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vergleichende Ausgabe</span>
+<span class="n">xi</span><span class="p">,</span> <span class="n">yip_f1</span> <span class="o">=</span> <span class="n">ableitung_f1</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">xi</span><span class="p">,</span> <span class="n">yip_f2</span> <span class="o">=</span> <span class="n">ableitung_f2</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="n">yip_analytisch</span> <span class="o">=</span> <span class="n">ableitung_analytisch</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    
+<span class="n">diff_f1</span> <span class="o">=</span> <span class="n">yip_f1</span> <span class="o">-</span> <span class="n">yip_analytisch</span>
+<span class="n">diff_f2</span> <span class="o">=</span> <span class="n">yip_f2</span> <span class="o">-</span> <span class="n">yip_analytisch</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">diff_f1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;erste Ordnung&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">diff_f2</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;zweite Ordnung&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;nx=80&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;numerisch - analytisch&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/ableitungsfunktion_32_0.png" src="../../../../_images/ableitungsfunktion_32_0.png" />
+</div>
+</div>
 </div>
 </div>
 </div>
