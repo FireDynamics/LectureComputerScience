@@ -32,6 +32,7 @@ Da sich das Skript in der Entwicklung befinden freuen wir uns über konstruktive
 An der Ausarbeitung des Skripts und der Übungen sind beteiligt (in alphabetischer Reihenfolge):
 
 * Lukas Arnold
+* Simone Arnold
 * Alexander Belt
 * Kristian Börger
 * Karen De Lannoye
