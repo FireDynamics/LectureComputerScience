@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="../../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -82,7 +82,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
@@ -971,7 +971,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#erstellen-von-software">
@@ -1020,13 +1020,13 @@
 <div class="section" id="beispiel-compiler-und-linker-programmiersprache-c">
 <h2>Beispiel: Compiler und Linker, Programmiersprache C<a class="headerlink" href="#beispiel-compiler-und-linker-programmiersprache-c" title="Permalink to this headline">¶</a></h2>
 <p>Quellcode (in C):</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
-  <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Der Wert von b lautet: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Der Wert von b lautet: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Kompilieren mit dem GNU Compiler:</p>
@@ -1078,12 +1078,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="041_betriebssysteme.html" title="previous page"><span class="section-number">1.4.1. </span>Betriebssysteme</a>
-    <a class='right-next' id="next-link" href="043_dateisystem.html" title="next page"><span class="section-number">1.4.3. </span>Dateisystem</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="041_betriebssysteme.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">1.4.1. </span>Betriebssysteme</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="043_dateisystem.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">1.4.3. </span>Dateisystem</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
