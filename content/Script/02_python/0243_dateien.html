@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -72,6 +72,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../../_static/cce_logo.png" class="logo" alt="logo">
       
@@ -1217,13 +1221,13 @@ Bergischen Städtedreiecks.
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der gefundenen Dateien: 7
 Dateienliste:
-   dateien/bochum.txt
-   dateien/tabelle.csv
-   dateien/neue_datei.txt
-   dateien/wuppertal.txt
    dateien/juelich.txt
-   dateien/zahlen.csv
+   dateien/tabelle.csv
+   dateien/bochum.txt
    dateien/unwichtig.dat
+   dateien/wuppertal.txt
+   dateien/zahlen.csv
+   dateien/neue_datei.txt
 </pre></div>
 </div>
 </div>
@@ -1243,10 +1247,10 @@ Dateienliste:
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der gefundenen Dateien: 4
 Dateienliste:
-   dateien/bochum.txt
-   dateien/neue_datei.txt
-   dateien/wuppertal.txt
    dateien/juelich.txt
+   dateien/bochum.txt
+   dateien/wuppertal.txt
+   dateien/neue_datei.txt
 </pre></div>
 </div>
 </div>
@@ -1267,16 +1271,17 @@ Dateienliste:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erste Zeile der Datei &#39;dateien/bochum.txt&#39;:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erste Zeile der Datei &#39;dateien/juelich.txt&#39;:
+Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige 
+
+Erste Zeile der Datei &#39;dateien/bochum.txt&#39;:
 Aus Wikipedia: Die Stadt Bochum [ˈboːxʊm] (westfälisch: 
 
-Erste Zeile der Datei &#39;dateien/neue_datei.txt&#39;:
-Hallo Dateiwelt!
 Erste Zeile der Datei &#39;dateien/wuppertal.txt&#39;:
 Aus Wikipedia: Wuppertal ist mit 354.382 Einwohnern (31. 
 
-Erste Zeile der Datei &#39;dateien/juelich.txt&#39;:
-Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige 
+Erste Zeile der Datei &#39;dateien/neue_datei.txt&#39;:
+Hallo Dateiwelt!
 </pre></div>
 </div>
 </div>
@@ -1297,12 +1302,12 @@ Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dateienliste nach dem Erstellen der neuen Datei:
-   dateien/bochum.txt
-   dateien/tabelle.csv
-   dateien/wuppertal.txt
    dateien/juelich.txt
-   dateien/zahlen.csv
+   dateien/tabelle.csv
+   dateien/bochum.txt
    dateien/unwichtig.dat
+   dateien/wuppertal.txt
+   dateien/zahlen.csv
 </pre></div>
 </div>
 </div>
@@ -1333,13 +1338,13 @@ Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dateienliste nach dem Erstellen der neuen Datei:
-   dateien/bochum.txt
-   dateien/tabelle.csv
-   dateien/neue_datei.txt
-   dateien/wuppertal.txt
    dateien/juelich.txt
-   dateien/zahlen.csv
+   dateien/tabelle.csv
+   dateien/bochum.txt
    dateien/unwichtig.dat
+   dateien/wuppertal.txt
+   dateien/zahlen.csv
+   dateien/neue_datei.txt
 </pre></div>
 </div>
 </div>
@@ -1587,12 +1592,20 @@ Spalte y: [1.0, 4.0, 9.0, 16.0, 25.0, 36.0, 49.0, 64.0]
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
           By Team Fire | CCE@BUW + IAS-7@FZJ<br/>
         
+          <div class="extra_footer">
+            <p>
+<img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
+| By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
+</br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</p>
+
+          </div>
       </p>
     </div>
   </footer>
