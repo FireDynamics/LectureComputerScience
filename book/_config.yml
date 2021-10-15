@@ -35,6 +35,7 @@ html:
     | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
     </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
     </p>
+  extra_navbar          : ''
 
 ###############################################################################
 # Interact link settings
