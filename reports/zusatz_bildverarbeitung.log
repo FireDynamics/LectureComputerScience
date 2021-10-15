@@ -45,7 +45,7 @@ plt.show()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/tmp/ipykernel_6336/1864491563.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_4922/1864491563.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      4[0m [0;34m[0m[0m
 [1;32m      5[0m [0;31m# Laden der Bilddateie als Numpy.array[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 6[0;31m [0mimage[0m [0;34m=[0m [0mplt[0m[0;34m.[0m[0mimread[0m[0;34m([0m[0;34m'bilder/Weissabgleich.jpg'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
