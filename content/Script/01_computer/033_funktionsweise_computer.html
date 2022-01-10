@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1.3.3. Arbeitsweise eines Computers &#8212; Vorlesung Ingenieurinformatik</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -41,7 +41,7 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -56,7 +56,10 @@
     <link rel="next" title="1.4. Software" href="04_software.html" />
     <link rel="prev" title="1.3.2. Aufbau eines Computers" href="032_komponenten.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -88,7 +91,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Ingenieurinformatik
  </span>
@@ -105,7 +108,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Vorlesungsskript
  </span>
@@ -487,6 +490,11 @@
      </li>
     </ul>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03_datenanalyse/034_klassifizierung.html">
+     3.4. Klassifizierung
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -583,7 +591,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Aufgabensammlung
  </span>
@@ -930,7 +938,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -966,7 +974,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -991,7 +999,35 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Arbeitsweise eines Computers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instruktionen">
+   Instruktionen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arbeitstakte">
+   Arbeitstakte
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="arbeitsweise-eines-computers">
@@ -1021,36 +1057,36 @@
 <div class="section" id="arbeitstakte">
 <h2>Arbeitstakte<a class="headerlink" href="#arbeitstakte" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="15cee44a-1766-46c5-8758-13f0345e1fb0" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="15cee44a-1766-46c5-8758-13f0345e1fb0">
+<input checked="checked" id="79ad7259-45c4-4590-9573-6854f08cd7dc" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="79ad7259-45c4-4590-9573-6854f08cd7dc">
 1000</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1000.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1000.svg" /></div>
-<input id="6dfc1945-28f9-4d5c-a266-e2d36b90f70a" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="6dfc1945-28f9-4d5c-a266-e2d36b90f70a">
+<input id="5a9678bc-6c99-48d7-9928-64ceb26248af" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="5a9678bc-6c99-48d7-9928-64ceb26248af">
 1001</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1001.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1001.svg" /></div>
-<input id="69a9982b-8b26-47dc-8059-209b538eb9ee" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="69a9982b-8b26-47dc-8059-209b538eb9ee">
+<input id="46bd2d40-ba3b-4f36-be5e-c0af2cab833b" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="46bd2d40-ba3b-4f36-be5e-c0af2cab833b">
 1002</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1002.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1002.svg" /></div>
-<input id="893733dc-66b2-47ef-a2f4-42b826a1f247" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="893733dc-66b2-47ef-a2f4-42b826a1f247">
+<input id="2e793cb9-1760-4a4e-82b6-3dd91534d02a" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="2e793cb9-1760-4a4e-82b6-3dd91534d02a">
 1003</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1003.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1003.svg" /></div>
-<input id="c0b18e71-bb33-44c0-8505-8d289092bd77" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="c0b18e71-bb33-44c0-8505-8d289092bd77">
+<input id="a998b4f8-b7bb-4705-869c-30353dc6f605" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="a998b4f8-b7bb-4705-869c-30353dc6f605">
 1004</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1004.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1004.svg" /></div>
-<input id="0f3c9e62-edd1-446d-9c1f-fb1a3de0b570" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="0f3c9e62-edd1-446d-9c1f-fb1a3de0b570">
+<input id="783b3d7d-ca15-44ba-b777-58aec5ed342c" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="783b3d7d-ca15-44ba-b777-58aec5ed342c">
 1005</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1005.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1005.svg" /></div>
-<input id="c38ca1be-426a-4ebe-a5e8-ac441bc4a25b" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="c38ca1be-426a-4ebe-a5e8-ac441bc4a25b">
+<input id="64cd5476-622d-4781-b4a1-ec9150aa1a32" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="64cd5476-622d-4781-b4a1-ec9150aa1a32">
 1006</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1006.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1006.svg" /></div>
-<input id="adc62be4-5a8a-44ec-9265-cc322ab208cf" name="0d91bab9-d9ea-4fad-8526-78cee8c5812e" type="radio">
-</input><label class="tabbed-label" for="adc62be4-5a8a-44ec-9265-cc322ab208cf">
+<input id="4a46fb0b-803e-426b-a11b-3d3627fdbbe0" name="1dba7d77-cf86-4502-8f3a-b9cc68d7a3a3" type="radio">
+</input><label class="tabbed-label" for="4a46fb0b-803e-426b-a11b-3d3627fdbbe0">
 1007</label><div class="tabbed-content docutils">
 <img alt="../../../_images/arbeitsweise-cpu-1007.svg" class="myslides" src="../../../_images/arbeitsweise-cpu-1007.svg" /></div>
 </div>
@@ -1079,59 +1115,47 @@
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="032_komponenten.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1.3.2. </span>Aufbau eines Computers</p>
-            </div>
-        </a>
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="032_komponenten.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.3.2. </span>Aufbau eines Computers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04_software.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Software</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="04_software.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">1.4. </span>Software</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          <div class="extra_footer">
-            <p>
+  <p>
+    
+      <div class="extra_footer">
+        <p>
 <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
 | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
 </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </p>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
