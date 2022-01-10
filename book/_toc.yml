@@ -100,6 +100,7 @@ parts:
       - file: content/Script/03_datenanalyse/0331_interpolation
       - file: content/Script/03_datenanalyse/0332_fitting
       - file: content/Script/03_datenanalyse/0333_splines
+    - file: content/Script/03_datenanalyse/034_klassifizierung
 
 ########################################
 # Kapitel NUMERIK
