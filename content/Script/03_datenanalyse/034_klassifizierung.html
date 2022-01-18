@@ -42,8 +42,8 @@
     <script src="../../../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -988,6 +988,11 @@
    3.4.1. k-Means-Algorithmus
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hierarchische-clusteranalyse">
+   3.4.2. Hierarchische Clusteranalyse
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1011,6 +1016,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#k-means-algorithmus">
    3.4.1. k-Means-Algorithmus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hierarchische-clusteranalyse">
+   3.4.2. Hierarchische Clusteranalyse
   </a>
  </li>
 </ul>
@@ -1119,8 +1129,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-8.25846604  7.81152655]
- [-0.25037619 -6.68466571]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.25037619 -6.68466571]
+ [-8.25846604  7.81152655]
  [ 4.15911301  0.32194317]]
 </pre></div>
 </div>
@@ -1133,9 +1143,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 1 2 1 1 2 1 1 1 0 1 0 1 1 2 0 0 0 0 1 1 0 0 2 1 0 1 1 1 1 1 0 1 0 2 0 1
- 0 0 2 2 1 2 0 0 0 2 0 2 2 2 0 1 0 2 1 1 0 0 1 0 0 2 2 2 2 2 0 2 1 0 2 0 1
- 2 2 2 0 1 1 1 0 2 0 1 1 1 2 2 2 0 2 2 1 2 0 2 0 0 2]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 0 2 0 0 2 0 0 0 1 0 1 0 0 2 1 1 1 1 0 0 1 1 2 0 1 0 0 0 0 0 1 0 1 2 1 0
+ 1 1 2 2 0 2 1 1 1 2 1 2 2 2 1 0 1 2 0 0 1 1 0 1 1 2 2 2 2 2 1 2 0 1 2 1 0
+ 2 2 2 1 0 0 0 1 2 1 0 0 0 2 2 2 1 2 2 0 2 1 2 1 1 2]
 </pre></div>
 </div>
 </div>
@@ -1213,6 +1223,234 @@
 </div>
 <div class="cell_output docutils container">
 <img alt="../../../_images/034_klassifizierung_22_0.png" src="../../../_images/034_klassifizierung_22_0.png" />
+</div>
+</div>
+<p>Der Verlauf der iterativen Suche nach den Clusterzentren kann exemplarisch durch die Einschränkung der maximalen Iterationen visualisiert werden. Dazu wird die <code class="docutils literal notranslate"><span class="pre">fit()</span></code> Funktion entsprechend oft aufgerufen und die gefundenen Zentren zwischengespeichert.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maximale Größe der maximalen Iterationsschritte der fit() Funktion</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Array für die Zwischenspeicherung der Clusterzentren</span>
+<span class="n">centers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Das erste Zentrum ist vorgegeben, welches auch die Startbedingung für die </span>
+<span class="c1"># Suche darstellt, hier werden absichtlich &#39;ungünstige&#39; Werte gewählt</span>
+<span class="n">centers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="p">]])</span>
+
+<span class="c1"># Schleife über die verschiedenen maximalen Iterationsschritte</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">KMeans</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="n">centers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> 
+                                 <span class="n">n_init</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="n">t</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">cluster_centers_</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Darstellung der Datenpunkte</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">cluster</span><span class="o">.</span><span class="n">labels_</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap3</span><span class="p">)</span>
+
+<span class="c1"># Darstellung des Suchpfads</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    
+<span class="c1"># Beschriftung</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/034_klassifizierung_25_0.png" src="../../../_images/034_klassifizierung_25_0.png" />
+</div>
+</div>
+<p>Die obige Darstellung kann für die weitere Verdeutlichung um eine Zuordnungskarte erweitert werden.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Erstellung von einer Graphik mit mehreren Untergraphiken</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flat</span>
+
+<span class="c1"># Schleife über alle darzustellenden Zustände</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    
+    <span class="c1"># Erzeugung der Zuordnungskarte</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">KMeans</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">],</span> <span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> 
+                                 <span class="n">n_init</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="n">t</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">cluster</span><span class="o">.</span><span class="n">cluster_centers_</span> <span class="o">=</span> <span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+    <span class="n">cluster</span><span class="o">.</span><span class="n">_n_threads</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">mx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">my</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">mx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+    <span class="c1"># Darstellung der Karte und der Datenpunkte</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap3</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+    <span class="c1"># Darstellung der Clusterzentren und deren Verlauf</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[:</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[:</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centers</span><span class="p">[:</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="c1"># Beschriftung</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max_iter=</span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+
+<span class="c1"># Es sollen nur Achsenbeschriftungen, welche außen liegen, dargestellt werden</span>
+<span class="k">for</span> <span class="n">cax</span> <span class="ow">in</span> <span class="n">ax</span><span class="p">:</span>
+    <span class="n">cax</span><span class="o">.</span><span class="n">label_outer</span><span class="p">()</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/034_klassifizierung_27_0.png" src="../../../_images/034_klassifizierung_27_0.png" />
+</div>
+</div>
+<p>Bei dem k-Means-Algorithmus muss die Anzahl der zu suchenden Clusterzentren im Vorfeld festgelegt werden. Eine Möglichkeit um eine sinnvolle bzw. notwendige Anzahl der Cluster zu bestimmen liegt in der Betrachtung der Abstandsfunktion. Folgende Abbidlung zeigt diese als Funktion der Anzahl der Clusterzentren für das obige Beispiel.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier werden die Ergebnisse zwischengespeichert</span>
+<span class="n">abstand</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ncluster</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Berechnung der Clusterzentren für verschiedene Anzahlen von Clusterzentren</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">145</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">abstand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cluster</span><span class="o">.</span><span class="n">inertia_</span><span class="p">)</span>
+    <span class="n">ncluster</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># Graphische Darstellung</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ncluster</span><span class="p">,</span> <span class="n">abstand</span><span class="p">,</span> <span class="s1">&#39;-o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Anzahl Cluster&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Abstandsfunktion&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/034_klassifizierung_29_0.png" src="../../../_images/034_klassifizierung_29_0.png" />
+</div>
+</div>
+<p>In dieser Betrachtung wird deutlich, dass bis zur Wahl von drei Clustern die Abstandsfunktion deutlich sinkt in jedem Schritt. Danach, d.h. für mehr als drei Cluster, gibt es nur kleinere Verbesserungen.</p>
+</div>
+<div class="section" id="hierarchische-clusteranalyse">
+<h2><span class="section-number">3.4.2. </span>Hierarchische Clusteranalyse<a class="headerlink" href="#hierarchische-clusteranalyse" title="Permalink to this headline">¶</a></h2>
+<p>Ein anderen Ansatz zur Identifikation von Clustern sind sogenannte agglomerativen Verfahren. Sie stellen die Beziehung der Datenpunkte hierarchisch dar. Vereinfacht gesagt, werden bei dem Verfahren benachbarte Punkte zu einem Cluster zusammengefasst und dieses sukzessive um weitere Datenpunkte oder Cluster erweitert. Der so gernerierte Verbindungsgraph wird Dendrogramm genannt und stellt im Allgemeinen alle Informationen dar – für die praktische Anwendung werden nur die größeren Cluster betrachtet.</p>
+<p>Das Python Modul <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> stellt als hieararchisches Verfahren die Klasse <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering">AgglomerativeClustering</a> zur Verfungung. Diese wird wie oben mit einigen spezifischen Parametern versort und dann mittels der <code class="docutils literal notranslate"><span class="pre">fit()</span></code> Funktion an die Datenpunkte angepasst.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agg</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">AgglomerativeClustering</span><span class="p">(</span><span class="n">distance_threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_clusters</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zur Verdeutlichung wird zunächst ein kleinerer Datensatz generiert und verwendent. Bei der graphischen Darstellung des Datensatzes werden auch noch die Indizes der Datenpunkte angegeben.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_klein</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">144</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_klein</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x_klein</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_klein</span><span class="p">)):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x_klein</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">x_klein</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/034_klassifizierung_35_0.png" src="../../../_images/034_klassifizierung_35_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_klein</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AgglomerativeClustering(distance_threshold=0, n_clusters=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dies ist eine Hilfsfunktion um die Verknüpfungen in einem Dendrogramm darzustellen, </span>
+<span class="c1"># weche mit der AgglomerativeClustering Klasse bestimmt wurden</span>
+<span class="c1"># Das Argumentpaar `truncate_mode=&quot;level&quot;, p=3` kann für eine Reduktion der Darstellung</span>
+<span class="c1"># genutzt werden, diese Parameter werden an die Funktion </span>
+<span class="c1"># `scipy.cluster.hierarchy.dendrogram()` durchgereicht</span>
+
+<span class="k">def</span> <span class="nf">plot_dendrogram</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+    <span class="c1"># Bestimmung der Punkte für jeden Kindknoten</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">children_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">n_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">merge</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">children_</span><span class="p">):</span>
+        <span class="n">current_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">child_idx</span> <span class="ow">in</span> <span class="n">merge</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">child_idx</span> <span class="o">&lt;</span> <span class="n">n_samples</span><span class="p">:</span>
+                <span class="n">current_count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">current_count</span> <span class="o">+=</span> <span class="n">counts</span><span class="p">[</span><span class="n">child_idx</span> <span class="o">-</span> <span class="n">n_samples</span><span class="p">]</span>
+        <span class="n">counts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_count</span>
+
+    <span class="n">linkage_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">children_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">distances_</span><span class="p">,</span> <span class="n">counts</span><span class="p">]</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+    <span class="c1"># Darstellung des Dendrograms</span>
+    <span class="n">scipy</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">hierarchy</span><span class="o">.</span><span class="n">dendrogram</span><span class="p">(</span><span class="n">linkage_matrix</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Das folgende Dendrogramm stellt die Verbindungen aller Datenpunkte dar. Je nach Wahl des Wertes für den Schwellwert des Abstands werden unterschiedliche Cluster identifiziert.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_dendrogram</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Datenpunkt&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Abstand&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Abstand&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/034_klassifizierung_39_1.png" src="../../../_images/034_klassifizierung_39_1.png" />
+</div>
+</div>
+<p>Die folgende Abbildung stellt die identifizierten Verknüpfungen für den ursprünglichen Datensatz dar, hier allerdings nur bis zur Stufe 3. Auf der x-Achse sind entweder die expliziten Knoten als Indizes der Datenpunkte dargestellt oder falls es ein Cluster von Punkten ist, die Anzahl der darin enthaltenen Punkte in runden Klammern. Die Anzahl und Zugehörigkeit der Datenpunkte kann bei diesem Verfahren auch nach dem Fitting bestimmt werden, je nachdem welcher Abstandswert in dem Dendrogramm gewählt wird.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_dendrogram</span><span class="p">(</span><span class="n">agg</span><span class="p">,</span> <span class="n">truncate_mode</span><span class="o">=</span><span class="s2">&quot;level&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Datenpunkten / (Untercluster)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Abstand&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Abstand&#39;)
+</pre></div>
+</div>
+<img alt="../../../_images/034_klassifizierung_41_1.png" src="../../../_images/034_klassifizierung_41_1.png" />
 </div>
 </div>
 </div>
