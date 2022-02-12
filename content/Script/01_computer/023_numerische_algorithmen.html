@@ -37,9 +37,12 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -1130,24 +1133,24 @@ Endergebnis nach 5 Iterationen: x_(ns) = 1.0001
 <p class="caption"><span class="caption-number">Fig. 1.23 </span><span class="caption-text">Newton-Verfahren, Beispiel 1</span><a class="headerlink" href="#fig-algorithmus-newton-bsp1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c9fc1295-1d88-4c8a-a086-ed8d91d2e397" name="40739442-806b-42fc-9a77-b7dcd2753ae3" type="radio">
-</input><label class="tabbed-label" for="c9fc1295-1d88-4c8a-a086-ed8d91d2e397">
+<input checked="checked" id="80b9122f-d3a5-4488-b467-fdaa2aa59870" name="a945301f-c6c9-42fe-be48-0827d2a83633" type="radio">
+</input><label class="tabbed-label" for="80b9122f-d3a5-4488-b467-fdaa2aa59870">
 Schritt 0</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp1_step_00.svg" class="myslides" src="../../../_images/newton_bsp1_step_00.svg" /></div>
-<input id="925d49f0-26b6-489b-8c61-6fa42fb05183" name="40739442-806b-42fc-9a77-b7dcd2753ae3" type="radio">
-</input><label class="tabbed-label" for="925d49f0-26b6-489b-8c61-6fa42fb05183">
+<input id="ed134113-8a05-4cc7-9f3a-679bf1dcb1ba" name="a945301f-c6c9-42fe-be48-0827d2a83633" type="radio">
+</input><label class="tabbed-label" for="ed134113-8a05-4cc7-9f3a-679bf1dcb1ba">
 Schritt 1</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp1_step_01.svg" class="myslides" src="../../../_images/newton_bsp1_step_01.svg" /></div>
-<input id="be8e155a-1808-4f25-9e4a-d1d2dce606df" name="40739442-806b-42fc-9a77-b7dcd2753ae3" type="radio">
-</input><label class="tabbed-label" for="be8e155a-1808-4f25-9e4a-d1d2dce606df">
+<input id="da01f9d3-6441-4e1e-bdec-6d77f29df6a9" name="a945301f-c6c9-42fe-be48-0827d2a83633" type="radio">
+</input><label class="tabbed-label" for="da01f9d3-6441-4e1e-bdec-6d77f29df6a9">
 Schritt 2</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp1_step_02.svg" class="myslides" src="../../../_images/newton_bsp1_step_02.svg" /></div>
-<input id="8008df77-24d8-4d48-a599-488fa2d41115" name="40739442-806b-42fc-9a77-b7dcd2753ae3" type="radio">
-</input><label class="tabbed-label" for="8008df77-24d8-4d48-a599-488fa2d41115">
+<input id="a3262cc1-3382-4da0-90c6-18074b099165" name="a945301f-c6c9-42fe-be48-0827d2a83633" type="radio">
+</input><label class="tabbed-label" for="a3262cc1-3382-4da0-90c6-18074b099165">
 Schritt 3</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp1_step_03.svg" class="myslides" src="../../../_images/newton_bsp1_step_03.svg" /></div>
-<input id="5fff9c6b-fcb5-4114-ac07-2cda5bca05be" name="40739442-806b-42fc-9a77-b7dcd2753ae3" type="radio">
-</input><label class="tabbed-label" for="5fff9c6b-fcb5-4114-ac07-2cda5bca05be">
+<input id="767b363f-b005-4e24-98b4-fc249828e826" name="a945301f-c6c9-42fe-be48-0827d2a83633" type="radio">
+</input><label class="tabbed-label" for="767b363f-b005-4e24-98b4-fc249828e826">
 Schritt 4</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp1_step_04.svg" class="myslides" src="../../../_images/newton_bsp1_step_04.svg" /></div>
 </div>
@@ -1192,24 +1195,24 @@ Endergebnis nach 5 Iterationen: x_(ns) = 0.5236
 <p class="caption"><span class="caption-number">Fig. 1.24 </span><span class="caption-text">Newton-Verfahren, Beispiel 2</span><a class="headerlink" href="#fig-algorithmus-newton-bsp2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f02b4414-be46-4c2f-a58a-b150c75c874d" name="556b7740-eda4-43e0-88df-4bb0d99cb4eb" type="radio">
-</input><label class="tabbed-label" for="f02b4414-be46-4c2f-a58a-b150c75c874d">
+<input checked="checked" id="bff3a7b7-87e7-4b16-a3d4-769aa9bb16a2" name="8bad3e27-ad48-4987-b30c-56fe9d67651a" type="radio">
+</input><label class="tabbed-label" for="bff3a7b7-87e7-4b16-a3d4-769aa9bb16a2">
 Schritt 0</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp2_step_00.svg" class="myslides" src="../../../_images/newton_bsp2_step_00.svg" /></div>
-<input id="ed70d646-e4d8-4a87-b61a-f6629c557a5a" name="556b7740-eda4-43e0-88df-4bb0d99cb4eb" type="radio">
-</input><label class="tabbed-label" for="ed70d646-e4d8-4a87-b61a-f6629c557a5a">
+<input id="06c3834b-b126-4abe-91c3-52382e5c61b3" name="8bad3e27-ad48-4987-b30c-56fe9d67651a" type="radio">
+</input><label class="tabbed-label" for="06c3834b-b126-4abe-91c3-52382e5c61b3">
 Schritt 1</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp2_step_01.svg" class="myslides" src="../../../_images/newton_bsp2_step_01.svg" /></div>
-<input id="1bf20237-76ed-4389-9ae0-92f87cd60c7b" name="556b7740-eda4-43e0-88df-4bb0d99cb4eb" type="radio">
-</input><label class="tabbed-label" for="1bf20237-76ed-4389-9ae0-92f87cd60c7b">
+<input id="f5f5f943-6333-4738-b84f-cf33c829a8a8" name="8bad3e27-ad48-4987-b30c-56fe9d67651a" type="radio">
+</input><label class="tabbed-label" for="f5f5f943-6333-4738-b84f-cf33c829a8a8">
 Schritt 2</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp2_step_02.svg" class="myslides" src="../../../_images/newton_bsp2_step_02.svg" /></div>
-<input id="fb04dc73-032c-45b8-b870-8b9fb936ecdb" name="556b7740-eda4-43e0-88df-4bb0d99cb4eb" type="radio">
-</input><label class="tabbed-label" for="fb04dc73-032c-45b8-b870-8b9fb936ecdb">
+<input id="985b384b-2903-4b69-a937-513245db5fda" name="8bad3e27-ad48-4987-b30c-56fe9d67651a" type="radio">
+</input><label class="tabbed-label" for="985b384b-2903-4b69-a937-513245db5fda">
 Schritt 3</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp2_step_03.svg" class="myslides" src="../../../_images/newton_bsp2_step_03.svg" /></div>
-<input id="a7e6766e-d5ea-452a-9d97-0b3188095eb8" name="556b7740-eda4-43e0-88df-4bb0d99cb4eb" type="radio">
-</input><label class="tabbed-label" for="a7e6766e-d5ea-452a-9d97-0b3188095eb8">
+<input id="f013237b-cbd9-4c3a-a056-df39bd47bb37" name="8bad3e27-ad48-4987-b30c-56fe9d67651a" type="radio">
+</input><label class="tabbed-label" for="f013237b-cbd9-4c3a-a056-df39bd47bb37">
 Schritt 4</label><div class="tabbed-content docutils">
 <img alt="../../../_images/newton_bsp2_step_04.svg" class="myslides" src="../../../_images/newton_bsp2_step_04.svg" /></div>
 </div>

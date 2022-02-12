@@ -37,9 +37,12 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -993,6 +996,11 @@
    3.4.2. Hierarchische Clusteranalyse
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weitere-clusteralgorithmen">
+   3.4.3. Weitere Clusteralgorithmen
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -1021,6 +1029,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hierarchische-clusteranalyse">
    3.4.2. Hierarchische Clusteranalyse
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#weitere-clusteralgorithmen">
+   3.4.3. Weitere Clusteralgorithmen
   </a>
  </li>
 </ul>
@@ -1129,9 +1142,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.25037619 -6.68466571]
- [-8.25846604  7.81152655]
- [ 4.15911301  0.32194317]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-8.25846604  7.81152655]
+ [ 4.15911301  0.32194317]
+ [-0.25037619 -6.68466571]]
 </pre></div>
 </div>
 </div>
@@ -1143,9 +1156,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 0 2 0 0 2 0 0 0 1 0 1 0 0 2 1 1 1 1 0 0 1 1 2 0 1 0 0 0 0 0 1 0 1 2 1 0
- 1 1 2 2 0 2 1 1 1 2 1 2 2 2 1 0 1 2 0 0 1 1 0 1 1 2 2 2 2 2 1 2 0 1 2 1 0
- 2 2 2 1 0 0 0 1 2 1 0 0 0 2 2 2 1 2 2 0 2 1 2 1 1 2]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 1 2 2 1 2 2 2 0 2 0 2 2 1 0 0 0 0 2 2 0 0 1 2 0 2 2 2 2 2 0 2 0 1 0 2
+ 0 0 1 1 2 1 0 0 0 1 0 1 1 1 0 2 0 1 2 2 0 0 2 0 0 1 1 1 1 1 0 1 2 0 1 0 2
+ 1 1 1 0 2 2 2 0 1 0 2 2 2 1 1 1 0 1 1 2 1 0 1 0 0 1]
 </pre></div>
 </div>
 </div>
@@ -1426,32 +1439,35 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_dendrogram</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Datenpunkt&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Abstand&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Abstand&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Abstand&#39;)
-</pre></div>
-</div>
-<img alt="../../../_images/034_klassifizierung_39_1.png" src="../../../_images/034_klassifizierung_39_1.png" />
+<img alt="../../../_images/034_klassifizierung_39_0.png" src="../../../_images/034_klassifizierung_39_0.png" />
 </div>
 </div>
 <p>Die folgende Abbildung stellt die identifizierten Verknüpfungen für den ursprünglichen Datensatz dar, hier allerdings nur bis zur Stufe 3. Auf der x-Achse sind entweder die expliziten Knoten als Indizes der Datenpunkte dargestellt oder falls es ein Cluster von Punkten ist, die Anzahl der darin enthaltenen Punkte in runden Klammern. Die Anzahl und Zugehörigkeit der Datenpunkte kann bei diesem Verfahren auch nach dem Fitting bestimmt werden, je nachdem welcher Abstandswert in dem Dendrogramm gewählt wird.</p>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_dendrogram</span><span class="p">(</span><span class="n">agg</span><span class="p">,</span> <span class="n">truncate_mode</span><span class="o">=</span><span class="s2">&quot;level&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plot_dendrogram</span><span class="p">(</span><span class="n">agg</span><span class="p">,</span> <span class="n">truncate_mode</span><span class="o">=</span><span class="s2">&quot;level&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Datenpunkten / (Untercluster)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Abstand&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Abstand&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Abstand&#39;)
-</pre></div>
+<img alt="../../../_images/034_klassifizierung_41_0.png" src="../../../_images/034_klassifizierung_41_0.png" />
 </div>
-<img alt="../../../_images/034_klassifizierung_41_1.png" src="../../../_images/034_klassifizierung_41_1.png" />
 </div>
+</div>
+<div class="section" id="weitere-clusteralgorithmen">
+<h2><span class="section-number">3.4.3. </span>Weitere Clusteralgorithmen<a class="headerlink" href="#weitere-clusteralgorithmen" title="Permalink to this headline">¶</a></h2>
+<p>Je nach Anwendungsfall können die oben vorgestellten Verfahren gute, oder aber auch ganz schlechte Ergebnisse liefern. So existiert eine breite Palette an verschiedenen Verfahren, welche entsprechend andere Eigenschaften haben. Ein Vergleich der im <code class="docutils literal notranslate"><span class="pre">scikit</span></code> Modul <a class="reference external" href="https://scikit-learn.org/stable/modules/clustering.html">implementierten Algorithmen</a> bei sehr unterschiedlichen Datensätzen ist in folgender Abbildung demonstriert.</p>
+<div class="figure align-default" id="fig-scikit-clustering">
+<a class="reference internal image-reference" href="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png"><img alt="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Vergleich verschiedener Clusteralgorithmen aus dem <code class="docutils literal notranslate"><span class="pre">scikit</span></code> Modul. Quelle: <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html"><code class="docutils literal notranslate"><span class="pre">scikit</span></code> clustering comparison</a></span><a class="headerlink" href="#fig-scikit-clustering" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
