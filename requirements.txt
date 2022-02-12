@@ -9,3 +9,5 @@ pandas
 scipy
 seaborn
 sklearn
+jupyterlab-git
+ipympl
