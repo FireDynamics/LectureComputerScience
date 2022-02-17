@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.3.2. Abzweigungen &#8212; Vorlesung Ingenieurinformatik</title>
+    <title>3.5. Optimierung &#8212; Vorlesung Ingenieurinformatik</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -45,6 +45,8 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,12 +54,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/02_python/0232_abzweigungen.html" />
+    <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/03_datenanalyse/035_optimierung.html" />
     <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.3.3. Funktionen" href="0233_funktionen.html" />
-    <link rel="prev" title="2.3.1. Schleifen" href="0231_schleifen.html" />
+    <link rel="next" title="4. Numerik" href="../04_numerik/04_einleitung.html" />
+    <link rel="prev" title="3.4. Klassifizierung" href="034_klassifizierung.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -237,18 +239,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="02_einleitung.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02_python/02_einleitung.html">
    2. Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="021_sprache.html">
+    <a class="reference internal" href="../02_python/021_sprache.html">
      2.1. Sprache
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -258,24 +260,24 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="0211_arbeiten.html">
+      <a class="reference internal" href="../02_python/0211_arbeiten.html">
        2.1.1. Arbeiten mit Python
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0212_jupyter.html">
+      <a class="reference internal" href="../02_python/0212_jupyter.html">
        2.1.2. JupyterLab
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0213_syntax.html">
+      <a class="reference internal" href="../02_python/0213_syntax.html">
        2.1.3. Syntax
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="022_grundlagen.html">
+    <a class="reference internal" href="../02_python/022_grundlagen.html">
      2.2. Grundlagen
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
@@ -285,71 +287,71 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="0221_zahlen.html">
+      <a class="reference internal" href="../02_python/0221_zahlen.html">
        2.2.1. Zahlen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0222_operationen.html">
+      <a class="reference internal" href="../02_python/0222_operationen.html">
        2.2.2. Operationen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0223_variablen.html">
+      <a class="reference internal" href="../02_python/0223_variablen.html">
        2.2.3. Variablen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0224_funktionen.html">
+      <a class="reference internal" href="../02_python/0224_funktionen.html">
        2.2.4. Funktionen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0225_zeichenketten.html">
+      <a class="reference internal" href="../02_python/0225_zeichenketten.html">
        2.2.5. Zeichenketten
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0226_listen.html">
+      <a class="reference internal" href="../02_python/0226_listen.html">
        2.2.6. Listen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0227_sammeltypen.html">
+      <a class="reference internal" href="../02_python/0227_sammeltypen.html">
        2.2.7. Sammeltypen
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="023_flusskontrolle.html">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../02_python/023_flusskontrolle.html">
      2.3. Flusskontrolle
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
     <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
+    <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="0231_schleifen.html">
+      <a class="reference internal" href="../02_python/0231_schleifen.html">
        2.3.1. Schleifen
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../02_python/0232_abzweigungen.html">
        2.3.2. Abzweigungen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0233_funktionen.html">
+      <a class="reference internal" href="../02_python/0233_funktionen.html">
        2.3.3. Funktionen
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="024_weiteres.html">
+    <a class="reference internal" href="../02_python/024_weiteres.html">
      2.4. Weitere Themen
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -359,17 +361,17 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="0241_module.html">
+      <a class="reference internal" href="../02_python/0241_module.html">
        2.4.1. Module
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0242_formattierte_strings.html">
+      <a class="reference internal" href="../02_python/0242_formattierte_strings.html">
        2.4.2. Formatierte Zeichenketten
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="0243_dateien.html">
+      <a class="reference internal" href="../02_python/0243_dateien.html">
        2.4.3. Dateien
       </a>
      </li>
@@ -377,18 +379,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../03_datenanalyse/03_einleitung.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="03_einleitung.html">
    3. Datenanalyse
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
   <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../03_datenanalyse/031_visualisierung.html">
+    <a class="reference internal" href="031_visualisierung.html">
      3.1. Visualisierung
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
@@ -398,34 +400,34 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0311_matplotlib.html">
+      <a class="reference internal" href="0311_matplotlib.html">
        3.1.1. matplotlib-Modul
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0312_1d_plots.html">
+      <a class="reference internal" href="0312_1d_plots.html">
        3.1.2. Eindimensionale Daten
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0313_beschriftung.html">
+      <a class="reference internal" href="0313_beschriftung.html">
        3.1.3. Beschriftung
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0314_farben.html">
+      <a class="reference internal" href="0314_farben.html">
        3.1.4. Farben
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0315_skalierung.html">
+      <a class="reference internal" href="0315_skalierung.html">
        3.1.5. Skalierung
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../03_datenanalyse/032_verarbeitung.html">
+    <a class="reference internal" href="032_verarbeitung.html">
      3.2. Verarbeitung
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -435,39 +437,39 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0321_numpy.html">
+      <a class="reference internal" href="0321_numpy.html">
        3.2.1. numpy-Modul
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0322_arrays.html">
+      <a class="reference internal" href="0322_arrays.html">
        3.2.2. numpy-Arrays
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0323_referenzen.html">
+      <a class="reference internal" href="0323_referenzen.html">
        3.2.3. Referenzen
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0324_dateien.html">
+      <a class="reference internal" href="0324_dateien.html">
        3.2.4. Dateien
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0325_mehrdimensional.html">
+      <a class="reference internal" href="0325_mehrdimensional.html">
        3.2.5. Mehrdimensionale Daten
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0326_bilder.html">
+      <a class="reference internal" href="0326_bilder.html">
        3.2.6. Bilddaten
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../03_datenanalyse/033_modellierung.html">
+    <a class="reference internal" href="033_modellierung.html">
      3.3. Modellierung
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
@@ -477,29 +479,29 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0331_interpolation.html">
+      <a class="reference internal" href="0331_interpolation.html">
        3.3.1. Polynominterpolation
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0332_fitting.html">
+      <a class="reference internal" href="0332_fitting.html">
        3.3.2. Fitting
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../03_datenanalyse/0333_splines.html">
+      <a class="reference internal" href="0333_splines.html">
        3.3.3. Splines
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../03_datenanalyse/034_klassifizierung.html">
+    <a class="reference internal" href="034_klassifizierung.html">
      3.4. Klassifizierung
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../03_datenanalyse/035_optimierung.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      3.5. Optimierung
     </a>
    </li>
@@ -941,7 +943,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/Script/02_python/0232_abzweigungen.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../../_sources/content/Script/03_datenanalyse/035_optimierung.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -961,10 +963,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/02_python/0232_abzweigungen.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/03_datenanalyse/035_optimierung.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/02_python/0232_abzweigungen.ipynb"><button
+        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/03_datenanalyse/035_optimierung.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -984,29 +986,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#verschachtelte-abzweigungen">
-   Verschachtelte Abzweigungen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kombination-von-schleifen-und-abzweigungen">
-   Kombination von Schleifen und Abzweigungen
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -1014,214 +993,188 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Abzweigungen</h1>
+                <h1>Optimierung</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#verschachtelte-abzweigungen">
-   Verschachtelte Abzweigungen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kombination-von-schleifen-und-abzweigungen">
-   Kombination von Schleifen und Abzweigungen
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="abzweigungen">
-<h1><span class="section-number">2.3.2. </span>Abzweigungen<a class="headerlink" href="#abzweigungen" title="Permalink to this headline">¶</a></h1>
-<p>Abzweigungen ermöglichen eine Fallunterscheidung, bei der verschiedene Teile des Skripts ausgeführt werden.</p>
-<p>Zum Beispiel im Maximum-Algorithmus wird entschieden, ob der aktuelle Iterationswert größer ist als eine Variable. Falls nicht, wird die nächste Iteration durchgeführt, falls ja, wird der Wert der Variablen angepasst.</p>
-<div class="section" id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
-<p>In Python werden Abzweigungen mit dem <code class="docutils literal notranslate"><span class="pre">if</span></code> Schlüsselwort eingeleitet. Dieses wird von der Abzweigbedingung gefolgt und mit einem Doppelpunkt <code class="docutils literal notranslate"><span class="pre">:</span></code> abgeschlossen. Falls die Abzweigbedingung wahr ist, wird der eingerückte Anweisungsblock ausgeführt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">Bedingung</span><span class="p">:</span>
-    <span class="n">Anweisungsblock</span>
-</pre></div>
-</div>
-<p>Es ist auch möglich einen alternativen Anweisungsblock zu definieren, welcher ausgeführt wird, wenn die Bedingung falsch ist. Dies wird mit dem <code class="docutils literal notranslate"><span class="pre">else</span></code> Schlüsselwort umgesetzt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">Bedingung</span><span class="p">:</span>
-    <span class="c1"># Bedingung ist wahr</span>
-    <span class="n">Anweisungsblock</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="c1"># Bedingung ist falsch</span>
-    <span class="n">Anweisungsblock</span>
-</pre></div>
-</div>
-<p>Folgende Beispiele verdeutlichen den Einsatz der Abzweigung.</p>
-<div class="cell docutils container">
+  <div class="tex2jax_ignore mathjax_ignore section" id="optimierung">
+<h1><span class="section-number">3.5. </span>Optimierung<a class="headerlink" href="#optimierung" title="Permalink to this headline">¶</a></h1>
+<p>In der Datenanalyse wird häufig versucht eine Modellfunktion zur interpretation der Daten zu nutzen. Solche Modellfunktionen können beispielsweise Polynome sein, deren Koeffizienten anhand der gegebenen Daten bestimmt werden um diese durch die Modellfunktion bestmöglich darzustellen. In diesem Kapitel wird ein allgemeiner Ansatz für das Fitten einer beliebigen Modellfunktion vorgestellt.</p>
+<div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 1: Zahl kleiner als ein Schwellwert</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist kleiner als 10.&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;ticks&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zur Demonstration, wird zunächst ein Datensatz generiert.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_daten</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y_daten</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">1.3</span><span class="o">*</span><span class="n">x_daten</span> <span class="o">+</span> <span class="mf">0.7</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.25</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_daten</span><span class="p">))))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_daten</span><span class="p">,</span> <span class="n">y_daten</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-Werte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-Werte&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Zahl 7 ist kleiner als 10.
-</pre></div>
+<img alt="../../../_images/035_optimierung_4_0.png" src="../../../_images/035_optimierung_4_0.png" />
 </div>
 </div>
-</div>
+<p>Die Modellfunktion, welche hier genutzt werden soll, ist eine Sinus-Funktion. Diese hat jedoch die Amplitude, Frequenz und Phasenverschiebung als frei bestimmbare Parameter:</p>
+<div class="math notranslate nohighlight">
+\[\sf f(x) = p_1 \cdot \sin\left(p_2 \cdot x + p_3\right)\]</div>
+<p>Folgende Pyhton Funktion wertet die obige Funktion an der Stelle <span class="math notranslate nohighlight">\(\sf x\)</span> aus, bei gegebenen Parametern <span class="math notranslate nohighlight">\(\sf p_1, p_2, p_3\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 2: Zahl kleiner als ein Schwellwert mit alternativer Ausgabe</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="mi">13</span>
-<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist kleiner als 10.&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist nicht kleiner als 10.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Zahl 13 ist nicht kleiner als 10.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">modell_funktion</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">p2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">p3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Die Funktion <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html"><code class="docutils literal notranslate"><span class="pre">scipy.optimize.curve_fit</span></code></a> kann zur Bestimmung dieser Parameter genutzt werden. Dazu muss die Modellfunktion, hier <code class="docutils literal notranslate"><span class="pre">modell_funktion</span></code>, als erstes Argument die unabhängige Variable, hier <code class="docutils literal notranslate"><span class="pre">x</span></code>, gefolgt von den Modellparametern, hier <code class="docutils literal notranslate"><span class="pre">p1,</span> <span class="pre">p2,</span> <span class="pre">p3</span></code>, aufnehmen. Des weiteren müssen noch die x- und y-Werte der Datenpunkte übergeben werden. Neben den Datenpunkten muss auch noch ein initialer Wert für die Suche nach den besten Parameterwerten übergeben werden. Hier wird der Wert von 1 als Anfangswert für alle Parameter verwendet. Im Allgemeinen kann die gefundene Lösung vom Anfangswert abhängig sein.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 3: Zahl im Wertebereich zwischen 10 und 20</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;liegt zwischen 10 und 20.&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;liegt nicht zwischen 10 und 20.&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Zahl 1 liegt nicht zwischen 10 und 20.
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="verschachtelte-abzweigungen">
-<h2>Verschachtelte Abzweigungen<a class="headerlink" href="#verschachtelte-abzweigungen" title="Permalink to this headline">¶</a></h2>
-<p>Wie Schleifen, können auch Abzweigungen verschachtelt werden. Dazu werden folgende Abzweigungen in die Anweisungsblöcke der übergeordneten Abfragen gesetzt.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 4: Zahl im Wertebereich zwischen 10 und 20 mit verschachtelten Abzweigungen</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist größer als 10.&#39;</span> <span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist kleiner als 20.&#39;</span> <span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Damit liegt die Zahl zwischen 10 und 20.&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist größer als 20 und liegt nicht im gesuchten Wertebereich.&#39;</span> <span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Die Zahl&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s1">&#39;ist kleiner als 10 und liegt nicht im gesuchten Wertebereich.&#39;</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Zahl 12 ist größer als 10.
-Die Zahl 12 ist kleiner als 20.
-Damit liegt die Zahl zwischen 10 und 20.
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="kombination-von-schleifen-und-abzweigungen">
-<h2>Kombination von Schleifen und Abzweigungen<a class="headerlink" href="#kombination-von-schleifen-und-abzweigungen" title="Permalink to this headline">¶</a></h2>
-<p>Wie alle Anweisungen, können auch die beiden Grundelemente Schleifen und Abzweigungen kombiniert werden. Dazu werden sie in die jeweiligen Ausführungsblöcke integriert.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 5: Prüfe ob Elemente einer Liste gerade Zahlen sind.</span>
-
-<span class="c1"># Defniere eine Liste</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">35</span><span class="p">]</span>
-
-<span class="c1"># Schleife über alle Listenelemente</span>
-<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">l1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Prüfe das Element&quot;</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
-    <span class="c1"># Prüfe ob Element gerade ist</span>
-    <span class="k">if</span> <span class="n">el</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  -&gt; gerade&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  -&gt; ungerade&quot;</span><span class="p">)</span>
-        
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prüfe das Element -4
-  -&gt; gerade
-Prüfe das Element 5
-  -&gt; ungerade
-Prüfe das Element 11
-  -&gt; ungerade
-Prüfe das Element 98
-  -&gt; gerade
-Prüfe das Element 2
-  -&gt; gerade
-Prüfe das Element -35
-  -&gt; ungerade
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.optimize</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Beispiel 6: Ausgabe der einzelnen Elemente in verschiedenen Richtungen</span>
-
-<span class="c1"># Setze Variable zum Steuern der Richtung</span>
-<span class="n">vorwaerts</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="c1"># Beispielliste</span>
-<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;Feuer&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="o">-</span><span class="mf">3.456</span><span class="p">]</span>
-
-<span class="k">if</span> <span class="n">vorwaerts</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Element: &quot;</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
-        
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Element: &quot;</span><span class="p">,</span> <span class="n">l2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">modell_funktion</span><span class="p">,</span> <span class="n">x_daten</span><span class="p">,</span> <span class="n">y_daten</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Element:  -3.456
-Element:  [6, 7]
-Element:  Feuer
-Element:  45
-Element:  11
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([3.08778071, 1.29375225, 0.69977958]), array([[ 3.97940679e-03, -8.37274967e-06, -2.41531680e-06],
+       [-8.37274967e-06,  5.14409621e-05, -2.73642936e-04],
+       [-2.41531680e-06, -2.73642936e-04,  1.87905170e-03]]))
 </pre></div>
 </div>
 </div>
 </div>
+<p>Das Ergebnis des Funktionsaufrufs von <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> ist ein Tupel, dessen erstes Element die Parameterwerte enthält, welche bei der gegebenen Modellfunktion die Daten am besten fitten. Hier also</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.08778071 1.29375225 0.69977958]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Da der Beispieldatensatz mittels einer verrauschten Sinus-Funktion generiert wurde, ist eine direkte Überprüfung dieser Werte möglich. Bei der Generierung wurden die Zahlenwerte <span class="math notranslate nohighlight">\(\sf p_1 = 3, p_2 = 1.3, p_3=0.7\)</span> verwendet. Die gefitteten Werte liegen nahe an den vorgegebenen und der Unterschied wird durch das Rauschen verursacht. Als visuellen Vergleich können die Messdaten und die gefittete Modellfunktion gemeinsam dargestellt werden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_daten</span><span class="p">,</span> <span class="n">y_daten</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Datenpunkte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_daten</span><span class="p">,</span> <span class="n">modell_funktion</span><span class="p">(</span><span class="n">x_daten</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gefittete Modellfunktion&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-Werte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-Werte&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/035_optimierung_13_0.png" src="../../../_images/035_optimierung_13_0.png" />
+</div>
+</div>
+<p>Häufig werden auch stückweise definierte Modellfunktionen benötigt. Das folgende Beispiel zeigt wie dies anhand des folgenden Datensatzes umgesetzt werden kann.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_ld</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y_ld</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x_ld</span><span class="p">)</span>
+<span class="n">y_ld</span><span class="p">[</span><span class="n">x_ld</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_ld</span><span class="p">[</span><span class="n">x_ld</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span>
+<span class="n">y_ld</span><span class="p">[</span><span class="n">x_ld</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="n">y_ld</span> <span class="o">+=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_ld</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_ld</span><span class="p">,</span> <span class="n">y_ld</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-Werte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-Werte&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/035_optimierung_15_0.png" src="../../../_images/035_optimierung_15_0.png" />
+</div>
+</div>
+<p>In diesem Fall wird nach einer passenden stückweise konstanten bzw. linearen Funktion gesucht. Diese hat zwei Parameter und kann wie folgt definiert werden</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sf f(x) = \begin{cases}
+\sf p_1\cdot x &amp; \sf x &lt; p_2 \\
+\sf p_1\cdot p_2 &amp; \sf x \ge p_2
+\end{cases}\end{split}\]</div>
+<p>Dabei entspricht <span class="math notranslate nohighlight">\(\sf p_1\)</span> der Steigung im ersten Teil der Funktion und <span class="math notranslate nohighlight">\(\sf p_2\)</span> gibt den x-Wert an, an welchem der zweite Teil anfängt, welcher konstant ist und stetig zum erten Teil ist.</p>
+<p>Die Implementierung in Python sieht mit Hilfe der Funktion <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.piecewise.html">numpy.piecewise</a> wie folgt aus.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">modell_funktion_ld</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">teil_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">p1</span><span class="o">*</span><span class="n">x</span>
+    <span class="k">def</span> <span class="nf">teil_2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">p1</span><span class="o">*</span><span class="n">p2</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">piecewise</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="n">p2</span><span class="p">,</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">p2</span><span class="p">],</span> <span class="p">[</span><span class="n">teil_1</span><span class="p">,</span> <span class="n">teil_2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wie oben kann nun die Funktion <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code> eingesetzt werden.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">modell_funktion_ld</span><span class="p">,</span> <span class="n">x_ld</span><span class="p">,</span> <span class="n">y_ld</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.02243619 2.97682029]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der visuelle Vergleich zeigt, dass auch hier passende Werte für die Modellparameter gefunden werden konnten.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_ld</span><span class="p">,</span> <span class="n">y_ld</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Datenpunkte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_ld</span><span class="p">,</span> <span class="n">modell_funktion_ld</span><span class="p">(</span><span class="n">x_ld</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gefittete Modellfunktion&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-Werte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-Werte&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/035_optimierung_22_0.png" src="../../../_images/035_optimierung_22_0.png" />
+</div>
+</div>
+<p>Im allgemeinen kann es passieren, insbesondere bei komplexen Problemen, dass nicht optimale Parameter gefunden weren konnten. An dieser Stelle kann eine Variation der Anfangswerte helfen.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1237,7 +1190,7 @@ Element:  11
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/Script/02_python"
+            path: "./content/Script/03_datenanalyse"
         },
         predefinedOutput: true
     }
@@ -1249,17 +1202,17 @@ Element:  11
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="0231_schleifen.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="034_klassifizierung.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.3.1. </span>Schleifen</p>
+            <p class="prev-next-title"><span class="section-number">3.4. </span>Klassifizierung</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="0233_funktionen.html" title="next page">
+    <a class='right-next' id="next-link" href="../04_numerik/04_einleitung.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3.3. </span>Funktionen</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Numerik</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
