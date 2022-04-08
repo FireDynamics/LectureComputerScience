@@ -52,6 +52,9 @@ for ipath in notebooks:
                 if 'remove_cell' in cell_tags:
                     cell_tags.remove('remove_cell')
                     print('Revealed cell in' + ipath)
+# Adds toggle to code cells. does not work for markdown                   
+#                if 'hide_cell' not in cell_tags:
+#                	cell_tags.append('hide_cell')
         if len(cell_tags) > 0:
             cell['metadata']['tags'] = cell_tags
 
