@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/02_python/zusatzaufgaben/zusatz_grundlagen.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1101,10 +1100,10 @@
 <h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">¶</a></h3>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quotient</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">dividend</span> <span class="o">=</span> <span class="mi">8</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dividend</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="n">divisor</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">quotient</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">//</span> <span class="n">divisor</span>
-<span class="n">rest</span> <span class="o">=</span> <span class="n">dividend</span> <span class="o">-</span> <span class="p">(</span><span class="n">quotient</span> <span class="o">*</span> <span class="n">divisor</span><span class="p">)</span>
+<span class="n">rest</span> <span class="o">=</span> <span class="n">quotient</span> <span class="o">-</span> <span class="p">(</span><span class="n">dividend</span> <span class="o">*</span> <span class="n">divisor</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1124,7 +1123,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5 in Minuten:  90.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32.2 in Minuten:  1932.0000000000002
 </pre></div>
 </div>
 </div>
@@ -1134,8 +1133,8 @@
 <div class="section" id="temperaturkonversion">
 <h2>Temperaturkonversion<a class="headerlink" href="#temperaturkonversion" title="Permalink to this headline">¶</a></h2>
 <p>Schreiben Sie ein Programm, welches eine Temperatur von °Fahrenheit nach °Celsius umrechnet und ausgibt. Benutzen Sie die Formel:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6df9f652-cf61-41d7-8cdc-82aeb8e9ec9b">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-6df9f652-cf61-41d7-8cdc-82aeb8e9ec9b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a99633df-1d78-4d56-a99c-367261e7da7e">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-a99633df-1d78-4d56-a99c-367261e7da7e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{C}{5} = \frac{F-32}{9}
 \end{equation}\]</div>
 <p>mit <span class="math notranslate nohighlight">\(C\)</span> der Temperatur in Celsius und <span class="math notranslate nohighlight">\(F\)</span> der Temperatur in Fahrenheit.</p>

@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/03_datenanalyse/03_numpy_arrays/arrays.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1006,11 +1005,6 @@
      Lösungshinweis
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1026,11 +1020,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
      Lösungshinweis
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1070,11 +1059,6 @@
      Lösungshinweis
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1090,11 +1074,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
      Lösungshinweis
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1126,35 +1105,6 @@
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">¶</a></h3>
 <p>Wenn Sie alles richtig gemacht haben, sollten Sie eine Sinus und eine Cosinus Kurve sehen.</p>
 </div>
-<div class="section" id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Berechnung von Sinus und dessen Ableitung</span>
-<span class="n">wertebereich</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">)</span>
-<span class="n">cos</span> <span class="o">=</span> <span class="p">(</span><span class="n">sin</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">-</span><span class="n">sin</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mi">1000</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-
-<span class="c1"># Plotten der Daten</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cos</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cosin&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../../_images/arrays_6_0.png" src="../../../../_images/arrays_6_0.png" />
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">¶</a></h2>
@@ -1174,34 +1124,6 @@
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <img alt="../../../../_images/arrays_9_0.png" src="../../../../_images/arrays_9_0.png" />
-</div>
-</div>
-</div>
-<div class="section" id="id3">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Erstellen der binaeren Maske</span>
-<span class="n">maske</span> <span class="o">=</span> <span class="n">cos</span> <span class="o">-</span> <span class="n">sin</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">&lt;</span> <span class="mi">0</span>
-
-<span class="c1"># Erstellen des Maximumsarrays</span>
-<span class="n">mix</span> <span class="o">=</span> <span class="n">cos</span>
-<span class="n">mix</span><span class="p">[</span><span class="n">maske</span><span class="p">]</span> <span class="o">=</span> <span class="n">sin</span><span class="p">[</span><span class="mi">1</span><span class="p">:][</span><span class="n">maske</span><span class="p">]</span>
-
-<span class="c1"># Plotten der Daten</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">mix</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;max(sin, cos)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../../_images/arrays_11_0.png" src="../../../../_images/arrays_11_0.png" />
 </div>
 </div>
 </div>

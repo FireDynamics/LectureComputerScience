@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -1250,8 +1249,8 @@
 <div class="section" id="pythagoras">
 <h2>Pythagoras<a class="headerlink" href="#pythagoras" title="Permalink to this headline">¶</a></h2>
 <p>Schreiben Sie ein Programm, dass alle Integer Triplets <span class="math notranslate nohighlight">\(a, b, c\)</span> zwichen 1 und einer beliebigen Grenze findet, die die Gleichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06118017-be0d-4b71-a907-d98b909845b9">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-06118017-be0d-4b71-a907-d98b909845b9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-43256a3a-a695-48b0-a2cf-cf1cb8a0b080">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-43256a3a-a695-48b0-a2cf-cf1cb8a0b080" title="Permalink to this equation">¶</a></span>\[\begin{equation}
     a² + b² =c²
 \end{equation}\]</div>
 <p>erfüllen.

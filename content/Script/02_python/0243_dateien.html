@@ -45,12 +45,11 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/02_python/0243_dateien.html" />
     <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
@@ -1276,13 +1275,13 @@ Bergischen Städtedreiecks.
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der gefundenen Dateien: 7
 Dateienliste:
-   dateien/bochum.txt
-   dateien/wuppertal.txt
-   dateien/neue_datei.txt
-   dateien/zahlen.csv
    dateien/tabelle.csv
    dateien/unwichtig.dat
+   dateien/neue_datei.txt
+   dateien/zahlen.csv
+   dateien/bochum.txt
    dateien/juelich.txt
+   dateien/wuppertal.txt
 </pre></div>
 </div>
 </div>
@@ -1302,10 +1301,10 @@ Dateienliste:
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der gefundenen Dateien: 4
 Dateienliste:
-   dateien/bochum.txt
-   dateien/wuppertal.txt
    dateien/neue_datei.txt
+   dateien/bochum.txt
    dateien/juelich.txt
+   dateien/wuppertal.txt
 </pre></div>
 </div>
 </div>
@@ -1326,16 +1325,16 @@ Dateienliste:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erste Zeile der Datei &#39;dateien/bochum.txt&#39;:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erste Zeile der Datei &#39;dateien/neue_datei.txt&#39;:
+Hallo Dateiwelt!
+Erste Zeile der Datei &#39;dateien/bochum.txt&#39;:
 Aus Wikipedia: Die Stadt Bochum [ˈboːxʊm] (westfälisch: 
+
+Erste Zeile der Datei &#39;dateien/juelich.txt&#39;:
+Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige 
 
 Erste Zeile der Datei &#39;dateien/wuppertal.txt&#39;:
 Aus Wikipedia: Wuppertal ist mit 354.382 Einwohnern (31. 
-
-Erste Zeile der Datei &#39;dateien/neue_datei.txt&#39;:
-Hallo Dateiwelt!
-Erste Zeile der Datei &#39;dateien/juelich.txt&#39;:
-Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige 
 </pre></div>
 </div>
 </div>
@@ -1356,12 +1355,12 @@ Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dateienliste nach dem Erstellen der neuen Datei:
-   dateien/bochum.txt
-   dateien/wuppertal.txt
-   dateien/zahlen.csv
    dateien/tabelle.csv
    dateien/unwichtig.dat
+   dateien/zahlen.csv
+   dateien/bochum.txt
    dateien/juelich.txt
+   dateien/wuppertal.txt
 </pre></div>
 </div>
 </div>
@@ -1392,13 +1391,13 @@ Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dateienliste nach dem Erstellen der neuen Datei:
-   dateien/bochum.txt
-   dateien/wuppertal.txt
-   dateien/neue_datei.txt
-   dateien/zahlen.csv
    dateien/tabelle.csv
    dateien/unwichtig.dat
+   dateien/neue_datei.txt
+   dateien/zahlen.csv
+   dateien/bochum.txt
    dateien/juelich.txt
+   dateien/wuppertal.txt
 </pre></div>
 </div>
 </div>

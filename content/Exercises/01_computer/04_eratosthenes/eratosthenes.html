@@ -45,14 +45,11 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/01_computer/04_eratosthenes/eratosthenes.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
@@ -1001,11 +998,6 @@
    Lösungshinweise
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -1034,11 +1026,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#losungshinweise">
    Lösungshinweise
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
   </a>
  </li>
 </ul>
@@ -1077,37 +1064,6 @@ b) Versuchen Sie die Komplexität des Algorithmus abzuschätzen und begründen S
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="losungsvorschlag">
-<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h2>
-<p>a) So in der Art sollte das Ergebnis aussehen:</p>
-<div class="cell tag_remove_input tag_loesung docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    2  3  x  5  x  7  x  x  x 
-11  x 13  x  x  x 17  x 19  x 
- x  x 23  x  x  x  x  x 29  x 
-31  x  x  x  x  x 37  x  x  x 
-41  x 43  x  x  x 47  x  x  x 
- x  x 53  x  x  x  x  x 59  x 
-61  x  x  x  x  x 67  x  x  x 
-71  x 73  x  x  x  x  x 79  x 
- x  x 83  x  x  x  x  x 89  x 
- x  x  x  x  x  x 97  x  x  x 
-</pre></div>
-</div>
-</div>
-</div>
-<p>b) Das größte Problem beim Abschätzen der Komplexität ist, dass man nicht sagen kann, wie viele von n Zahlen tatsächlich Primzahlen sind. Was man jedoch sicher sagen kann ist, dass höchstens jede Zahl eine Primzahl ist. Mit dieser Abschätzung können wir den Algorithmus analysieren.
-Die simpelste Abschätzung der Komplexität wäre, dass wir für jede Primzahl schauen, ob jede andere Zahl durch sie teilbar ist. Bei n Zahlen ergibt sich eine Komplexität von</p>
-<p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot (n-1)) = \mathcal{O}(n^2).\)</span></p>
-<p>Allerdings muss man nicht für jede der Zahlen jede andere überprüfen. Es reicht, wenn explizit die Vielfachen überprüft und gelöscht werden.
-Addiert man alle Überprüfungen zusammen, erhält man</p>
-<p><span class="math notranslate nohighlight">\(\frac{n}{2} + \frac{n}{3} + \frac{n}{4} + … + \frac{n}{n}= n \cdot \sum_{i=2}^{n}\frac{1}{i}.\)</span></p>
-<p><span class="math notranslate nohighlight">\(\sum_{i=1}^{n}\frac{1}{i}\)</span> ist die Harmonische Reihe und divergiert mit <span class="math notranslate nohighlight">\(\mathcal{O}(\ln(n))\)</span>. Dies erlaubt eine genauere Abschätzung zu</p>
-<p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot \mathcal{O}(\ln(n))) =  \mathcal{O}(n \cdot \ln(n)).\)</span></p>
-<p><strong>Bonus:</strong>
-Der Algorithmus kann noch weiter optimiert werden, wenn man berücksichtigt, dass jede Zahl als Produkt von Primzahlen darstellbar ist. Nach den ersten <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> Zahlen wurden alle Zahlen aus der Liste gestrichen, deren Primfaktorzerlegung mindestens eine der darin enthaltenen Primzahlen enthällt. Das bedeutet aber, dass die Primfaktorzerlegungen aller folgenden, nicht gestrichenen Zahlen nur aus Primzahlen größer als <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> bestehen können. Da jedoch das Produkt von zwei dieser Zahlen immer größer als <span class="math notranslate nohighlight">\(n\)</span> ist, muss jede noch nicht gestrichene Zahl in der Liste eine Primzahl sein. Folglich kann der Algorithmus beendet werden, sobald die Vielfachen der Zahlen kleiner-gleich <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> überprüft wurden. Für die Komplexität heißt dies:</p>
-<p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot \ln(\sqrt{n})).\)</span></p>
 </div>
 </div>
 

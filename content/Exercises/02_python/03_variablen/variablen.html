@@ -45,15 +45,14 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/02_python/03_variablen/variablen.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -995,25 +994,11 @@
   <a class="reference internal nav-link" href="#aufgabenteil-a">
    Aufgabenteil A
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-b">
    Aufgabenteil B
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Lösungsvorschlag
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1039,25 +1024,11 @@
   <a class="reference internal nav-link" href="#aufgabenteil-a">
    Aufgabenteil A
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-b">
    Aufgabenteil B
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Lösungsvorschlag
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1080,47 +1051,6 @@
 <li><p>90061 s</p></li>
 <li><p>3000000 s</p></li>
 </ol>
-<div class="section" id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeit</span> <span class="o">=</span> <span class="mi">3000000</span>
-
-<span class="c1"># Ein Tag hat 24 Stunden mit jeweils 3600 Sekunden</span>
-<span class="n">tage</span> <span class="o">=</span> <span class="n">zeit</span> <span class="o">//</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
-<span class="n">tage_rest</span> <span class="o">=</span> <span class="n">zeit</span> <span class="o">%</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
-
-<span class="c1"># Eine Stunde hat 3600 Sekunden</span>
-<span class="n">stunden</span> <span class="o">=</span> <span class="n">tage_rest</span> <span class="o">//</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
-<span class="n">stunden_rest</span> <span class="o">=</span> <span class="n">tage_rest</span> <span class="o">%</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
-
-<span class="c1"># Eine Minute hat 60 Sekunden</span>
-<span class="n">minuten</span> <span class="o">=</span> <span class="n">stunden_rest</span> <span class="o">//</span> <span class="mi">60</span>
-<span class="n">minuten_rest</span> <span class="o">=</span> <span class="n">stunden_rest</span> <span class="o">%</span> <span class="mi">60</span>
-
-<span class="c1"># Der letzte Rest, ist die Anzahl der Sekunden</span>
-<span class="n">sekunden</span> <span class="o">=</span> <span class="n">minuten_rest</span>
-
-<span class="c1"># Ausgabe der Ergebnisse</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Zeitdauer&quot;</span><span class="p">,</span> <span class="n">zeit</span><span class="p">,</span> <span class="s2">&quot;in Sekunden entspricht:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tage     : &quot;</span><span class="p">,</span> <span class="n">tage</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stunden  : &quot;</span><span class="p">,</span> <span class="n">stunden</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Minuten  : &quot;</span><span class="p">,</span> <span class="n">minuten</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sekunden : &quot;</span><span class="p">,</span> <span class="n">sekunden</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Zeitdauer 3000000 in Sekunden entspricht:
-Tage     :  34
-Stunden  :  17
-Minuten  :  20
-Sekunden :  0
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">¶</a></h2>
@@ -1140,56 +1070,6 @@ Position <span class="math notranslate nohighlight">\(\sf x(t)\)</span>.</p></li
 <li><p>Geben Sie nicht nur den Wert von x(t) in Kilometer aus, sondern betten ihn in einen
 ganzen Antwortsatz (einschließlich Einheiten) ein.</p></li>
 </ol>
-<div class="section" id="id1">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="cell tag_loesung docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Eingangsgrößen</span>
-
-<span class="c1"># x_0 in Kilometer</span>
-<span class="n">x_0</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="c1"># v_0 in Kilometer pro Stunde</span>
-<span class="n">v_0</span> <span class="o">=</span> <span class="mi">50</span>
-
-<span class="c1"># a in Meter pro Sekunde-Quadrat</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
-
-<span class="c1"># Zeitpunkt in Minuten</span>
-<span class="n">t</span> <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_loesung docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Umwandlung aller Größen in SI-Einheiten, also hier Meter und Sekunde</span>
-<span class="n">x_0_ms</span> <span class="o">=</span> <span class="n">x_0</span> <span class="o">*</span> <span class="mi">1000</span>
-<span class="n">v_0_ms</span> <span class="o">=</span> <span class="n">v_0</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">3600</span>
-<span class="n">t_ms</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">60</span>
-
-<span class="c1"># Auswertung der Postition</span>
-<span class="n">x_ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_0_ms</span> <span class="o">+</span> <span class="n">v_0_ms</span> <span class="o">*</span> <span class="n">t_ms</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">t_ms</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># Umwandlung der Position in Kilometer</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x_ms</span> <span class="o">/</span> <span class="mi">1000</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_loesung docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Position nach&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;Minuten beträgt &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot; km.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Position nach 10 Minuten beträgt  36.333333333333336  km.
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 

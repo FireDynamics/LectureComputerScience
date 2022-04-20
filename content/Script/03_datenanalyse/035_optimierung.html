@@ -45,15 +45,14 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/03_datenanalyse/035_optimierung.html" />
     <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -1066,9 +1065,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([3.08778071, 1.29375225, 0.69977958]), array([[ 3.97940679e-03, -8.37274967e-06, -2.41531680e-06],
-       [-8.37274967e-06,  5.14409621e-05, -2.73642936e-04],
-       [-2.41531680e-06, -2.73642936e-04,  1.87905170e-03]]))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([2.9958665 , 1.2979873 , 0.71563237]), array([[ 4.06060610e-03, -1.23603663e-05,  1.33246436e-05],
+       [-1.23603663e-05,  5.65826524e-05, -3.00112851e-04],
+       [ 1.33246436e-05, -3.00112851e-04,  2.05371409e-03]]))
 </pre></div>
 </div>
 </div>
@@ -1081,7 +1080,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.08778071 1.29375225 0.69977958]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.9958665  1.2979873  0.71563237]
 </pre></div>
 </div>
 </div>
@@ -1152,7 +1151,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.02243619 2.97682029]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.97382886 3.03030285]
 </pre></div>
 </div>
 </div>

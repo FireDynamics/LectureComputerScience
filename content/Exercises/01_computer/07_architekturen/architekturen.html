@@ -45,12 +45,11 @@
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/01_computer/07_architekturen/architekturen.html" />
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
@@ -999,11 +998,6 @@
    Lösungshinweise
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -1034,11 +1028,6 @@
    Lösungshinweise
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -1062,24 +1051,6 @@
 <div class="section" id="losungshinweise">
 <h2>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Permalink to this headline">¶</a></h2>
 <p>Diese Rechercheaufgabe soll Ihnen einen groben Überblick über die Prozessorarchitekturen ermöglichen. Informationen aus Wikipedia sind zur Lösung dieser Aufgabe hinreichend.</p>
-</div>
-<div class="section" id="losungsvorschlag">
-<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>x86 kommen vorranging in Desktop Systemen zum Einsatz, während ARM auf Mobiltelefonen und Single Board Computern verbaut werden.</p></li>
-<li><p>x86 hat umfangreichere Befehlssätze (CISC - Complex Instruction Set Computing), ARM wenige effiziente (RISC - Reduced Instruction Set Computing). x86 Systeme sind im Allgemeinen leistungsstärker, dafür verbrauchen ARM Prozessoren weniger Energie. Im Vergleich sind ARM Prozessoren auch günstiger.</p></li>
-<li><p>Die Befehlssätze der Prozessoren sind verschieden. Einmal kompiliert für einen Prozessor kann die Software auch nur auf diesem Typen verwendet werden. Der Quellcode muss für jeden Prozessortypen separat kompiliert werden. Es entstehen so zwei verschiedene ausführbare Programme.</p></li>
-</ol>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><a class="reference internal" href="http://i.cloud.opensystemsmedia.com/i__src854cf3b9d36d8785d724e5048b72276a_paraf0d99c20bd457d46a92c72841873c47.jpeg"><img alt="http://i.cloud.opensystemsmedia.com/i__src854cf3b9d36d8785d724e5048b72276a_paraf0d99c20bd457d46a92c72841873c47.jpeg" src="http://i.cloud.opensystemsmedia.com/i__src854cf3b9d36d8785d724e5048b72276a_paraf0d99c20bd457d46a92c72841873c47.jpeg" style="width: 600px;" /></a></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p><a class="reference external" href="http://embedded-computing.com/articles/x86-arm-both-ambidextrous-product-strategy/">Marktanteile 2012 von ARM und x86 Prozessoren nach Endgerät</a></p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 
