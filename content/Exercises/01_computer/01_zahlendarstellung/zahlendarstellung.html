@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.1. Zahlendarstellung &#8212; Vorlesung Ingenieurinformatik</title>
     
-  <link href="../../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../../../_static/doctools.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -908,88 +922,204 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../../_sources/content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../../_sources/content/Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#grundlagen-und-beispiele">
    Grundlagen und Beispiele
@@ -1084,12 +1214,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Zahlendarstellung</h1>
@@ -1200,20 +1329,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="zahlendarstellung">
-<h1><span class="section-number">1.1. </span>Zahlendarstellung<a class="headerlink" href="#zahlendarstellung" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="zahlendarstellung">
+<h1><span class="section-number">1.1. </span>Zahlendarstellung<a class="headerlink" href="#zahlendarstellung" title="Permalink to this headline">#</a></h1>
 <p>In dieser Aufgabe wird die digitale Darstellung von ganzen und reellen Zahlen vertieft. Insbesondere soll die Umwandlung von reellen Zahlen in Gleitkommazahlen verdeutlicht und die Grenzen der digitalen Darstellung illustriert werden.</p>
-<div class="section" id="grundlagen-und-beispiele">
-<h2>Grundlagen und Beispiele<a class="headerlink" href="#grundlagen-und-beispiele" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ganze-zahlen">
-<h3>Ganze Zahlen<a class="headerlink" href="#ganze-zahlen" title="Permalink to this headline">¶</a></h3>
+<section id="grundlagen-und-beispiele">
+<h2>Grundlagen und Beispiele<a class="headerlink" href="#grundlagen-und-beispiele" title="Permalink to this headline">#</a></h2>
+<section id="ganze-zahlen">
+<h3>Ganze Zahlen<a class="headerlink" href="#ganze-zahlen" title="Permalink to this headline">#</a></h3>
 <p>Die Umwandlung ganzer Zahlen erfolt direkt über die Zahlendarstellung im Dualsystem. Soll ein Vorzeichen dargestellt werden, so wird dieses im höchsten Bit gespeichert. Hierbei wird oft die Zahl als negativ interpretiert, wenn das höchste Bit einen Wert von Eins hat.</p>
-</div>
-<div class="section" id="gleitkommazahlen">
-<h3>Gleitkommazahlen<a class="headerlink" href="#gleitkommazahlen" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gleitkommazahlen">
+<h3>Gleitkommazahlen<a class="headerlink" href="#gleitkommazahlen" title="Permalink to this headline">#</a></h3>
 <p>Die Darstellung von Gleitkommzahlen in binären Systemen kann auf unterschiedliche Weisen erfolgen. Die mit Abstand weitverbreiteste Methode wird im IEEE754 Standard beschrieben. Die hier verwendeten Beispiele folgen dem Verfahren dieses Standards und werden im folgenden kurz vorgestellt.</p>
 <p>Für einen besseren Überblick und eine kürzere Schreibweise wird in diesem Beispiel eine hypothetische 8-Bit-Darstellung verwendet. Die real eingesetzten Verfahren für höhere Bitwerte, typischerweise 32 und 64 Bit, sind gleich. Eine mögliche Aufteilung der Bits könnte wie in folgender Abbildung aussehen.</p>
 <table class="colwidths-auto table">
@@ -1229,28 +1359,28 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In diesem Beispiel wird eine Gleitkommazahl <span class="math notranslate nohighlight">\(a\)</span> wie folgt durch das Vorzeichen <span class="math notranslate nohighlight">\(s\)</span>, die Mantisse <span class="math notranslate nohighlight">\(m\)</span> umd den Exponenten <span class="math notranslate nohighlight">\(e\)</span> abgebildet:
 <span class="math notranslate nohighlight">\(a = (-1)^{s} \cdot (1.0+m) \cdot 2^{e-3}\)</span></p>
 <p>Zur Umwandlung von der binären Darstellung in eine Gleitkommazahl sind folgende Schritte notwendig. Diese werden anhand der Bitfolge 11011011<sub>2</sub> verdeutlicht.</p>
-<div class="section" id="schritt-0">
-<h4>Schritt 0<a class="headerlink" href="#schritt-0" title="Permalink to this headline">¶</a></h4>
+<section id="schritt-0">
+<h4>Schritt 0<a class="headerlink" href="#schritt-0" title="Permalink to this headline">#</a></h4>
 <p>Zur besseren visuellen Darstellung werden die Bitgruppen getrennt nach obiger Aufteilung dargestellt:</p>
 <p>11011011<sub>2</sub> = 1 101 1011<sub>2</sub></p>
-</div>
-<div class="section" id="schritt-1">
-<h4>Schritt 1<a class="headerlink" href="#schritt-1" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="schritt-1">
+<h4>Schritt 1<a class="headerlink" href="#schritt-1" title="Permalink to this headline">#</a></h4>
 <p>Bestimmen Sie das Vorzeichen der Gleitkommazahl</p>
 <ul class="simple">
 <li><p>Vorzeichenbit = 1 : die Gleitkommazahl ist negativ</p></li>
 <li><p>Vorzeichenbit = 0 : die Gleitkommazahl ist positiv</p></li>
 </ul>
 <p>In unserem Beispiel ist die Gleitkommazahl negativ.</p>
-</div>
-<div class="section" id="schritt-2">
-<h4>Schritt 2<a class="headerlink" href="#schritt-2" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="schritt-2">
+<h4>Schritt 2<a class="headerlink" href="#schritt-2" title="Permalink to this headline">#</a></h4>
 <p>Berechnen Sie den Exponenten <span class="math notranslate nohighlight">\(e\)</span> indem Sie die binäre Zahl in das Dezimalsystem umwandeln. Hierbei wird eine vorzeichenlose ganze Zahl angenommen.</p>
 <p>In unserem Beispiel ergibt sich somit
 <span class="math notranslate nohighlight">\(e\)</span> = 101<sub>2</sub> = 5<sub>10</sub></p>
-</div>
-<div class="section" id="schritt-3">
-<h4>Schritt 3<a class="headerlink" href="#schritt-3" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="schritt-3">
+<h4>Schritt 3<a class="headerlink" href="#schritt-3" title="Permalink to this headline">#</a></h4>
 <p>Als letztes muss noch die Mantisse bestimmt werden. Da durch die Mantisse keine ganze Zahl dargestellt werden soll, ist hier die Umwandlung etwas komplexer.</p>
 <p>Um eine – in diesem Zahlenformat definierte – Umrechnung zu demonstrieren werden die Bits der Mantisse durchnummeriert. Von links nach rechts gehend, sind die einzelnen n-Bits der Mantisse wie folgt gekennzeichnet: <span class="math notranslate nohighlight">\(m_1\)</span>, <span class="math notranslate nohighlight">\(\dots\)</span>, <span class="math notranslate nohighlight">\(m_n\)</span>. In unserem Beispiel ist <span class="math notranslate nohighlight">\(n=4\)</span> und</p>
 <ul class="simple">
@@ -1266,22 +1396,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Und somit ergibt sich folgender Wert für <span class="math notranslate nohighlight">\(m\)</span> in unserem Beispiel:</p>
 <div class="math notranslate nohighlight">
 \[ m = \frac{1}{2^1} + \frac{0}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} = \frac{11}{2^4} = \frac{11}{16} = 0.6875 \]</div>
-</div>
-<div class="section" id="schritt-4">
-<h4>Schritt 4<a class="headerlink" href="#schritt-4" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="schritt-4">
+<h4>Schritt 4<a class="headerlink" href="#schritt-4" title="Permalink to this headline">#</a></h4>
 <p>Werden nun alle obigen Schritte zusammengesetzt, so ergibt sich mit</p>
 <div class="math notranslate nohighlight">
 \[ s = 1 \quad e = 5 \quad m = 0.6875 \]</div>
 <p>für die Gleitkommazahl <span class="math notranslate nohighlight">\(a\)</span> folgender Wert</p>
 <div class="math notranslate nohighlight">
 \[a = -1^{s} \cdot (1.0+m) \cdot 2^{e-3} = -1 \cdot 1.6875 \cdot 2^2 = -6.75\]</div>
-</div>
-</div>
-</div>
-<div class="section" id="aufgabenstellung">
-<h2>Aufgabenstellung<a class="headerlink" href="#aufgabenstellung" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="aufgabenteil-a">
-<h3>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="aufgabenstellung">
+<h2>Aufgabenstellung<a class="headerlink" href="#aufgabenstellung" title="Permalink to this headline">#</a></h2>
+<section id="aufgabenteil-a">
+<h3>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this headline">#</a></h3>
 <p>Wandeln Sie folgende Dezimalzahlen in Binärzahlen um. Beachten Sie dabei den gewünschten Datentyp.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1307,26 +1437,26 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-<div class="section" id="losungshinweis">
-<h4>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">¶</a></h4>
+<section id="losungshinweis">
+<h4>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">#</a></h4>
 <p>Die Anzahl der Einsen in der binären Darstellung für die ersten drei Zahlen sind: 6, 4, 4.</p>
-</div>
-</div>
-<div class="section" id="aufgabenteil-b">
-<h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="aufgabenteil-b">
+<h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">#</a></h3>
 <p>Wandeln Sie folgende binäre Gleitkommazahlen (8 Bit) in ihr dezimales Äquivalent um. Verwenden Sie die oben vorgestellte Umwandlung.</p>
 <ul class="simple">
 <li><p>01010100<sub>2</sub></p></li>
 <li><p>11100010<sub>2</sub></p></li>
 </ul>
 <p>Welche Gleitkommazahl ist vom Betrag her die kleinste darstellbare Zahl in diesem Format? Hierzu ist es hilfreich zuerst die binäre Darstellung zu bestimmen.</p>
-<div class="section" id="id1">
-<h4>Lösungshinweis<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<section id="id1">
+<h4>Lösungshinweis<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>Die beiden umzuwandelnden Zahlen liegen vom Betrag her zwischen 4 und 10. Schreibt man die Gleitkommazahl auf, so sind ab der zweiten Nachkommastelle alle Stellen gleich Null.</p>
-</div>
-</div>
-<div class="section" id="aufgabenteil-c">
-<h3>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="aufgabenteil-c">
+<h3>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this headline">#</a></h3>
 <p>Bestimmen Sie die binäre Darstellung im obigen hypothetischen 8-Bit-Format folgender Gleitkommazahlen:</p>
 <ul class="simple">
 <li><p>1.0</p></li>
@@ -1338,22 +1468,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>3.0</p></li>
 <li><p>-2.5</p></li>
 </ul>
-<div class="section" id="id2">
-<h4>Lösungshinweis<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<section id="id2">
+<h4>Lösungshinweis<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <p>Die Anzahl der Einsen in der binären Darstellung der oberen drei Zahlen ist: 2, 1, 3.</p>
-</div>
-</div>
-<div class="section" id="aufgabenteil-d">
-<h3>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="aufgabenteil-d">
+<h3>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this headline">#</a></h3>
 <p>Mit der oberen hypothetischen 8-Bit-Darstellung sind nur wenige Gleitkommazahlen abbildbar. Beispielsweise kann die 0.1 in diesem Format nicht exakt dargestellt werden – Sie können es mal versuchen. Bei der Umwandlung ins binäre Format würde dann die nächstgelegene abbildbare Gleitkommazahl gewählt werden.</p>
 <p>Aber auch mit den in der Praxis eingesetzten 32-Bit-Darstellungen, wie nach dem IEEE754 Standard, kann die 0.1 nicht exakt dargestellt werden. Die beiden benachbarten und abbildbaren Gleitkommazahlen sind</p>
 <div class="math notranslate nohighlight">
 \[ 0.0999999940395 \le 0.1 \le 0.10000000149 \]</div>
 <p>Hier ist die größere Zahl näher dran, so dass deren binäre Darstellung für die 0.1 gewählt werden würde.</p>
 <p>Auch die Zahlen 0.2 und 0.3 können nicht exakt dargestellt werden. Wenn Sie nun einen Computer, welcher natürlich nur mit der binären Darstellung rechnen kann, die Summe aus 0.1 und 0.2 bilden lassen, wird das Ergebniss gleich 0.3 sein?</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1377,9 +1507,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../uebersicht.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1395,29 +1527,33 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    <div class="extra_footer">
+      <p>
 <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
 | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
 </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

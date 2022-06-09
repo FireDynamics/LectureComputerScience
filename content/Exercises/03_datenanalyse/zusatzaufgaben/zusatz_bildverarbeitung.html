@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Bildverarbeitung &#8212; Vorlesung Ingenieurinformatik</title>
     
-  <link href="../../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../../../_static/doctools.js"></script>
     <script src="../../../../_static/clipboard.min.js"></script>
     <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -908,88 +922,204 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../../_sources/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../../_sources/content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#weiszabgleich">
    Weißabgleich
@@ -1070,12 +1200,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Bildverarbeitung</h1>
@@ -1172,11 +1301,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="bildverarbeitung">
-<h1>Bildverarbeitung<a class="headerlink" href="#bildverarbeitung" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="bildverarbeitung">
+<h1>Bildverarbeitung<a class="headerlink" href="#bildverarbeitung" title="Permalink to this headline">#</a></h1>
 <p>Die nachfolgenden Aufgaben behandeln das Einlesen und Bearbeiten von Bilddateien. Verwenden das Modul <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> zum Einlesen und Darstellen der Dateien und <code class="docutils literal notranslate"><span class="pre">Numpy</span></code> zur Datenverarbeitung. JPEG Bilder wie sie im Folgenden verwendet werden, können mittels Python als dreidimensionales Array eingelesen werden. Oftmals empfiehlt es sich die Bearbeitung getrennt für die drei Farbkanäle <span class="math notranslate nohighlight">\((R, G, B)\)</span> vorzunehmen. Sämtliche Bilder können zur lokalen Bearbeitung der Aufgaben hier heruntergeladen heruntergeladen werden: <a class="reference download internal" download="" href="../../../../_downloads/6f7d4470ea42fd0ad9606ae2ee192ea9/Bilder.zip"><code class="xref download docutils literal notranslate"><span class="pre">Bilder.zip</span></code></a>.
 Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können wie folgt adressiert werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image_dir</span> <span class="o">=</span> <span class="s1">&#39;/srv/images/&#39;</span>
@@ -1184,11 +1314,11 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <span class="n">bild_array</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="weiszabgleich">
-<h2>Weißabgleich<a class="headerlink" href="#weiszabgleich" title="Permalink to this headline">¶</a></h2>
+<section id="weiszabgleich">
+<h2>Weißabgleich<a class="headerlink" href="#weiszabgleich" title="Permalink to this headline">#</a></h2>
 <p>Der Weißabgleich dient der Anpassung der Farbtemperatur eines Fotos an die Lichtbedingungen des Aufnahmeortes. Dies kann erreicht werden, indem die Intensitäten der drei Farbkanäle des Fotos anhand eines Referenzpixels skaliert werden. Der Referenzpixel wird dabei aus einem Bereich des Bildes ausgewählt, der wahrheitsgemäß als weiß oder grau angenommen wird. Für die Übung benötigen Sie das Bild “Weissabgleich.jpg”</p>
-<div class="section" id="aufgabe">
-<h3>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h3>
+<section id="aufgabe">
+<h3>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h3>
 <p>Nachfolgendes Foto weist durch einen falschen Weißabgleich einen erheblichen Blaustich auf. Wählen Sie einen Referenzpixel innerhalb des Bildes und korrigieren Sie die Intensitäten der drei Farbkanäle auf ein einheitliches Niveau. Skalieren Sie sämtliche Pixel des Bildes anhand der zuvor bestimmten Korrekturfaktoren.</p>
 <p>Orientieren Sie sich dabei an den folgenden Bearbeitungsschritten:</p>
 <ol class="simple">
@@ -1202,17 +1332,19 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <p class="admonition-title">Hinweis</p>
 <p>Beachten Sie, dass die Funktion <code class="docutils literal notranslate"><span class="pre">matplotlib.imshow</span></code> lediglich die Ausgabe von RGB Bildern mit Integerwerten, also Ganzzahlen erlaubt. Floatwerte (Fließkommazahlen) müssen vorab entsprechend gerundet bzw. konvertiert werden.</p>
 </div>
-<div class="figure align-default" id="fig-weiszabgleich">
+<figure class="align-default" id="fig-weiszabgleich">
 <a class="reference internal image-reference" href="../../../../_images/weissabgleich.jpg"><img alt="../../../../_images/weissabgleich.jpg" src="../../../../_images/weissabgleich.jpg" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Foto mit falschem Weißabgleich und starkem Blaustich</span><a class="headerlink" href="#fig-weiszabgleich" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Foto mit falschem Weißabgleich und starkem Blaustich</span><a class="headerlink" href="#fig-weiszabgleich" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="note admonition">
 <p class="admonition-title">Hinweis</p>
 <p>Die Koordinaten beim Auslesen von Pixeldaten mit Numpy entsprechen den Indizes des <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> und sind demnach gegenüber der Ausgabe mit Matplotlib transponiert.</p>
 </div>
-</div>
-<div class="section" id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">#</a></h3>
 <div class="toggle docutils container">
 <p>Als Referenzpixel wird ein Punkt mit den Pixel-Koordinaten x = 3900, y = 1300 auf der Mühle gewählt, von dem angenommen wird, dass er in Wirklichkeit annähernd perfekt weiß ist.</p>
 </div>
@@ -1249,27 +1381,29 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <img alt="../../../../_images/zusatz_bildverarbeitung_6_0.png" src="../../../../_images/zusatz_bildverarbeitung_6_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="image-stacking">
-<h2>Image Stacking<a class="headerlink" href="#image-stacking" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="image-stacking">
+<h2>Image Stacking<a class="headerlink" href="#image-stacking" title="Permalink to this headline">#</a></h2>
 <p>Der Begriff “Image Stacking” bezeichnet allgemein das Überlagern von Bildern um unterschiedliche Effekte und Wirkungen zu erzielen. Neben dem Erzeugen von künstlerischen Effekten können auf diese Weise auch bewegte Objekte aus einer Bildserie des selben Bildausschnittes entfernt werden.</p>
 <p>Für diese Aufgabe benötigen Sie die Bilder “Image_stackig_1.jpg” - “Image_stacking_5.jpg”</p>
-<div class="figure align-default" id="fig-image-stacking">
+<figure class="align-default" id="fig-image-stacking">
 <a class="reference internal image-reference" href="../../../../_images/Stacking_bildserie.jpg"><img alt="../../../../_images/Stacking_bildserie.jpg" src="../../../../_images/Stacking_bildserie.jpg" style="width: 800px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Bildserie des selben Bildauschnittes mit “bewegtem” Objekt</span><a class="headerlink" href="#fig-image-stacking" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="aufgabenteil-1">
-<h3>Aufgabenteil 1<a class="headerlink" href="#aufgabenteil-1" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Bildserie des selben Bildauschnittes mit “bewegtem” Objekt</span><a class="headerlink" href="#fig-image-stacking" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="aufgabenteil-1">
+<h3>Aufgabenteil 1<a class="headerlink" href="#aufgabenteil-1" title="Permalink to this headline">#</a></h3>
 <p>Überlagern Sie alle Bilder der genannten Bildserie, indem Sie den Durchschnitt der Farbwerte eines jeden Pixels bilden. Gehen Sie dazu wie folgt vor:</p>
 <ol class="simple">
 <li><p>Lesen Sie das Bild mit <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> als dreidimensionales <code class="docutils literal notranslate"><span class="pre">Numpy.array</span></code> ein und separieren Sie die Farbkanäle als zweidimensionale Arrays</p></li>
 <li><p>Bilden Sie die Durschnittswerte der monochromatischen Bildarrays aus den Bildserien unter Anwendung der <code class="docutils literal notranslate"><span class="pre">Numpy.mean</span></code> Funktion. Tip: Verwenden Sie eine Schleife zum Einlesen der Daten und speichern Sie die Arrays in einer Liste zwischen.</p></li>
 <li><p>Fügen Sie die Arrays mit den Durchschnittswerten wieder zu einem dreidimensionalen Array zusammen und plotten Sie das Ergebnis.</p></li>
 </ol>
-</div>
-<div class="section" id="id1">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Anlegen von Listen zum Speichern der `Numpy.array`s aus den einzelnen Bildern</span>
@@ -1305,13 +1439,13 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <img alt="../../../../_images/zusatz_bildverarbeitung_9_0.png" src="../../../../_images/zusatz_bildverarbeitung_9_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="aufgabenteil-2">
-<h3>Aufgabenteil 2<a class="headerlink" href="#aufgabenteil-2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="aufgabenteil-2">
+<h3>Aufgabenteil 2<a class="headerlink" href="#aufgabenteil-2" title="Permalink to this headline">#</a></h3>
 <p>Überlagern Sie erneut die einzelnen Bilder und wenden Sie einen Hochpassfilter (z.B. Median) auf die einzelnen Farbkanäle an um stark abweichende Farbwerte aus dem Bild zu eliminieren. Führen Sie hierzu die Arbeitsschritte aus Aufgabenteil 1 aus. Verwenden Sie statt der Funktion zur Berechnung des Durchschnitts z.B. <code class="docutils literal notranslate"><span class="pre">Numpy.median</span></code>. Überlegen Sie vorab, welcher Effekt hierdurch in Bezug auf das überlagerte Bild erzielt wird.</p>
-</div>
-<div class="section" id="id2">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Berechung des Medians der Farbwerte</span>
@@ -1335,13 +1469,13 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <img alt="../../../../_images/zusatz_bildverarbeitung_12_0.png" src="../../../../_images/zusatz_bildverarbeitung_12_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="freistellen-von-objekten">
-<h2>Freistellen von Objekten<a class="headerlink" href="#freistellen-von-objekten" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="freistellen-von-objekten">
+<h2>Freistellen von Objekten<a class="headerlink" href="#freistellen-von-objekten" title="Permalink to this headline">#</a></h2>
 <p>Das Freistellen von Objekten kann über verschiedene Methoden mit unterschiedlicher Komplexizität erfolgen. Eine einfache, wenn auch äußerst fehleranfällige Methode ist das Maskieren anhand eines Schwellenwertes einer oder mehrerer Farbkanäle.</p>
-<div class="section" id="id3">
-<h3>Aufgabe<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<section id="id3">
+<h3>Aufgabe<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>Für die Übung benötigen Sie die Bilder “Freistellen_objekt.jpg” und “Freistellen_hintergrund.jpg”. Maskieren Sie die Bereiche um die Kerze herum anhand von oberen oder unteren Schwellenwerten eines oder mehrerer Farbkanäle. Platzieren Sie die Kerze anschließend innerhalb des zweiten Bildes.</p>
 <p>Orientieren Sie sich an folgenden Arbeitsschritten:</p>
 <ol class="simple">
@@ -1351,13 +1485,15 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <li><p>Weisen Sie den maskierten Pixel einen fixen Farbwert zu um einen einfarbigen Hintergrund zu erhalten</p></li>
 <li><p>Weisen Sie den maskierten Pixeln die entsprechenden Pixel mit den selben Koordinaten aus dem Bild “Freistellen_hintergrund.jpg” zu.</p></li>
 </ol>
-<div class="figure align-default" id="fig-image-freistellen">
+<figure class="align-default" id="fig-image-freistellen">
 <a class="reference internal image-reference" href="../../../../_images/Freistellen_bildserie.jpg"><img alt="../../../../_images/Freistellen_bildserie.jpg" src="../../../../_images/Freistellen_bildserie.jpg" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Objekt und Hintergrund</span><a class="headerlink" href="#fig-image-freistellen" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="id4">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Objekt und Hintergrund</span><a class="headerlink" href="#fig-image-freistellen" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id4">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laden der Bilddateien als Numpy.array</span>
@@ -1399,10 +1535,10 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <img alt="../../../../_images/zusatz_bildverarbeitung_15_0.png" src="../../../../_images/zusatz_bildverarbeitung_15_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="gammakorrektur">
-<h2>Gammakorrektur<a class="headerlink" href="#gammakorrektur" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="gammakorrektur">
+<h2>Gammakorrektur<a class="headerlink" href="#gammakorrektur" title="Permalink to this headline">#</a></h2>
 <p>In der digitalen Bildverarbeitung dient die Gammakorrektur zur Überführung linearer physikalischer Zusammenhänge in die nichtlineare menschliche Wahrnehmung. Die Gammafunktion ist eine Potenzfunktion, die z.B. im Rahmen der Farbraumumwandlung in den sRGB Standard die Rohdaten eines Bildes, wie die Pixelhelligkeit <span class="math notranslate nohighlight">\(I_{in}\)</span> in eine  entsprechende Ausgabegröße <span class="math notranslate nohighlight">\(I_{out}\)</span> umwandelt.
 Die Gammafunktion kann wie folgt beschrieben werden:</p>
 <div class="math notranslate nohighlight">
@@ -1411,8 +1547,8 @@ Die Gammafunktion kann wie folgt beschrieben werden:</p>
 <span class="math notranslate nohighlight">\(0 \leq I_{in} \leq 1\)</span>
 und
 <span class="math notranslate nohighlight">\(0 \leq I_{out} \leq 1\)</span></p>
-<div class="section" id="id5">
-<h3>Aufgabe<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<section id="id5">
+<h3>Aufgabe<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <p>Führen Sie Gammakorrektur für die Faktoren <span class="math notranslate nohighlight">\(\gamma = 2.2\)</span> und <span class="math notranslate nohighlight">\(\gamma = 0.5\)</span> durch. Gehen Sie dazu wie folgt vor:</p>
 <ol>
 <li><p>Erstellen Sie zuerst zwei “Lookup-Tabellen” (LUT) in der Sie alle möglichen Pixelwerte <span class="math notranslate nohighlight">\(I_{in}\)</span> in einem linearen Wertebereich von 8bit mit den durch die Gamma-Funktion korrigierten Werten <span class="math notranslate nohighlight">\(I_{out}\)</span> verknüpfen. Erstellen die für beide <span class="math notranslate nohighlight">\(\gamma\)</span>-Werte unabhängige LUT.</p></li>
@@ -1424,13 +1560,15 @@ und
 </li>
 </ol>
 <p>Verwenden Sie das nachfolgende Bild “Gammakorrektur.jpg” für diese Aufgabe:</p>
-<div class="figure align-default" id="fig-image-gammakorrektur">
+<figure class="align-default" id="fig-image-gammakorrektur">
 <a class="reference internal image-reference" href="../../../../_images/Gammakorrektur.jpg"><img alt="../../../../_images/Gammakorrektur.jpg" src="../../../../_images/Gammakorrektur.jpg" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Bild mit falscher Gammakorrektur.</span><a class="headerlink" href="#fig-image-gammakorrektur" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="id6">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Bild mit falscher Gammakorrektur.</span><a class="headerlink" href="#fig-image-gammakorrektur" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id6">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Gammawerte</span>
@@ -1499,9 +1637,9 @@ und
 <img alt="../../../../_images/zusatz_bildverarbeitung_20_0.png" src="../../../../_images/zusatz_bildverarbeitung_20_0.png" />
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1525,9 +1663,11 @@ und
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="zusatz_modellierung.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1543,29 +1683,33 @@ und
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    <div class="extra_footer">
+      <p>
 <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
 | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
 </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.3.2. Aufbau eines Computers &#8212; Vorlesung Ingenieurinformatik</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +63,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +86,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -906,88 +920,204 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/Script/01_computer/032_komponenten.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/01_computer/032_komponenten.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/01_computer/032_komponenten.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/01_computer/032_komponenten.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/01_computer/032_komponenten.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/Script/01_computer/032_komponenten.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#grundbausteine">
    Grundbausteine
@@ -1046,12 +1176,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Aufbau eines Computers</h1>
@@ -1126,161 +1255,32 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="aufbau-eines-computers">
-<h1><span class="section-number">1.3.2. </span>Aufbau eines Computers<a class="headerlink" href="#aufbau-eines-computers" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="grundbausteine">
-<h2>Grundbausteine<a class="headerlink" href="#grundbausteine" title="Permalink to this headline">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="aufbau-eines-computers">
+<h1><span class="section-number">1.3.2. </span>Aufbau eines Computers<a class="headerlink" href="#aufbau-eines-computers" title="Permalink to this headline">#</a></h1>
+<section id="grundbausteine">
+<h2>Grundbausteine<a class="headerlink" href="#grundbausteine" title="Permalink to this headline">#</a></h2>
 <p>Die Bausteine moderner Computer beruhen auf Halbleiterelementen, welche die CMOS-Technik (<a class="reference external" href="https://de.wikipedia.org/wiki/Complementary_metal-oxide-semiconductor">Complementary metal-oxide-semiconductor</a>) verwenden. Aus den damit realisierten Transistoren können Spannungen (5 V bzw. 0 V) zur Schaltung von Zuständen geschaffen werden und damit logische Operationen in Form von Logikgattern gebaut werden. Die Weiterentwicklung der Fertigungstechnik ermöglicht eine kontinuierliche Verkleinerung der physikalischen Größe dieser Elemente, so dass die Dichte dieser Elemente immer weiter zunimmt.</p>
-<div class="section" id="transistoren">
-<h3>Transistoren<a class="headerlink" href="#transistoren" title="Permalink to this headline">¶</a></h3>
+<section id="transistoren">
+<h3>Transistoren<a class="headerlink" href="#transistoren" title="Permalink to this headline">#</a></h3>
 <p>Die grundlegenden Recheneinheiten zum Rechnen mit binären Zahlen sind die logischen Gatter. Sie realisieren die logischen Operationen, z.B. das logische UND, ODER und NICHT, in Form von sogenannten <a class="reference external" href="https://de.wikipedia.org/wiki/Logikgatter">Logikgattern</a>. Das dafür notwendige elektrische Bauteil ist der <a class="reference external" href="https://de.wikipedia.org/wiki/Transistor">Transistor</a>, welcher den allergrößten Teil des datenverarbeitenden Teils eines Computers ausmacht.</p>
 <p>Beispielhaft ist hier der Schaltplan eines UND-Gatters als Schaltkreis mit fünf Transistoren:</p>
-<div class="figure align-default" id="fig-and">
-<img alt="https://upload.wikimedia.org/wikipedia/commons/c/c1/Cmos_and.svg" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Cmos_and.svg" /><p class="caption"><span class="caption-number">Fig. 1.43 </span><span class="caption-text">Schaltkreis eines AND-Gatters</span><a class="headerlink" href="#fig-and" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="logikgatter">
-<h3>Logikgatter<a class="headerlink" href="#logikgatter" title="Permalink to this headline">¶</a></h3>
+<figure class="align-default" id="fig-and">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/c/c1/Cmos_and.svg" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Cmos_and.svg" /><figcaption>
+<p><span class="caption-number">Fig. 1.33 </span><span class="caption-text">Schaltkreis eines AND-Gatters</span><a class="headerlink" href="#fig-and" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="logikgatter">
+<h3>Logikgatter<a class="headerlink" href="#logikgatter" title="Permalink to this headline">#</a></h3>
 <p>Um zwei Bits zu addieren, kann z.B. folgende einfache Verschaltung eines UND- und eines ODER-Gatters verwendet werden. Dies entspricht dem sogenannten Halbaddierer.</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-4 mb-0 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-und">
-<img alt="https://upload.wikimedia.org/wikipedia/commons/c/c2/IEC_AND_label.svg" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/IEC_AND_label.svg" /><p class="caption"><span class="caption-number">Fig. 1.44 </span><span class="caption-text">UND-Gatter</span><a class="headerlink" href="#fig-und" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 mb-0 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-oder">
-<img alt="https://upload.wikimedia.org/wikipedia/commons/4/40/IEC_OR_label.svg" src="https://upload.wikimedia.org/wikipedia/commons/4/40/IEC_OR_label.svg" /><p class="caption"><span class="caption-number">Fig. 1.45 </span><span class="caption-text">ODER-Gatter</span><a class="headerlink" href="#fig-oder" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 mb-0 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-addierer">
-<img alt="https://upload.wikimedia.org/wikipedia/commons/1/15/Halbaddierer_Aufbau.svg" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Halbaddierer_Aufbau.svg" /><p class="caption"><span class="caption-number">Fig. 1.46 </span><span class="caption-text">Halbaddierer</span><a class="headerlink" href="#fig-addierer" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 mt-0 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p class="card-text">A</p></th>
-<th class="head"><p class="card-text">B</p></th>
-<th class="head"><p class="card-text">Y</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">1</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">0</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">0</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 mt-0 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p class="card-text">A</p></th>
-<th class="head"><p class="card-text">B</p></th>
-<th class="head"><p class="card-text">Y</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">1</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">1</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">0</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="d-flex col-4 mt-0 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p class="card-text">A</p></th>
-<th class="head"><p class="card-text">B</p></th>
-<th class="head"><p class="card-text">c</p></th>
-<th class="head"><p class="card-text">s</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">1</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">1</p></td>
-</tr>
-<tr class="row-even"><td><p class="card-text">0</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">0</p></td>
-<td><p class="card-text">1</p></td>
-</tr>
-<tr class="row-odd"><td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">1</p></td>
-<td><p class="card-text">0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
 <p>Die Addition und natürlich andere Operationen von längeren Zahlen werden in entsprechend komplexeren Schaltungen realisiert.</p>
-</div>
-<div class="section" id="mooresches-gesetz">
-<h3>Mooresches-Gesetz<a class="headerlink" href="#mooresches-gesetz" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mooresches-gesetz">
+<h3>Mooresches-Gesetz<a class="headerlink" href="#mooresches-gesetz" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Mikrochip</p></th>
@@ -1328,20 +1328,24 @@ const thebe_selector_output = ".output, .cell_output"
 </tbody>
 </table>
 <p>Das <a class="reference external" href="https://de.wikipedia.org/wiki/Mooresches_Gesetz">Mooresche-Gesetzt</a> besagt, dass sich die Anzahl der Transistoren auf integrierten Schaltkreisen in einem festen Zeitraum verdoppelt. Je nach Zählweise sind es 12, 18 oder 24 Monate.</p>
-<div class="figure align-default" id="fig-transistor">
+<figure class="align-default" id="fig-transistor">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/8/8b/Moore%27s_Law_Transistor_Count_1971-2018.png" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Moore%27s_Law_Transistor_Count_1971-2018.png" />
-<p class="caption"><span class="caption-number">Fig. 1.47 </span><span class="caption-text">Entwicklung der Anzahl der Transistorzahl, Quelle: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Moore%27s_Law_Transistor_Count_1971-2018.png">Max Roser, Moore’s Law Transistor Count 1971-2018, CC BY-SA 4.0</a></span><a class="headerlink" href="#fig-transistor" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="computerarchitektur">
-<h2>Computerarchitektur<a class="headerlink" href="#computerarchitektur" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="von-neumann-architektur">
-<h3>Von-Neumann-Architektur<a class="headerlink" href="#von-neumann-architektur" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 1.34 </span><span class="caption-text">Entwicklung der Anzahl der Transistorzahl, Quelle: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Moore%27s_Law_Transistor_Count_1971-2018.png">Max Roser, Moore’s Law Transistor Count 1971-2018, CC BY-SA 4.0</a></span><a class="headerlink" href="#fig-transistor" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="computerarchitektur">
+<h2>Computerarchitektur<a class="headerlink" href="#computerarchitektur" title="Permalink to this headline">#</a></h2>
+<section id="von-neumann-architektur">
+<h3>Von-Neumann-Architektur<a class="headerlink" href="#von-neumann-architektur" title="Permalink to this headline">#</a></h3>
 <p>Die allgemeinste, prinzipiell immer noch eingesetzte, Computer-Architektur ist die Von-Neumann Architektur.</p>
-<div class="figure align-default" id="fig-neu-architektur">
-<img alt="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg" /><p class="caption"><span class="caption-number">Fig. 1.48 </span><span class="caption-text">Von-Neumann-Architektur, Quelle:  <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg">Lukas Grossar, Von-Neumann Architektur, als gemeinfrei gekennzeichnet</a></span><a class="headerlink" href="#fig-neu-architektur" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-default" id="fig-neu-architektur">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg" /><figcaption>
+<p><span class="caption-number">Fig. 1.35 </span><span class="caption-text">Von-Neumann-Architektur, Quelle:  <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg">Lukas Grossar, Von-Neumann Architektur, als gemeinfrei gekennzeichnet</a></span><a class="headerlink" href="#fig-neu-architektur" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p><strong>CPU</strong>: Central processing unit, zentrale Prozesseinheit</p></li>
 <li><p><strong>Steuerlogik</strong>: Steuert das Abarbeiten von Instruktionen.</p></li>
@@ -1350,10 +1354,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><strong>Speicherwerk</strong>: Hat zur Aufgabe Daten und Instruktionen zu speichern.</p></li>
 <li><p><strong>E/A-Werk</strong>: Das Eingabe- / Ausgabewerk stellt die Kommunikation mit externen Komponenten zur Verfügung, z.B. Monitor, Festplatte oder Tastatur.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="x86-architektur">
-<h2>x86 Architektur<a class="headerlink" href="#x86-architektur" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="x86-architektur">
+<h2>x86 Architektur<a class="headerlink" href="#x86-architektur" title="Permalink to this headline">#</a></h2>
 <p>Abgeleitet von der generellen Von-Neumann-Architektur hat sich im privaten Bereich insbesondere die x86-Architektur durchgesetzt. Sie wird seit 1978, vor allem von Intel und AMD, weiterentwickelt.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1387,8 +1391,8 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 <p>Andere Architekturen sind z.B. PowerPC (Apple, IBM, Motorola) oder die
 ARM-Architektur (ARM).</p>
-<div class="section" id="speichermedien">
-<h3>Speichermedien<a class="headerlink" href="#speichermedien" title="Permalink to this headline">¶</a></h3>
+<section id="speichermedien">
+<h3>Speichermedien<a class="headerlink" href="#speichermedien" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>Register</strong>: extrem schneller Speicher auf dem u.A. das Rechenwerk seine Operationen ausführt.</p></li>
 <li><p><strong>Cache</strong>: extrem schneller Zwischenspeicher, um die Zugriffszeit auf den Hauptspeicher zu beschleunigen.</p></li>
@@ -1399,16 +1403,18 @@ ARM-Architektur (ARM).</p>
 </ul>
 <p>Nur lesbare Speicher werden oft als ROM (read only memory) bezeichnet; (beliebig) beschreibbare Speicher als RAM (random access memory).</p>
 <p>Ob Speicherwerte Daten oder Instruktionen darstellen muss die lesende Einheit selbst entscheiden!</p>
-</div>
-<div class="section" id="hierarchie-des-speichers">
-<h3>Hierarchie des Speichers<a class="headerlink" href="#hierarchie-des-speichers" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hierarchie-des-speichers">
+<h3>Hierarchie des Speichers<a class="headerlink" href="#hierarchie-des-speichers" title="Permalink to this headline">#</a></h3>
 <p>Optimal wäre ein möglichst schneller Speicher. Jedoch steigt der Herstellungspreis mit der Zugriffsgeschwindigkeit, so dass sich die folgende Volumenverteilung etabliert hat. Die verschiedenen Stufen versuchen die langsamen Zugriffszeiten zu puffern. Insbesondere ist für numerische Berechnungen der Cache, welcher selbst in drei Stufen, sogenannte Level, aufgeteilt ist.</p>
-<div class="figure align-default" id="fig-speicher">
-<img alt="Speicherhierarchie" src="../../../_images/storage_hierachy.svg" /><p class="caption"><span class="caption-number">Fig. 1.49 </span><span class="caption-text">Speicherhierarchie</span><a class="headerlink" href="#fig-speicher" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="beispiel-amd-zen-architektur">
-<h3>Beispiel AMD Zen Architektur<a class="headerlink" href="#beispiel-amd-zen-architektur" title="Permalink to this headline">¶</a></h3>
+<figure class="align-default" id="fig-speicher">
+<img alt="Speicherhierarchie" src="../../../_images/storage_hierachy.svg" /><figcaption>
+<p><span class="caption-number">Fig. 1.36 </span><span class="caption-text">Speicherhierarchie</span><a class="headerlink" href="#fig-speicher" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="beispiel-amd-zen-architektur">
+<h3>Beispiel AMD Zen Architektur<a class="headerlink" href="#beispiel-amd-zen-architektur" title="Permalink to this headline">#</a></h3>
 <p>Welche Operation als nächstes abgearbeitet wird – und das Veranlassen dieser Operation – wird von der Steuerlogik auf der CPU (central processing unit) geregelt. Daneben befindet sich auf dem Mikrochip auch noch die arithmetische Einheit (Rechenwerk) und der Cache-Speicher, als auch andere Kontrolleinheiten. Diese werden anhand der <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">AMD Zen Architektur</a> exemplarisch vorgestellt.</p>
 <p><strong>Zen Core</strong></p>
 <ul class="simple">
@@ -1419,28 +1425,36 @@ ARM-Architektur (ARM).</p>
 <li><p><strong>LSU</strong>: Load–store Unit</p></li>
 <li><p><strong>BPU</strong>: Branch Prediction Unit</p></li>
 </ul>
-<div class="figure align-default" id="fig-zen">
+<figure class="align-default" id="fig-zen">
 <img alt="https://en.wikichip.org/w/images/6/6a/amd_zen_core.png" src="https://en.wikichip.org/w/images/6/6a/amd_zen_core.png" />
-<p class="caption"><span class="caption-number">Fig. 1.50 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Core</span><a class="headerlink" href="#fig-zen" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="fig-zen2">
+<figcaption>
+<p><span class="caption-number">Fig. 1.37 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Core</span><a class="headerlink" href="#fig-zen" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-zen2">
 <img alt="https://en.wikichip.org/w/images/c/cb/amd_zen_core_%28annotated%29.png" src="https://en.wikichip.org/w/images/c/cb/amd_zen_core_%28annotated%29.png" />
-<p class="caption"><span class="caption-number">Fig. 1.51 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Core mit Beschriftung, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-zen2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.38 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Core mit Beschriftung, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-zen2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Zen CCX</strong></p>
 <ul class="simple">
 <li><p>vier Zen Cores</p></li>
 <li><p>8 MB L3-Cache</p></li>
 <li><p>1 400 000 000 Transistoren</p></li>
 </ul>
-<div class="figure align-default" id="fig-ccx">
+<figure class="align-default" id="fig-ccx">
 <img alt="https://en.wikichip.org/w/images/4/44/amd_zen_ccx_2.png" src="https://en.wikichip.org/w/images/4/44/amd_zen_ccx_2.png" />
-<p class="caption"><span class="caption-number">Fig. 1.52 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen CCX</span><a class="headerlink" href="#fig-ccx" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="fig-ccx2">
+<figcaption>
+<p><span class="caption-number">Fig. 1.39 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen CCX</span><a class="headerlink" href="#fig-ccx" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-ccx2">
 <img alt="https://en.wikichip.org/w/images/a/a7/amd_zen_ccx_2_%28annotated%29.png" src="https://en.wikichip.org/w/images/a/a7/amd_zen_ccx_2_%28annotated%29.png" />
-<p class="caption"><span class="caption-number">Fig. 1.53 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen CCX mit Beschriftung, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-ccx2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.40 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen CCX mit Beschriftung, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-ccx2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Zen Zeppelin</strong></p>
 <ul class="simple">
 <li><p>Zwei Zen CCX</p></li>
@@ -1449,21 +1463,27 @@ ARM-Architektur (ARM).</p>
 <li><p>4 800 000 000 Transistoren</p></li>
 <li><p>22 mm x 9.5 mm Abmessung</p></li>
 </ul>
-<div class="figure align-default" id="fig-zep">
+<figure class="align-default" id="fig-zep">
 <img alt="https://en.wikichip.org/w/images/3/3f/amd_zen_octa-core_die_shot.png" src="https://en.wikichip.org/w/images/3/3f/amd_zen_octa-core_die_shot.png" />
-<p class="caption"><span class="caption-number">Fig. 1.54 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Zeppelin</span><a class="headerlink" href="#fig-zep" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="fig-zep2">
+<figcaption>
+<p><span class="caption-number">Fig. 1.41 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Zeppelin</span><a class="headerlink" href="#fig-zep" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-zep2">
 <img alt="https://en.wikichip.org/w/images/7/75/amd_zen_octa-core_die_shot_%28annotated%29.png" src="https://en.wikichip.org/w/images/7/75/amd_zen_octa-core_die_shot_%28annotated%29.png" />
-<p class="caption"><span class="caption-number">Fig. 1.55 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Zeppelin mit Beschriftung, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-zep2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.42 </span><span class="caption-text">Aufteilung der Bereiche an einem AMD Zen Zeppelin mit Beschriftung, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-zep2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Zen EPYC</strong></p>
-<div class="figure align-default" id="fig-epyc">
-<img alt="https://en.wikichip.org/w/images/4/4d/zen-4zep.svg" src="https://en.wikichip.org/w/images/4/4d/zen-4zep.svg" /><p class="caption"><span class="caption-number">Fig. 1.56 </span><span class="caption-text">Struktur eines EPYC Processors, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-epyc" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
+<figure class="align-default" id="fig-epyc">
+<img alt="https://en.wikichip.org/w/images/4/4d/zen-4zep.svg" src="https://en.wikichip.org/w/images/4/4d/zen-4zep.svg" /><figcaption>
+<p><span class="caption-number">Fig. 1.43 </span><span class="caption-text">Struktur eines EPYC Processors, Quelle <a class="reference external" href="https://en.wikichip.org/wiki/amd/microarchitectures/zen">Wikichip</a></span><a class="headerlink" href="#fig-epyc" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1487,9 +1507,11 @@ ARM-Architektur (ARM).</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="031_geschichte.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1505,29 +1527,33 @@ ARM-Architektur (ARM).</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    <div class="extra_footer">
+      <p>
 <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
 | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
 </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

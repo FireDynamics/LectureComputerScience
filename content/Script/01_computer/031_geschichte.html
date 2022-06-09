@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>1.3.1. Geschichte der Computer &#8212; Vorlesung Ingenieurinformatik</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +63,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +86,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -906,88 +920,204 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../../_sources/content/Script/01_computer/031_geschichte.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/FireDynamics/LectureComputerScience"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/01_computer/031_geschichte.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/01_computer/031_geschichte.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/01_computer/031_geschichte.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/01_computer/031_geschichte.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/Script/01_computer/031_geschichte.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ausgewahlte-personen">
    Ausgewählte Personen
@@ -1059,12 +1189,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Geschichte der Computer</h1>
@@ -1152,149 +1281,54 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="geschichte-der-computer">
-<h1><span class="section-number">1.3.1. </span>Geschichte der Computer<a class="headerlink" href="#geschichte-der-computer" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ausgewahlte-personen">
-<h2>Ausgewählte Personen<a class="headerlink" href="#ausgewahlte-personen" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="alan-turing">
-<h3>1936 – Alan Turing<a class="headerlink" href="#alan-turing" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-5 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-turing">
-<a class="reference internal image-reference" href="https://anthrowiki.at/images/d/d8/Alan_Turing_1.jpg"><img alt="https://anthrowiki.at/images/d/d8/Alan_Turing_1.jpg" src="https://anthrowiki.at/images/d/d8/Alan_Turing_1.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.28 </span><span class="caption-text">Alan Turing (~1930)</span><a class="headerlink" href="#fig-turing" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-7 my-auto docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-turingmaschiene">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/c/c4/Turingmaschine.svg"><img alt="https://upload.wikimedia.org/wikipedia/commons/c/c4/Turingmaschine.svg" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Turingmaschine.svg" width="500" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.29 </span><span class="caption-text">Turingmaschine</span><a class="headerlink" href="#fig-turingmaschiene" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="geschichte-der-computer">
+<h1><span class="section-number">1.3.1. </span>Geschichte der Computer<a class="headerlink" href="#geschichte-der-computer" title="Permalink to this headline">#</a></h1>
+<section id="ausgewahlte-personen">
+<h2>Ausgewählte Personen<a class="headerlink" href="#ausgewahlte-personen" title="Permalink to this headline">#</a></h2>
+<section id="alan-turing">
+<h3>1936 – Alan Turing<a class="headerlink" href="#alan-turing" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Lebenszeit: 1912 – 1954</p></li>
 <li><p>Mathematik, Kryptographie, Computerwissenschaften und Biologie</p></li>
 <li><p>Begründer der theoretischen Informatik</p></li>
 <li><p>erfand das Konzept für einen universalen Computer: die Turingmaschine</p></li>
 </ul>
-</div>
-<div class="section" id="konrath-zuse">
-<h3>1938 – Konrath Zuse<a class="headerlink" href="#konrath-zuse" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-5 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-zuse">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/d/da/Konrad_Zuse_%281992%29.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/d/da/Konrad_Zuse_%281992%29.jpg" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Konrad_Zuse_%281992%29.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.30 </span><span class="caption-text">Konrath Zuse (1992)</span><a class="headerlink" href="#fig-zuse" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-7 my-auto docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-zusez3">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG"><img alt="https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.31 </span><span class="caption-text">Zuse Z3</span><a class="headerlink" href="#fig-zusez3" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+<section id="konrath-zuse">
+<h3>1938 – Konrath Zuse<a class="headerlink" href="#konrath-zuse" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Lebenszeit: 1910 – 1995</p></li>
 <li><p>Bauingenieur, Erfinder und Unternehmer</p></li>
 <li><p>baute den ersten funktionstüchtigen, vollautomatischen, programmgesteuerten und frei programmierbaren Rechner</p></li>
 <li><p>Z1: 1938, Z3: 1941</p></li>
 </ul>
-</div>
-<div class="section" id="john-von-neumann">
-<h3>1945 – John von Neumann<a class="headerlink" href="#john-von-neumann" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-5 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-neumann">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"><img alt="https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.32 </span><span class="caption-text">John von Neumann</span><a class="headerlink" href="#fig-neumann" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-7 my-auto docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-neu-achitektur">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg"><img alt="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg" src="https://upload.wikimedia.org/wikipedia/commons/d/db/Von-Neumann_Architektur.svg" width="500" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.33 </span><span class="caption-text">Von-Neumann-Architektur</span><a class="headerlink" href="#fig-neu-achitektur" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+<section id="john-von-neumann">
+<h3>1945 – John von Neumann<a class="headerlink" href="#john-von-neumann" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Lebenszeit: 1903 – 1957</p></li>
 <li><p>Mathematiker und Physiker</p></li>
 <li><p>erforschte die Grundstruktur für heutzutage verwendete Computer</p></li>
 </ul>
-</div>
-<div class="section" id="jack-kilby">
-<h3>1958 – Jack Kilby<a class="headerlink" href="#jack-kilby" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-5 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-kilby">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/en/c/cc/Jack_Kilby.jpg"><img alt="https://upload.wikimedia.org/wikipedia/en/c/cc/Jack_Kilby.jpg" src="https://upload.wikimedia.org/wikipedia/en/c/cc/Jack_Kilby.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.34 </span><span class="caption-text">Jack Kilby</span><a class="headerlink" href="#fig-kilby" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-7 my-auto docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-schaltkreis">
-<a class="reference internal image-reference" href="https://jooinn.com/images/integrated-circuit-4.jpg"><img alt="https://jooinn.com/images/integrated-circuit-4.jpg" src="https://jooinn.com/images/integrated-circuit-4.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.35 </span><span class="caption-text">Integrierter Schaltkreis</span><a class="headerlink" href="#fig-schaltkreis" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+<section id="jack-kilby">
+<h3>1958 – Jack Kilby<a class="headerlink" href="#jack-kilby" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Lebenszeit: 1923 – 2005</p></li>
 <li><p>Physik und Elektrotechnik</p></li>
 <li><p>baute (zusammen mit Robert Noyce) den ersten integrierten Schaltkreis</p></li>
 <li><p>bekam 2000 den Physik-Nobelpreis</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="ausgewahlte-maschinen">
-<h2>Ausgewählte Maschinen<a class="headerlink" href="#ausgewahlte-maschinen" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ubersicht-der-ersten-rechner">
-<h3>Übersicht der ersten Rechner<a class="headerlink" href="#ubersicht-der-ersten-rechner" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="ausgewahlte-maschinen">
+<h2>Ausgewählte Maschinen<a class="headerlink" href="#ausgewahlte-maschinen" title="Permalink to this headline">#</a></h2>
+<section id="ubersicht-der-ersten-rechner">
+<h3>Übersicht der ersten Rechner<a class="headerlink" href="#ubersicht-der-ersten-rechner" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Computer</p></th>
@@ -1356,13 +1390,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>GA: Gleitkommaarithmetik</p></li>
 <li><p>TM: Turingmächtig</p></li>
 </ul>
-</div>
-<div class="section" id="analytical-engine">
-<h3>1837 – Analytical Engine<a class="headerlink" href="#analytical-engine" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="fig-an-engine">
+</section>
+<section id="analytical-engine">
+<h3>1837 – Analytical Engine<a class="headerlink" href="#analytical-engine" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="fig-an-engine">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/c/cc/Babbages_Analytical_Engine%2C_1834-1871._%289660574685%29.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/c/cc/Babbages_Analytical_Engine%2C_1834-1871._%289660574685%29.jpg" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Babbages_Analytical_Engine%2C_1834-1871._%289660574685%29.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.36 </span><span class="caption-text">Analytical Engine</span><a class="headerlink" href="#fig-an-engine" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.28 </span><span class="caption-text">Analytical Engine</span><a class="headerlink" href="#fig-an-engine" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>erste Rechenmaschine mit allgemeiner Anwendung</p></li>
 <li><p>angetrieben durch eine Dampfmaschine, 30 m lang und 10 m breit</p></li>
@@ -1370,87 +1406,71 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Ausgabe auf Plotter, Drucker und Glocke</p></li>
 <li><p>Speicher: 20 KB</p></li>
 </ul>
-</div>
-<div class="section" id="zuse-z3">
-<h3>1941 – Zuse Z3<a class="headerlink" href="#zuse-z3" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="fig-zusez3-2">
+</section>
+<section id="zuse-z3">
+<h3>1941 – Zuse Z3<a class="headerlink" href="#zuse-z3" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="fig-zusez3-2">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG"><img alt="https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Z3_Deutsches_Museum.JPG" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.37 </span><span class="caption-text">Zuse Z3</span><a class="headerlink" href="#fig-zusez3-2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.29 </span><span class="caption-text">Zuse Z3</span><a class="headerlink" href="#fig-zusez3-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>Operationen mit 22 Bit Fließkommazahlen</p></li>
 <li><p>Hauptspeicher von 200 Byte</p></li>
 <li><p>Rechentakt: 5.3 Hz</p></li>
 <li><p>Programme auf Lochkarten und über Tastatureingabe</p></li>
 </ul>
-</div>
-<div class="section" id="cray-1">
-<h3>1976 - Cray 1<a class="headerlink" href="#cray-1" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="fig-cray">
+</section>
+<section id="cray-1">
+<h3>1976 - Cray 1<a class="headerlink" href="#cray-1" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="fig-cray">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/f/f7/Cray-1-deutsches-museum.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/f/f7/Cray-1-deutsches-museum.jpg" src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Cray-1-deutsches-museum.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.38 </span><span class="caption-text">Cray 1</span><a class="headerlink" href="#fig-cray" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.30 </span><span class="caption-text">Cray 1</span><a class="headerlink" href="#fig-cray" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>8 MB Hauptspeicher</p></li>
 <li><p>80 MF/S</p></li>
 </ul>
-</div>
-<div class="section" id="apple-ii">
-<h3>1977 - Apple II<a class="headerlink" href="#apple-ii" title="Permalink to this headline">¶</a></h3>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-7 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-apple">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/b/b1/Apple_II_Plus%2C_Museum_of_the_Moving_Image.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/b/b1/Apple_II_Plus%2C_Museum_of_the_Moving_Image.jpg" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Apple_II_Plus%2C_Museum_of_the_Moving_Image.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.39 </span><span class="caption-text">Apple II</span><a class="headerlink" href="#fig-apple" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-5 my-auto docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="figure align-default" id="fig-farbpalette">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/9/9f/AppleII_palette.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/9/9f/AppleII_palette.png" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/AppleII_palette.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.40 </span><span class="caption-text">Apple II Farbpalette</span><a class="headerlink" href="#fig-farbpalette" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</section>
+<section id="apple-ii">
+<h3>1977 - Apple II<a class="headerlink" href="#apple-ii" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Bildschirm mit 40x48 Pixeln in 15 Farben</p></li>
 <li><p>’high-res’-Modus: 280x192 Pixel mit 2 Farben</p></li>
 <li><p>64 KB Speicher</p></li>
 <li><p>Taktfrequenz: 1 MHz</p></li>
 </ul>
-</div>
-<div class="section" id="apple-macbook-pro">
-<h3>2020 - Apple MacBook Pro<a class="headerlink" href="#apple-macbook-pro" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="fig-macbook">
+</section>
+<section id="apple-macbook-pro">
+<h3>2020 - Apple MacBook Pro<a class="headerlink" href="#apple-macbook-pro" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="fig-macbook">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Late_2016_MacBook_Pro.jpg/1280px-Late_2016_MacBook_Pro.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Late_2016_MacBook_Pro.jpg/1280px-Late_2016_MacBook_Pro.jpg" />
-<p class="caption"><span class="caption-number">Fig. 1.41 </span><span class="caption-text">Apple MacBook Pro, Quelle: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Late_2016_MacBook_Pro.jpg/1280px-Late_2016_MacBook_Pro.jpg">Sonicdrewdriver, Late 2016 MacBook Pro, CC BY-SA 4.0</a></span><a class="headerlink" href="#fig-macbook" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.31 </span><span class="caption-text">Apple MacBook Pro, Quelle: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Late_2016_MacBook_Pro.jpg/1280px-Late_2016_MacBook_Pro.jpg">Sonicdrewdriver, Late 2016 MacBook Pro, CC BY-SA 4.0</a></span><a class="headerlink" href="#fig-macbook" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>64 GB Hauptspeicher</p></li>
 <li><p>Rechenleistung: ~150 GF/s</p></li>
 <li><p>Bildschirm: 3072 x 1920 Pixel</p></li>
 <li><p>mobil</p></li>
 </ul>
-</div>
-<div class="section" id="entwicklung-der-rechenleistung-von-hochleistungsrechnern">
-<h3>Entwicklung der Rechenleistung von Hochleistungsrechnern<a class="headerlink" href="#entwicklung-der-rechenleistung-von-hochleistungsrechnern" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="entwicklung-der-rechenleistung-von-hochleistungsrechnern">
+<h3>Entwicklung der Rechenleistung von Hochleistungsrechnern<a class="headerlink" href="#entwicklung-der-rechenleistung-von-hochleistungsrechnern" title="Permalink to this headline">#</a></h3>
 <p>Für technische und wissenschaftliche Anwendungen, welche einen sehr großen Rechenbedarf haben, werden <a class="reference external" href="https://de.wikipedia.org/wiki/Hochleistungsrechnen">Hochleistungsrechner</a> (Supercomputer, High Performance Computing (HPC)) gebaut. Diese existieren in vielen Varianten und werden kontinuierlich weiterentwickelt. Eine Übersicht der öffentlich bekannten bzw. im zivilen Bereich eingesetzten HPC-Systeme bietet die <a class="reference external" href="https://www.top500.org/">Top 500-Liste</a>. Diese vergleicht die theoretische Rechenleistung der Computer und dokumentiert seit einigen Jahrzehneten die Entwicklung dieser Rechner.</p>
-<div class="figure align-default" id="fig-performance">
+<figure class="align-default" id="fig-performance">
 <img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Supercomputers-history.svg/1024px-Supercomputers-history.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Supercomputers-history.svg/1024px-Supercomputers-history.svg.png" />
-<p class="caption"><span class="caption-number">Fig. 1.42 </span><span class="caption-text">Entwicklung der Rechenperformande, der in der Top500-Liste aufgeführten Systeme, Quelle: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Supercomputers-history.svg/1024px-Supercomputers-history.svg.png">AI.Graphic, Supercomputers-history, CC BY-SA 3.0</a></span><a class="headerlink" href="#fig-performance" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 1.32 </span><span class="caption-text">Entwicklung der Rechenperformande, der in der Top500-Liste aufgeführten Systeme, Quelle: <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Supercomputers-history.svg/1024px-Supercomputers-history.svg.png">AI.Graphic, Supercomputers-history, CC BY-SA 3.0</a></span><a class="headerlink" href="#fig-performance" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1474,9 +1494,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="03_hardware.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1492,29 +1514,33 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
-    
-      <div class="extra_footer">
-        <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    <div class="extra_footer">
+      <p>
 <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
 | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
 </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </p>
 
-      </div>
-  </p>
-</footer>
-</main>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
