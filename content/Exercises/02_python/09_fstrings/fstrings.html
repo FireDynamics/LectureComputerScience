@@ -1122,6 +1122,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#aufgabenteil-a">
    Aufgabenteil A
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losung">
+     Lösung
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-b">
@@ -1131,6 +1138,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#losungshinweis">
      Lösungshinweis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungsvorschlag">
+     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1158,6 +1170,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#aufgabenteil-a">
    Aufgabenteil A
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losung">
+     Lösung
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-b">
@@ -1167,6 +1186,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#losungshinweis">
      Lösungshinweis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#losungsvorschlag">
+     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1198,6 +1222,25 @@ title="Print to PDF"
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f&quot;{42:&lt;8d}</span> <span class="pre">{42:08d}</span> <span class="pre">{42:+8d}&quot;</span></code>, was sind die Auswirkungen von <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code> und <code class="docutils literal notranslate"><span class="pre">+</span></code>?</p></li>
 </ol>
+<section id="losung">
+<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1. Hexadezimalzahl mit festgelegter Größe </span><span class="si">{</span><span class="mi">144</span><span class="si">:</span><span class="s2">6x</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2. </span><span class="si">{</span><span class="mf">1015.39</span><span class="si">:</span><span class="s2">12.1f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="mf">1015.39</span><span class="si">:</span><span class="s2">E</span><span class="si">}</span><span class="s2"> - Die letzte Stelle wird gerundet.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;3. &#39;&lt;&#39; formatiert die Zahl linksbündig, &#39;0&#39; füllt ungenutzte stellen mit Nullen auf und &#39;+&#39; zeigt das Vorzeichen auch dann, wenn die Zahl positiv ist.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. Hexadezimalzahl mit festgelegter Größe     90.
+2.       1015.4, 1.015390E+03 - Die letzte Stelle wird gerundet.
+3. &#39;&lt;&#39; formatiert die Zahl linksbündig, &#39;0&#39; füllt ungenutzte stellen mit Nullen auf und &#39;+&#39; zeigt das Vorzeichen auch dann, wenn die Zahl positiv ist.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">#</a></h2>
@@ -1206,6 +1249,49 @@ title="Print to PDF"
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">#</a></h3>
 <p>Die Tabelle könnte wie folgt aussehen:</p>
 <div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x	x**2	x**3
+---------------------
+-2.00	 4.00	-8.00
+-1.75	 3.06	-5.36
+-1.50	 2.25	-3.38
+-1.25	 1.56	-1.95
+-1.00	 1.00	-1.00
+-0.75	 0.56	-0.42
+-0.50	 0.25	-0.12
+-0.25	 0.06	-0.02
+ 0.00	 0.00	 0.00
+ 0.25	 0.06	 0.02
+ 0.50	 0.25	 0.12
+ 0.75	 0.56	 0.42
+ 1.00	 1.00	 1.00
+ 1.25	 1.56	 1.95
+ 1.50	 2.25	 3.38
+ 1.75	 3.06	 5.36
+ 2.00	 4.00	 8.00
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x</span><span class="se">\t</span><span class="s2">x**2</span><span class="se">\t</span><span class="s2">x**3&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">21</span><span class="p">)</span>
+
+<span class="n">xmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">xmax</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mf">0.25</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">xmax</span> <span class="o">-</span> <span class="n">xmin</span><span class="p">)</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">xmin</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">step</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x	x**2	x**3
 ---------------------
