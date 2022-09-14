@@ -1,7 +1,9 @@
 wheel
 setuptools
 jupyter-book
-jupyterlab
+jupyter-core >= 4.9.1
+jupyter-server >= 1.13.5
+jupyterlab >= 3.2.9
 typing_extensions
 matplotlib
 numpy
