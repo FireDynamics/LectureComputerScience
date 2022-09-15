@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
-    record_timing=False,
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/nbclient/client.py", line 1204, in execute
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/nbclient/client.py", line 664, in async_execute
-    cell, index, execution_count=self.code_cells_executed + 1
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -45,33 +45,32 @@ plt.show()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/tmp/ipykernel_7212/2024790253.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      4[0m [0;34m[0m[0m
-[1;32m      5[0m [0;31m# Laden der Bilddateie als Numpy.array[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 6[0;31m [0mimage[0m [0;34m=[0m [0mplt[0m[0;34m.[0m[0mimread[0m[0;34m([0m[0;34m'bilder/Weissabgleich.jpg'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      7[0m [0;34m[0m[0m
-[1;32m      8[0m [0;31m# Auslesen der Farbwerte eines Referenzpixels[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+Cell [0;32mIn [1], line 6[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      5[0m [38;5;66;03m# Laden der Bilddateie als Numpy.array[39;00m
+[0;32m----> 6[0m image [38;5;241m=[39m [43mplt[49m[38;5;241;43m.[39;49m[43mimread[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mbilder/Weissabgleich.jpg[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      8[0m [38;5;66;03m# Auslesen der Farbwerte eines Referenzpixels[39;00m
+[1;32m      9[0m x [38;5;241m=[39m [38;5;241m3900[39m
 
-[0;32m/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/matplotlib/pyplot.py[0m in [0;36mimread[0;34m(fname, format)[0m
-[1;32m   2158[0m [0;34m@[0m[0m_copy_docstring_and_deprecators[0m[0;34m([0m[0mmatplotlib[0m[0;34m.[0m[0mimage[0m[0;34m.[0m[0mimread[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   2159[0m [0;32mdef[0m [0mimread[0m[0;34m([0m[0mfname[0m[0;34m,[0m [0mformat[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 2160[0;31m     [0;32mreturn[0m [0mmatplotlib[0m[0;34m.[0m[0mimage[0m[0;34m.[0m[0mimread[0m[0;34m([0m[0mfname[0m[0;34m,[0m [0mformat[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   2161[0m [0;34m[0m[0m
-[1;32m   2162[0m [0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/matplotlib/pyplot.py:2158[0m, in [0;36mimread[0;34m(fname, format)[0m
+[1;32m   2156[0m [38;5;129m@_copy_docstring_and_deprecators[39m(matplotlib[38;5;241m.[39mimage[38;5;241m.[39mimread)
+[1;32m   2157[0m [38;5;28;01mdef[39;00m [38;5;21mimread[39m(fname, [38;5;28mformat[39m[38;5;241m=[39m[38;5;28;01mNone[39;00m):
+[0;32m-> 2158[0m     [38;5;28;01mreturn[39;00m [43mmatplotlib[49m[38;5;241;43m.[39;49m[43mimage[49m[38;5;241;43m.[39;49m[43mimread[49m[43m([49m[43mfname[49m[43m,[49m[43m [49m[38;5;28;43mformat[39;49m[43m)[49m
 
-[0;32m/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/matplotlib/image.py[0m in [0;36mimread[0;34m(fname, format)[0m
-[1;32m   1558[0m                     [0mresponse[0m [0;34m=[0m [0mio[0m[0;34m.[0m[0mBytesIO[0m[0;34m([0m[0mresponse[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1559[0m                 [0;32mreturn[0m [0mimread[0m[0;34m([0m[0mresponse[0m[0;34m,[0m [0mformat[0m[0;34m=[0m[0mext[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1560[0;31m     [0;32mwith[0m [0mimg_open[0m[0;34m([0m[0mfname[0m[0;34m)[0m [0;32mas[0m [0mimage[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1561[0m         return (_pil_png_to_float_array(image)
-[1;32m   1562[0m                 [0;32mif[0m [0misinstance[0m[0;34m([0m[0mimage[0m[0;34m,[0m [0mPIL[0m[0;34m.[0m[0mPngImagePlugin[0m[0;34m.[0m[0mPngImageFile[0m[0;34m)[0m [0;32melse[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/matplotlib/image.py:1560[0m, in [0;36mimread[0;34m(fname, format)[0m
+[1;32m   1558[0m                 response [38;5;241m=[39m io[38;5;241m.[39mBytesIO(response[38;5;241m.[39mread())
+[1;32m   1559[0m             [38;5;28;01mreturn[39;00m imread(response, [38;5;28mformat[39m[38;5;241m=[39mext)
+[0;32m-> 1560[0m [38;5;28;01mwith[39;00m [43mimg_open[49m[43m([49m[43mfname[49m[43m)[49m [38;5;28;01mas[39;00m image:
+[1;32m   1561[0m     [38;5;28;01mreturn[39;00m (_pil_png_to_float_array(image)
+[1;32m   1562[0m             [38;5;28;01mif[39;00m [38;5;28misinstance[39m(image, PIL[38;5;241m.[39mPngImagePlugin[38;5;241m.[39mPngImageFile) [38;5;28;01melse[39;00m
+[1;32m   1563[0m             pil_to_array(image))
 
-[0;32m/opt/hostedtoolcache/Python/3.7.13/x64/lib/python3.7/site-packages/PIL/Image.py[0m in [0;36mopen[0;34m(fp, mode, formats)[0m
-[1;32m   3090[0m [0;34m[0m[0m
-[1;32m   3091[0m     [0;32mif[0m [0mfilename[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3092[0;31m         [0mfp[0m [0;34m=[0m [0mbuiltins[0m[0;34m.[0m[0mopen[0m[0;34m([0m[0mfilename[0m[0;34m,[0m [0;34m"rb"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3093[0m         [0mexclusive_fp[0m [0;34m=[0m [0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3094[0m [0;34m[0m[0m
+File [0;32m/opt/hostedtoolcache/Python/3.9.13/x64/lib/python3.9/site-packages/PIL/Image.py:3092[0m, in [0;36mopen[0;34m(fp, mode, formats)[0m
+[1;32m   3089[0m     filename [38;5;241m=[39m fp
+[1;32m   3091[0m [38;5;28;01mif[39;00m filename:
+[0;32m-> 3092[0m     fp [38;5;241m=[39m [43mbuiltins[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[43mfilename[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[1;32m   3093[0m     exclusive_fp [38;5;241m=[39m [38;5;28;01mTrue[39;00m
+[1;32m   3095[0m [38;5;28;01mtry[39;00m:
 
 [0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'bilder/Weissabgleich.jpg'
 FileNotFoundError: [Errno 2] No such file or directory: 'bilder/Weissabgleich.jpg'
