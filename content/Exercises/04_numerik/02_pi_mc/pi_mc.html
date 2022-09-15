@@ -1137,6 +1137,23 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losungsvorschlag">
+   Lösungsvorschlag
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Aufgabenteil B
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -1168,6 +1185,23 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aufgabenteil-b">
+     Aufgabenteil B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losungsvorschlag">
+   Lösungsvorschlag
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Aufgabenteil A
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
      Aufgabenteil B
     </a>
    </li>
@@ -1210,6 +1244,64 @@ title="Print to PDF"
 <section id="aufgabenteil-b">
 <h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">#</a></h3>
 <p>Plotten Sie die absolute Differenz zwischen Ihrem approximierten <span class="math notranslate nohighlight">\(\pi\)</span> und numpy.pi doppelt logarithmisch für alle Zehnerpotenzen zwischen 10 und 100.000. Was sagt ihnen der Graph? Fühern Sie das Programm ein paarmal aus. Wieso verändert sich der Graph?</p>
+</section>
+</section>
+<section id="losungsvorschlag">
+<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Aufgabenteil A<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Berechnung von Pi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \frac{\text{# Treffer}}{\text{# Versuche}} \approx \frac{\pi r²}{2²}\\
+\Rightarrow \pi \approx 4 \frac{\text{# Treffer}}{\text{# Versuche}}\end{split}\]</div>
+<p>Die Funktion:</p>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">pi_func</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">kreis_zaehler</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">kreis_zaehler</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">kreis_zaehler</span><span class="o">/</span><span class="n">N</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Aufgabenteil B<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pi_diff</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">pi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pi_func</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">pi_diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+    
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Approximation von Pi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Anzahl der Zufallspunkte&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Genauigkeit&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pi_diff</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/pi_mc_12_0.png" src="../../../../_images/pi_mc_12_0.png" />
+</div>
+</div>
+<p>Jeder Punkt ist die Differenz zwischen dem genährten <span class="math notranslate nohighlight">\(\pi\)</span> aus einem Zufallsexperiment und <span class="math notranslate nohighlight">\(\pi\)</span>. Ein neuer Programmdurchlauf führt zu einem neuen Zufallsexperiment mit einem potenziell anderen Ergebnis.</p>
 </section>
 </section>
 </section>
