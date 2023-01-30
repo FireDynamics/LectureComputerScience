@@ -193,6 +193,7 @@ parts:
       - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_verarbeitung
       - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_modellierung
       - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung
+      - file: content/Exercises/03_datenanalyse/zusatzaufgaben/zusatz_periodische_daten
 
 ########################################
 # AUFGABENSAMMLUNG NUMERIK
