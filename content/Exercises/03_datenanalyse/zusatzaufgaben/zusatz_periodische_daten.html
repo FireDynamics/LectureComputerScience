@@ -1248,10 +1248,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="periodische-daten">
 <h1>Periodische Daten<a class="headerlink" href="#periodische-daten" title="Permalink to this headline">#</a></h1>
-<p>Die nachfolgende Aufgabe behanelt die Verarbeitung periodischer Daten mit Hilfe von <code class="docutils literal notranslate"><span class="pre">Numpy.arrays</span></code>.</p>
+<p>Die nachfolgende Aufgabe behanelt die Verarbeitung periodischer Daten mit Hilfe von <code class="docutils literal notranslate"><span class="pre">numpy.arrays</span></code>.</p>
 <section id="aufgabenteil-a">
 <h2>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this headline">#</a></h2>
-<p>Lesen Sie die für diese Aufgabe erforderliche Datei <a class="reference download internal" download="" href="../../../../_downloads/c7783e564475276712ee39e2829dcaa5/periodische_daten.csv"><code class="xref download docutils literal notranslate"><span class="pre">periodische_daten.csv</span></code></a>. als <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code> ein. Der Datensatzt beschreibt die Rotation eines Punktes auf einem Kreis mit dem Durchmesser <span class="math notranslate nohighlight">\(d=10~m\)</span>. Der zurückgelegte Weg auf der Kreisbahn <span class="math notranslate nohighlight">\(U(t)\)</span> in [m] wird dabei in Abhängigkeit der Zeit <span class="math notranslate nohighlight">\(t\)</span> [s] beschrieben. Plotten Sie die Daten mit Hilfe des <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> Moduls in einer sinnvollen Darstellung und interpretieren Sie den Plot.</p>
+<p>Lesen Sie die für diese Aufgabe erforderliche Datei <a class="reference download internal" download="" href="../../../../_downloads/c7783e564475276712ee39e2829dcaa5/periodische_daten.csv"><code class="xref download docutils literal notranslate"><span class="pre">periodische_daten.csv</span></code></a>. als <code class="docutils literal notranslate"><span class="pre">numpy.array</span></code> ein. Der Datensatzt beschreibt die Rotation eines Punktes auf einem Kreis mit dem Durchmesser <span class="math notranslate nohighlight">\(d=20~m\)</span>. Der zurückgelegte Weg auf der Kreisbahn <span class="math notranslate nohighlight">\(U(t)\)</span> in [m] wird dabei in Abhängigkeit der Zeit <span class="math notranslate nohighlight">\(t\)</span> [s] beschrieben. Plotten Sie die Daten mit Hilfe des <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> Moduls in einer sinnvollen Darstellung und interpretieren Sie den Plot.</p>
 <p><img alt="circle" src="../../../../_images/circle.png" /></p>
 </section>
 <section id="losungsvorschlag">
@@ -1315,7 +1315,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Berechnen des Kreisumfangs</span>
-<span class="n">u</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span><span class="mi">10</span>
+<span class="n">u</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">20</span>
 
 <span class="c1"># Korrektur der Weginkremente um den periodischen Einfluss</span>
 <span class="n">ds_cor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ds</span><span class="o">+</span><span class="n">u</span><span class="p">,</span> <span class="n">ds</span><span class="p">)</span>
@@ -1378,12 +1378,13 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <span class="c1"># Berechnung des gleitenden Durchschnitts der Geschwindigkeit über ein Fenster von n = 200</span>
 <span class="n">t_ma</span><span class="p">,</span> <span class="n">v_ma</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">v_cor</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">v_cor</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_ma</span><span class="p">,</span> <span class="n">v_ma</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">v_cor</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Originaldaten&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_ma</span><span class="p">,</span> <span class="n">v_ma</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gleitender Durschnitt über 200 Wertepaare&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$t$ / s&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$v~/~ms^{-1}$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1399,11 +1400,12 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <span class="c1"># Berechnung des gleitenden Durchschnits für die Beschelunigung</span>
 <span class="n">t_ma</span><span class="p">,</span> <span class="n">a_ma</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">201</span><span class="p">:],</span> <span class="n">a</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">201</span><span class="p">:],</span> <span class="n">a</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_ma</span><span class="p">,</span> <span class="n">a_ma</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">201</span><span class="p">:],</span> <span class="n">a</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Originaldaten&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_ma</span><span class="p">,</span> <span class="n">a_ma</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Gleitender Durschnitt über 200 Wertepaare&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$t$ / s&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;$a~/~ms^{-2}$&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
