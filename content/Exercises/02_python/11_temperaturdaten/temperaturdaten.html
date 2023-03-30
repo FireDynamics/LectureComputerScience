@@ -1133,16 +1133,6 @@ title="Print to PDF"
      Lösungshinweise
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-i">
-     Lösungsvorschlag I
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-ii">
-     Lösungsvorschlag II
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -1172,16 +1162,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#losungshinweise">
      Lösungshinweise
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-i">
-     Lösungsvorschlag I
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-ii">
-     Lösungsvorschlag II
     </a>
    </li>
   </ul>
@@ -1240,122 +1220,6 @@ title="Print to PDF"
 </ol>
 </li>
 </ol>
-</section>
-<section id="losungsvorschlag-i">
-<h3>Lösungsvorschlag I<a class="headerlink" href="#losungsvorschlag-i" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen und Ausgeben einer Datei</span>
-<span class="kn">import</span> <span class="nn">glob</span>
-
-<span class="c1"># Erstelle Liste mit allen Dateien im Verzeichniss mit gegebenem Namen</span>
-<span class="n">datei_namen</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;TC??.csv&#39;</span><span class="p">)</span>
-<span class="n">daten</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Laden der Zeitstempel</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">datei_namen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">daten</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="c1"># Speichern aller Daten in einer Matrix</span>
-<span class="n">datei_nr</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">datei</span> <span class="ow">in</span> <span class="n">datei_namen</span><span class="p">:</span>
-    <span class="n">daten</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">datei</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">daten</span><span class="p">[</span><span class="n">datei_nr</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
-    <span class="n">datei_nr</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="c1"># Berechnen von maximaler und mittlerer Temperatur</span>
-<span class="n">mittl_temp</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">max_temp</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Schleife über alle Zeitschritte</span>
-<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
-    <span class="n">mittl_temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="n">max_temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">daten</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>      <span class="c1"># benutze als Startwert eine der zu vergleichenden Temperaturen</span>
-    
-    <span class="c1">#Schleife über alle Messreihen</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">)):</span>
-        <span class="n">mittl_temp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">daten</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
-        <span class="n">max_temp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_temp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">daten</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>   
-    <span class="n">mittl_temp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    
-<span class="c1"># Speichern in einer neuen Datei</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;TC_verarbeitet.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">mittl_temp</span><span class="p">)):</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">,</span><span class="si">{</span><span class="n">mittl_temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">,</span><span class="si">{</span><span class="n">max_temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die maximalen Temperaturen sowie die mittleren Temperaturen wurden in &quot;TC_verarbeitet.csv&quot; gespeichert.&#39;</span><span class="p">)</span>
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die maximalen Temperaturen sowie die mittleren Temperaturen wurden in &quot;TC_verarbeitet.csv&quot; gespeichert.
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="losungsvorschlag-ii">
-<h3>Lösungsvorschlag II<a class="headerlink" href="#losungsvorschlag-ii" title="Permalink to this headline">#</a></h3>
-<p>Der Unterschied zu Lösungsvorschlag I ist, dass hier die Reihnefolge der geschachtelten Schleifen, getauscht wurde.</p>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen und Ausgeben einer Datei</span>
-<span class="kn">import</span> <span class="nn">glob</span>
-
-<span class="c1"># Erstelle Liste mit allen Dateien im Verzeichniss mit gegebenem Namen</span>
-<span class="n">datei_namen</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;TC??.csv&#39;</span><span class="p">)</span>
-<span class="n">daten</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Laden der Zeitstempel</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">datei_namen</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">daten</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="c1"># Speichern aller Daten in einer Matrix</span>
-<span class="n">datei_nr</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">for</span> <span class="n">datei</span> <span class="ow">in</span> <span class="n">datei_namen</span><span class="p">:</span>
-    <span class="n">daten</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">datei</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-        <span class="n">daten</span><span class="p">[</span><span class="n">datei_nr</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
-    <span class="n">datei_nr</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="c1"># Berechnen von maximaler und mittlerer Temperatur</span>
-<span class="c1"># Iinitialisieren der Listen für die Ergebnisse</span>
-<span class="n">mittl_temp</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">max_temp</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
-    <span class="n">mittl_temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">daten</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="n">max_temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">daten</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-    
-<span class="c1"># Schleife über alle Messreihen</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">)):</span>
-    
-    <span class="c1"># Schleife über alle Zeitschritte</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
-        <span class="n">mittl_temp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">daten</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">daten</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">max_temp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_temp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">daten</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>   
-    
-<span class="c1"># Speichern in einer neuen Datei</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;TC_verarbeitet_2.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">mittl_temp</span><span class="p">)):</span>
-    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">daten</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">,</span><span class="si">{</span><span class="n">mittl_temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">,</span><span class="si">{</span><span class="n">max_temp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Die maximalen Temperaturen sowie die mittleren Temperaturen wurden in &quot;TC_verarbeitet_2.csv&quot; gespeichert.&#39;</span><span class="p">)</span>
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die maximalen Temperaturen sowie die mittleren Temperaturen wurden in &quot;TC_verarbeitet_2.csv&quot; gespeichert.
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 </section>

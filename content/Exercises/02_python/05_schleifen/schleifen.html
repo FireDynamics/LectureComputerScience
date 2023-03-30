@@ -1135,11 +1135,6 @@ title="Print to PDF"
      Lösungshinweis
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losung">
-     Lösung
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1150,11 +1145,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Lösungshinweis
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1188,11 +1178,6 @@ title="Print to PDF"
      Lösungshinweis
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losung">
-     Lösung
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1203,11 +1188,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      Lösungshinweis
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
     </a>
    </li>
   </ul>
@@ -1237,70 +1217,6 @@ title="Print to PDF"
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">#</a></h3>
 <p>Für <span class="math notranslate nohighlight">\(\sf N=100\)</span> lautet das Ergebnis 5050.</p>
 </section>
-<section id="losung">
-<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zu 1:</span>
-
-<span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">summe</span> <span class="o">+=</span> <span class="n">i</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Summe der Zahlen von 0 bis&quot;</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="s2">&quot;lautet:&quot;</span><span class="p">,</span> <span class="n">summe</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Summe der Zahlen von 0 bis 100 lautet: 5050
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zu 2:</span>
-
-<span class="n">summe</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">:</span>
-    <span class="n">summe</span> <span class="o">+=</span> <span class="n">i</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Summe der Zahlen von 0 bis&quot;</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="s2">&quot;lautet:&quot;</span><span class="p">,</span> <span class="n">summe</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Summe der Zahlen von 0 bis 100 lautet: 5050
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zu 3:</span>
-
-<span class="n">summe</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">//</span><span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Die Summe der Zahlen von 0 bis&quot;</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="s2">&quot;lautet:&quot;</span><span class="p">,</span> <span class="n">summe</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die Summe der Zahlen von 0 bis 100 lautet: 5050
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this headline">#</a></h2>
@@ -1314,52 +1230,6 @@ title="Print to PDF"
 <h3>Lösungshinweis<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>So könnte beispielsweise die Ausgabe aussehen.</p>
 <div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Start bei 0 km/h
-Ende bei 100 km/h
-Ausgabeschritte 5
-
-km/h	 m/s
-============
-0 	 0.0
-25 	 6.944444444444445
-50 	 13.88888888888889
-75 	 20.833333333333332
-100 	 27.77777777777778
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># definiere Berechnungsbereich</span>
-<span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">ende</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
-
-<span class="c1"># Ausgabe der Eingaben </span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Start bei&#39;</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="s1">&#39;km/h&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ende bei&#39;</span><span class="p">,</span> <span class="n">ende</span><span class="p">,</span> <span class="s1">&#39;km/h&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ausgabeschritte&#39;</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># Kopf der Tabelle</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;km/h</span><span class="se">\t</span><span class="s1"> m/s&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;============&#39;</span><span class="p">)</span>
-
-<span class="c1"># Berechnung der Schrittweite</span>
-<span class="n">dN</span> <span class="o">=</span> <span class="p">(</span><span class="n">ende</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c1"># Berechnungsschleife</span>
-<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">ende</span><span class="o">+</span><span class="n">dN</span><span class="p">,</span> <span class="n">dN</span><span class="p">):</span>
-    <span class="n">ms</span> <span class="o">=</span> <span class="n">v</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">3600</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Start bei 0 km/h
 Ende bei 100 km/h

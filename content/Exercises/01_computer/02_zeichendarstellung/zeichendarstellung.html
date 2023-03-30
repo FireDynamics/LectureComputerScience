@@ -1155,28 +1155,6 @@ title="Print to PDF"
    Lösungshinweise
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teil-a">
-     Teil A
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teil-b">
-     Teil B
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teil-c">
-     Teil C
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </nav>
@@ -1227,28 +1205,6 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#losungshinweise">
    Lösungshinweise
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losungsvorschlag">
-   Lösungsvorschlag
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teil-a">
-     Teil A
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teil-b">
-     Teil B
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teil-c">
-     Teil C
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1356,46 +1312,6 @@ Zahl:     43 43 45 20 3D 20 43 6F 6D 70 2E 2E 2E
 <li><p>Zu Teil C, Frage 2: Deutlich weniger als 1 kB.</p></li>
 <li><p>Zu Teil C, Frage 3: Wieviele Byte werden von einem ASCII kodierten Zeichen belegt?</p></li>
 </ul>
-</section>
-<section id="losungsvorschlag">
-<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">#</a></h2>
-<section id="teil-a">
-<h3>Teil A<a class="headerlink" href="#teil-a" title="Permalink to this headline">#</a></h3>
-<p>Die hier codierte Zeichenfolge lautet: <code class="docutils literal notranslate"><span class="pre">Computer</span> <span class="pre">und</span> <span class="pre">Feuer</span></code>.</p>
-</section>
-<section id="teil-b">
-<h3>Teil B<a class="headerlink" href="#teil-b" title="Permalink to this headline">#</a></h3>
-<p>Ein Texteditor würde den Inhalt wie folgt visuell darstellen:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">Milch</span>
-    <span class="o">-</span> <span class="n">Kaffee</span>
-</pre></div>
-</div>
-<p>Mit einer Darstellung der nicht-sichtbaren Zeichen sehe es so aus:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TODO:↵
- ⇥  -␣Milch↵
- ⇥  -␣Kaffee
-</pre></div>
-</div>
-</section>
-<section id="teil-c">
-<h3>Teil C<a class="headerlink" href="#teil-c" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
-<li><p>Sie sollten die Darstellung der Zeichen als Hexadezimalzahlen sich anschauen können, welche beispielsweise so aussieht:
-<img alt="" src="../../../../_images/beispieltext_1_hex.png" /></p></li>
-<li><p>Die Dateigröße können Sie direkt mit den Boardmitteln ihres Betriebssystems ermitteln. Diese betragen</p></li>
-</ol>
-<ul class="simple">
-<li><p>149 Byte für die Datei <code class="docutils literal notranslate"><span class="pre">beispieltext_1.txt</span></code></p></li>
-<li><p>154 Byte für die Datei <code class="docutils literal notranslate"><span class="pre">beispieltext_2.txt</span></code></p></li>
-</ul>
-<ol class="simple">
-<li><p>Die Anzahl der Zeichen ist in beiden Dateien gleich, jeweils 149. Da bei der ASCII-Kodierung ein Byte pro Zeichen benötigt wird, ergibt sich aus der Zeichenzahl direkt die Dateigröße. Bei Betrachten der zweiten Beispieldatei sieht man jedoch, dass diese Zeichen enthält, welche nicht durch die ASCII-Tabelle abgedeckt sind und somit mehr als ein Byte zur Kodierung benötigen.
-<img alt="" src="../../../../_images/beispieltext_2_hex.png" /></p></li>
-<li><p>Die Office Open XML enthält nicht nur den Textinhalt, sondern auch Informationen zu Formatierung des Textes und Metainformationen. Sie ist entsprechend viel größer und keine Textdatei, im Gegensatz zu den beiden obigen Beispieldateien. Ein Blick in den Anfangsbereich der Datei verdeutlicht die Komplexität einer solchen Datei.
-<img alt="" src="../../../../_images/beispieltext_3_hex.png" /></p></li>
-</ol>
-</section>
 </section>
 </section>
 

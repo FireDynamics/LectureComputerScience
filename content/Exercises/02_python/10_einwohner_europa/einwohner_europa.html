@@ -1129,11 +1129,6 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aufgabenteil-b-speichern-in-listen">
      Aufgabenteil B – Speichern in Listen
     </a>
@@ -1141,16 +1136,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#losungshinweis">
      Lösungshinweis
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-i">
-     Lösungsvorschlag I
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-ii">
-     Lösungsvorschlag II
     </a>
    </li>
   </ul>
@@ -1165,24 +1150,12 @@ title="Print to PDF"
      Lösungshinweis
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Lösungsvorschlag
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-d">
    Aufgabenteil D
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Lösungsvorschlag
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1209,11 +1182,6 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag">
-     Lösungsvorschlag
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aufgabenteil-b-speichern-in-listen">
      Aufgabenteil B – Speichern in Listen
     </a>
@@ -1221,16 +1189,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#losungshinweis">
      Lösungshinweis
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-i">
-     Lösungsvorschlag I
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#losungsvorschlag-ii">
-     Lösungsvorschlag II
     </a>
    </li>
   </ul>
@@ -1245,24 +1203,12 @@ title="Print to PDF"
      Lösungshinweis
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Lösungsvorschlag
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabenteil-d">
    Aufgabenteil D
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Lösungsvorschlag
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -1281,84 +1227,6 @@ title="Print to PDF"
 <section id="aufgabenteil-a-auslesen-der-datei">
 <h2>Aufgabenteil A – Auslesen der Datei<a class="headerlink" href="#aufgabenteil-a-auslesen-der-datei" title="Permalink to this headline">#</a></h2>
 <p>Schreiben Sie ein Programm, dass den Inhalt der Datei <code class="docutils literal notranslate"><span class="pre">einwohner_europa_2019.csv</span></code> ausließt und ausgibt.</p>
-<section id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen und Ausgeben einer Datei</span>
-
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;einwohner_europa_2019.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GEO,Value
-
-Belgien,11467923
-
-Bulgarien,7000039
-
-Tschechien,10528984
-
-Daenemark,5799763
-
-Deutschland einschliesslich ehemalige DDR,82940663
-
-Estland,1324820
-
-Irland,4904240
-
-Griechenland,10722287
-
-Spanien,46934632
-
-Frankreich,67028048
-
-Kroatien,4076246
-
-Italien,61068437
-
-Zypern,875898
-
-Lettland,1919968
-
-Litauen,2794184
-
-Luxemburg,612179
-
-Uganda,-1
-
-Ungarn,9772756
-
-Malta,493559
-
-Niederlande,17423013
-
-Oesterreich,8842000
-
-Polen,37972812
-
-Portugal,10276617
-
-Rumaenien,19405156
-
-Slowenien,2080908
-
-Slowakei,5450421
-
-Finnland,5512119
-
-Schweden,10243000
-
-Vereinigtes Koenigreich,66647112
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="aufgabenteil-b-speichern-in-listen">
 <h3>Aufgabenteil B – Speichern in Listen<a class="headerlink" href="#aufgabenteil-b-speichern-in-listen" title="Permalink to this headline">#</a></h3>
 <p>Verändern Sie obiges Programm, sodass die ausgelesenen Daten nicht mehr ausgegeben, sondern in zwei Listen gespeichert werden. Die Erste Zeile soll hierbei ignoriert werden. Die Liste mit den Einwohnern soll Zahlen anstelle von Strings enthalten.</p>
@@ -1367,89 +1235,6 @@ Vereinigtes Koenigreich,66647112
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this headline">#</a></h3>
 <p>Benutzen Sie eine Bool-Variable um zu überprüfen, ob Sie gerade die erste Zeile der Datei auslesen. Alternativ können Sie mit der <code class="docutils literal notranslate"><span class="pre">pop</span></code>-Methode von Listen Elemente an einer bestimmten Position löschen.</p>
 </section>
-<section id="losungsvorschlag-i">
-<h3>Lösungsvorschlag I<a class="headerlink" href="#losungsvorschlag-i" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen einer Datei und Speichern in Listen</span>
-
-<span class="n">laender</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">bevoelkerungen</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">erste_zeile</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;einwohner_europa_2019.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="c1"># Speichern der Datei in zwei Listen</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    
-    <span class="c1"># Überprüfung, ob das Programm gerade die erste Zeile der Datei ausließt</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">erste_zeile</span><span class="p">:</span>
-
-        <span class="c1"># Aufteilen der Zeile in zwei Variablen</span>
-        <span class="p">[</span><span class="n">land</span><span class="p">,</span> <span class="n">einwohner</span><span class="p">]</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-
-        <span class="c1"># Konvertierung in einen Integer</span>
-        <span class="n">einwohner</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">einwohner</span><span class="p">)</span>
-
-        <span class="c1"># Erweiterung der Listen um die beiden Elemente der aktuell ausgelesenen Zeile</span>
-        <span class="n">laender</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">land</span><span class="p">)</span>
-        <span class="n">bevoelkerungen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">einwohner</span><span class="p">))</span>
-    
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">erste_zeile</span> <span class="o">=</span> <span class="kc">False</span>
-        
-<span class="nb">print</span><span class="p">(</span><span class="n">laender</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">bevoelkerungen</span><span class="p">)</span>
-
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Belgien&#39;, &#39;Bulgarien&#39;, &#39;Tschechien&#39;, &#39;Daenemark&#39;, &#39;Deutschland einschliesslich ehemalige DDR&#39;, &#39;Estland&#39;, &#39;Irland&#39;, &#39;Griechenland&#39;, &#39;Spanien&#39;, &#39;Frankreich&#39;, &#39;Kroatien&#39;, &#39;Italien&#39;, &#39;Zypern&#39;, &#39;Lettland&#39;, &#39;Litauen&#39;, &#39;Luxemburg&#39;, &#39;Uganda&#39;, &#39;Ungarn&#39;, &#39;Malta&#39;, &#39;Niederlande&#39;, &#39;Oesterreich&#39;, &#39;Polen&#39;, &#39;Portugal&#39;, &#39;Rumaenien&#39;, &#39;Slowenien&#39;, &#39;Slowakei&#39;, &#39;Finnland&#39;, &#39;Schweden&#39;, &#39;Vereinigtes Koenigreich&#39;]
-[11467923, 7000039, 10528984, 5799763, 82940663, 1324820, 4904240, 10722287, 46934632, 67028048, 4076246, 61068437, 875898, 1919968, 2794184, 612179, -1, 9772756, 493559, 17423013, 8842000, 37972812, 10276617, 19405156, 2080908, 5450421, 5512119, 10243000, 66647112]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="losungsvorschlag-ii">
-<h3>Lösungsvorschlag II<a class="headerlink" href="#losungsvorschlag-ii" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auslesen einer Datei und Speichern in Listen</span>
-
-<span class="n">laender</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">einwohner</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;einwohner_europa_2019.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="c1"># Speichern der Datei in zwei Listen</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">laender</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">einwohner</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
-    
-<span class="c1"># Entfernen des ersten Elements beider Listen</span>
-<span class="n">laender</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">einwohner</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Konvertieren der Elemente in Einwohner in Integers</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">einwohner</span><span class="p">)):</span>
-    <span class="n">einwohner</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">einwohner</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">laender</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">einwohner</span><span class="p">)</span>
-
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Belgien&#39;, &#39;Bulgarien&#39;, &#39;Tschechien&#39;, &#39;Daenemark&#39;, &#39;Deutschland einschliesslich ehemalige DDR&#39;, &#39;Estland&#39;, &#39;Irland&#39;, &#39;Griechenland&#39;, &#39;Spanien&#39;, &#39;Frankreich&#39;, &#39;Kroatien&#39;, &#39;Italien&#39;, &#39;Zypern&#39;, &#39;Lettland&#39;, &#39;Litauen&#39;, &#39;Luxemburg&#39;, &#39;Uganda&#39;, &#39;Ungarn&#39;, &#39;Malta&#39;, &#39;Niederlande&#39;, &#39;Oesterreich&#39;, &#39;Polen&#39;, &#39;Portugal&#39;, &#39;Rumaenien&#39;, &#39;Slowenien&#39;, &#39;Slowakei&#39;, &#39;Finnland&#39;, &#39;Schweden&#39;, &#39;Vereinigtes Koenigreich&#39;]
-[11467923, 7000039, 10528984, 5799763, 82940663, 1324820, 4904240, 10722287, 46934632, 67028048, 4076246, 61068437, 875898, 1919968, 2794184, 612179, -1, 9772756, 493559, 17423013, 8842000, 37972812, 10276617, 19405156, 2080908, 5450421, 5512119, 10243000, 66647112]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 <section id="aufgabenteil-c-filtern-und-verwenden-optional">
 <h2>Aufgabenteil C – Filtern und Verwenden – Optional<a class="headerlink" href="#aufgabenteil-c-filtern-und-verwenden-optional" title="Permalink to this headline">#</a></h2>
@@ -1457,55 +1242,6 @@ Vereinigtes Koenigreich,66647112
 <section id="id1">
 <h3>Lösungshinweis<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Falls Sie beim Löschen auf einen <code class="docutils literal notranslate"><span class="pre">out-of-range</span> <span class="pre">IndexError</span></code> treffen, überlegen Sie sich, warum dies passiert und ob Sie vielleicht mit einer anderen Schleifenart das Problem umgehen können.</p>
-</section>
-<section id="id2">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Auswerten von Daten</span>
-
-<span class="n">laender</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">einwohner</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;einwohner_europa_2019.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="c1"># Speichern der Datei in zwei Listen</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">laender</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">einwohner</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
-    
-<span class="c1"># Entfernen des ersten Elements beider Listen</span>
-<span class="n">laender</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">einwohner</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Konvertieren der Elemente in Einwohner in Integers</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">einwohner</span><span class="p">)):</span>
-    <span class="n">einwohner</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">einwohner</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    
-<span class="c1"># Entfernen von Ausreißern</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">einwohner</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">einwohner</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">einwohner</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">laender</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    
-<span class="c1"># Berechnung der gesammten EU-Bevölkerung</span>
-<span class="n">gesammtBev</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">einwohner</span><span class="p">:</span>
-    <span class="n">gesammtBev</span> <span class="o">+=</span> <span class="n">i</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Die gesammte EU-Bevölkerung in 2019 waren ungefähr </span><span class="si">{</span><span class="n">gesammtBev</span><span class="o">/</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> Millionen Personen.&#39;</span><span class="p">)</span>
-
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Die gesammte EU-Bevölkerung in 2019 waren ungefähr 514.12 Millionen Personen.
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 <section id="aufgabenteil-d">
@@ -1516,33 +1252,6 @@ Hinweis:</p>
 <li><p>Um die Ländernamen besser lesen zu können, soll die Beschriftung um 90 grad gedreht werden.</p></li>
 <li><p>Wenn Sie plt.bar() anstelle von plt.plot() verwenden, erhalten Sie ein Balkendiagramm.</p></li>
 </ul>
-<section id="id3">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<div class="cell tag_loesung tag_hide_cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">laender</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">einwohner</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">laender</span><span class="p">,</span><span class="n">einwohner</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Laender&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Bevoelkerungszahlen&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">gesammtBev</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">einwohner</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Belgien&#39;, &#39;Bulgarien&#39;, &#39;Tschechien&#39;, &#39;Daenemark&#39;, &#39;Deutschland einschliesslich ehemalige DDR&#39;, &#39;Estland&#39;, &#39;Irland&#39;, &#39;Griechenland&#39;, &#39;Spanien&#39;, &#39;Frankreich&#39;, &#39;Kroatien&#39;, &#39;Italien&#39;, &#39;Zypern&#39;, &#39;Lettland&#39;, &#39;Litauen&#39;, &#39;Luxemburg&#39;, &#39;Ungarn&#39;, &#39;Malta&#39;, &#39;Niederlande&#39;, &#39;Oesterreich&#39;, &#39;Polen&#39;, &#39;Portugal&#39;, &#39;Rumaenien&#39;, &#39;Slowenien&#39;, &#39;Slowakei&#39;, &#39;Finnland&#39;, &#39;Schweden&#39;, &#39;Vereinigtes Koenigreich&#39;]
-[11467923, 7000039, 10528984, 5799763, 82940663, 1324820, 4904240, 10722287, 46934632, 67028048, 4076246, 61068437, 875898, 1919968, 2794184, 612179, 9772756, 493559, 17423013, 8842000, 37972812, 10276617, 19405156, 2080908, 5450421, 5512119, 10243000, 66647112]
-</pre></div>
-</div>
-<img alt="../../../../_images/einwohner_europa_20_1.png" src="../../../../_images/einwohner_europa_20_1.png" />
-</div>
-</div>
-</section>
 </section>
 </section>
 
