@@ -10,9 +10,9 @@ Die von uns entwickelten und eingesetzten Simulationsmodelle beruhen meist auf d
 
 :::{figure-md} fig-jureca
 
-<img src="https://www.fz-juelich.de/SharedDocs/Bilder/IAS/JSC/EN/galeries/JURECA/JURECA.jpg?__blob=poster" width="80%">
+<img src="https://www.fz-juelich.de/en/ias/jsc/systems/supercomputers/jureca/jureca-dc.jpeg/@@images/image" width="80%">
 
-JURECA Supercomputer, Bildquelle: Forschungszentrum Jülich
+JURECA Supercomputer, [Bildquelle: Forschungszentrum Jülich](https://www.fz-juelich.de/en/ias/jsc/systems/supercomputers/jureca/jureca-dc.jpeg/@@images/image)
 :::
 
 Zu unseren Forschungsaktivitäten zählt zum Einen der Einsatz und Weiterentwicklung von [FDS](https://pages.nist.gov/fds-smv/) (Fire Dynamics Simulator), welches genutzten werden kann zur Berechnung der Rauch- und Brandausbreitung in Gebäuden. Zum Anderen die Entwicklung neuer Simulationswerkzeuge. Dazu zählt beispielsweise die Simulationssoftware [ARTSS](https://github.com/FireDynamics/ARTSS) (Accelerator-based Real-Time Smoke Simulator) oder [PROPTI](https://github.com/FireDynamics/propti). 

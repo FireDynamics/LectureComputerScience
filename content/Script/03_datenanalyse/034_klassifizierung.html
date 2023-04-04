@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3.4. Klassifizierung &#8212; Vorlesung Ingenieurinformatik</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,1140 +63,503 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Script/03_datenanalyse/034_klassifizierung';</script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/03_datenanalyse/034_klassifizierung.html" />
     <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3.5. Optimierung" href="035_optimierung.html" />
     <link rel="prev" title="3.3.3. Splines" href="0333_splines.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../Overview/uebersicht.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../../_static/cce_logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Vorlesung Ingenieurinformatik</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ingenieurinformatik
- </span>
-</p>
+    
+    
+    <img src="../../../_static/cce_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/cce_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Overview/informatik.html">
-   Informatik
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Overview/cce.html">
-   Computational Civil Engineering (CCE)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../Overview/informatik.html">Informatik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Overview/cce.html">Computational Civil Engineering (CCE)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Vorlesungsskript
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vorlesungsskript</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01_computer/00_einleitung.html">
-   1. Computer
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../01_computer/01_digitalisierung.html">
-     1.1. Digitalisierung
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/011_analoge_informationen.html">
-       1.1.1. Analoge Informationen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/012_digitale_informationen.html">
-       1.1.2. Digitale Informationen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/013_zahlendarstellung.html">
-       1.1.3. Digitale Zahlendarstellung
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../01_computer/02_algorithmen.html">
-     1.2. Algorithmen
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/021_sortieralgorithmen.html">
-       1.2.1. Sortieralgorithmen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/022_eigenschaften.html">
-       1.2.2. Eigenschaften
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/023_numerische_algorithmen.html">
-       1.2.3. Numerische Algorithmen
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../01_computer/03_hardware.html">
-     1.3. Hardware
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/031_geschichte.html">
-       1.3.1. Geschichte der Computer
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/032_komponenten.html">
-       1.3.2. Aufbau eines Computers
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/033_funktionsweise_computer.html">
-       1.3.3. Arbeitsweise eines Computers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../01_computer/04_software.html">
-     1.4. Software
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/041_betriebssysteme.html">
-       1.4.1. Betriebssysteme
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/042_softwareentwicklung.html">
-       1.4.2. Softwareentwicklung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../01_computer/043_dateisystem.html">
-       1.4.3. Dateisystem
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02_python/02_einleitung.html">
-   2. Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../02_python/021_sprache.html">
-     2.1. Sprache
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0211_arbeiten.html">
-       2.1.1. Arbeiten mit Python
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0212_jupyter.html">
-       2.1.2. JupyterLab
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0213_syntax.html">
-       2.1.3. Syntax
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../02_python/022_grundlagen.html">
-     2.2. Grundlagen
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0221_zahlen.html">
-       2.2.1. Zahlen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0222_operationen.html">
-       2.2.2. Operationen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0223_variablen.html">
-       2.2.3. Variablen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0224_funktionen.html">
-       2.2.4. Funktionen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0225_zeichenketten.html">
-       2.2.5. Zeichenketten
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0226_listen.html">
-       2.2.6. Listen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0227_sammeltypen.html">
-       2.2.7. Sammeltypen
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../02_python/023_flusskontrolle.html">
-     2.3. Flusskontrolle
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0231_schleifen.html">
-       2.3.1. Schleifen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0232_abzweigungen.html">
-       2.3.2. Abzweigungen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0233_funktionen.html">
-       2.3.3. Funktionen
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../02_python/024_weiteres.html">
-     2.4. Weitere Themen
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0241_module.html">
-       2.4.1. Module
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0242_formattierte_strings.html">
-       2.4.2. Formatierte Zeichenketten
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../02_python/0243_dateien.html">
-       2.4.3. Dateien
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="03_einleitung.html">
-   3. Datenanalyse
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="031_visualisierung.html">
-     3.1. Visualisierung
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0311_matplotlib.html">
-       3.1.1. matplotlib-Modul
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0312_1d_plots.html">
-       3.1.2. Eindimensionale Daten
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0313_beschriftung.html">
-       3.1.3. Beschriftung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0314_farben.html">
-       3.1.4. Farben
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0315_skalierung.html">
-       3.1.5. Skalierung
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="032_verarbeitung.html">
-     3.2. Verarbeitung
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0321_numpy.html">
-       3.2.1. numpy-Modul
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0322_arrays.html">
-       3.2.2. numpy-Arrays
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0323_referenzen.html">
-       3.2.3. Referenzen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0324_dateien.html">
-       3.2.4. Dateien
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0325_mehrdimensional.html">
-       3.2.5. Mehrdimensionale Daten
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0326_bilder.html">
-       3.2.6. Bilddaten
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="033_modellierung.html">
-     3.3. Modellierung
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0331_interpolation.html">
-       3.3.1. Polynominterpolation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0332_fitting.html">
-       3.3.2. Fitting
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="0333_splines.html">
-       3.3.3. Splines
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     3.4. Klassifizierung
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="035_optimierung.html">
-     3.5. Optimierung
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../04_numerik/04_einleitung.html">
-   4. Numerik
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-  <label for="toctree-checkbox-15">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../04_numerik/041_integrale.html">
-     4.1. Integration
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-    <label for="toctree-checkbox-16">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0411_oberuntersumme.html">
-       4.1.1. Ober- und Untersumme
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0412_interpolation.html">
-       4.1.2. Interpolation
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0413_montecarlo.html">
-       4.1.3. Monte-Carlo
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../04_numerik/042_ableitungen.html">
-     4.2. Differentiation
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-    <label for="toctree-checkbox-17">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0421_taylor.html">
-       4.2.1. Taylor-Entwicklung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0422_differenzenquotienten.html">
-       4.2.2. Differenzenformeln
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0423_konvergenz.html">
-       4.2.3. Fehlerbetrachtung
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../04_numerik/043_dgl.html">
-     4.3. Differentialgleichungen
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0431_fdm.html">
-       4.3.1. Finite-Differenzen-Methode
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0432_ode.html">
-       4.3.2. Gewöhnliche DGL
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../04_numerik/0433_pde.html">
-       4.3.3. Partielle DGL
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_computer/00_einleitung.html">1. Computer</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_computer/01_digitalisierung.html">1.1. Digitalisierung</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/011_analoge_informationen.html">1.1.1. Analoge Informationen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/012_digitale_informationen.html">1.1.2. Digitale Informationen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/013_zahlendarstellung.html">1.1.3. Digitale Zahlendarstellung</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Aufgabensammlung
- </span>
-</p>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_computer/02_algorithmen.html">1.2. Algorithmen</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/021_sortieralgorithmen.html">1.2.1. Sortieralgorithmen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/022_eigenschaften.html">1.2.2. Eigenschaften</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/023_numerische_algorithmen.html">1.2.3. Numerische Algorithmen</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_computer/03_hardware.html">1.3. Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/031_geschichte.html">1.3.1. Geschichte der Computer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/032_komponenten.html">1.3.2. Aufbau eines Computers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/033_funktionsweise_computer.html">1.3.3. Arbeitsweise eines Computers</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_computer/04_software.html">1.4. Software</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/041_betriebssysteme.html">1.4.1. Betriebssysteme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/042_softwareentwicklung.html">1.4.2. Softwareentwicklung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_computer/043_dateisystem.html">1.4.3. Dateisystem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_python/02_einleitung.html">2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_python/021_sprache.html">2.1. Sprache</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0211_arbeiten.html">2.1.1. Arbeiten mit Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0212_jupyter.html">2.1.2. JupyterLab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0213_syntax.html">2.1.3. Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_python/022_grundlagen.html">2.2. Grundlagen</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0221_zahlen.html">2.2.1. Zahlen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0222_operationen.html">2.2.2. Operationen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0223_variablen.html">2.2.3. Variablen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0224_funktionen.html">2.2.4. Funktionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0225_zeichenketten.html">2.2.5. Zeichenketten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0226_listen.html">2.2.6. Listen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0227_sammeltypen.html">2.2.7. Sammeltypen</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_python/023_flusskontrolle.html">2.3. Flusskontrolle</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0231_schleifen.html">2.3.1. Schleifen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0232_abzweigungen.html">2.3.2. Abzweigungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0233_funktionen.html">2.3.3. Funktionen</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_python/024_weiteres.html">2.4. Weitere Themen</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0241_module.html">2.4.1. Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0242_formattierte_strings.html">2.4.2. Formatierte Zeichenketten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_python/0243_dateien.html">2.4.3. Dateien</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="03_einleitung.html">3. Datenanalyse</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="031_visualisierung.html">3.1. Visualisierung</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="0311_matplotlib.html">3.1.1. matplotlib-Modul</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0312_1d_plots.html">3.1.2. Eindimensionale Daten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0313_beschriftung.html">3.1.3. Beschriftung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0314_farben.html">3.1.4. Farben</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0315_skalierung.html">3.1.5. Skalierung</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="032_verarbeitung.html">3.2. Verarbeitung</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="0321_numpy.html">3.2.1. numpy-Modul</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0322_arrays.html">3.2.2. numpy-Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0323_referenzen.html">3.2.3. Referenzen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0324_dateien.html">3.2.4. Dateien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0325_mehrdimensional.html">3.2.5. Mehrdimensionale Daten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0326_bilder.html">3.2.6. Bilddaten</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="033_modellierung.html">3.3. Modellierung</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="0331_interpolation.html">3.3.1. Polynominterpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0332_fitting.html">3.3.2. Fitting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="0333_splines.html">3.3.3. Splines</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4. Klassifizierung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="035_optimierung.html">3.5. Optimierung</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04_numerik/04_einleitung.html">4. Numerik</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04_numerik/041_integrale.html">4.1. Integration</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0411_oberuntersumme.html">4.1.1. Ober- und Untersumme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0412_interpolation.html">4.1.2. Interpolation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0413_montecarlo.html">4.1.3. Monte-Carlo</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04_numerik/042_ableitungen.html">4.2. Differentiation</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0421_taylor.html">4.2.1. Taylor-Entwicklung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0422_differenzenquotienten.html">4.2.2. Differenzenformeln</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0423_konvergenz.html">4.2.3. Fehlerbetrachtung</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../04_numerik/043_dgl.html">4.3. Differentialgleichungen</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0431_fdm.html">4.3.1. Finite-Differenzen-Methode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0432_ode.html">4.3.2. Gewöhnliche DGL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../04_numerik/0433_pde.html">4.3.3. Partielle DGL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aufgabensammlung</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../Exercises/01_computer/uebersicht.html">
-   1. Computer
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html">
-     1.1. Zahlendarstellung
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html">
-     1.2. Darstellung von Zeichen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html">
-     1.3. Intervallschachtelung
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html">
-     1.4. Sieb von Eratosthenes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html">
-     1.5. Größter gemeinsamer Teiler (ggT)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html">
-     1.6. Majorität
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html">
-     1.7. Prozessorarchitekturen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html">
-     1.8. Betriebssysteme
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">
-     1.9. Zusatzaufgaben
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">
-       Algorithmen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">
-       Programmablaufpläne
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">
-       Perfekte (volkommene) Zahlen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">
-       Intervallschachtelung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">
-       Prozessorarchitekturen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">
-       Betriebssysteme
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../Exercises/02_python/uebersicht.html">
-   2. Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-  <label for="toctree-checkbox-21">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/01_markdown/markdown.html">
-     2.1. Markdown
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/02_operationen/operationen.html">
-     2.2. Operationen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/03_variablen/variablen.html">
-     2.3. Variablen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/04_listen/listen.html">
-     2.4. Listen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/05_schleifen/schleifen.html">
-     2.5. Anwendung von Schleifen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/06_abzweigungen/abzweigungen.html">
-     2.6. Abzweigungen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html">
-     2.7. Funktion für π-Näherungsformel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus.html">
-     2.8. Sortieralgorithmus
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/09_fstrings/fstrings.html">
-     2.9. Formattierte Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/10_einwohner_europa/einwohner_europa.html">
-     2.10. Einwohnerzahl Europa
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/02_python/11_temperaturdaten/temperaturdaten.html">
-     2.11. Temperaturdaten
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/uebersicht.html">
-     2.12. Zusatzaufgaben
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-    <label for="toctree-checkbox-22">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_grundlagen.html">
-       Grundlagen
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle.html">
-       Flusskontrolle
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../Exercises/03_datenanalyse/uebersicht.html">
-   3. Datenanalyse
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-  <label for="toctree-checkbox-23">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten.html">
-     3.1. Plotten von Funktionen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/02_daten_plotten/daten_plotten.html">
-     3.2. Daten aus Datei plotten
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/03_numpy_arrays/arrays.html">
-     3.3. Numpy Arrays
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2.html">
-     3.4. Temperaturdaten II
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/05_interpolation/interpolation.html">
-     3.5. Fitting und Interpolation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html">
-     3.6. Ballonfahrt
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/uebersicht.html">
-     3.7. Zusatzaufgaben
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-    <label for="toctree-checkbox-24">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung.html">
-       Visualisierung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_verarbeitung.html">
-       Verarbeitung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_modellierung.html">
-       Modellierung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.html">
-       Bildverarbeitung
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_periodische_daten.html">
-       Periodische Daten
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../Exercises/04_numerik/uebersicht.html">
-   4. Numerik
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
-  <label for="toctree-checkbox-25">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/04_numerik/01_trapez/trapez.html">
-     4.1. Trapezfunktion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/04_numerik/02_pi_mc/pi_mc.html">
-     4.2. Monte Carlo Integration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/04_numerik/03_abl_analytisch/abl_analytisch.html">
-     4.3. 2. Ableitung 2. Ordnung
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/04_numerik/04_abl_num/abl_num.html">
-     4.4. Ableitung und Genauigkeit
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html">
-     4.5. Ableitungsfunktion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html">
-     4.6. Temperaturgleichung
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Exercises/01_computer/uebersicht.html">1. Computer</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/01_zahlendarstellung/zahlendarstellung.html">1.1. Zahlendarstellung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/02_zeichendarstellung/zeichendarstellung.html">1.2. Darstellung von Zeichen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html">1.3. Intervallschachtelung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html">1.4. Sieb von Eratosthenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html">1.5. Größter gemeinsamer Teiler (ggT)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html">1.6. Majorität</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html">1.7. Prozessorarchitekturen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html">1.8. Betriebssysteme</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">1.9. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">Algorithmen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">Programmablaufpläne</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">Perfekte (volkommene) Zahlen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">Intervallschachtelung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">Prozessorarchitekturen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">Betriebssysteme</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Exercises/02_python/uebersicht.html">2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/01_markdown/markdown.html">2.1. Markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/02_operationen/operationen.html">2.2. Operationen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/03_variablen/variablen.html">2.3. Variablen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/04_listen/listen.html">2.4. Listen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/05_schleifen/schleifen.html">2.5. Anwendung von Schleifen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/06_abzweigungen/abzweigungen.html">2.6. Abzweigungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/07_naeherungsformel_pi/naeherungsformel_pi.html">2.7. Funktion für π-Näherungsformel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/08_sortieralgorithmus/sortieralgorithmus.html">2.8. Sortieralgorithmus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/09_fstrings/fstrings.html">2.9. Formattierte Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/10_einwohner_europa/einwohner_europa.html">2.10. Einwohnerzahl Europa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/11_temperaturdaten/temperaturdaten.html">2.11. Temperaturdaten</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/uebersicht.html">2.12. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_grundlagen.html">Grundlagen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle.html">Flusskontrolle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Exercises/03_datenanalyse/uebersicht.html">3. Datenanalyse</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/03_datenanalyse/01_funktionen_plotten/funktionen_plotten.html">3.1. Plotten von Funktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/03_datenanalyse/02_daten_plotten/daten_plotten.html">3.2. Daten aus Datei plotten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/03_datenanalyse/03_numpy_arrays/arrays.html">3.3. Numpy Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/03_datenanalyse/04_Temperaturdaten_2/temperaturdaten_2.html">3.4. Temperaturdaten II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/03_datenanalyse/05_interpolation/interpolation.html">3.5. Fitting und Interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/03_datenanalyse/06_ballonfahrt/ballonfahrt.html">3.6. Ballonfahrt</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/uebersicht.html">3.7. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_visualisierung.html">Visualisierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_verarbeitung.html">Verarbeitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_modellierung.html">Modellierung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_bildverarbeitung.html">Bildverarbeitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/03_datenanalyse/zusatzaufgaben/zusatz_periodische_daten.html">Periodische Daten</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Exercises/04_numerik/uebersicht.html">4. Numerik</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/04_numerik/01_trapez/trapez.html">4.1. Trapezfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/04_numerik/02_pi_mc/pi_mc.html">4.2. Monte Carlo Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/04_numerik/03_abl_analytisch/abl_analytisch.html">4.3. 2. Ableitung 2. Ordnung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/04_numerik/04_abl_num/abl_num.html">4.4. Ableitung und Genauigkeit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html">4.5. Ableitungsfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/04_numerik/06_temperaturgleichung/temperaturgleichung.html">4.6. Temperaturgleichung</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FireDynamics/LectureComputerScience" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
   </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/03_datenanalyse/034_klassifizierung.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-</label>
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/03_datenanalyse/034_klassifizierung.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-    </ul>
-  </div>
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/Script/03_datenanalyse/034_klassifizierung.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/FireDynamics/LectureComputerScience"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/FireDynamics/LectureComputerScience/issues/new?title=Issue%20on%20page%20%2Fcontent/Script/03_datenanalyse/034_klassifizierung.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/FireDynamics/LectureComputerScience/edit/main/book/content/Script/03_datenanalyse/034_klassifizierung.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/content/Script/03_datenanalyse/034_klassifizierung.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#k-means-algorithmus">
-   3.4.1. k-Means-Algorithmus
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hierarchische-clusteranalyse">
-   3.4.2. Hierarchische Clusteranalyse
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weitere-clusteralgorithmen">
-   3.4.3. Weitere Clusteralgorithmen
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Klassifizierung</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#k-means-algorithmus">
-   3.4.1. k-Means-Algorithmus
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hierarchische-clusteranalyse">
-   3.4.2. Hierarchische Clusteranalyse
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#weitere-clusteralgorithmen">
-   3.4.3. Weitere Clusteralgorithmen
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Klassifizierung</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-algorithmus">3.4.1. k-Means-Algorithmus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchische-clusteranalyse">3.4.2. Hierarchische Clusteranalyse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weitere-clusteralgorithmen">3.4.3. Weitere Clusteralgorithmen</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="klassifizierung">
-<h1><span class="section-number">3.4. </span>Klassifizierung<a class="headerlink" href="#klassifizierung" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3.4. </span>Klassifizierung<a class="headerlink" href="#klassifizierung" title="Permalink to this heading">#</a></h1>
 <p>Bei der Analyse von Daten kann die Identifikation von Klassen, d.h. Gruppen oder Cluster von Datenpunkten, welche änhliche Eigenschaften haben, sehr hilfreich sein. Diese Strategie wird häufig in Situationen eingesetzt, in welchen die Daten eine hohe Dimensionalität aufweisen und so Strukturen für den Menschen schwer zu erkennen sind.</p>
 <p>Die folgende Abbildung zeigt ein Beispiel mit drei Gruppen von Datenpunkten, welche eine Nähe bzgl. der abhängigen Größen <span class="math notranslate nohighlight">\(\sf A\)</span> und <span class="math notranslate nohighlight">\(\sf B\)</span> haben. Die visuelle Erkennung der Gruppen ist in diesem Fall für Menschen im Allgemeinen sehr einfach.</p>
 <div class="cell tag_hide_input docutils container">
@@ -1199,6 +573,19 @@ title="Print to PDF"
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;ticks&#39;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">scipy</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
 </div>
@@ -1224,19 +611,19 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_4_0.png" src="../../../_images/034_klassifizierung_4_0.png" />
+<img alt="../../../_images/d771d542653e34a3a190e2eddc36f08d4e92ddf2c4a9ff0fceca1e19ff715d45.png" src="../../../_images/d771d542653e34a3a190e2eddc36f08d4e92ddf2c4a9ff0fceca1e19ff715d45.png" />
 </div>
 </div>
 <p>Im Folgenden werden zwei Verfahren vorgestellt, welche eine automatische Erkennung von Grupppen oder Clustern durchführen können.</p>
 <section id="k-means-algorithmus">
-<h2><span class="section-number">3.4.1. </span>k-Means-Algorithmus<a class="headerlink" href="#k-means-algorithmus" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.1. </span>k-Means-Algorithmus<a class="headerlink" href="#k-means-algorithmus" title="Permalink to this heading">#</a></h2>
 <p>Bei dem <a class="reference external" href="https://de.wikipedia.org/wiki/K-Means-Algorithmus">k-Means-Algorithmus</a> handelt es sich um ein Verfahren um <span class="math notranslate nohighlight">\(\sf k\)</span> Punkte zu finden, welche als Zentren von Clustern interpretiert werden können. Für alle Datenpunkte, welche zu einem Clusterzentrum <span class="math notranslate nohighlight">\(\sf \vec{\mu}_i\)</span> gehören, gilt, dass sie diesem am nächsten sind. Bestimmt werden die Zentren <span class="math notranslate nohighlight">\(\sf \vec{\mu}_i\)</span> über die Minimierung der folgenden Abstandsfunktion <span class="math notranslate nohighlight">\(\sf J\)</span> für alle Datenpunkte <span class="math notranslate nohighlight">\(\sf \vec{x}_j\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \sf J = \sum_{i=1}^k\sum_{\text{alle}\ \vec{x}_j} \left| \vec{x}_j - \vec{\mu}_i\right|^2
 \]</div>
 <p>Der k-Means-Algorithmus weist ein sehr einfaches und effizientes Verfahren zur Bestimmung der Clusterzentren.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Es werden <span class="math notranslate nohighlight">\(\sf k\)</span> (zufällige) Clusterzentren vorgegeben.</p></li>
 <li><p>Für jeden Datenpunkt <span class="math notranslate nohighlight">\(\sf \vec{x}_j\)</span> wird das nächstgelegene Clusterzentrum bestimmt.</p></li>
 <li><p>Die Clusterzentren werden in die Mittelpunkte der ihnen zugewiesenen Menge von Datenpunkten verschoben.</p></li>
@@ -1281,9 +668,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-8.25846604  7.81152655]
- [-0.25037619 -6.68466571]
- [ 4.15911301  0.32194317]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 4.15911301  0.32194317]
+ [-8.25846604  7.81152655]
+ [-0.25037619 -6.68466571]]
 </pre></div>
 </div>
 </div>
@@ -1295,9 +682,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 1 2 1 1 2 1 1 1 0 1 0 1 1 2 0 0 0 0 1 1 0 0 2 1 0 1 1 1 1 1 0 1 0 2 0 1
- 0 0 2 2 1 2 0 0 0 2 0 2 2 2 0 1 0 2 1 1 0 0 1 0 0 2 2 2 2 2 0 2 1 0 2 0 1
- 2 2 2 0 1 1 1 0 2 0 1 1 1 2 2 2 0 2 2 1 2 0 2 0 0 2]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 2 0 2 2 0 2 2 2 1 2 1 2 2 0 1 1 1 1 2 2 1 1 0 2 1 2 2 2 2 2 1 2 1 0 1 2
+ 1 1 0 0 2 0 1 1 1 0 1 0 0 0 1 2 1 0 2 2 1 1 2 1 1 0 0 0 0 0 1 0 2 1 0 1 2
+ 0 0 0 1 2 2 2 1 0 1 2 2 2 0 0 0 1 0 0 2 0 1 0 1 1 0]
 </pre></div>
 </div>
 </div>
@@ -1335,7 +722,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_19_0.png" src="../../../_images/034_klassifizierung_19_0.png" />
+<img alt="../../../_images/99bea8aedde489bcba2ac7cc858242da123dcbc50c5dae4ccbf51b179cea134b.png" src="../../../_images/99bea8aedde489bcba2ac7cc858242da123dcbc50c5dae4ccbf51b179cea134b.png" />
 </div>
 </div>
 <p>Neben der expliziten Zuweisung der vorhandenen Datenpunkte, ist es möglich eine Vorhersage über die Zuordnung anderer Punkte zu machen. Somit kann beispielsweise eine Karte erstellt werden, welche den gesamten Bereich entsprechend kennzeichnet.</p>
@@ -1374,7 +761,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_22_0.png" src="../../../_images/034_klassifizierung_22_0.png" />
+<img alt="../../../_images/2cf72c4d4b0a0081f046d649a7fa7d2b9516238391f8041f912df9cc5feda4ee.png" src="../../../_images/2cf72c4d4b0a0081f046d649a7fa7d2b9516238391f8041f912df9cc5feda4ee.png" />
 </div>
 </div>
 <p>Der Verlauf der iterativen Suche nach den Clusterzentren kann exemplarisch durch die Einschränkung der maximalen Iterationen visualisiert werden. Dazu wird die <code class="docutils literal notranslate"><span class="pre">fit()</span></code> Funktion entsprechend oft aufgerufen und die gefundenen Zentren zwischengespeichert.</p>
@@ -1420,7 +807,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_25_0.png" src="../../../_images/034_klassifizierung_25_0.png" />
+<img alt="../../../_images/51b8f592e05adb09f0529caad02937f636dcbe9c4ab43cd66d5d7f8d2e1ae405.png" src="../../../_images/51b8f592e05adb09f0529caad02937f636dcbe9c4ab43cd66d5d7f8d2e1ae405.png" />
 </div>
 </div>
 <p>Die obige Darstellung kann für die weitere Verdeutlichung um eine Zuordnungskarte erweitert werden.</p>
@@ -1468,7 +855,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_27_0.png" src="../../../_images/034_klassifizierung_27_0.png" />
+<img alt="../../../_images/cd2b97051e4bfcc36591d61aad4186b54a592a54640afeb26cba337aa851c999.png" src="../../../_images/cd2b97051e4bfcc36591d61aad4186b54a592a54640afeb26cba337aa851c999.png" />
 </div>
 </div>
 <p>Bei dem k-Means-Algorithmus muss die Anzahl der zu suchenden Clusterzentren im Vorfeld festgelegt werden. Eine Möglichkeit um eine sinnvolle bzw. notwendige Anzahl der Cluster zu bestimmen liegt in der Betrachtung der Abstandsfunktion. Folgende Abbidlung zeigt diese als Funktion der Anzahl der Clusterzentren für das obige Beispiel.</p>
@@ -1493,13 +880,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_29_0.png" src="../../../_images/034_klassifizierung_29_0.png" />
+<img alt="../../../_images/5cd5138e111df2e47bad8691c0f518a755b57429c8b517f89cd364d4a1a8a54d.png" src="../../../_images/5cd5138e111df2e47bad8691c0f518a755b57429c8b517f89cd364d4a1a8a54d.png" />
 </div>
 </div>
 <p>In dieser Betrachtung wird deutlich, dass bis zur Wahl von drei Clustern die Abstandsfunktion deutlich sinkt in jedem Schritt. Danach, d.h. für mehr als drei Cluster, gibt es nur kleinere Verbesserungen.</p>
 </section>
 <section id="hierarchische-clusteranalyse">
-<h2><span class="section-number">3.4.2. </span>Hierarchische Clusteranalyse<a class="headerlink" href="#hierarchische-clusteranalyse" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.2. </span>Hierarchische Clusteranalyse<a class="headerlink" href="#hierarchische-clusteranalyse" title="Permalink to this heading">#</a></h2>
 <p>Ein anderen Ansatz zur Identifikation von Clustern sind sogenannte agglomerativen Verfahren. Sie stellen die Beziehung der Datenpunkte hierarchisch dar. Vereinfacht gesagt, werden bei dem Verfahren benachbarte Punkte zu einem Cluster zusammengefasst und dieses sukzessive um weitere Datenpunkte oder Cluster erweitert. Der so gernerierte Verbindungsgraph wird Dendrogramm genannt und stellt im Allgemeinen alle Informationen dar – für die praktische Anwendung werden nur die größeren Cluster betrachtet.</p>
 <p>Das Python Modul <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> stellt als hieararchisches Verfahren die Klasse <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering">AgglomerativeClustering</a> zur Verfungung. Diese wird wie oben mit einigen spezifischen Parametern versort und dann mittels der <code class="docutils literal notranslate"><span class="pre">fit()</span></code> Funktion an die Datenpunkte angepasst.</p>
 <div class="cell docutils container">
@@ -1526,7 +913,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_35_0.png" src="../../../_images/034_klassifizierung_35_0.png" />
+<img alt="../../../_images/7500bf167218e11533fb289515ec18bfb0a2126d676c6ebf2a8e9db33d4b66b6.png" src="../../../_images/7500bf167218e11533fb289515ec18bfb0a2126d676c6ebf2a8e9db33d4b66b6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1536,7 +923,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>AgglomerativeClustering(distance_threshold=0, n_clusters=None)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">AgglomerativeClustering</label><div class="sk-toggleable__content"><pre>AgglomerativeClustering(distance_threshold=0, n_clusters=None)</pre></div></div></div></div></div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AgglomerativeClustering(distance_threshold=0, n_clusters=None)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
@@ -1580,7 +970,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_39_0.png" src="../../../_images/034_klassifizierung_39_0.png" />
+<img alt="../../../_images/af5cd86c1df42cb4a6f4808e714ea88210765cacddf9d53c830bc70178c64856.png" src="../../../_images/af5cd86c1df42cb4a6f4808e714ea88210765cacddf9d53c830bc70178c64856.png" />
 </div>
 </div>
 <p>Die folgende Abbildung stellt die identifizierten Verknüpfungen für den ursprünglichen Datensatz dar, hier allerdings nur bis zur Stufe 3. Auf der x-Achse sind entweder die expliziten Knoten als Indizes der Datenpunkte dargestellt oder falls es ein Cluster von Punkten ist, die Anzahl der darin enthaltenen Punkte in runden Klammern. Die Anzahl und Zugehörigkeit der Datenpunkte kann bei diesem Verfahren auch nach dem Fitting bestimmt werden, je nachdem welcher Abstandswert in dem Dendrogramm gewählt wird.</p>
@@ -1594,12 +984,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/034_klassifizierung_41_0.png" src="../../../_images/034_klassifizierung_41_0.png" />
+<img alt="../../../_images/ea258992d2182c19a7c4bc04e456d06319f782329d861b42030f0f2d240ca611.png" src="../../../_images/ea258992d2182c19a7c4bc04e456d06319f782329d861b42030f0f2d240ca611.png" />
 </div>
 </div>
 </section>
 <section id="weitere-clusteralgorithmen">
-<h2><span class="section-number">3.4.3. </span>Weitere Clusteralgorithmen<a class="headerlink" href="#weitere-clusteralgorithmen" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.4.3. </span>Weitere Clusteralgorithmen<a class="headerlink" href="#weitere-clusteralgorithmen" title="Permalink to this heading">#</a></h2>
 <p>Je nach Anwendungsfall können die oben vorgestellten Verfahren gute, oder aber auch ganz schlechte Ergebnisse liefern. So existiert eine breite Palette an verschiedenen Verfahren, welche entsprechend andere Eigenschaften haben. Ein Vergleich der im <code class="docutils literal notranslate"><span class="pre">scikit</span></code> Modul <a class="reference external" href="https://scikit-learn.org/stable/modules/clustering.html">implementierten Algorithmen</a> bei sehr unterschiedlichen Datensätzen ist in folgender Abbildung demonstriert.</p>
 <figure class="align-default" id="fig-scikit-clustering">
 <a class="reference internal image-reference" href="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png"><img alt="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" src="https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_001.png" style="width: 100%;" /></a>
@@ -1622,7 +1012,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content/Script/03_datenanalyse"
         },
         predefinedOutput: true
@@ -1630,55 +1020,104 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="0333_splines.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.3.3. </span>Splines</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0333_splines.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3.3.3. </span>Splines</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="035_optimierung.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="035_optimierung.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">3.5. </span>Optimierung</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+</div></div>
   
-    <div class="extra_footer">
-      <p>
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-algorithmus">3.4.1. k-Means-Algorithmus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchische-clusteranalyse">3.4.2. Hierarchische Clusteranalyse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weitere-clusteralgorithmen">3.4.3. Weitere Clusteralgorithmen</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
 <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>
 | By Team Fire | Contacts and Infos: <a href='https://cce.uni-wuppertal.de/en.html'>CCE@BUW</a> and <a href='https://www.fz-juelich.de/ias/ias-7/EN/Research/Fire_Dynamics/_node.html'>IAS-7@FZJ</a>
 </br>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
 </p>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

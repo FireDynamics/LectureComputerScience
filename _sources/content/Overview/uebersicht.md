@@ -18,9 +18,9 @@ Da sich das Skript in der Entwicklung befinden freuen wir uns über konstruktive
 
 ## Inhalte des Skripts
 
-* Geplant ist, dass dieses Skript nicht nur die Vorlesung *Ingenieurinformatik* sondern auch andere mit dieser Vorlesung verknüpfte Inhalte, wie z.B. *Datenanalyse mit Python*, enthält. Im Laufe der Vorlesung werden wir die für Sie relevanten Inhalte entsprechend bekannt geben. Im Sommersemester 2020 werden voraussichtlich aber noch keine weiteren Inhalte eingebunden sein.
+* Geplant ist, dass dieses Skript nicht nur die Vorlesung *Ingenieurinformatik*, sondern auch andere mit dieser Vorlesung verknüpfte Inhalte, wie z.B. *Datenanalyse mit Python*, enthält. Im Laufe der Vorlesung werden wir die für Sie relevanten Inhalte entsprechend bekannt geben. Im Sommersemester 2020 werden voraussichtlich aber noch keine weiteren Inhalte eingebunden sein.
 * Das Skript enthält auch Übungsaufgaben für alle Kapitel, mit und ohne Lösungswege, aber immer mit einem Ergebnis bzw. der Möglichkeit der Validierung Ihrer Lösung.
-* Drucken Sie das Skript nicht aus, oder speichern Sie es nicht anderwaltig. So haben Sie die aktuellste Version, welche kontinuierlich verbessert und mit Inhalten ergänzt wird.
+* Drucken Sie das Skript nicht aus, oder speichern Sie es nicht anderweitig. So haben Sie die aktuellste Version, welche kontinuierlich verbessert und mit Inhalten ergänzt wird.
 * Das Skript wird immer frei zugänglich bleiben.
 
 ## Themenübersicht
@@ -53,16 +53,16 @@ Die in der Vorlesung und der Erstellung der Materiallien verwendeten Softwarewer
 ## Kontakt
 
 So erreichen Sie uns:
-* Als Teilnehmer der Vorlesung: am besten über den zugehörigen [Moodle-Kurs](https://moodle.uni-wuppertal.de/course/view.php?id=25250) an der Bergischen Universität Wuppertal
+* Als Teilnehmer der Vorlesung: am besten über den zugehörigen [Moodle-Kurs](https://moodle.uni-wuppertal.de/course/view.php?id=27036) an der Bergischen Universität Wuppertal
 * Externe Interessenten benutzten am besten unsere <a href="mailto:cce-inginf@lists.uni-wuppertal.de">Emailliste</a>
-* Kontaktmöglichkeiten zu einzelnen Personen finden Sie auf der [Mitarbeiterwebseite](https://cce.uni-wuppertal.de/index.php?id=4186&L=0)
+* Kontaktmöglichkeiten zu einzelnen Personen finden Sie auf der [Mitarbeiterwebseite](https://cce.uni-wuppertal.de/de/team/)
 
 
 ## Abschlussarbeiten
 
 Wir bieten Abschlussarbeiten (BA, MA, PhD) zu vielen verschiedenen Themen an
-* eine Themenübersicht und bereits betreuter Arbeiten finden Sie auf der [Abschlussarbeitenwebseite](https://cce.uni-wuppertal.de/index.php?id=4171&L=0)
-* Bei der Themenfindung kann auch die [Übersicht unserer Publikationen](https://www.fz-juelich.de/ias/ias-7/EN/AboutUs/Staff/Current/Arnold_Lukas/publication_node.html) helfen
+* eine Themenübersicht und bereits betreuter Arbeiten finden Sie auf der [Webseite der Abschlussarbeiten](https://cce.uni-wuppertal.de/de/abschlussarbeiten/)
+* Bei der Themenfindung kann auch die [Übersicht unserer Publikationen](https://www.fz-juelich.de/en/ias/ias-7/profiles/arnold-lukas/journal-articles) helfen
 * Bei Interesse kontaktieren Sie bitte Lukas Arnold
 
 
