@@ -124,6 +124,17 @@ parts:
       - file: content/Script/04_numerik/0432_ode
       - file: content/Script/04_numerik/0433_pde
 
+########################################
+########################################
+# Kapitel LEHRVERANSTALTUNGEN
+
+# - caption: Lehrveranstaltungen
+#   chapters:
+#   - file: content/Teaching/02_dataanalysis/uebersicht
+#     sections:
+#     - file: content/Teaching/02_dataanalysis/01_week_01
+#     - file: content/Teaching/02_dataanalysis/02_week_02
+
 
 ########################################
 ########################################
