@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="3. Datenanalyse" href="../../03_datenanalyse/uebersicht.html" />
+    <link rel="next" title="Addition von Listen" href="zusatz_fehlersuche.html" />
     <link rel="prev" title="Grundlagen" href="zusatz_grundlagen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -304,6 +304,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="uebersicht.html">2.12. Zusatzaufgaben</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="zusatz_grundlagen.html">Grundlagen</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Flusskontrolle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="zusatz_fehlersuche.html">Addition von Listen</a></li>
+
 </ul>
 </li>
 </ul>
@@ -578,6 +580,19 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Lösung</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wurzel-ziehen">Wurzel ziehen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Aufgabenteil A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Aufgabenteil B</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Aufgabenteil C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Aufgabenteil D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-e">Aufgabenteil E</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Lösung</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -605,7 +620,9 @@ document.write(`
 </section>
 <section id="losung">
 <h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this heading">#</a></h3>
+<div class="toggle docutils container">
 <p><img alt="" src="../../../../_images/Flussdiagram_Schaltjahr.png" /></p>
+</div>
 </section>
 <section id="aufgabenteil-b">
 <h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this heading">#</a></h3>
@@ -613,6 +630,7 @@ document.write(`
 </section>
 <section id="id1">
 <h3>Lösung<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<div class="toggle docutils container">
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Jahr</p></th>
@@ -637,6 +655,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="aufgabenteil-c">
 <h3>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this heading">#</a></h3>
@@ -674,7 +693,12 @@ document.write(`
 </section>
 <section id="id3">
 <h3>Lösung<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">datum_valide</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">monat</span><span class="p">,</span> <span class="n">jahr</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">tag</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">monat</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">monat</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
@@ -698,6 +722,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 </section>
@@ -789,8 +814,8 @@ document.write(`
 <section id="pythagoras">
 <h2>Pythagoras<a class="headerlink" href="#pythagoras" title="Permalink to this heading">#</a></h2>
 <p>Schreiben Sie ein Programm, dass alle Integer Triplets <span class="math notranslate nohighlight">\(a, b, c\)</span> zwichen 1 und einer beliebigen Grenze findet, die die Gleichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-09223a46-401c-48cd-8bc1-b336eb90de5a">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-09223a46-401c-48cd-8bc1-b336eb90de5a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0f757880-1261-4b99-be70-d32e9f609cf0">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-0f757880-1261-4b99-be70-d32e9f609cf0" title="Permalink to this equation">#</a></span>\[\begin{equation}
     a² + b² =c²
 \end{equation}\]</div>
 <p>erfüllen.
@@ -836,7 +861,7 @@ Was ist die Komplexität des Algorithmus? Spielen Sie ein bisschen mit der Grenz
 </section>
 <section id="spannungs-dehnungs-diagramm">
 <h2>Spannungs-Dehnungs-Diagramm<a class="headerlink" href="#spannungs-dehnungs-diagramm" title="Permalink to this heading">#</a></h2>
-<p>Führt man mit Stahl einen Strecktest durch so erhält man folgendes idealisiertes Diagramm:
+<p>Führt man mit Stahl einen Strecktest durch so erhält man folgendes idealisiertes Diagramm:<br />
 <img alt="" src="../../../../_images/Spannungs-Dehnungslinie.png" /><br />
 Dabei sind volgende Stellen von Bedeutung:</p>
 <ol class="arabic simple">
@@ -852,7 +877,9 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </section>
 <section id="id8">
 <h3>Lösung<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<div class="toggle docutils container">
 <p><img alt="" src="../../../../_images/Flussdiagram_Stahl_einfach.png" /></p>
+</div>
 </section>
 <section id="id9">
 <h3>Aufgabenteil B<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
@@ -886,7 +913,9 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </section>
 <section id="id12">
 <h3>Lösung<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p><img alt="" src="../../../../_images/Flussdiagram_Stahl_ausfuehrlich.png" /></p>
+<div class="toggle docutils container">
+<p><img alt="" src="content/Exercises/02_python/zusatzaufgaben/zusatz_photos/Flussdiagram_Stahl_ausf%C3%BChrlich.png" /></p>
+</div>
 </section>
 <section id="aufgabenteil-d">
 <h3>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this heading">#</a></h3>
@@ -929,6 +958,229 @@ Dabei sind volgende Stellen von Bedeutung:</p>
             <span class="k">return</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">s4</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">s3</span> <span class="o">=</span> <span class="n">s4</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="wurzel-ziehen">
+<h2>Wurzel ziehen<a class="headerlink" href="#wurzel-ziehen" title="Permalink to this heading">#</a></h2>
+<p>Der in dieser Aufgabe beschriebene Algorithmus kann aus allen <code class="docutils literal notranslate"><span class="pre">N</span></code><span class="math notranslate nohighlight">\(\space \in \mathbb{N}_{+}\{/0\}\)</span> die Wurzel ziehen. In den folgenden Aufgaben soll dieser implementiert werden. Das Flussdiagramm sieht wie folgt aus:</p>
+<p><img alt="" src="../../../../_images/Wurzel_ziehen.png" /></p>
+<p>Eine genauere Erklärung dieses Verfahrens ist in diesem <a class="reference external" href="https://www.youtube.com/watch?v=RQlnMPpLQFk">Video</a> zu finden.</p>
+<section id="id14">
+<h3>Aufgabenteil A<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>Führen Sie das Flussdiagramm händisch für die Zahl <code class="docutils literal notranslate"><span class="pre">121</span></code> und <code class="docutils literal notranslate"><span class="pre">71289</span></code> durch und schreiben Sie die Werte für <code class="docutils literal notranslate"><span class="pre">P</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code> und <code class="docutils literal notranslate"><span class="pre">r</span></code> auf.</p>
+</section>
+<section id="id15">
+<h3>Lösung<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<div class="toggle docutils container">
+<p class="rubric">Für <code class="docutils literal notranslate"><span class="pre">121</span></code>:</p>
+<p><span class="math notranslate nohighlight">\(P = [1, 21]\)</span><br />
+<span class="math notranslate nohighlight">\(p = 1\)</span><br />
+<span class="math notranslate nohighlight">\(w = 1\)</span><br />
+<span class="math notranslate nohighlight">\(r = 1 - 1² = 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(p = 21\)</span>
+<span class="math notranslate nohighlight">\(r = 0 \cdot 100 + 21 = 21\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space v = 1 \cdot 20 = 20\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space n = 21 // 20 = 1\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space 1 \cdot (20 + 1) = 21 \le 21\)</span><br />
+<span class="math notranslate nohighlight">\(r = 21 - 21 = 0\)</span><br />
+<span class="math notranslate nohighlight">\(w = 1 \cdot 10 + 1 = 11\)</span></p>
+<p class="rubric">Für <code class="docutils literal notranslate"><span class="pre">71289</span></code>:</p>
+<p><span class="math notranslate nohighlight">\(P = [7, 12, 89]\)</span><br />
+<span class="math notranslate nohighlight">\(p = 7\)</span><br />
+<span class="math notranslate nohighlight">\(w = 2\)</span>
+<span class="math notranslate nohighlight">\(r = 7 - 2² = 3\)</span></p>
+<p><span class="math notranslate nohighlight">\(p = 12\)</span><br />
+<span class="math notranslate nohighlight">\(r = 3 \cdot 100 + 12 = 312\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space v = 2 \cdot 20 = 40\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space n = 312 // 40 = 7\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space 7 \cdot (40 + 7) = 329 &gt; 312\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space n = 7 - 1 = 6\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space 6 \cdot (40 + 6) = 276 \le 312\)</span><br />
+<span class="math notranslate nohighlight">\(r = 312 - 276 = 36\)</span>
+<span class="math notranslate nohighlight">\(w = 2 \cdot 10 + 6 = 26\)</span></p>
+<p><span class="math notranslate nohighlight">\(p = 89\)</span><br />
+<span class="math notranslate nohighlight">\(r = 36 \cdot 100 + 89 = 3689\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space v = 26 \cdot 20 = 520\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space n = 3689 // 520 = 7\)</span><br />
+<span class="math notranslate nohighlight">\(\space \space \space \space 7 \cdot (520 + 7) = 3689 \le 3689\)</span><br />
+<span class="math notranslate nohighlight">\(r = 3689 - 3689 = 0\)</span><br />
+<span class="math notranslate nohighlight">\(w = 26 \cdot 10 + 7 = 267\)</span></p>
+</div>
+</section>
+<section id="id16">
+<h3>Aufgabenteil B<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Päckchen</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">20</span></code>, <code class="docutils literal notranslate"><span class="pre">120</span></code>, <code class="docutils literal notranslate"><span class="pre">1203</span></code> und <code class="docutils literal notranslate"><span class="pre">12035</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
+</section>
+<section id="id17">
+<h3>Lösung<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paeckchen</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">P</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">N</span>
+    
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">100</span>
+        <span class="n">P</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">100</span>
+    
+    <span class="n">P</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">P</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">paeckchen</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">paeckchen</span><span class="p">(</span><span class="mi">120</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">paeckchen</span><span class="p">(</span><span class="mi">1203</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">paeckchen</span><span class="p">(</span><span class="mi">12035</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[20]
+[1, 20]
+[12, 3]
+[1, 20, 35]
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id18">
+<h3>Aufgabenteil C<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Kleinstes</span> <span class="pre">Quadrat</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">99</span></code>, <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">36</span></code> und <code class="docutils literal notranslate"><span class="pre">17</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
+</section>
+<section id="id19">
+<h3>Lösung<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kleinstes_quadrat</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">p</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">v</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">kleinstes_quadrat</span><span class="p">(</span><span class="mi">99</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kleinstes_quadrat</span><span class="p">(</span><span class="mi">30</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kleinstes_quadrat</span><span class="p">(</span><span class="mi">36</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kleinstes_quadrat</span><span class="p">(</span><span class="mi">17</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+5
+6
+4
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id20">
+<h3>Aufgabenteil D<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Neuer</span> <span class="pre">Rest</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">(128,</span> <span class="pre">4)</span></code>, <code class="docutils literal notranslate"><span class="pre">(128,</span> <span class="pre">2)</span></code>, <code class="docutils literal notranslate"><span class="pre">(1289,</span> <span class="pre">17)</span></code> und <code class="docutils literal notranslate"><span class="pre">(61289,</span> <span class="pre">425)</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
+</section>
+<section id="id21">
+<h3>Lösung<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">neuer_rest</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="mi">20</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">r</span> <span class="o">//</span> <span class="n">v</span>
+    
+    <span class="k">while</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">r</span> <span class="o">-</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">v</span> <span class="o">+</span> <span class="n">n</span><span class="p">),</span> <span class="n">n</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">neuer_rest</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">neuer_rest</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">neuer_rest</span><span class="p">(</span><span class="mi">1289</span><span class="p">,</span> <span class="mi">17</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">neuer_rest</span><span class="p">(</span><span class="mi">61289</span><span class="p">,</span> <span class="mi">425</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(47, 1)
+(44, 2)
+(260, 3)
+(1740, 7)
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="aufgabenteil-e">
+<h3>Aufgabenteil E<a class="headerlink" href="#aufgabenteil-e" title="Permalink to this heading">#</a></h3>
+<p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Quadratwurzel</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">17</span></code>, <code class="docutils literal notranslate"><span class="pre">476</span></code>, <code class="docutils literal notranslate"><span class="pre">1097</span></code> und <code class="docutils literal notranslate"><span class="pre">6027341</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
+</section>
+<section id="id22">
+<h3>Lösung<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadratwurzel</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">P</span> <span class="o">=</span> <span class="n">paeckchen</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+    <span class="n">p</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">kleinstes_quadrat</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">p</span> <span class="o">-</span> <span class="n">w</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">l</span><span class="p">)</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">l</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">p</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">100</span>
+
+        <span class="n">r</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">neuer_rest</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">w</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">n</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="n">w</span> <span class="o">=</span> <span class="n">w</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">l</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">w</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">quadratwurzel</span><span class="p">(</span><span class="mi">17</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quadratwurzel</span><span class="p">(</span><span class="mi">476</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quadratwurzel</span><span class="p">(</span><span class="mi">1097</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quadratwurzel</span><span class="p">(</span><span class="mi">6027341</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.123105625617661
+21.817424229271428
+33.12099032335839
+2455.064357608574
 </pre></div>
 </div>
 </div>
@@ -979,11 +1231,11 @@ Dabei sind volgende Stellen von Bedeutung:</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../03_datenanalyse/uebersicht.html"
+       href="zusatz_fehlersuche.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Datenanalyse</p>
+        <p class="prev-next-title">Addition von Listen</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1037,6 +1289,19 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Lösung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-d">Aufgabenteil D</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Lösung</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wurzel-ziehen">Wurzel ziehen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Aufgabenteil A</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Aufgabenteil B</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Aufgabenteil C</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Aufgabenteil D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Lösung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-e">Aufgabenteil E</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Lösung</a></li>
 </ul>
 </li>
 </ul>
