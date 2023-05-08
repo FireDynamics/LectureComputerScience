@@ -560,7 +560,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fehlerbetrachtung">
 <h1><span class="section-number">4.2.3. </span>Fehlerbetrachtung<a class="headerlink" href="#fehlerbetrachtung" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">65</span><span class="p">)</span>
@@ -577,24 +582,18 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;ticks&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">})</span>
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">scipy</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
-</pre></div>
-</div>
-</div>
+</details>
 </div>
 <p>In diesem Abschnitt werden die Approximationsfehler, d.h. Fehler aus der Differenzenformeln, und Rundungsfehler, d.h. Fehler durch die endliche Genauigkeit der digitalen Darstellung von Zahlen, betrachtet.</p>
 <section id="approximationsfehler">
 <h2>Approximationsfehler<a class="headerlink" href="#approximationsfehler" title="Permalink to this heading">#</a></h2>
 <p>Die Ordnung des Verfahrens kann durch die Betrachtung des Fehlers, hier zum bekannten exakten Wert, bestimmt werden. Dazu wird die Schrittweite kontinuierlich verkleinert.</p>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fkt</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
@@ -608,8 +607,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mf">0.85</span>
 
@@ -635,8 +640,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fpfs</span> <span class="o">-</span> <span class="n">fp_exakt</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;vorwärts&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fpcs</span> <span class="o">-</span> <span class="n">fp_exakt</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;zentral&#39;</span><span class="p">)</span>
@@ -655,8 +666,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/30283b2b5d0d3017e94f5f638aee642b0f3e0613bf9daf17c125677caa83ea3b.png" src="../../../_images/30283b2b5d0d3017e94f5f638aee642b0f3e0613bf9daf17c125677caa83ea3b.png" />
+<img alt="../../../_images/7fec081075b3b116e44382279b251c7c1bc8a7b9f66f43a0d562a63361ed9968.png" src="../../../_images/7fec081075b3b116e44382279b251c7c1bc8a7b9f66f43a0d562a63361ed9968.png" />
 </div>
 </div>
 <p>In der logiarithmischen Darstellung beider Achsen werden Potenzfunktionen zu Graden mit dem Potenzgrad als Steigung. Das bedeutet, dass der Fehler im obigen Plot sich wie eine Potenzfunktion mit dem Grad eins bzw. zwei verhält. Die eingezeichneten Hilfslinien haben eine Steigung von eins bzw. zwei. Dies entspricht auch der Ordnung <span class="math notranslate nohighlight">\(\sf \mathcal{O}(h)\)</span> bzw. <span class="math notranslate nohighlight">\(\sf \mathcal{O}(h^2)\)</span> aus der Differenzenformel.</p>
@@ -664,7 +676,12 @@ document.write(`
 <section id="rundungsfehler">
 <h2>Rundungsfehler<a class="headerlink" href="#rundungsfehler" title="Permalink to this heading">#</a></h2>
 <p>Wird nun die Schrittweiter noch weiter verkleinert, wirkt sich die Genauigkeit der Darstellung von Zahlen bzw. Rundungsfehler auf die Approximation aus.</p>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="mf">0.85</span>
 
@@ -690,8 +707,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fpfs</span> <span class="o">-</span> <span class="n">fp_exakt</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;vorwärts&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">fpcs</span> <span class="o">-</span> <span class="n">fp_exakt</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;zentral&#39;</span><span class="p">)</span>
@@ -710,8 +733,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
-<img alt="../../../_images/4d1cefb8d20bdfa0072794cc56d23c0e65fbe875d7170727057045ac2ed9568c.png" src="../../../_images/4d1cefb8d20bdfa0072794cc56d23c0e65fbe875d7170727057045ac2ed9568c.png" />
+<img alt="../../../_images/0a908bebd5430df7b00c06a5969183c47cde6df9de2c4d12ff612edd566a10a0.png" src="../../../_images/0a908bebd5430df7b00c06a5969183c47cde6df9de2c4d12ff612edd566a10a0.png" />
 </div>
 </div>
 <p>Wie bereits vorgestellt, können 64-Bit-Zahlen nur mit einer Genauigkeit von etwa <span class="math notranslate nohighlight">\(\sf \epsilon\approx10^{-16}\)</span> dargestellt werden. Das bedeutet, dass z.B. die Differenz von zwei Zahlen nicht genauer als <span class="math notranslate nohighlight">\(\sf \epsilon\)</span> berechnet werden kann. Dies ist der sogenannte Rundungsfehler.</p>
@@ -722,9 +746,11 @@ document.write(`
 \[\sf \overset{Rundungsfehler}{\Rightarrow} \frac{f(x_0 + h) - f(x_0) + \mathcal{O}(\epsilon)}{h} + \mathcal{O}(h) \]</div>
 <div class="math notranslate nohighlight">
 \[ \sf = \frac{f(x_0 + h) - f(x_0)}{h} + \mathcal{O}\left(\frac{\epsilon}{h}\right) + \mathcal{O}(h) \]</div>
-<p>Damit macht eine Verkleinerung von <span class="math notranslate nohighlight">\(\sf h\)</span> nur Sinn, solange der Rundungsfehler klein gegenüber <span class="math notranslate nohighlight">\(\sf h\)</span> ist. Genauer:
-$<span class="math notranslate nohighlight">\(\sf \frac{\epsilon}{h} \le h \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(\sf \Rightarrow \quad h \ge \sqrt{\epsilon} \)</span>$</p>
+<p>Damit macht eine Verkleinerung von <span class="math notranslate nohighlight">\(\sf h\)</span> nur Sinn, solange der Rundungsfehler klein gegenüber <span class="math notranslate nohighlight">\(\sf h\)</span> ist. Genauer:</p>
+<div class="math notranslate nohighlight">
+\[\sf \frac{\epsilon}{h} \le h \]</div>
+<div class="math notranslate nohighlight">
+\[\sf \Rightarrow \quad h \ge \sqrt{\epsilon} \]</div>
 <p>Mit <span class="math notranslate nohighlight">\(\sf \epsilon \approx 10^{-16}\)</span> ist für diese Differenzenformel ein <span class="math notranslate nohighlight">\(\sf h\)</span> nur bis etwa <span class="math notranslate nohighlight">\(\sf 10^{-8}\)</span> angemessen.</p>
 </section>
 </section>

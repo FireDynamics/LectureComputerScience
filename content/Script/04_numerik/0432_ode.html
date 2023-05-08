@@ -578,18 +578,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;ticks&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">})</span>
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">scipy.integrate</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Bei gewöhnlichen Differentialgleichungen werden zwei Fälle unterschieden: Anfangswertproblem und Randwertproblem. Für beide gilt, dass die Lösung auf einem Intervall gesucht wird, jedoch wird im ersten Fall nur der Anfangswert vorgegeben und im zweiten Fall die Lösungswerte an den (im eindimensionalen Fall zwei) Randpunkten des Intervalls.</p>
 <p>In diesem Kapitel wird nur auf das Anfangswertproblem eingegangen. Als Beispiel dafür und dessen Lösung werden im Folgenden zwei Gleichungen vorgestellt und numerisch gelöst.</p>
@@ -657,7 +645,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/478c4b257d2e4b30b5a59b543dc53325e263bfc1b2e4fb2d93145b5666032963.png" src="../../../_images/478c4b257d2e4b30b5a59b543dc53325e263bfc1b2e4fb2d93145b5666032963.png" />
+<img alt="../../../_images/f30b117e8442b4d11617c1e9029f7057ac537f15e4f62ddd4f3220cf7c6676df.png" src="../../../_images/f30b117e8442b4d11617c1e9029f7057ac537f15e4f62ddd4f3220cf7c6676df.png" />
 </div>
 </div>
 <p>Im zweiten Lösungsbeispiel wird nun die Funktion <span class="math notranslate nohighlight">\(\sf Q(t)\)</span> als Stufenfunktion hinzugenommen, mit</p>
@@ -706,7 +694,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/c57406b1e39d5a61e7a5e902eaba2e1334d564adb8a7109d9d5072c4ee3c5b3b.png" src="../../../_images/c57406b1e39d5a61e7a5e902eaba2e1334d564adb8a7109d9d5072c4ee3c5b3b.png" />
+<img alt="../../../_images/63fff87d5eccb333317c070e0385e47a4661b1d2a63e0692ad6672e2843cffab.png" src="../../../_images/63fff87d5eccb333317c070e0385e47a4661b1d2a63e0692ad6672e2843cffab.png" />
 </div>
 </div>
 </section>
@@ -770,7 +758,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/78970915153cfbde24e782529b56d52cc3b55f8e7e3a68a181a7806752b83d18.png" src="../../../_images/78970915153cfbde24e782529b56d52cc3b55f8e7e3a68a181a7806752b83d18.png" />
+<img alt="../../../_images/27ebc3409a83a235d59c7dfd142ebe59020de7e06537c8fd09f751b9ac97ef71.png" src="../../../_images/27ebc3409a83a235d59c7dfd142ebe59020de7e06537c8fd09f751b9ac97ef71.png" />
 </div>
 </div>
 </section>
@@ -823,21 +811,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  message: &#39;The solver successfully reached the end of the integration interval.&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  message: The solver successfully reached the end of the integration interval.
+  success: True
+   status: 0
+        t: [ 0.000e+00  1.320e-01 ...  2.335e+01  2.500e+01]
+        y: [[ 4.000e+02  3.876e+02 ...  3.001e+02  3.000e+02]]
+      sol: None
+ t_events: None
+ y_events: None
      nfev: 128
      njev: 0
       nlu: 0
-      sol: None
-   status: 0
-  success: True
-        t: array([ 0.  ,  0.13,  1.36,  2.51,  3.94,  5.69,  6.99,  8.29,
-       10.02, 12.2 , 13.66, 14.53, 15.4 , 16.49, 17.71, 19.17,
-       20.99, 23.35, 25.  ])
- t_events: None
-        y: array([[400.  , 387.64, 325.86, 308.17, 301.99, 357.47, 388.3 ,
-        396.78, 399.38, 399.89, 399.97, 399.99, 366.49, 322.42,
-        306.66, 301.58, 300.29, 300.06, 300.01]])
- y_events: None
 </pre></div>
 </div>
 </div>
@@ -854,7 +838,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/04a20ce6320a5aabc9aa801dab22214bd91c266b8c23e887eb29c21b7cf15436.png" src="../../../_images/04a20ce6320a5aabc9aa801dab22214bd91c266b8c23e887eb29c21b7cf15436.png" />
+<img alt="../../../_images/45a771fe749aeef2f7fb4d048a429638c5b72f46aeadbbf8823f3626bd029e79.png" src="../../../_images/45a771fe749aeef2f7fb4d048a429638c5b72f46aeadbbf8823f3626bd029e79.png" />
 </div>
 </div>
 <p>Da es sich im Beispiel der Schwingungsgleichung von oben um ein Gleichungssystem handelt, ist die Funktion <span class="math notranslate nohighlight">\(\sf \vec{f}\)</span> folgende Vektorform an</p>
@@ -897,33 +881,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  message: &#39;The solver successfully reached the end of the integration interval.&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  message: The solver successfully reached the end of the integration interval.
+  success: True
+   status: 0
+        t: [ 0.000e+00  9.990e-04 ...  2.382e+01  2.500e+01]
+        y: [[ 1.000e+00  1.000e+00 ...  3.020e-06 -2.385e-06]
+            [ 0.000e+00 -9.985e-04 ... -7.475e-06 -1.761e-06]]
+      sol: None
+ t_events: None
+ y_events: None
      nfev: 170
      njev: 0
       nlu: 0
-      sol: None
-   status: 0
-  success: True
-        t: array([0.00e+00, 9.99e-04, 1.10e-02, 1.11e-01, 7.52e-01,
-       1.60e+00, 2.48e+00, 3.37e+00, 4.25e+00, 5.10e+00,
-       5.97e+00, 6.96e+00, 7.85e+00, 8.70e+00, 9.59e+00,
-       1.06e+01, 1.15e+01, 1.24e+01, 1.33e+01, 1.44e+01,
-       1.55e+01, 1.65e+01, 1.77e+01, 1.90e+01, 2.04e+01,
-       2.19e+01, 2.38e+01, 2.50e+01])
- t_events: None
-        y: array([[ 1.00e+00,  1.00e+00,  1.00e+00,  9.94e-01,  7.86e-01,
-         3.38e-01, -1.67e-02, -1.57e-01, -1.38e-01, -6.63e-02,
-        -3.83e-03,  2.52e-02,  2.28e-02,  1.11e-02,  7.49e-04,
-        -4.10e-03, -3.67e-03, -1.65e-03,  3.51e-05,  7.00e-04,
-         4.89e-04,  1.08e-04, -9.88e-05, -8.41e-05, -6.74e-06,
-         1.83e-05,  3.02e-06, -2.38e-06],
-       [ 0.00e+00, -9.99e-04, -1.09e-02, -1.05e-01, -4.81e-01,
-        -5.10e-01, -2.81e-01, -4.80e-02,  7.10e-02,  8.64e-02,
-         5.23e-02,  9.22e-03, -1.12e-02, -1.41e-02, -8.65e-03,
-        -1.55e-03,  1.88e-03,  2.27e-03,  1.26e-03,  9.27e-05,
-        -3.70e-04, -2.97e-04, -7.00e-05,  5.83e-05,  4.02e-05,
-        -1.90e-06, -7.48e-06, -1.76e-06]])
- y_events: None
 </pre></div>
 </div>
 </div>
@@ -939,7 +908,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/ef739b309ad9f8d751c109c54a7993859411f9e0bb4c4cf360cb807cf108e1d3.png" src="../../../_images/ef739b309ad9f8d751c109c54a7993859411f9e0bb4c4cf360cb807cf108e1d3.png" />
+<img alt="../../../_images/171adbb9ebcf2bc89341f37429612d763f612c84895efd9f7899330aec8f3df2.png" src="../../../_images/171adbb9ebcf2bc89341f37429612d763f612c84895efd9f7899330aec8f3df2.png" />
 </div>
 </div>
 </section>

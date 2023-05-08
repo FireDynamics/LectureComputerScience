@@ -564,19 +564,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">scipy</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Zur Demonstration, wird zunächst ein Datensatz generiert.</p>
 <div class="cell tag_hide_input docutils container">
@@ -591,7 +578,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/6448dfe17d781e39bc3d7916f40d10a4b58fe44322fdc1b8e6178b52d6a9c065.png" src="../../../_images/6448dfe17d781e39bc3d7916f40d10a4b58fe44322fdc1b8e6178b52d6a9c065.png" />
+<img alt="../../../_images/038e3e1c6c583d0eb9704f5b95ff31d7d5ae690832e8d8ec34c111340910c8c2.png" src="../../../_images/038e3e1c6c583d0eb9704f5b95ff31d7d5ae690832e8d8ec34c111340910c8c2.png" />
 </div>
 </div>
 <p>Die Modellfunktion, welche hier genutzt werden soll, ist eine Sinus-Funktion. Diese hat jedoch die Amplitude, Frequenz und Phasenverschiebung als frei bestimmbare Parameter:</p>
@@ -622,9 +609,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([3.03720168, 1.29555363, 0.74109596]), array([[ 3.27322794e-03, -1.12277111e-05,  1.99770915e-05],
-       [-1.12277111e-05,  4.45397092e-05, -2.36385856e-04],
-       [ 1.99770915e-05, -2.36385856e-04,  1.61718717e-03]]))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([2.99586345, 1.31111659, 0.62003163]), array([[ 3.08999024e-03, -5.92575836e-06, -1.70490122e-05],
+       [-5.92575836e-06,  4.27144606e-05, -2.25288774e-04],
+       [-1.70490122e-05, -2.25288774e-04,  1.53943957e-03]]))
 </pre></div>
 </div>
 </div>
@@ -637,7 +624,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.03720168 1.29555363 0.74109596]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.99586345 1.31111659 0.62003163]
 </pre></div>
 </div>
 </div>
@@ -656,7 +643,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/250062d64b1fcb7faa20220bc88f5eca51328352bca45c87c0efe3b845883b74.png" src="../../../_images/250062d64b1fcb7faa20220bc88f5eca51328352bca45c87c0efe3b845883b74.png" />
+<img alt="../../../_images/2740f8ea568cfa954a8dd55ad9b4b37bf3878152d4f7fbdd6568c3effc69f870.png" src="../../../_images/2740f8ea568cfa954a8dd55ad9b4b37bf3878152d4f7fbdd6568c3effc69f870.png" />
 </div>
 </div>
 <p>Häufig werden auch stückweise definierte Modellfunktionen benötigt. Das folgende Beispiel zeigt wie dies anhand des folgenden Datensatzes umgesetzt werden kann.</p>
@@ -676,7 +663,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/fadb021f98ec273c6845bf5a18d00d8ea15fb2149423e63688704a4fc2bdae46.png" src="../../../_images/fadb021f98ec273c6845bf5a18d00d8ea15fb2149423e63688704a4fc2bdae46.png" />
+<img alt="../../../_images/831b1bded76bd073daf86f6573721f328b0c78a50644f788c334da2281b9eb94.png" src="../../../_images/831b1bded76bd073daf86f6573721f328b0c78a50644f788c334da2281b9eb94.png" />
 </div>
 </div>
 <p>In diesem Fall wird nach einer passenden stückweise konstanten bzw. linearen Funktion gesucht. Diese hat zwei Parameter und kann wie folgt definiert werden</p>
@@ -708,7 +695,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.98037249 3.01220558]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.95350885 3.04257836]
 </pre></div>
 </div>
 </div>
@@ -727,7 +714,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/a71a907dd834ae7ff20dd2193eb48bbb91b6cd30b4d45ddae79ca2a1ea93be01.png" src="../../../_images/a71a907dd834ae7ff20dd2193eb48bbb91b6cd30b4d45ddae79ca2a1ea93be01.png" />
+<img alt="../../../_images/8b3347563315f31b1312b0ef0e2e5341fd9f2faf07765d270631892abdab2b04.png" src="../../../_images/8b3347563315f31b1312b0ef0e2e5341fd9f2faf07765d270631892abdab2b04.png" />
 </div>
 </div>
 <p>Im allgemeinen kann es passieren, insbesondere bei komplexen Problemen, dass nicht optimale Parameter gefunden weren konnten. An dieser Stelle kann eine Variation der Anfangswerte helfen.</p>
