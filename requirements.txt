@@ -1,6 +1,7 @@
 numpy
 pandas
 matplotlib
+scipy
 seaborn
 jupyterlab
 jupyter-book
