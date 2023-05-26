@@ -547,10 +547,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
@@ -582,6 +584,21 @@ document.write(`
     <span class="c1"># Ihre Berechnung</span>
     <span class="n">pi</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># nur als Platzhalter</span>
     <span class="k">return</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funktion zur näherungsweisen Berechnung von π</span>
+<span class="k">def</span> <span class="nf">naeherung_pi</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">+=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">i</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">*</span><span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -623,6 +640,169 @@ document.write(`
 17 	 3.0860798011238346 	 0.055512852465958495 	 1.0587253079058843
 18 	 3.1941879092319425 	 0.0525952556421494 	 1.0554726236841592
 19 	 3.09162380666784 	 0.04996884692195325 	 1.0525609230947106
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funktion zur näherungsweisen Berechnung von π</span>
+<span class="k">def</span> <span class="nf">my_pi</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">+=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">i</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">*</span><span class="mi">4</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Leere Listen, welche mit den N Werten und der zugehörigen </span>
+<span class="c1"># Näherung von π gefüllt werden</span>
+<span class="n">pis</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Ns</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Aufrufen der obigen Funktion für verschiedene Werte von N</span>
+<span class="k">for</span> <span class="n">N</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">my_pi</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    
+    <span class="c1"># Füllen der Listen</span>
+    <span class="n">Ns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">pis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mf">3.141592653589793238</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tabellenkopf</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;N</span><span class="se">\t</span><span class="s2"> ~π</span><span class="se">\t\t\t</span><span class="s2"> ∆π</span><span class="se">\t\t\t</span><span class="s2"> Reduktionsfaktor&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">75</span><span class="p">)</span>
+
+<span class="c1"># Analyse und Ausgabe der Listenwerte</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Ns</span><span class="p">)):</span>
+    <span class="c1"># f beinhaltet den Reduktionsfaktor</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="c1"># f wird nicht für das erste Element berechnet, da es keinen</span>
+    <span class="c1"># vorangehenden Vergleichswert gibt</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Berechne Verhältnis</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">ds</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="c1"># Ausgabe der Listeneinträge und des Reduktionsfaktors</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Ns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">pis</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ds</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N	 ~π			 ∆π			 Reduktionsfaktor
+===========================================================================
+1 	 2.666666666666667 	 0.47492598692312615 	 None
+2 	 3.466666666666667 	 0.32507401307687367 	 1.4609780167534199
+3 	 2.8952380952380956 	 0.2463545583516975 	 1.3195372362982452
+4 	 3.3396825396825403 	 0.19808988609274714 	 1.2436503610101148
+5 	 2.9760461760461765 	 0.16554647754361662 	 1.1965817034104895
+6 	 3.2837384837384844 	 0.1421458301486913 	 1.1646242268974554
+7 	 3.017071817071818 	 0.1245208365179753 	 1.1415425251192537
+8 	 3.2523659347188767 	 0.11077328112908358 	 1.124105337034043
+9 	 3.0418396189294032 	 0.09975303466038987 	 1.110475300387725
+10 	 3.232315809405594 	 0.09072315581580082 	 1.0995322391884472
+11 	 3.058402765927333 	 0.08318988766245994 	 1.0905550946757718
+12 	 3.2184027659273333 	 0.0768101123375402 	 1.0830590547359698
+13 	 3.0702546177791854 	 0.07133803581060771 	 1.0767062965044352
+14 	 3.208185652261944 	 0.06659299867215074 	 1.0712542944914922
+15 	 3.079153394197428 	 0.062439259392365276 	 1.0665244802742384
+16 	 3.200365515409549 	 0.05877286181975583 	 1.0623824918353224
+17 	 3.0860798011238346 	 0.055512852465958495 	 1.0587253079058843
+18 	 3.1941879092319425 	 0.0525952556421494 	 1.0554726236841592
+19 	 3.09162380666784 	 0.04996884692195325 	 1.0525609230947106
+20 	 3.189184782277596 	 0.04759212868780294 	 1.0499393134890271
+21 	 3.0961615264636424 	 0.04543112712615072 	 1.0475665407915518
+22 	 3.1850504153525314 	 0.0434577617627383 	 1.0454088126808323
+23 	 3.099944032373808 	 0.041648621215985226 	 1.0434381858014234
+24 	 3.1815766854350325 	 0.039984031845239354 	 1.0416313536661026
+25 	 3.1031453128860127 	 0.03844734070378042 	 1.0399687238006512
+26 	 3.1786170109992202 	 0.03702435740942711 	 1.0384337067249407
+27 	 3.1058897382719475 	 0.03570291531784564 	 1.0370121621670756
+28 	 3.1760651768684385 	 0.03447252327864536 	 1.0356919634009636
+29 	 3.108268566698947 	 0.03332408689084598 	 1.0344626513416892
+30 	 3.1738423371907505 	 0.03224968360095737 	 1.0333151575433355
+31 	 3.110350273698687 	 0.031242379891105898 	 1.0322415806146135
+32 	 3.1718887352371485 	 0.030296081647355422 	 1.0312350044063563
+33 	 3.112187242699835 	 0.029405410889958183 	 1.0302893491517713
+34 	 3.1701582571925884 	 0.028565603602795253 	 1.0293992487902741
+35 	 3.1138202290235744 	 0.027772424566218756 	 1.028559949264973
+36 	 3.1686147495715193 	 0.027022095981726224 	 1.027767223719431
+37 	 3.115281416238186 	 0.02631123735160701 	 1.0270173014145911
+38 	 3.167229468186238 	 0.025636814596444957 	 1.0263068078378026
+39 	 3.116596556793833 	 0.024996096795959932 	 1.025632714007916
+40 	 3.1659792728432157 	 0.02438661925342256 	 1.0249922933639863
+41 	 3.117786501758878 	 0.023806151830914946 	 1.0243830849534368
+42 	 3.1648453252882898 	 0.023252671698496652 	 1.0238028618644315
+43 	 3.118868313794037 	 0.022724339795756165 	 1.023249604058427
+44 	 3.163812134018756 	 0.022219480428963045 	 1.0227214748970923
+45 	 3.1198560900627124 	 0.021736563527080754 	 1.0222168007965309
+46 	 3.1628668427508844 	 0.02127418916109125 	 1.0217340535278847
+47 	 3.1207615795929895 	 0.020831073996803617 	 1.021271834777008
+48 	 3.161998692995051 	 0.020406039405258092 	 1.0208288626276005
+49 	 3.121594652591011 	 0.01999800099878213 	 1.0204039597008128
+50 	 3.1611986129870506 	 0.01960595939725751 	 1.0199960427123733
+51 	 3.12236366153074 	 0.01922899205905315 	 1.019604113260158
+52 	 3.160458899625978 	 0.01886624603618481 	 1.0192272496697334
+53 	 3.1230757220558845 	 0.018516931533908654 	 1.0188645997657053
+54 	 3.1597729697623063 	 0.018180316172513145 	 1.0185153744413113
+55 	 3.12373693372627 	 0.017855719863522967 	 1.0181788419325108
+56 	 3.159135163814766 	 0.017542510224972663 	 1.017854322701459
+57 	 3.124352555119114 	 0.01724009847067931 	 1.0175411848608447
+58 	 3.158540589307148 	 0.016947935717354756 	 1.0172388400686097
+59 	 3.1249271439289967 	 0.016665509660796385 	 1.016946739842151
+60 	 3.157984995168666 	 0.016392341578872927 	 1.0166643722380413
+61 	 3.125464669965414 	 0.016127983624379283 	 1.0163912588610293
+62 	 3.157464669965414 	 0.015872016375620746 	 1.0161269521591283
+63 	 3.125968606973288 	 0.015624046616505183 	 1.0158710329789729
+64 	 3.1569763589112725 	 0.015383705321479368 	 1.0156231083476515
+65 	 3.1264420077662343 	 0.01515064582355885 	 1.0153828094613708
+66 	 3.156517195736159 	 0.014924542146365738 	 1.0151497898545698
+67 	 3.126887566106529 	 0.014705087483263934 	 1.0149237237351745
+68 	 3.1560846463985 	 0.014491992808706833 	 1.0147043044645367
+69 	 3.127307667981234 	 0.014284985608559175 	 1.0144912431709854
+70 	 3.155676462307475 	 0.014083808717682 	 1.0142842674811823
+71 	 3.127704434335447 	 0.013888219254345913 	 1.0140831203593565
+72 	 3.155290641231999 	 0.013697987642205867 	 1.0138875590421699
+73 	 3.1280797568782575 	 0.01351289671153566 	 1.013697354062671
+74 	 3.15492539446215 	 0.013332740872356919 	 1.0135122883511718
+75 	 3.1284353282369843 	 0.01315732535280878 	 1.0133321564105497
+76 	 3.1545791190866574 	 0.01298646549686433 	 1.013156763554002
+77 	 3.128772667473754 	 0.012819986116038962 	 1.012985925204481
+78 	 3.1542503744801236 	 0.01265772089033046 	 1.0128194662462862
+79 	 3.129093141775721 	 0.01249951181407205 	 1.0126572204268247
+80 	 3.1539378622726155 	 0.012345208682822406 	 1.0124990298029022
+81 	 3.129397984972002 	 0.012194668617790949 	 1.012344744227968
+82 	 3.1536404092144266 	 0.01204775562463345 	 1.012194220876884
+83 	 3.129688313406043 	 0.011904340183749973 	 1.0120473238054173
+84 	 3.1533569524592977 	 0.011764298869504586 	 1.011903923540093
+85 	 3.129965139593801 	 0.011627513995992267 	 1.0117638966987668
+86 	 3.153086526877038 	 0.011493873287244938 	 1.0116271256353273
+87 	 3.1302293840198954 	 0.01136326956989775 	 1.0114934981119492
+88 	 3.1528282540763923 	 0.011235600486599218 	 1.011362906989333
+89 	 3.1304818853613083 	 0.01111076822848478 	 1.0112352499437802
+90 	 3.1525813328751204 	 0.010988679285327319 	 1.0111104291960256
+91 	 3.1307234093778527 	 0.010869244211940465 	 1.0109883512650906
+92 	 3.1523450309994745 	 0.01075237740968138 	 1.0108689267318556
+93 	 3.1309546566679236 	 0.010637996921869508 	 1.0107520700233263
+94 	 3.152118677831945 	 0.010526024242151877 	 1.0106376992054829
+95 	 3.131176269454982 	 0.010416384134811274 	 1.0105257357948416
+96 	 3.151901658056018 	 0.010309004466225069 	 1.0104161045751807
+97 	 3.1313888375431977 	 0.010203816046595371 	 1.0103087334335858
+98 	 3.1516934060711166 	 0.010100752481323472 	 1.0102035531968996
+99 	 3.1315929035585537 	 0.00999975003123943 	 1.010100497489288
+100 	 3.1514934010709914 	 0.009900747481198291 	 1.0099995025859558
 </pre></div>
 </div>
 </div>
@@ -700,10 +880,12 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>

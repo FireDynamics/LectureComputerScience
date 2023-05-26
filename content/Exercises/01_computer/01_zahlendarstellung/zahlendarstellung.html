@@ -562,15 +562,18 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungshinweis</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungsvorschlag</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-c">Aufgabenteil C</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungshinweis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Lösungshinweis</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-d">Aufgabenteil D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Lösungsvorschlag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
@@ -693,6 +696,16 @@ document.write(`
 <p>Die Anzahl der Einsen in der binären Darstellung für die ersten drei Zahlen sind: 6, 4, 4.</p>
 </section>
 </section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>111<sub>10</sub> = 0110 1111<sub>2</sub></p></li>
+<li><p>-522<sub>10</sub> = 1000 0010 0000 1010<sub>2</sub></p></li>
+<li><p>300<sub>10</sub> = 0000 0001 0010 1100<sub>2</sub></p></li>
+<li><p>-112<sub>10</sub> = 1111 0000<sub>2</sub></p></li>
+<li><p>nicht möglich, da mit 7 Bit (eines ist für das Vorzeichen borbehalten) die maximale Zahl 127 ist</p></li>
+</ul>
+</section>
 <section id="aufgabenteil-b">
 <h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this heading">#</a></h3>
 <p>Wandeln Sie folgende binäre Gleitkommazahlen (8 Bit) in ihr dezimales Äquivalent um. Verwenden Sie die oben vorgestellte Umwandlung.</p>
@@ -705,6 +718,13 @@ document.write(`
 <h4>Lösungshinweis<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>Die beiden umzuwandelnden Zahlen liegen vom Betrag her zwischen 4 und 10. Schreibt man die Gleitkommazahl auf, so sind ab der zweiten Nachkommastelle alle Stellen gleich Null.</p>
 </section>
+</section>
+<section id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>0 101 0100<sub>2</sub> = 5.0</p></li>
+<li><p>1 110 0010<sub>2</sub> = -9.0</p></li>
+</ul>
 </section>
 <section id="aufgabenteil-c">
 <h3>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this heading">#</a></h3>
@@ -719,19 +739,65 @@ document.write(`
 <li><p>3.0</p></li>
 <li><p>-2.5</p></li>
 </ul>
-<section id="id2">
-<h4>Lösungshinweis<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<section id="id3">
+<h4>Lösungshinweis<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <p>Die Anzahl der Einsen in der binären Darstellung der oberen drei Zahlen ist: 2, 1, 3.</p>
 </section>
 </section>
-<section id="aufgabenteil-d">
-<h3>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this heading">#</a></h3>
-<p>Mit der oberen hypothetischen 8-Bit-Darstellung sind nur wenige Gleitkommazahlen abbildbar. Beispielsweise kann die 0.1 in diesem Format nicht exakt dargestellt werden – Sie können es mal versuchen. Bei der Umwandlung ins binäre Format würde dann die nächstgelegene abbildbare Gleitkommazahl gewählt werden.</p>
-<p>Aber auch mit den in der Praxis eingesetzten 32-Bit-Darstellungen, wie nach dem IEEE754 Standard, kann die 0.1 nicht exakt dargestellt werden. Die beiden benachbarten und abbildbaren Gleitkommazahlen sind</p>
+<section id="id4">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>0 011 0000</p></li>
+<li><p>0 010 0000</p></li>
+<li><p>0 011 1000</p></li>
+</ul>
+<p>und</p>
+<ul class="simple">
+<li><p>0 100 1000</p></li>
+<li><p>1 100 0100</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>Die Antwort auf diese Frage lautet: Es kommt darauf an. Hierbei ist es wichtig zu verstehen, dass Gleitkommazahlen, wie die 0.1, 0.2 oder auch 0.3 nicht exakt als Gleitkommazahl im Dualsystem dargestellt werden können. Konkret für diese Zahlen heisst das, dass  bei der Umwandlung in eine binäre Gleitkommazahl</p>
+<ul class="simple">
+<li><p>0.1 zu 0.10000000149,</p></li>
+<li><p>0.2 zu 0.20000000298 und</p></li>
+<li><p>0.3 zu 0.30000001192</p></li>
+</ul>
+<p>angenäht werden. Hinweis: Nützlich für diese Betrachtung ist ein Gleitkommazahlkonverter, wie dieser <a class="reference external" href="https://www.h-schmidt.net/FloatConverter/IEEE754de.html">Gleitkommazahlkonverter</a>.</p>
+<p>Addiert man nun die binären Repräsentationen von 0.1 und 0.2, ergibt das</p>
 <div class="math notranslate nohighlight">
-\[ 0.0999999940395 \le 0.1 \le 0.10000000149 \]</div>
-<p>Hier ist die größere Zahl näher dran, so dass deren binäre Darstellung für die 0.1 gewählt werden würde.</p>
-<p>Auch die Zahlen 0.2 und 0.3 können nicht exakt dargestellt werden. Wenn Sie nun einen Computer, welcher natürlich nur mit der binären Darstellung rechnen kann, die Summe aus 0.1 und 0.2 bilden lassen, wird das Ergebniss gleich 0.3 sein?</p>
+\[\sf 0.10000000149 + 0.20000000298 = 0.3000000045 \]</div>
+<p>Die Zahl 0.3000000045 kann binär nicht exakt abgebildet werden, sondern wird als 0.30000001192 abgespeichert. Das entspricht exakt der binären Darstellung von 0.3. Damit würde in diesem Fall die Addition von 0.1 und 0.2 in diesem Zahlenformat die 0.3 ergeben.</p>
+<p>Das muss aber nicht immer so sein. Die Addition von 1.1 und 0.2 verdeutlicht dies. Die binären Darstellungen lauten:</p>
+<ul class="simple">
+<li><p>0.2 wird binär zu 0.20000000298</p></li>
+<li><p>1.1 wird zu 1.10000002384</p></li>
+</ul>
+<p>Die Summe beider lautet</p>
+<div class="math notranslate nohighlight">
+\[ \sf 0.20000000298 + 1.10000002384 = 1.3000000268 .\]</div>
+<p>Allerdings ist dies keine darstellbare Zahl in diesem Format und wird zu 1.30000007153 umgewandelt. Dies entspricht aber nicht der Darstellung von 1.3, welche 1.29999995232 wäre. Das bedeutet, dass bei der Berechnung obiger Summe folgende Ausgabe zu erwarten wäre</p>
+<div class="math notranslate nohighlight">
+\[ \sf 0.2 + 1.1 = 1.30000007153 .\]</div>
+<div class="cell tag_loesung tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1           -&gt; 0.10000000149
+0.2           -&gt; 0.20000000298
+0.3           -&gt; 0.30000001192
+0.1+0.2       -&gt; 0.30000001192
+(0.1+0.2)-0.3 -&gt; 0.00000000000
+
+1.1           -&gt; 1.10000002384
+0.2           -&gt; 0.20000000298
+1.3           -&gt; 1.29999995232
+1.1+0.2       -&gt; 1.30000007153
+(1.1+0.2)-1.3 -&gt; 0.00000011921
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -820,15 +886,18 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungshinweis</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungsvorschlag</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-c">Aufgabenteil C</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungshinweis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Lösungshinweis</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-d">Aufgabenteil D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Lösungsvorschlag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>

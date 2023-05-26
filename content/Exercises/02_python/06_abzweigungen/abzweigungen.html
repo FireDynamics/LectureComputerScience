@@ -545,10 +545,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
@@ -575,6 +577,42 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gegeben sind die Werte a = 5 und b = 10
 --&gt; a ist kleiner als b
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gegeben sind die Werte a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;und b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gegeben sind die Werte a = 5 und b = 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--&gt; a ist größer als b&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--&gt; a ist kleiner als b&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--&gt; a ist gleich b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; a ist kleiner als b
 </pre></div>
 </div>
 </div>
@@ -614,6 +652,51 @@ Anzahl der Werte innerhalb:  8
 </div>
 </div>
 </div>
+</section>
+<section id="id2">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Eingabeliste</span>
+<span class="n">werte</span> <span class="o">=</span> <span class="p">[</span><span class="mi">86</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># Filterschranken</span>
+<span class="n">unten</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">oben</span> <span class="o">=</span> <span class="mi">65</span>
+
+<span class="c1"># Listen, welche nach den Filterregeln gefüllt werden</span>
+<span class="n">innerhalb</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ausserhalb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Iteration über alle Listenelemente</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">werte</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">el</span> <span class="o">&gt;=</span> <span class="n">unten</span> <span class="ow">and</span> <span class="n">el</span> <span class="o">&lt;=</span> <span class="n">oben</span><span class="p">:</span>
+        <span class="n">innerhalb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ausserhalb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+
+<span class="c1"># Ausgabe</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gegebene Liste: &quot;</span><span class="p">,</span> <span class="n">werte</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Untere Grenze: &quot;</span><span class="p">,</span> <span class="n">unten</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Obere Grenze: &quot;</span><span class="p">,</span> <span class="n">oben</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liste innerhalb: &quot;</span><span class="p">,</span> <span class="n">innerhalb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liste außerhalb: &quot;</span><span class="p">,</span> <span class="n">ausserhalb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Anzahl der Werte innerhalb: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">innerhalb</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gegebene Liste:  [86, 22, 45, 80, 11, 88, 20, 2, 34, 98, 92, 48, 74, 45, 67, 39, 82, 36, 65, 22, 24, 69, 44, 91, 78, 92, 10, 78, 77, 4]
+Untere Grenze:  25
+Obere Grenze:  65
+Liste innerhalb:  [45, 34, 48, 45, 39, 36, 65, 44]
+Liste außerhalb:  [86, 22, 80, 11, 88, 20, 2, 98, 92, 74, 67, 82, 22, 24, 69, 91, 78, 92, 10, 78, 77, 4]
+Anzahl der Werte innerhalb:  8
+</pre></div>
+</div>
+</div>
+</div>
+<p>Test</p>
 </section>
 </section>
 </section>
@@ -687,10 +770,12 @@ Anzahl der Werte innerhalb:  8
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
