@@ -187,6 +187,7 @@ parts:
       - file: content/Exercises/02_python/zusatzaufgaben/zusatz_grundlagen
       - file: content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle
       - file: content/Exercises/02_python/zusatzaufgaben/zusatz_fehlersuche
+      - file: content/Exercises/02_python/zusatzaufgaben/zusatz_statik
 
 ########################################
 # AUFGABENSAMMLUNG DATENANALYSE
