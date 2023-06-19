@@ -813,8 +813,8 @@ document.write(`
 <section id="pythagoras">
 <h2>Pythagoras<a class="headerlink" href="#pythagoras" title="Permalink to this heading">#</a></h2>
 <p>Schreiben Sie ein Programm, dass alle Integer Triplets <span class="math notranslate nohighlight">\(a, b, c\)</span> zwichen 1 und einer beliebigen Grenze findet, die die Gleichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8d93ca4-9bb0-463e-95a3-fe816c4c4702">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-d8d93ca4-9bb0-463e-95a3-fe816c4c4702" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-779606b4-28c2-4596-93a1-cd59a89e14e2">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-779606b4-28c2-4596-93a1-cd59a89e14e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
     a² + b² =c²
 \end{equation}\]</div>
 <p>erfüllen.
@@ -977,8 +977,8 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <section id="id15">
 <h3>Lösung<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
 <div class="toggle docutils container">
-<p><strong>Für <code class="docutils literal notranslate"><span class="pre">121</span></code>:</strong><br />
-<span class="math notranslate nohighlight">\(P = [1, 21]\)</span><br />
+<p class="rubric">Für 121:</p>
+<p><span class="math notranslate nohighlight">\(P = [1, 21]\)</span><br />
 <span class="math notranslate nohighlight">\(p = 1\)</span><br />
 <span class="math notranslate nohighlight">\(q = 1\)</span><br />
 <span class="math notranslate nohighlight">\(r = 1 - 1² = 0\)</span></p>
@@ -989,8 +989,8 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="math notranslate nohighlight">\(\space \space \space \space 1 \cdot (20 + 1) = 21 \le 21\)</span><br />
 <span class="math notranslate nohighlight">\(r = 21 - 21 = 0\)</span><br />
 <span class="math notranslate nohighlight">\(q = 1 \cdot 10 + 1 = 11\)</span></p>
-<p><strong>Für <code class="docutils literal notranslate"><span class="pre">71289</span></code>:</strong><br />
-<span class="math notranslate nohighlight">\(P = [7, 12, 89]\)</span><br />
+<p class="rubric">Für 71289:</p>
+<p><span class="math notranslate nohighlight">\(P = [7, 12, 89]\)</span><br />
 <span class="math notranslate nohighlight">\(p = 7\)</span><br />
 <span class="math notranslate nohighlight">\(q = 2\)</span>
 <span class="math notranslate nohighlight">\(r = 7 - 2² = 3\)</span></p>
@@ -1169,18 +1169,24 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 
     <span class="k">return</span> <span class="n">q</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">Wurzel</span><span class="p">(</span><span class="mi">17</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Wurzel</span><span class="p">(</span><span class="mi">476</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Wurzel</span><span class="p">(</span><span class="mi">1097</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Wurzel</span><span class="p">(</span><span class="mi">6027341</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">17</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">476</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">1097</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">6027341</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.123105625617661
-21.817424229271428
-33.12099032335839
-2455.064357608574
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">25</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">/</span> <span class="p">(</span><span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">l</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="k">return</span> <span class="n">q</span>
+<span class="ne">---&gt; </span><span class="mi">25</span> <span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">17</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">476</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="nb">print</span><span class="p">(</span><span class="n">wurzel</span><span class="p">(</span><span class="mi">1097</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;wurzel&#39; is not defined
 </pre></div>
 </div>
 </div>
