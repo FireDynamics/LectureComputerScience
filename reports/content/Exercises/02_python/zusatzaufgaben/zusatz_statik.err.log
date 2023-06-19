@@ -15,45 +15,36 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-def Wurzel(N):
-    P = paeckchen(N)
+import matplotlib.pyplot as plt
 
-    p = P[0]
-    q = quadrat(p)
-    r = p - q**2
-    i = 1
-    l = len(P)
+stuetzen = list(range(2, 1000 // 10 + 2))
+kosten = []
+for s in stuetzen:
+    k, _, _ = Kosten(s)
+    kosten.append(k)
 
-    while (r > 0 or i < l) and i < l + 100:
-        if i < l:
-            p = P[i]
-            r = r * 100 + p
-        else:
-            r = r * 100
-
-        r, n = rest(r, q)
-        q = q * 10 + n
-        i += 1
-    
-    q = q / (10 ** (i - l))
-
-    return q
-
-print(wurzel(17))
-print(wurzel(476))
-print(wurzel(1097))
-print(wurzel(6027341))
+plt.figure(figsize=(8,4))
+plt.plot(stuetzen, kosten, ".")
+plt.semilogy()
+plt.title(label="Kostenentwicklung")
+plt.xlabel("Anzahl Stützen")
+plt.ylabel("Kosten [€]")
+plt.ylim(10**5, 10**7)
+plt.xlim(0, 1000 // 10 + 2)
+plt.grid(which = "both")
+plt.xticks(range(0, 1000 // 10 + 2, 5))
+plt.savefig("zusatz_photos/Seil_Kosten.svg")
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[11], line 25[0m
-[1;32m     21[0m     q [38;5;241m=[39m q [38;5;241m/[39m ([38;5;241m10[39m [38;5;241m*[39m[38;5;241m*[39m (i [38;5;241m-[39m l))
-[1;32m     23[0m     [38;5;28;01mreturn[39;00m q
-[0;32m---> 25[0m [38;5;28mprint[39m([43mwurzel[49m([38;5;241m17[39m))
-[1;32m     26[0m [38;5;28mprint[39m(wurzel([38;5;241m476[39m))
-[1;32m     27[0m [38;5;28mprint[39m(wurzel([38;5;241m1097[39m))
+Cell [0;32mIn[3], line 6[0m
+[1;32m      4[0m kosten [38;5;241m=[39m []
+[1;32m      5[0m [38;5;28;01mfor[39;00m s [38;5;129;01min[39;00m stuetzen:
+[0;32m----> 6[0m     k, _, _ [38;5;241m=[39m [43mKosten[49m(s)
+[1;32m      7[0m     kosten[38;5;241m.[39mappend(k)
+[1;32m      9[0m plt[38;5;241m.[39mfigure(figsize[38;5;241m=[39m([38;5;241m8[39m,[38;5;241m4[39m))
 
-[0;31mNameError[0m: name 'wurzel' is not defined
+[0;31mNameError[0m: name 'Kosten' is not defined
 

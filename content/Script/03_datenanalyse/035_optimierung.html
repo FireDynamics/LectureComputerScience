@@ -305,6 +305,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_grundlagen.html">Grundlagen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle.html">Flusskontrolle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_fehlersuche.html">Fehlersuche</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_statik.html">Seildurchhang</a></li>
 </ul>
 </li>
 </ul>
@@ -578,7 +579,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/38d0bddc89101def522d18d9570359cccaa43af31321a22a94c6fe7bdf526c91.png" src="../../../_images/38d0bddc89101def522d18d9570359cccaa43af31321a22a94c6fe7bdf526c91.png" />
+<img alt="../../../_images/8d4955c724bf890af876cf68830aed7661bfdf694778418f499c73b47c36dba8.png" src="../../../_images/8d4955c724bf890af876cf68830aed7661bfdf694778418f499c73b47c36dba8.png" />
 </div>
 </div>
 <p>Die Modellfunktion, welche hier genutzt werden soll, ist eine Sinus-Funktion. Diese hat jedoch die Amplitude, Frequenz und Phasenverschiebung als frei bestimmbare Parameter:</p>
@@ -609,9 +610,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([3.00139676, 1.2991371 , 0.71377849]), array([[ 3.65587197e-03, -1.13517369e-05,  1.24609855e-05],
-       [-1.13517369e-05,  5.08521461e-05, -2.69543695e-04],
-       [ 1.24609855e-05, -2.69543695e-04,  1.84347899e-03]]))
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([3.00120825, 1.29072762, 0.73609694]), array([[ 3.95438670e-03, -1.11588437e-05,  1.43808616e-05],
+       [-1.11588437e-05,  5.44485134e-05, -2.89848749e-04],
+       [ 1.43808616e-05, -2.89848749e-04,  1.98915165e-03]]))
 </pre></div>
 </div>
 </div>
@@ -624,7 +625,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.00139676 1.2991371  0.71377849]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.00120825 1.29072762 0.73609694]
 </pre></div>
 </div>
 </div>
@@ -643,7 +644,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/9732dfc3b31433ed099577eaeacb19ddcf80e5d69750fe7c1c649e6d6291d15d.png" src="../../../_images/9732dfc3b31433ed099577eaeacb19ddcf80e5d69750fe7c1c649e6d6291d15d.png" />
+<img alt="../../../_images/20da247616355cfdc8a071cee68bef508630cae6aa8a4f3a0f68cf165bdabf42.png" src="../../../_images/20da247616355cfdc8a071cee68bef508630cae6aa8a4f3a0f68cf165bdabf42.png" />
 </div>
 </div>
 <p>Häufig werden auch stückweise definierte Modellfunktionen benötigt. Das folgende Beispiel zeigt wie dies anhand des folgenden Datensatzes umgesetzt werden kann.</p>
@@ -663,7 +664,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/1f96575cf9f2d6b10370e190ed1cb1a6b3f3e6e17a35887ffb509b3d64e16d5e.png" src="../../../_images/1f96575cf9f2d6b10370e190ed1cb1a6b3f3e6e17a35887ffb509b3d64e16d5e.png" />
+<img alt="../../../_images/0041f61cfe21eda7e490edb9b1f7a0fca813c563826cebf73af7568bbf2d653e.png" src="../../../_images/0041f61cfe21eda7e490edb9b1f7a0fca813c563826cebf73af7568bbf2d653e.png" />
 </div>
 </div>
 <p>In diesem Fall wird nach einer passenden stückweise konstanten bzw. linearen Funktion gesucht. Diese hat zwei Parameter und kann wie folgt definiert werden</p>
@@ -695,7 +696,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.02568292 2.97128326]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.97833122 3.00692411]
 </pre></div>
 </div>
 </div>
@@ -714,7 +715,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/d4fcfdd739ef3c831da5135eb6384d1bf8c1f1c0b278910cfcc3e2808011944e.png" src="../../../_images/d4fcfdd739ef3c831da5135eb6384d1bf8c1f1c0b278910cfcc3e2808011944e.png" />
+<img alt="../../../_images/d1672a88dc17b0fd105bbc5bca54d2ea37f9010021d5a7b7d2d4334c49511960.png" src="../../../_images/d1672a88dc17b0fd105bbc5bca54d2ea37f9010021d5a7b7d2d4334c49511960.png" />
 </div>
 </div>
 <p>Im allgemeinen kann es passieren, insbesondere bei komplexen Problemen, dass nicht optimale Parameter gefunden weren konnten. An dieser Stelle kann eine Variation der Anfangswerte helfen.</p>
