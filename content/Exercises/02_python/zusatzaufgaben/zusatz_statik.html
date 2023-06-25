@@ -549,6 +549,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losung">Lösung</a></li>
 </ul>
 </li>
 </ul>
@@ -562,7 +563,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="seildurchhang">
+  <section class="tex2jax_ignore mathjax_ignore" id="seildurchhang">
 <h1>Seildurchhang<a class="headerlink" href="#seildurchhang" title="Permalink to this heading">#</a></h1>
 <p><img alt="" src="../../../../_images/Seil.svg" /></p>
 <p>Beim Bauen mit Seilen muss man den Seildurchhang <span class="math notranslate nohighlight">\(f\)</span> immer beachten. Dieser ist im idealisierten Fall abhängig von der Spannweite <span class="math notranslate nohighlight">\(L\)</span>, der auf das Seil wirkenden Kraft <span class="math notranslate nohighlight">\(q\)</span> und den horizontalen Kräften <span class="math notranslate nohighlight">\(H\)</span> an den Auflagern.</p>
@@ -620,6 +621,9 @@ S = L + \frac{8 \cdot f^2}{3 \cdot L} - \frac{32 \cdot f^4}{5 \cdot L^3}
 <section id="losungshinweis">
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this heading">#</a></h3>
 <p>Es kann davon ausgegangen werden, dass bei einer Spannweite von weniger als <span class="math notranslate nohighlight">\(10~m\)</span> mit einem Unwirtschaftlichen Ergebnis zu rechnen ist.</p>
+</section>
+<section id="losung">
+<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -631,15 +635,15 @@ S = L + \frac{8 \cdot f^2}{3 \cdot L} - \frac{32 \cdot f^4}{5 \cdot L^3}
 <span class="n">q</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">gesamt_laenge</span> <span class="o">=</span> <span class="mi">1000</span>
 
-<span class="k">def</span> <span class="nf">kosten</span><span class="p">(</span><span class="n">stuetzen</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">berechnung_kosten</span><span class="p">(</span><span class="n">stuetzen</span><span class="p">):</span>
     <span class="n">L</span> <span class="o">=</span> <span class="n">gesamt_laenge</span> <span class="o">/</span> <span class="p">(</span><span class="n">stuetzen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">H</span> <span class="o">=</span> <span class="n">q</span> <span class="o">*</span> <span class="n">L</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">f</span> <span class="c1"># Die umgestellte Funktion &#39;Stich&#39;</span>
     <span class="n">k</span> <span class="o">=</span> <span class="n">stuetzen</span> <span class="o">*</span> <span class="mi">10000</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">H</span> <span class="o">*</span> <span class="mi">500</span> <span class="c1"># 2 * H da auf beiden Seiten Auflager sind</span>
     <span class="k">return</span> <span class="n">k</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">H</span>
 
 <span class="k">for</span> <span class="n">stuetzen</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span> <span class="c1"># 2 Stützen sind immer vorhanden</span>
-    <span class="n">k1</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">H</span> <span class="o">=</span> <span class="n">kosten</span><span class="p">(</span><span class="n">stuetzen</span><span class="p">)</span>
-    <span class="n">k2</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">kosten</span><span class="p">(</span><span class="n">stuetzen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Nur das erste Ergebnis ist wichtig</span>
+    <span class="n">k1</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">H</span> <span class="o">=</span> <span class="n">berechnung_kosten</span><span class="p">(</span><span class="n">stuetzen</span><span class="p">)</span>
+    <span class="n">k2</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">berechnung_kosten</span><span class="p">(</span><span class="n">stuetzen</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Nur das erste Ergebnis ist wichtig</span>
     <span class="k">if</span> <span class="n">k1</span> <span class="o">&lt;=</span> <span class="n">k2</span><span class="p">:</span>
        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kosten: </span><span class="si">{</span><span class="n">k1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> €, Stützen: </span><span class="si">{</span><span class="n">stuetzen</span><span class="si">}</span><span class="s2">, Länge: </span><span class="si">{</span><span class="n">L</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> m, Kraft: </span><span class="si">{</span><span class="n">H</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> kN&quot;</span><span class="p">)</span>
        <span class="k">break</span>
@@ -653,25 +657,14 @@ S = L + \frac{8 \cdot f^2}{3 \cdot L} - \frac{32 \cdot f^4}{5 \cdot L^3}
 </div>
 </details>
 </div>
-<div class="cell tag_hide-cell tag_remove-input docutils container">
+<div class="cell tag_hide-cell tag_remove_input docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell outputs</span>
 <span class="expanded">Hide code cell outputs</span>
 </summary>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">kosten</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">stuetzen</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="n">k</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">Kosten</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">kosten</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;Kosten&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../../../_images/5db35a34ebe732680d046d100bfba9ace8dfc4c68d8dee33713998008ac26831.png" src="../../../../_images/5db35a34ebe732680d046d100bfba9ace8dfc4c68d8dee33713998008ac26831.png" />
 </div>
 </details>
 </div>
@@ -749,6 +742,7 @@ S = L + \frac{8 \cdot f^2}{3 \cdot L} - \frac{32 \cdot f^4}{5 \cdot L^3}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losung">Lösung</a></li>
 </ul>
 </li>
 </ul>
