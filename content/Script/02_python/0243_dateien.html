@@ -299,7 +299,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/09_fstrings/fstrings.html">2.9. Formattierte Strings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/10_einwohner_europa/einwohner_europa.html">2.10. Einwohnerzahl Europa</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/11_temperaturdaten/temperaturdaten.html">2.11. Temperaturdaten</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/uebersicht.html">2.12. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/02_python/12_arrays/arrays.html">2.12. NumPy Arrays</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/uebersicht.html">2.13. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_grundlagen.html">Grundlagen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle.html">Flusskontrolle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/02_python/zusatzaufgaben/zusatz_fehlersuche.html">Fehlersuche</a></li>
@@ -769,12 +770,12 @@ Bergischen Städtedreiecks.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der gefundenen Dateien: 7
 Dateienliste:
    dateien/unwichtig.dat
-   dateien/bochum.txt
-   dateien/neue_datei.txt
-   dateien/tabelle.csv
-   dateien/zahlen.csv
-   dateien/wuppertal.txt
    dateien/juelich.txt
+   dateien/bochum.txt
+   dateien/zahlen.csv
+   dateien/tabelle.csv
+   dateien/wuppertal.txt
+   dateien/neue_datei.txt
 </pre></div>
 </div>
 </div>
@@ -794,10 +795,10 @@ Dateienliste:
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der gefundenen Dateien: 4
 Dateienliste:
-   dateien/bochum.txt
-   dateien/neue_datei.txt
-   dateien/wuppertal.txt
    dateien/juelich.txt
+   dateien/bochum.txt
+   dateien/wuppertal.txt
+   dateien/neue_datei.txt
 </pre></div>
 </div>
 </div>
@@ -818,16 +819,17 @@ Dateienliste:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erste Zeile der Datei &#39;dateien/bochum.txt&#39;:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erste Zeile der Datei &#39;dateien/juelich.txt&#39;:
+Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige 
+
+Erste Zeile der Datei &#39;dateien/bochum.txt&#39;:
 Aus Wikipedia: Die Stadt Bochum [ˈboːxʊm] (westfälisch: 
 
-Erste Zeile der Datei &#39;dateien/neue_datei.txt&#39;:
-Hallo Dateiwelt!
 Erste Zeile der Datei &#39;dateien/wuppertal.txt&#39;:
 Aus Wikipedia: Wuppertal ist mit 354.382 Einwohnern (31. 
 
-Erste Zeile der Datei &#39;dateien/juelich.txt&#39;:
-Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige 
+Erste Zeile der Datei &#39;dateien/neue_datei.txt&#39;:
+Hallo Dateiwelt!
 </pre></div>
 </div>
 </div>
@@ -849,11 +851,11 @@ Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dateienliste nach dem Erstellen der neuen Datei:
    dateien/unwichtig.dat
-   dateien/bochum.txt
-   dateien/tabelle.csv
-   dateien/zahlen.csv
-   dateien/wuppertal.txt
    dateien/juelich.txt
+   dateien/bochum.txt
+   dateien/zahlen.csv
+   dateien/tabelle.csv
+   dateien/wuppertal.txt
 </pre></div>
 </div>
 </div>
@@ -885,12 +887,12 @@ Aus Wikipedia: Jülich liegt an der Rur. Das zugehörige
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dateienliste nach dem Erstellen der neuen Datei:
    dateien/unwichtig.dat
-   dateien/bochum.txt
-   dateien/neue_datei.txt
-   dateien/tabelle.csv
-   dateien/zahlen.csv
-   dateien/wuppertal.txt
    dateien/juelich.txt
+   dateien/bochum.txt
+   dateien/zahlen.csv
+   dateien/tabelle.csv
+   dateien/wuppertal.txt
+   dateien/neue_datei.txt
 </pre></div>
 </div>
 </div>
