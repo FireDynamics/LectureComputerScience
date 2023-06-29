@@ -182,6 +182,7 @@ parts:
     - file: content/Exercises/02_python/09_fstrings/fstrings
     - file: content/Exercises/02_python/10_einwohner_europa/einwohner_europa
     - file: content/Exercises/02_python/11_temperaturdaten/temperaturdaten
+    - file: content/Exercises/02_python/12_arrays/arrays
     - file: content/Exercises/02_python/zusatzaufgaben/uebersicht
       sections:
       - file: content/Exercises/02_python/zusatzaufgaben/zusatz_grundlagen
