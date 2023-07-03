@@ -24,6 +24,8 @@ Wie in allen anderen Wissenschafts- und Ingenieurdisziplinen nehmen Computer ein
 
 * **[Baubetrieb und Bauwirtschaft](https://www.baubetrieb.uni-wuppertal.de)** – Building Information Modeling (BIM): Erfassung und Vernetzung von Prozessen im gesamten Lebenszyklus einer Immobilie.
 
-* **[Baumechanik und Numerische Methoden](http://www.baumechanik.uni-wuppertal.de/index.php?content=start)** – Finite Elemente Methode (FEM): Numerisches Verfahren zur Lösung von Differentialgleichungen. Anwendung kann findet diese Methode in der Statik und Dynamik von Bauwerken.
+* **[Baumechanik und Numerische Methoden](https://cam.uni-wuppertal.de/)** – Finite Elemente Methode (FEM): Numerisches Verfahren zur Lösung von Differentialgleichungen. Anwendung kann findet diese Methode in der Statik und Dynamik von Bauwerken.
 
 * **[Computersimulation für Brandschutz und Fußgängerverkehr](https://www.asim.uni-wuppertal.de/)** Berechnung der Personendynamik auf Grundlage physikalischer und sozialer Wechselwirkungen. Die entwickelten Methoden werden bei der Sicherheitsbetrachtung währen der Planung von Gebäuden eingesetzt.
+
+* **[Wasserwirtschaft und Wasserbau](https://www.hydro.uni-wuppertal.de/)** – Hydrologische Modellierung: Einsatz computergestützter Simulationen zur Analyse von natürlichen und künstlichen hydraulischen Systemen, Datenanalyse und Modellierung von Niederschlags-Abfluss-Prozessen.
