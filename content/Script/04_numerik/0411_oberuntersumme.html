@@ -562,7 +562,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ober-und-untersumme">
 <h1><span class="section-number">4.1.1. </span>Ober- und Untersumme<a class="headerlink" href="#ober-und-untersumme" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">65</span><span class="p">)</span>
@@ -577,6 +582,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>Eine der grundlegendsten Arten Integrale von Funktionen zu bestimmen sind die <a class="reference external" href="https://de.wikipedia.org/wiki/Riemannsches_Integral">Ober- und Untersumme</a>. Sie nähern den Integralwert durch eine Abschätzung nach oben bzw. unten an. Mit einer steigenden Anzahl von Stützstellen, d.h. Positionen an welchen die Funktion ausgewertet wird, konvergieren beide Abschätzungen gegen den Integralwert.</p>
 <section id="definition">
@@ -668,7 +674,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/1555bb51d922fd85b988bcfec6e29c9ccb565fad62a94eb1ab7801b5bc932eb2.png" src="../../../_images/1555bb51d922fd85b988bcfec6e29c9ccb565fad62a94eb1ab7801b5bc932eb2.png" />
+<img alt="../../../_images/97ce340bef3dc0b0adf13fdc1fb4572e1bef76c596ccf73eaf602b1989c7598b.png" src="../../../_images/97ce340bef3dc0b0adf13fdc1fb4572e1bef76c596ccf73eaf602b1989c7598b.png" />
 </div>
 </div>
 <p>Das obige Verfahren kann nun in einer Funktion zusammengefasst werden, welche die Summen der beiden Folgen zurückgibt.</p>
@@ -699,7 +705,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_max</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_max</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_max</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">os</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span>
 <span class="n">us</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span>
 
@@ -708,31 +714,6 @@ document.write(`
     <span class="n">o</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">ou_summe</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">os</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">o</span>
     <span class="n">us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-Cell In[8], line 2
-      1 n_max = 100
-----&gt; 2 ns = np.arange(2, n_max, 1, dtype=np.int)
-      3 os = np.zeros(len(ns))
-      4 us = np.zeros(len(ns))
-
-File /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/numpy/__init__.py:313, in __getattr__(attr)
-    308     warnings.warn(
-    309         f&quot;In the future `np.{attr}` will be defined as the &quot;
-    310         &quot;corresponding NumPy scalar.&quot;, FutureWarning, stacklevel=2)
-    312 if attr in __former_attrs__:
---&gt; 313     raise AttributeError(__former_attrs__[attr])
-    315 if attr == &#39;testing&#39;:
-    316     import numpy.testing as testing
-
-AttributeError: module &#39;numpy&#39; has no attribute &#39;int&#39;.
-`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
-The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
-    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
 </pre></div>
 </div>
 </div>
@@ -754,7 +735,7 @@ The aliases was originally deprecated in NumPy 1.20; for more details and guidan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/a63915d3242f8740170ae7774ba7c162ad5acc768f1061b0fd4e32e298e959b6.png" src="../../../_images/a63915d3242f8740170ae7774ba7c162ad5acc768f1061b0fd4e32e298e959b6.png" />
+<img alt="../../../_images/404e2715f99a8f0313a4cc0a04977eeb126328800768089ce34bcd20b5b6c531.png" src="../../../_images/404e2715f99a8f0313a4cc0a04977eeb126328800768089ce34bcd20b5b6c531.png" />
 </div>
 </div>
 <p>Dies wird insbesondere deutlich, wenn die Differenz der beiden Summen aufgetragen wird. Mit einer logarithmischen Darstellung kann die kontinuierliche Annäherung auch quantitativ abgelesen werden.</p>
@@ -773,7 +754,7 @@ The aliases was originally deprecated in NumPy 1.20; for more details and guidan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/bf2b2c00e4c413e1b22b20c6749e873f2873775be4614c10381a6e4f1d4ddce3.png" src="../../../_images/bf2b2c00e4c413e1b22b20c6749e873f2873775be4614c10381a6e4f1d4ddce3.png" />
+<img alt="../../../_images/7df598a76344e2ea7154565a63aae2be5254c509065e1b014a1e9c61f61f7bcf.png" src="../../../_images/7df598a76344e2ea7154565a63aae2be5254c509065e1b014a1e9c61f61f7bcf.png" />
 </div>
 </div>
 </section>

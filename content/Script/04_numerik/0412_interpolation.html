@@ -562,7 +562,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="interpolation">
 <h1><span class="section-number">4.1.2. </span>Interpolation<a class="headerlink" href="#interpolation" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">65</span><span class="p">)</span>
@@ -579,6 +584,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>Bei der Bildung der Ober- und Untersumme wurde die zu integrierende Funktion durch einen konstanten Wert in den Teilintervallen zwischen den Stützstellen angenähert. Eine genauere Berechnung des Integrals kann durch eine bessere Interpolation erfolgen. Dazu eignen sich  Polynome, da diese leicht zu Integrieren sind.</p>
 <section id="trapezregel">
@@ -628,7 +634,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/51091837bf3a26f93510042410bbffd0ebe18e46819fbd5745182aa22e8d5e16.png" src="../../../_images/51091837bf3a26f93510042410bbffd0ebe18e46819fbd5745182aa22e8d5e16.png" />
+<img alt="../../../_images/a4ffffeebe8b276935326e028355ebc3ca9ed74aa259bd8b72daf66d5b21a96e.png" src="../../../_images/a4ffffeebe8b276935326e028355ebc3ca9ed74aa259bd8b72daf66d5b21a96e.png" />
 </div>
 </div>
 <p>Die Integration selbst kann mittels der <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapz.html#scipy.integrate.trapz">Funktion <code class="docutils literal notranslate"><span class="pre">scipy.integrate.trapz</span></code></a> ausgeführt werden.</p>
@@ -649,38 +655,13 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_max</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_max</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_max</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">tr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ns</span><span class="p">):</span>
     <span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
     <span class="n">yi</span> <span class="o">=</span> <span class="n">fkt</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
     <span class="n">tr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">integrate</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">yi</span><span class="p">,</span> <span class="n">xi</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-Cell In[6], line 2
-      1 n_max = 50
-----&gt; 2 ns = np.arange(2, n_max, 1, dtype=np.int)
-      3 tr = np.zeros(len(ns))
-      5 for i, n in enumerate(ns):
-
-File /opt/hostedtoolcache/Python/3.10.12/x64/lib/python3.10/site-packages/numpy/__init__.py:313, in __getattr__(attr)
-    308     warnings.warn(
-    309         f&quot;In the future `np.{attr}` will be defined as the &quot;
-    310         &quot;corresponding NumPy scalar.&quot;, FutureWarning, stacklevel=2)
-    312 if attr in __former_attrs__:
---&gt; 313     raise AttributeError(__former_attrs__[attr])
-    315 if attr == &#39;testing&#39;:
-    316     import numpy.testing as testing
-
-AttributeError: module &#39;numpy&#39; has no attribute &#39;int&#39;.
-`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
-The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
-    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
 </pre></div>
 </div>
 </div>
@@ -698,7 +679,7 @@ The aliases was originally deprecated in NumPy 1.20; for more details and guidan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/0c2046425fa502a07a8f3eda7718c3229420d929fec9871f8fa02753c16b4a8e.png" src="../../../_images/0c2046425fa502a07a8f3eda7718c3229420d929fec9871f8fa02753c16b4a8e.png" />
+<img alt="../../../_images/24755ec1e4ca522439df790b8a58dfe648b8aa9df8eb3398472f0b0dc1c06602.png" src="../../../_images/24755ec1e4ca522439df790b8a58dfe648b8aa9df8eb3398472f0b0dc1c06602.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -716,7 +697,7 @@ The aliases was originally deprecated in NumPy 1.20; for more details and guidan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/0a7e48d0a0bb3192fba7e241f9e6b3050be3286b751d87aeba00e0ebae49ede3.png" src="../../../_images/0a7e48d0a0bb3192fba7e241f9e6b3050be3286b751d87aeba00e0ebae49ede3.png" />
+<img alt="../../../_images/490fb9824c95ccfc1cc5a50c850d12727a941d6de182c47a6dda6a2f6f69fc7b.png" src="../../../_images/490fb9824c95ccfc1cc5a50c850d12727a941d6de182c47a6dda6a2f6f69fc7b.png" />
 </div>
 </div>
 </section>
@@ -764,14 +745,14 @@ The aliases was originally deprecated in NumPy 1.20; for more details and guidan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/44b37abc0e1ed945f48b898a4fb29605b426c82dff7f04e8a45e2779269a304e.png" src="../../../_images/44b37abc0e1ed945f48b898a4fb29605b426c82dff7f04e8a45e2779269a304e.png" />
+<img alt="../../../_images/c29e6f3e8790f7627c450d7375bc2a15e3d653abe8f342b7e69da5e8b9c1b4b6.png" src="../../../_images/c29e6f3e8790f7627c450d7375bc2a15e3d653abe8f342b7e69da5e8b9c1b4b6.png" />
 </div>
 </div>
 <p>Die Simpsonregel ist bereits in der <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.simps.html#scipy.integrate.simps">Funktion <code class="docutils literal notranslate"><span class="pre">scipy.integrate.simps</span></code></a> implementiert. Im Folgenden wird nur die Differenz zur Trapezregel demonstriert.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_max</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_max</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_max</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">si</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span>
 <span class="n">tr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ns</span><span class="p">))</span>
 
@@ -801,7 +782,7 @@ The aliases was originally deprecated in NumPy 1.20; for more details and guidan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/0f482a35cd032ed35ac7f81b126d9b8d966d1e2ab6083d4139df4faaaf0fae9e.png" src="../../../_images/0f482a35cd032ed35ac7f81b126d9b8d966d1e2ab6083d4139df4faaaf0fae9e.png" />
+<img alt="../../../_images/d7083d2f039a3a7ac9cecac7cf689470a82f1b0819d290a9fce801369d2800ef.png" src="../../../_images/d7083d2f039a3a7ac9cecac7cf689470a82f1b0819d290a9fce801369d2800ef.png" />
 </div>
 </div>
 </section>
