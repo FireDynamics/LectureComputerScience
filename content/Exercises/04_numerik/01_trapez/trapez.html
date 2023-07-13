@@ -552,6 +552,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
             </nav>
         </div>
@@ -576,6 +577,51 @@ document.write(`
 <h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this heading">#</a></h3>
 <p>Wählen sie eine beliebige Funktion und überprüfen Sie die von Ihnen erstellte Funktion mit der Trapezfunktion des Scipy Moduls.</p>
 </section>
+</section>
+<section id="losungsvorschlag">
+<h2>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_loesung tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">integrate</span>
+
+<span class="k">def</span> <span class="nf">fkt</span><span class="p">(</span><span class="n">xi</span><span class="p">):</span>
+    <span class="n">yi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">yi</span>
+
+<span class="k">def</span> <span class="nf">trapez</span><span class="p">(</span><span class="n">werte</span><span class="p">,</span> <span class="n">schrittweite</span><span class="p">):</span>
+    <span class="n">flaeche</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">werte</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">flaeche</span> <span class="o">+=</span> <span class="n">werte</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">schrittweite</span>
+        <span class="n">flaeche</span> <span class="o">+=</span> <span class="p">(</span><span class="n">werte</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">werte</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="n">schrittweite</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">flaeche</span>
+
+<span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">yi</span> <span class="o">=</span> <span class="n">fkt</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+
+<span class="n">flaeche_sp</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">integrate</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">yi</span><span class="p">,</span> <span class="n">xi</span><span class="p">)</span>
+<span class="n">flaeche_selbst</span> <span class="o">=</span> <span class="n">trapez</span><span class="p">(</span><span class="n">yi</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Eigene Trapezfunktion:&#39;</span><span class="p">,</span> <span class="n">flaeche_selbst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Scipy:&#39;</span><span class="p">,</span> <span class="n">flaeche_sp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigene Trapezfunktion: 0.0034463689419717627
+Scipy: 0.0034463689419721374
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 </section>
 </section>
 
@@ -651,6 +697,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
   </nav></div>
 
