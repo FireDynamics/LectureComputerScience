@@ -550,11 +550,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenstellung">Aufgabenstellung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aufgabenstellung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
@@ -586,6 +588,41 @@ document.write(`
 <h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this heading">#</a></h3>
 <p>Wenn Sie alles richtig gemacht haben, sollten Sie eine Sinus und eine Cosinus Kurve sehen.</p>
 </section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Berechnung von Sinus und dessen Ableitung</span>
+<span class="n">wertebereich</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">)</span>
+<span class="n">cos</span> <span class="o">=</span> <span class="p">(</span><span class="n">sin</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">-</span><span class="n">sin</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mi">1000</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="c1"># Plotten der Daten</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">cos</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cosin&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/9ced3a54b7639493e343ed708e3f4e4777d5a3fce4019df525a55354c99d0271.png" src="../../../../_images/9ced3a54b7639493e343ed708e3f4e4777d5a3fce4019df525a55354c99d0271.png" />
+</div>
+</details>
+</div>
+</section>
 </section>
 <section id="aufgabenteil-b">
 <h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this heading">#</a></h2>
@@ -606,6 +643,40 @@ document.write(`
 <div class="cell_output docutils container">
 <img alt="../../../../_images/fc23b1fb06135d2120a02ab12b507932577d08ae3ff3eb5a60a2c2ad94c8f26d.png" src="../../../../_images/fc23b1fb06135d2120a02ab12b507932577d08ae3ff3eb5a60a2c2ad94c8f26d.png" />
 </div>
+</div>
+</section>
+<section id="id3">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Erstellen der binaeren Maske</span>
+<span class="n">maske</span> <span class="o">=</span> <span class="n">cos</span> <span class="o">-</span> <span class="n">sin</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">&lt;</span> <span class="mi">0</span>
+
+<span class="c1"># Erstellen des Maximumsarrays</span>
+<span class="n">mix</span> <span class="o">=</span> <span class="n">cos</span>
+<span class="n">mix</span><span class="p">[</span><span class="n">maske</span><span class="p">]</span> <span class="o">=</span> <span class="n">sin</span><span class="p">[</span><span class="mi">1</span><span class="p">:][</span><span class="n">maske</span><span class="p">]</span>
+
+<span class="c1"># Plotten der Daten</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wertebereich</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">mix</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;max(sin, cos)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/fc23b1fb06135d2120a02ab12b507932577d08ae3ff3eb5a60a2c2ad94c8f26d.png" src="../../../../_images/fc23b1fb06135d2120a02ab12b507932577d08ae3ff3eb5a60a2c2ad94c8f26d.png" />
+</div>
+</details>
 </div>
 </section>
 </section>
@@ -681,11 +752,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenstellung">Aufgabenstellung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweis">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aufgabenstellung</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Lösungshinweis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>

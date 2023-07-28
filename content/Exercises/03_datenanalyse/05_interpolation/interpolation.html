@@ -549,6 +549,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a1">Aufgabenteil A1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenstellung">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a2">Aufgabenteil A2</a><ul class="nav section-nav flex-column">
@@ -557,10 +558,12 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b1">Aufgabenteil B1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b2">Aufgabenteil B2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
@@ -582,6 +585,47 @@ document.write(`
 <h3>Aufgabenstellung<a class="headerlink" href="#aufgabenstellung" title="Permalink to this heading">#</a></h3>
 <p>In der Datei <a class="reference download internal" download="" href="../../../../_downloads/340ea4c5e67d572cf8f877b9043708e2/messwerte.txt"><code class="xref download docutils literal notranslate"><span class="pre">messwerte.txt</span></code></a> finden Sie 15 Messwerte entsprechend einer leicht verrauschten Normalverteilung. Nutzen Sie <code class="docutils literal notranslate"><span class="pre">numpy.polyfit</span></code>, um Polynome an die Messwerte zu fitten. Erstellen Sie Fits von Grad 1 bis zur Interpolation bei Grad 14 und plotten Sie diese.</p>
 </section>
+<section id="losungsvorschlag">
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;messwerte.txt&#39;</span><span class="p">)</span>
+<span class="n">data_x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">data_y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
+
+    <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">data_x</span><span class="p">,</span> <span class="n">data_y</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+    <span class="n">fit_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data_x</span><span class="p">,</span> <span class="n">data_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Messpunkte&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fit_x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">fit_x</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Fit g</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/fd8f4a2035fe4c99c93cf2c6d49a3f16b07db80532528300277e9fc373365526.png" src="../../../../_images/fd8f4a2035fe4c99c93cf2c6d49a3f16b07db80532528300277e9fc373365526.png" />
+</div>
+</details>
+</div>
+</section>
 </section>
 <section id="aufgabenteil-a2">
 <h2>Aufgabenteil A2<a class="headerlink" href="#aufgabenteil-a2" title="Permalink to this heading">#</a></h2>
@@ -601,16 +645,68 @@ document.write(`
 <h3>Aufgabenstellung<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>Die Funktion, welche zum Erzeugen der Daten verwendet wurde, ist <span class="math notranslate nohighlight">\(\exp(-x^2)\)</span>. Berechnen Sie die L2-Norm aller ihrer Fits. Tragen Sie die Abstände gegen den Grad des Fits auf. Berechnen Sie außerdem den Abstand zwichen den Messwerten und der ursprünglichen Funktion und tragen Sie das Ergebniss als Gerade in ihren Fit ein. Fitten Sie die gleichen Daten ein weiteres Mal, diesmal jedoch mit logarithmisch aufgetragenem Abstand. Ignorieren Sie hierbei die Interpolation.</p>
 </section>
+<section id="id3">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_loesung tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bestimmung der L2-Norm</span>
+
+<span class="k">def</span> <span class="nf">l2_norm</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">func_y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span><span class="o">-</span><span class="n">func_y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> 
+
+<span class="n">norm_fits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
+    <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">data_x</span><span class="p">,</span> <span class="n">data_y</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">norm_fits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2_norm</span><span class="p">(</span><span class="n">data_y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">data_x</span><span class="p">)))</span>
+    
+<span class="n">norm_func</span> <span class="o">=</span> <span class="n">l2_norm</span><span class="p">(</span><span class="n">data_y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">data_x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Polynomgrad&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;L2-Norm&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)),</span> <span class="n">norm_fits</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">],[</span><span class="n">norm_func</span><span class="p">,</span> <span class="n">norm_func</span><span class="p">]);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Polynomgrad&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)),</span> <span class="n">norm_fits</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">],[</span><span class="n">norm_func</span><span class="p">,</span> <span class="n">norm_func</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/05a8b6ef802704dbb1f3759b7b60aea256933b2dd0afc02df6a88b9c237ab11f.png" src="../../../../_images/05a8b6ef802704dbb1f3759b7b60aea256933b2dd0afc02df6a88b9c237ab11f.png" />
+</div>
+</details>
+</div>
+</section>
 </section>
 <section id="aufgabenteil-b2">
 <h2>Aufgabenteil B2<a class="headerlink" href="#aufgabenteil-b2" title="Permalink to this heading">#</a></h2>
-<section id="id3">
-<h3>Aufgabenstellung<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>Aufgabenstellung<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Beantworten Sie folgende Fragen:</p>
 <ol class="arabic simple">
 <li><p>Wann ist eine logarithmische Darstellung von Daten sinnvoll?</p></li>
 <li><p>Wieso haben die Plots Plateaus?</p></li>
 <li><p>Wieso ist es sinnvoll, die Interpolation beim logarithmischen Plot wegzulassen?</p></li>
+</ol>
+</section>
+<section id="id5">
+<h3>Lösungsvorschlag<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Eine logarithmische Darstellung von Daten ist oft dann sinnvoll, wenn diese auf mindestens einer Achse mehrere Größenordnungen umfassen und Details in den kleineren Größenordnungen von Bedeutung sind. Wie in den Plots von Aufgabenteil B1 zu sehen, lassen sich so auch bei höheren Polynomgraden Details ablesen, die in dem linearen Plot verloren gegangen sind.</p></li>
+<li><p>Die Plateaus korrespondieren mit der Ähnlichkeit der zugehörigen Fits (siehe Aufgabe A2.1).</p></li>
+<li><p>Da die L2-Norm zwischen der interpolierten Funktion und den Daten bis auf einen numerischen Rundungsfehler Null ist, führt dies zu einem Problem mit der logarithmischen Darstellung, da die Null in dieser nicht dargestellt werden kann. Und auch wenn die Norm nicht ganz Null ist, ist sie um viele Größenordnungen kleiner als die Nrom zwischen vorherigem Grad und Daten, was beim Plotten wieder zu einem Verlust von sichtbaren Details führen würde.</p></li>
 </ol>
 </section>
 </section>
@@ -685,6 +781,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a1">Aufgabenteil A1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenstellung">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a2">Aufgabenteil A2</a><ul class="nav section-nav flex-column">
@@ -693,10 +790,12 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b1">Aufgabenteil B1</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Lösungsvorschlag</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b2">Aufgabenteil B2</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Aufgabenstellung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Lösungsvorschlag</a></li>
 </ul>
 </li>
 </ul>
