@@ -29,6 +29,7 @@ html:
   use_edit_page_button  : true
   use_issues_button     : true
   use_repository_button : true
+  use_multitoc_numbering: false
   extra_footer          : |
     <p>
     <img src='https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg' height='31'/>

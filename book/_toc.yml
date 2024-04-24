@@ -154,15 +154,15 @@ parts:
     - file: content/Exercises/01_computer/03_intervallschachtelung/intervallschachtelung
     - file: content/Exercises/01_computer/04_eratosthenes/eratosthenes
     - file: content/Exercises/01_computer/05_ggt/ggt
-    - file: content/Exercises/01_computer/06_majoritaet/majoritaet
-    - file: content/Exercises/01_computer/07_architekturen/architekturen
-    - file: content/Exercises/01_computer/08_betriebssysteme/betriebssysteme
+    - file: content/Exercises/01_computer/06_architekturen/architekturen
+    - file: content/Exercises/01_computer/07_betriebssysteme/betriebssysteme
     - file: content/Exercises/01_computer/zusatzaufgaben/uebersicht
       sections:
       - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen
       - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene
       - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen
       - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung
+      - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_majoritaet/zusatz_majoritaet
       - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen
       - file: content/Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme
 
