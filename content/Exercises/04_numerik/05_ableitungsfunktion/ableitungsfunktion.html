@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4.5. Ableitungsfunktion &#8212; Vorlesung Ingenieurinformatik</title>
   
@@ -19,53 +18,50 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion';</script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/04_numerik/05_ableitungsfunktion/ableitungsfunktion.html" />
-    <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
+    <link rel="icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="4.6. Temperaturgleichung" href="../06_temperaturgleichung/temperaturgleichung.html" />
@@ -79,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -114,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -133,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../../Overview/uebersicht.html">
+  
   
   
   
@@ -145,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
 <ul class="nav bd-sidenav">
@@ -275,14 +295,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../01_computer/03_intervallschachtelung/intervallschachtelung.html">1.3. Intervallschachtelung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../01_computer/04_eratosthenes/eratosthenes.html">1.4. Sieb von Eratosthenes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../01_computer/05_ggt/ggt.html">1.5. Größter gemeinsamer Teiler (ggT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_computer/06_majoritaet/majoritaet.html">1.6. Majorität</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_computer/07_architekturen/architekturen.html">1.7. Prozessorarchitekturen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_computer/08_betriebssysteme/betriebssysteme.html">1.8. Betriebssysteme</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_computer/zusatzaufgaben/uebersicht.html">1.9. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_computer/06_architekturen/architekturen.html">1.6. Prozessorarchitekturen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_computer/07_betriebssysteme/betriebssysteme.html">1.7. Betriebssysteme</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_computer/zusatzaufgaben/uebersicht.html">1.8. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">Algorithmen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">Programmablaufpläne</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">Perfekte (volkommene) Zahlen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">Intervallschachtelung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_majoritaet/zusatz_majoritaet.html">Majorität</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">Prozessorarchitekturen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">Betriebssysteme</a></li>
 </ul>
@@ -507,20 +527,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -580,24 +602,24 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ableitungsfunktion">
-<h1><span class="section-number">4.5. </span>Ableitungsfunktion<a class="headerlink" href="#ableitungsfunktion" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4.5. </span>Ableitungsfunktion<a class="headerlink" href="#ableitungsfunktion" title="Link to this heading">#</a></h1>
 <p>In dieser Aufgabe wird die numerische Berechnung der Ableitungsfunktion vorgestellt. Insbesondere wird die Berechnung der Werte am Rand und der Berechnungsfehler betrachtet.</p>
 <section id="aufgabenteil-a">
-<h2>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this heading">#</a></h2>
+<h2>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Link to this heading">#</a></h2>
 <p>Gegeben ist die Funktion <span class="math notranslate nohighlight">\(\sf y(x)\)</span> mit</p>
 <div class="math notranslate nohighlight">
 \[ \sf y(x) = e^{-(x-2)^2} \]</div>
 <p>Stellen Sie die Funktion <span class="math notranslate nohighlight">\(\sf y\)</span> und deren Ableitung <span class="math notranslate nohighlight">\(\sf y'\)</span> graphisch im Intervall <span class="math notranslate nohighlight">\(\sf x \in [0,4]\)</span> dar.</p>
 <section id="losungshinweis">
-<h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Permalink to this heading">#</a></h3>
+<h3>Lösungshinweis<a class="headerlink" href="#losungshinweis" title="Link to this heading">#</a></h3>
 <p>Die Ausgabe könnte wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil1.png" /></p>
 </section>
 <section id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Permalink to this heading">#</a></h3>
+<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Link to this heading">#</a></h3>
 <p>Die analytische Ableitung der Funktion <span class="math notranslate nohighlight">\(\sf y(x)\)</span> lautet</p>
 <div class="math notranslate nohighlight">
 \[ \sf y'(x) = - 2(x-2)e^{-(x-2)^2} \]</div>
@@ -653,14 +675,14 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;x&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/bfe6831f49148db85d9c893d93b13867a1b36f5bc644f660d0f2b39a0d3f87c9.png" src="../../../../_images/bfe6831f49148db85d9c893d93b13867a1b36f5bc644f660d0f2b39a0d3f87c9.png" />
+<img alt="../../../../_images/317bb49e77d9ca0cf008b5deaba472ef624c444b5e937edd9b3a72dc106424ee.png" src="../../../../_images/317bb49e77d9ca0cf008b5deaba472ef624c444b5e937edd9b3a72dc106424ee.png" />
 </div>
 </details>
 </div>
 </section>
 </section>
 <section id="aufgabenteil-b">
-<h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this heading">#</a></h2>
+<h2>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Link to this heading">#</a></h2>
 <p>Diskretisieren Sie die das obige Intervall, z.B. mit 20 Stützstellen, und bestimmen sie numerisch die Ableitungsfunktion. Für Stützstellen, welche nicht am Rand liegen, verwenden Sie die zentrale Differenzenformel zweiter Ordnung. Die Randwerte werden mit den Vorwärtsdifferenzenquotienten</p>
 <div class="math notranslate nohighlight">
 \[ \sf y'_i = \frac{y_{i+1} - y_i}{\Delta x} \]</div>
@@ -669,12 +691,12 @@ document.write(`
 \[ \sf y'_i = \frac{y_{i} - y_{i-1}}{\Delta x} \]</div>
 <p>jeweils erster Ordnung berechnet. Stellen Sie die analytisch und numerisch bestimmten Ableitungsfunktionen zusammen dar.</p>
 <section id="id1">
-<h3>Lösungshinweis<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Lösungshinweis<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Die Ausgabe könnte wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil2.png" /></p>
 </section>
 <section id="id2">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Lösungsvorschlag<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell tag_loesung tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -704,7 +726,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/8fc4b6db1d649cfe95bf168b3f32c57ffb11bc435408a11c7d5b4857c16ee6b5.png" src="../../../../_images/8fc4b6db1d649cfe95bf168b3f32c57ffb11bc435408a11c7d5b4857c16ee6b5.png" />
+<img alt="../../../../_images/6b10a754d2dd687251cfa1fccba128c6868c2b2c58d015ad6a049df9098d6fbc.png" src="../../../../_images/6b10a754d2dd687251cfa1fccba128c6868c2b2c58d015ad6a049df9098d6fbc.png" />
 </div>
 </details>
 </div>
@@ -746,23 +768,23 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/47d2e276ec585c5468bbb93de2ae2d1263c86cd58d2c791239b4fd0d512d8f72.png" src="../../../../_images/47d2e276ec585c5468bbb93de2ae2d1263c86cd58d2c791239b4fd0d512d8f72.png" />
+<img alt="../../../../_images/38860175ad51ac2abd49d4a942a3fd824e0abd8257eef747a40a2f2b41697383.png" src="../../../../_images/38860175ad51ac2abd49d4a942a3fd824e0abd8257eef747a40a2f2b41697383.png" />
 </div>
 </details>
 </div>
 </section>
 </section>
 <section id="aufgabenteil-c">
-<h2>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this heading">#</a></h2>
+<h2>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Link to this heading">#</a></h2>
 <p>Berechnen Sie die Abweichung zwischen der analytischen und numerischen Ableitung an jedem Stützpunkt und stellen Sie diese graphisch dar. Verkleinern Sie den Gitterabstand <span class="math notranslate nohighlight">\(\sf \Delta x\)</span>, z.B. um einen Faktor 4. Was fällt Ihnen auf?</p>
 <section id="id3">
-<h3>Lösungshinweis<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Lösungshinweis<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Die Ausgaben könnten wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil3a.png" /></p>
 <p><img alt="" src="../../../../_images/teil3b.png" /></p>
 </section>
 <section id="id4">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>Lösungsvorschlag<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="cell tag_loesung tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -837,7 +859,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;numerisch - analytisch&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/c828cbec0cd5b835b43f76cc73ff6ae24a91b4a2c8db4fd5be52bdb204063511.png" src="../../../../_images/c828cbec0cd5b835b43f76cc73ff6ae24a91b4a2c8db4fd5be52bdb204063511.png" />
+<img alt="../../../../_images/dcba4c3a86c006d260739641946d524e55e547cac89870c3f56e20bbc17c15ea.png" src="../../../../_images/dcba4c3a86c006d260739641946d524e55e547cac89870c3f56e20bbc17c15ea.png" />
 </div>
 </details>
 </div>
@@ -865,7 +887,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;numerisch - analytisch&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/cc9d65f440e9301e435ecfadd1d27b6e860d4fe5d97e3c534e751c241ef64d43.png" src="../../../../_images/cc9d65f440e9301e435ecfadd1d27b6e860d4fe5d97e3c534e751c241ef64d43.png" />
+<img alt="../../../../_images/97f9f732114e71b573b4a48e4814519e726a8074c3bd0e0d3f912731db306787.png" src="../../../../_images/97f9f732114e71b573b4a48e4814519e726a8074c3bd0e0d3f912731db306787.png" />
 </div>
 </details>
 </div>
@@ -891,20 +913,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/44c37245718933688e8fe6cde3183afa13eaf59f9e32cc931bf6f5e0e5c422d1.png" src="../../../../_images/44c37245718933688e8fe6cde3183afa13eaf59f9e32cc931bf6f5e0e5c422d1.png" />
+<img alt="../../../../_images/20bbfdb76e6789a6bf725602421307710be39bc71d2fa1f04781b8f5bdc1e7dc.png" src="../../../../_images/20bbfdb76e6789a6bf725602421307710be39bc71d2fa1f04781b8f5bdc1e7dc.png" />
 </div>
 </details>
 </div>
 </section>
 </section>
 <section id="aufgabenteil-d">
-<h2>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this heading">#</a></h2>
+<h2>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Link to this heading">#</a></h2>
 <p>Bestimmen Sie die Formel für den Vorwärtsdifferenzenquotienten zweiter Ordnung zur Berechnung der ersten Ableitung. Verwenden Sie dafür die Taylor-Entwicklung an zwei vorwärtsgerichteten Punkten, d.h. <span class="math notranslate nohighlight">\(\sf i+1, i+2\)</span>.</p>
 <p>Die Rückwärtsformel lautet</p>
 <div class="math notranslate nohighlight">
 \[ \sf y'_i = \frac{3y_{i} - 4y_{i-1} + y_{i-2}}{2\Delta x} + \mathcal{O}\left(\Delta x^2\right)\]</div>
 <section id="id5">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>Lösungsvorschlag<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>Die Taylor-Entwicklungen an den Stellen <span class="math notranslate nohighlight">\(\sf x_i + \Delta x = x_{i+1}\)</span> bzw. <span class="math notranslate nohighlight">\(\sf x_i + \Delta x = x_{i+1}\)</span> lauten bis zur Ordnung <span class="math notranslate nohighlight">\(\sf \mathcal{O}\left(\Delta x^3\right)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\sf y(x_i + \Delta x) = y_{i+1} = y_i + y'_i\Delta x + \frac{1}{2}y''_i\Delta x^2 +  \mathcal{O}\left(\Delta x^3\right) \]</div>
@@ -924,15 +946,15 @@ document.write(`
 </section>
 </section>
 <section id="aufgabenteil-e">
-<h2>Aufgabenteil E<a class="headerlink" href="#aufgabenteil-e" title="Permalink to this heading">#</a></h2>
+<h2>Aufgabenteil E<a class="headerlink" href="#aufgabenteil-e" title="Link to this heading">#</a></h2>
 <p>Verwenden Sie die Formeln zweiter Ordnung für die Berechnung der Ableitung am Rand. Wie sieht nun die Abweichung zwischen der analytischen und numerischen Ableitung aus?</p>
 <section id="id6">
-<h3>Lösungshinweis<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3>Lösungshinweis<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>Die Ausgabe könnte wie folgt aussehen.</p>
 <p><img alt="" src="../../../../_images/teil5.png" /></p>
 </section>
 <section id="id7">
-<h3>Lösungsvorschlag<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3>Lösungsvorschlag<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <div class="cell tag_loesung tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -991,7 +1013,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/9041651ba2f7bc1c68c4e8e659172e27832c8ce20c87da4ca6378661d1ea3b1a.png" src="../../../../_images/9041651ba2f7bc1c68c4e8e659172e27832c8ce20c87da4ca6378661d1ea3b1a.png" />
+<img alt="../../../../_images/44e518efcaa618741cb3f7129ee16ad40fd6845f925d02d59902371bb2fc8d3a.png" src="../../../../_images/44e518efcaa618741cb3f7129ee16ad40fd6845f925d02d59902371bb2fc8d3a.png" />
 </div>
 </details>
 </div>
@@ -1023,7 +1045,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/f9d1b6abdc56e17d41fbaeae5a2ebc13a5982c467bd8ca2b49b37d1b551c4d8e.png" src="../../../../_images/f9d1b6abdc56e17d41fbaeae5a2ebc13a5982c467bd8ca2b49b37d1b551c4d8e.png" />
+<img alt="../../../../_images/25e13ffa6a42b7e61862cbbbdafb7ad964a4e6a8b9ce0af8ca3ecf856d2285b1.png" src="../../../../_images/25e13ffa6a42b7e61862cbbbdafb7ad964a4e6a8b9ce0af8ca3ecf856d2285b1.png" />
 </div>
 </details>
 </div>
@@ -1056,11 +1078,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../04_abl_num/abl_num.html"
@@ -1080,10 +1101,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1091,6 +1109,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1139,6 +1158,7 @@ document.write(`
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1166,8 +1186,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

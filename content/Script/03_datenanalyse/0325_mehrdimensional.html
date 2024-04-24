@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3.2.5. Mehrdimensionale Daten &#8212; Vorlesung Ingenieurinformatik</title>
   
@@ -19,51 +18,48 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Script/03_datenanalyse/0325_mehrdimensional';</script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/03_datenanalyse/0325_mehrdimensional.html" />
-    <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
+    <link rel="icon" href="../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3.2.6. Bilddaten" href="0326_bilder.html" />
@@ -77,7 +73,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -112,11 +116,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,9 +138,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../Overview/uebersicht.html">
+  
   
   
   
@@ -143,12 +152,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../../_static/cce_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../../_static/cce_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
 <ul class="nav bd-sidenav">
@@ -273,14 +293,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html">1.3. Intervallschachtelung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html">1.4. Sieb von Eratosthenes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html">1.5. Größter gemeinsamer Teiler (ggT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html">1.6. Majorität</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html">1.7. Prozessorarchitekturen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html">1.8. Betriebssysteme</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">1.9. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/06_architekturen/architekturen.html">1.6. Prozessorarchitekturen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/07_betriebssysteme/betriebssysteme.html">1.7. Betriebssysteme</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">1.8. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">Algorithmen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">Programmablaufpläne</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">Perfekte (volkommene) Zahlen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">Intervallschachtelung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_majoritaet/zusatz_majoritaet.html">Majorität</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">Prozessorarchitekturen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">Betriebssysteme</a></li>
 </ul>
@@ -505,20 +525,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -556,10 +578,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="mehrdimensionale-daten">
-<h1><span class="section-number">3.2.5. </span>Mehrdimensionale Daten<a class="headerlink" href="#mehrdimensionale-daten" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.2.5. </span>Mehrdimensionale Daten<a class="headerlink" href="#mehrdimensionale-daten" title="Link to this heading">#</a></h1>
 <p>Die von Modul numpy bereitgestellten Arrays können mehrdimensional sein. Beispielsweise können so mehrere eindimensionale Datensätze oder mehrdimensionale Daten in einer Datenstruktur gespeichert werden.</p>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
@@ -573,7 +595,7 @@ document.write(`
 </div>
 </div>
 <section id="zugriff">
-<h2>Zugriff<a class="headerlink" href="#zugriff" title="Permalink to this heading">#</a></h2>
+<h2>Zugriff<a class="headerlink" href="#zugriff" title="Link to this heading">#</a></h2>
 <p>Dabei erfolg der Zugriff auf die Daten entsprechend nicht mehr über einen einzelnen Index, sondern über mehrere, welche mit einem Komma <code class="docutils literal notranslate"><span class="pre">,</span></code> getrennt werden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -667,7 +689,7 @@ document.write(`
 </div>
 </section>
 <section id="d-visualisierung">
-<h2>2D-Visualisierung<a class="headerlink" href="#d-visualisierung" title="Permalink to this heading">#</a></h2>
+<h2>2D-Visualisierung<a class="headerlink" href="#d-visualisierung" title="Link to this heading">#</a></h2>
 <p>Zur Darstellung von zweidimensionalen Daten kann die <code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code>-Funktion verwendet werden. Zunächst wird die Beispieldatei <a class="reference download internal" download="" href="../../../_downloads/ff2438fce4625381af7d5c39bfb0ccbb/irdata.csv"><code class="xref download docutils literal notranslate"><span class="pre">irdata.csv</span></code></a> eingelesen. Sie enthält Temperaturwerte, welche mit einer Thermographikamera aufgezeichnet wurden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -699,7 +721,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/8003535961eadd52ce9c8b83d521d41d4f4f646c948c70528c3c617cda546fb7.png" src="../../../_images/8003535961eadd52ce9c8b83d521d41d4f4f646c948c70528c3c617cda546fb7.png" />
+<img alt="../../../_images/9d64dc87b52b2eb73336d4446d899548ac3fa9070b223c23efe29361d6286268.png" src="../../../_images/9d64dc87b52b2eb73336d4446d899548ac3fa9070b223c23efe29361d6286268.png" />
 </div>
 </div>
 <p>Hierbei ist es möglich beispielsweise den Maximalwert der Darstellung (Argument <code class="docutils literal notranslate"><span class="pre">vmax</span></code>) anzupassen und eine horizontale Linie (<code class="docutils literal notranslate"><span class="pre">plt.axhline</span></code>) einzuzeichnen. Wie bei den eindimensionalen Graphiken, kann die <code class="docutils literal notranslate"><span class="pre">plt.grid</span></code>-Funktion ein Gitter erzeugen.</p>
@@ -715,7 +737,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/810f043b52e9e7a61f1d752e23252e0d89f07e2f8dd67f7d7f31de6e7e259c11.png" src="../../../_images/810f043b52e9e7a61f1d752e23252e0d89f07e2f8dd67f7d7f31de6e7e259c11.png" />
+<img alt="../../../_images/8b5c56c41e5887ec206e4bcf37466c0324391e0516233f776452d55abc6218dd.png" src="../../../_images/8b5c56c41e5887ec206e4bcf37466c0324391e0516233f776452d55abc6218dd.png" />
 </div>
 </div>
 <p>Da es sich bei den Daten um Array handelt, ist eine Einschränkung auf bestimmte Bereiche des Datensatzes, hier ein horizontaler Streifen mit der Breite von 200 Punkten um die obige Linie, möglich.</p>
@@ -728,7 +750,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/950155edb3212713c52481eaf590db9c4601f8e545ff88e6d48da169974628f4.png" src="../../../_images/950155edb3212713c52481eaf590db9c4601f8e545ff88e6d48da169974628f4.png" />
+<img alt="../../../_images/331a15910a86aa733d85ec85985075ebf599ce8e096675f17289b678eca117b1.png" src="../../../_images/331a15910a86aa733d85ec85985075ebf599ce8e096675f17289b678eca117b1.png" />
 </div>
 </div>
 <p>Zur Veranschaulichung des Wertverlaufs sind eindimensionale Graphiken besser geeignet. Ein Schnitt, d.h. die Festlegung eines Index, kann hierfür verwendet werden. In diesem Beispiel werden die Werte entlang der roten Linie in den obigen Bildern dargestellt.</p>
@@ -742,7 +764,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/4e49ebcc9dea21435709121871c1e2361a2ff9010f0f8c2b8ab630e6ee38b4f7.png" src="../../../_images/4e49ebcc9dea21435709121871c1e2361a2ff9010f0f8c2b8ab630e6ee38b4f7.png" />
+<img alt="../../../_images/04397bfe3ffe2a4a2c7a5a01691c0a38f08d856a089b0e0cefbb3e8388d37ad7.png" src="../../../_images/04397bfe3ffe2a4a2c7a5a01691c0a38f08d856a089b0e0cefbb3e8388d37ad7.png" />
 </div>
 </div>
 </section>
@@ -773,11 +795,10 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="0324_dateien.html"
@@ -797,10 +818,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -808,6 +826,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -834,6 +853,7 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -861,8 +881,8 @@ Daten: [[20.76 20.69 20.71 ... 17.38 17.39 17.31]
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

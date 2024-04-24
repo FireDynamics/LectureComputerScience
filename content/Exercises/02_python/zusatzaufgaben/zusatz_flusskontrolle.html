@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Flusskontrolle &#8212; Vorlesung Ingenieurinformatik</title>
   
@@ -19,53 +18,50 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle';</script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Exercises/02_python/zusatzaufgaben/zusatz_flusskontrolle.html" />
-    <link rel="shortcut icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
+    <link rel="icon" href="../../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Fehlersuche" href="zusatz_fehlersuche.html" />
@@ -79,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -114,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -133,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../../Overview/uebersicht.html">
+  
   
   
   
@@ -145,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
 <ul class="nav bd-sidenav">
@@ -275,14 +295,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../01_computer/03_intervallschachtelung/intervallschachtelung.html">1.3. Intervallschachtelung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../01_computer/04_eratosthenes/eratosthenes.html">1.4. Sieb von Eratosthenes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../01_computer/05_ggt/ggt.html">1.5. Größter gemeinsamer Teiler (ggT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_computer/06_majoritaet/majoritaet.html">1.6. Majorität</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_computer/07_architekturen/architekturen.html">1.7. Prozessorarchitekturen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_computer/08_betriebssysteme/betriebssysteme.html">1.8. Betriebssysteme</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_computer/zusatzaufgaben/uebersicht.html">1.9. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_computer/06_architekturen/architekturen.html">1.6. Prozessorarchitekturen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_computer/07_betriebssysteme/betriebssysteme.html">1.7. Betriebssysteme</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_computer/zusatzaufgaben/uebersicht.html">1.8. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">Algorithmen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">Programmablaufpläne</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">Perfekte (volkommene) Zahlen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">Intervallschachtelung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_majoritaet/zusatz_majoritaet.html">Majorität</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">Prozessorarchitekturen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">Betriebssysteme</a></li>
 </ul>
@@ -507,20 +527,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -603,12 +625,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="flusskontrolle">
-<h1>Flusskontrolle<a class="headerlink" href="#flusskontrolle" title="Permalink to this heading">#</a></h1>
+<h1>Flusskontrolle<a class="headerlink" href="#flusskontrolle" title="Link to this heading">#</a></h1>
 <section id="schaltjahr">
-<h2>Schaltjahr<a class="headerlink" href="#schaltjahr" title="Permalink to this heading">#</a></h2>
+<h2>Schaltjahr<a class="headerlink" href="#schaltjahr" title="Link to this heading">#</a></h2>
 <p>Um zu ermitteln, ob ein Jahr ein Schaltjahr ist, gibt es 3 Regelungen.</p>
 <ul class="simple">
 <li><p>Ein Jahr ist ein Schaltjahr, wenn die Jahreszahl restlos durch 4 teilbar ist.</p></li>
@@ -616,21 +638,21 @@ document.write(`
 <li><p>Ein Jahr ist ein Schaltjahr, wenn es sowohl durch 4, durch 100 und durch 400 teilbar ist.</p></li>
 </ul>
 <section id="aufgabenteil-a">
-<h3>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Link to this heading">#</a></h3>
 <p>Erstellen Sie ein Flussdiagramm, das <strong>j</strong> als Jahreszahl entgegen nimmt und als Rückgabe entweder <code class="docutils literal notranslate"><span class="pre">True</span></code> oder <code class="docutils literal notranslate"><span class="pre">False</span></code> ausgibt, je nach dem ob es sich um ein Schaltjahr handelt oder nicht</p>
 </section>
 <section id="losung">
-<h3>Lösung<a class="headerlink" href="#losung" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#losung" title="Link to this heading">#</a></h3>
 <div class="toggle docutils container">
 <p><img alt="" src="../../../../_images/Schaltjahr.svg" /></p>
 </div>
 </section>
 <section id="aufgabenteil-b">
-<h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Link to this heading">#</a></h3>
 <p>Handelt es sich bei den Jahren 1800, 1996, 1997, 2000, 2016 um ein Schaltjahr?</p>
 </section>
 <section id="id1">
-<h3>Lösung<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="toggle docutils container">
 <table class="table">
 <thead>
@@ -659,11 +681,11 @@ document.write(`
 </div>
 </section>
 <section id="aufgabenteil-c">
-<h3>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil C<a class="headerlink" href="#aufgabenteil-c" title="Link to this heading">#</a></h3>
 <p>Überfuhren sie das Flussdiagramm in ein Python Programm</p>
 </section>
 <section id="id2">
-<h3>Lösung<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -689,11 +711,11 @@ document.write(`
 </div>
 </section>
 <section id="augabenteil-d">
-<h3>Augabenteil D<a class="headerlink" href="#augabenteil-d" title="Permalink to this heading">#</a></h3>
+<h3>Augabenteil D<a class="headerlink" href="#augabenteil-d" title="Link to this heading">#</a></h3>
 <p>Wie viele Tage ein Monat hat, hängt immer vom jeweiligen Monat selbst ab und im Falle vom Februar auch vom Jahr. Schreiben Sie eine weitere Funktion, die <strong>tag</strong>, <strong>monat</strong> und <strong>jahr</strong> entgegen nimmt und anschließend <code class="docutils literal notranslate"><span class="pre">True</span></code> oder <code class="docutils literal notranslate"><span class="pre">False</span></code> zurück gibt, je nach dem ob es sich um ein valides Datum handelt. Benutzen Sie dazu die zuvor geschriebene Methode.</p>
 </section>
 <section id="id3">
-<h3>Lösung<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -728,10 +750,10 @@ document.write(`
 </section>
 </section>
 <section id="wechselgeld">
-<h2>Wechselgeld<a class="headerlink" href="#wechselgeld" title="Permalink to this heading">#</a></h2>
+<h2>Wechselgeld<a class="headerlink" href="#wechselgeld" title="Link to this heading">#</a></h2>
 <p>Schreiben Sie eine Funktion, die einen Preis und einen bezahlten Geldbetrag entgegen nimmt, das zurückzuzahlende Wechselgeld berechnet und ausgibt, welche Scheine und Münzen zurück gegeben werden müssen, sodass die Anzahl der zurückgegebenen Scheine und Münzen minimal ist. Rechnen Sie mit Integern und ignorieren Sie Centbeträge.</p>
 <section id="id4">
-<h3>Lösung<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -766,10 +788,10 @@ document.write(`
 </section>
 </section>
 <section id="einstellige-quersumme">
-<h2>Einstellige Quersumme<a class="headerlink" href="#einstellige-quersumme" title="Permalink to this heading">#</a></h2>
+<h2>Einstellige Quersumme<a class="headerlink" href="#einstellige-quersumme" title="Link to this heading">#</a></h2>
 <p>Schreiben Sie eine Funktion, die die einstellige Quersumme für eine übergebene natürliche Zahl berechnet. Um die einstellige Quersumme zu berechnen, bilden sie so lange die Quersumme der Quersumme der Quersumme etc. einer Zahl, bis das Ergebnis zwischen 1 und 9 liegt.</p>
 <section id="id5">
-<h3>Lösung<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -813,16 +835,16 @@ document.write(`
 </section>
 </section>
 <section id="pythagoras">
-<h2>Pythagoras<a class="headerlink" href="#pythagoras" title="Permalink to this heading">#</a></h2>
+<h2>Pythagoras<a class="headerlink" href="#pythagoras" title="Link to this heading">#</a></h2>
 <p>Schreiben Sie ein Programm, dass alle Integer Triplets <span class="math notranslate nohighlight">\(a, b, c\)</span> zwichen 1 und einer beliebigen Grenze findet, die die Gleichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-40f62fbd-7356-490d-8679-456417654d4a">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-40f62fbd-7356-490d-8679-456417654d4a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7452ac70-4671-4346-9f26-bb1332abfebd">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-7452ac70-4671-4346-9f26-bb1332abfebd" title="Permalink to this equation">#</a></span>\[\begin{equation}
     a² + b² =c²
 \end{equation}\]</div>
 <p>erfüllen.
 Was ist die Komplexität des Algorithmus? Spielen Sie ein bisschen mit der Grenze und achten Sie auf die Laufzeit ihres Programms um ein Gefühl dafür zu bekommen, was Komplexität bedeutet.</p>
 <section id="id6">
-<h3>Lösung<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -861,7 +883,7 @@ Was ist die Komplexität des Algorithmus? Spielen Sie ein bisschen mit der Grenz
 </section>
 </section>
 <section id="spannungs-dehnungs-diagramm">
-<h2>Spannungs-Dehnungs-Diagramm<a class="headerlink" href="#spannungs-dehnungs-diagramm" title="Permalink to this heading">#</a></h2>
+<h2>Spannungs-Dehnungs-Diagramm<a class="headerlink" href="#spannungs-dehnungs-diagramm" title="Link to this heading">#</a></h2>
 <p>Führt man mit Stahl einen Strecktest durch so erhält man folgendes idealisiertes Diagramm:<br />
 <img alt="" src="../../../../_images/Spannungs-Dehnungslinie.svg" /><br />
 Dabei sind volgende Stellen von Bedeutung:</p>
@@ -873,21 +895,21 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </ol>
 <p>Für die folgende Aufgabe soll nur von idealisierten Werten ausgegangen werden.</p>
 <section id="id7">
-<h3>Aufgabenteil A<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil A<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Erstellen Sie ein Flussdiagramm das sigma = σ [ 𝑁/𝑚𝑚2 ] als Liste entgegen nimmt und anhand dieser die Spannung der oberen Steckgrenze ermittelt und ausgibt.</p>
 </section>
 <section id="id8">
-<h3>Lösung<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <div class="toggle docutils container">
 <p><img alt="" src="../../../../_images/Stahl_einfach.svg" /></p>
 </div>
 </section>
 <section id="id9">
-<h3>Aufgabenteil B<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil B<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>Überführen Sie das Flussdiagramm in ein Python Programm.</p>
 </section>
 <section id="id10">
-<h3>Lösung<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -909,21 +931,21 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </div>
 </section>
 <section id="id11">
-<h3>Aufgabenteil C<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil C<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>Erstellen Sie ein Flussdiagramm das <strong>sigma</strong> = σ [ <span class="math notranslate nohighlight">\(N/mm^2\)</span> ] als Liste entgegen nimmt und anhand dieser alle relevanten Spannungen ausgibt.</p>
 </section>
 <section id="id12">
-<h3>Lösung<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <div class="toggle docutils container">
 <p><img alt="" src="../../../../_images/Stahl_ausfuehrlich.svg" /></p>
 </div>
 </section>
 <section id="aufgabenteil-d">
-<h3>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil D<a class="headerlink" href="#aufgabenteil-d" title="Link to this heading">#</a></h3>
 <p>Überführen Sie das neue Flussdiagramm in ein Python Programm.</p>
 </section>
 <section id="id13">
-<h3>Lösung<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -967,17 +989,17 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </section>
 </section>
 <section id="wurzel-ziehen">
-<h2>Wurzel ziehen<a class="headerlink" href="#wurzel-ziehen" title="Permalink to this heading">#</a></h2>
+<h2>Wurzel ziehen<a class="headerlink" href="#wurzel-ziehen" title="Link to this heading">#</a></h2>
 <p>Viele Algorithmen wirken auf dem ersten Blick sehr kompliziert und überwältigend. Doch bricht man sie in ihre Einzelteile auf, so erscheinen sie einem nicht mehr so schwer.</p>
 <p>Der in dieser Aufgabe beschriebene Algorithmus kann aus allen <code class="docutils literal notranslate"><span class="pre">N</span></code><span class="math notranslate nohighlight">\(\space \in \mathbb{N}_{+}\{/0\}\)</span> die Wurzel ziehen. In den folgenden Aufgaben soll dieser implementiert werden. Das Flussdiagramm sieht wie folgt aus:</p>
 <p><img alt="" src="../../../../_images/Wurzel_ziehen.svg" /></p>
 <p>Eine genauere Erklärung dieses Verfahrens ist in diesem <a class="reference external" href="https://www.youtube.com/watch?v=RQlnMPpLQFk">Video</a> zu finden.</p>
 <section id="id14">
-<h3>Aufgabenteil A<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil A<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p>Führen Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Wurzel</span></code> händisch für die Zahl <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">121</span></code> und <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">71289</span></code> durch und schreiben Sie die Werte für <code class="docutils literal notranslate"><span class="pre">P</span></code>, <code class="docutils literal notranslate"><span class="pre">q</span></code> und <code class="docutils literal notranslate"><span class="pre">r</span></code> der Hauptfunktion auf.</p>
 </section>
 <section id="id15">
-<h3>Lösung<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <div class="toggle docutils container">
 <p><strong>Für <code class="docutils literal notranslate"><span class="pre">121</span></code>:</strong><br />
 <span class="math notranslate nohighlight">\(P = [1, 21]\)</span><br />
@@ -1015,11 +1037,11 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </div>
 </section>
 <section id="id16">
-<h3>Aufgabenteil B<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil B<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Päckchen</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">20</span></code>, <code class="docutils literal notranslate"><span class="pre">120</span></code>, <code class="docutils literal notranslate"><span class="pre">1203</span></code> und <code class="docutils literal notranslate"><span class="pre">12035</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
 </section>
 <section id="id17">
-<h3>Lösung<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1059,11 +1081,11 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </div>
 </section>
 <section id="id18">
-<h3>Aufgabenteil C<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil C<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Quadrat</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">99</span></code>, <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">36</span></code> und <code class="docutils literal notranslate"><span class="pre">17</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
 </section>
 <section id="id19">
-<h3>Lösung<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1095,11 +1117,11 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </div>
 </section>
 <section id="id20">
-<h3>Aufgabenteil D<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil D<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Rest</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">(128,</span> <span class="pre">4)</span></code>, <code class="docutils literal notranslate"><span class="pre">(128,</span> <span class="pre">2)</span></code>, <code class="docutils literal notranslate"><span class="pre">(1289,</span> <span class="pre">17)</span></code> und <code class="docutils literal notranslate"><span class="pre">(61289,</span> <span class="pre">425)</span></code>. Beschreiben Sie, was diese Funktion macht.</p>
 </section>
 <section id="id21">
-<h3>Lösung<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1135,11 +1157,11 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 </div>
 </section>
 <section id="aufgabenteil-e">
-<h3>Aufgabenteil E<a class="headerlink" href="#aufgabenteil-e" title="Permalink to this heading">#</a></h3>
+<h3>Aufgabenteil E<a class="headerlink" href="#aufgabenteil-e" title="Link to this heading">#</a></h3>
 <p>Implementieren Sie die Funktion <code class="docutils literal notranslate"><span class="pre">Wurzel</span></code> und berechnen Sie mit dieser Funktion die Werte <code class="docutils literal notranslate"><span class="pre">17</span></code>, <code class="docutils literal notranslate"><span class="pre">476</span></code>, <code class="docutils literal notranslate"><span class="pre">1097</span></code> und <code class="docutils literal notranslate"><span class="pre">6027341</span></code>. Beschreiben Sie, was diese Funktion macht. Vergleichen Sie die errechneten Werte mit denen von einem Taschenrechner.</p>
 </section>
 <section id="id22">
-<h3>Lösung<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h3>
+<h3>Lösung<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1217,11 +1239,10 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="zusatz_grundlagen.html"
@@ -1241,10 +1262,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1252,6 +1270,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1323,6 +1342,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1350,8 +1370,8 @@ Dabei sind volgende Stellen von Bedeutung:</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

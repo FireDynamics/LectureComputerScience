@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>3.3.1. Polynominterpolation &#8212; Vorlesung Ingenieurinformatik</title>
   
@@ -19,53 +18,50 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Script/03_datenanalyse/0331_interpolation';</script>
     <link rel="canonical" href="https://firedynamics.github.io/LectureComputerScience/content/Script/03_datenanalyse/0331_interpolation.html" />
-    <link rel="shortcut icon" href="../../../_static/cce_logo_standalone_icon.png"/>
+    <link rel="icon" href="../../../_static/cce_logo_standalone_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3.3.2. Fitting" href="0332_fitting.html" />
@@ -79,7 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -114,11 +118,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -133,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../Overview/uebersicht.html">
+  
   
   
   
@@ -145,12 +154,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../../_static/cce_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../../_static/cce_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
 <ul class="nav bd-sidenav">
@@ -275,14 +295,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/03_intervallschachtelung/intervallschachtelung.html">1.3. Intervallschachtelung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/04_eratosthenes/eratosthenes.html">1.4. Sieb von Eratosthenes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/05_ggt/ggt.html">1.5. Größter gemeinsamer Teiler (ggT)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/06_majoritaet/majoritaet.html">1.6. Majorität</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/07_architekturen/architekturen.html">1.7. Prozessorarchitekturen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/08_betriebssysteme/betriebssysteme.html">1.8. Betriebssysteme</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">1.9. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/06_architekturen/architekturen.html">1.6. Prozessorarchitekturen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exercises/01_computer/07_betriebssysteme/betriebssysteme.html">1.7. Betriebssysteme</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/uebersicht.html">1.8. Zusatzaufgaben</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_algorithmen/zusatz_algorithmen.html">Algorithmen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_programmablaufplaene/zusatz_programmablaufplaene.html">Programmablaufpläne</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_perfekte_zahlen/zusatz_perfekte_zahlen.html">Perfekte (volkommene) Zahlen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_intervallschachtelung/zusatz_intervallschachtelung.html">Intervallschachtelung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_majoritaet/zusatz_majoritaet.html">Majorität</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_architekturen/zusatz_architekturen.html">Prozessorarchitekturen</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Exercises/01_computer/zusatzaufgaben/zusatz_betriebssysteme/zusatz_betriebssysteme.html">Betriebssysteme</a></li>
 </ul>
@@ -507,20 +527,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -559,10 +581,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="polynominterpolation">
-<h1><span class="section-number">3.3.1. </span>Polynominterpolation<a class="headerlink" href="#polynominterpolation" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.3.1. </span>Polynominterpolation<a class="headerlink" href="#polynominterpolation" title="Link to this heading">#</a></h1>
 <p>Bei der Interpolation wird eine Modellfunktion gesucht, welche die Messdaten exakt abbildet.</p>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
@@ -581,7 +603,7 @@ document.write(`
 </div>
 </div>
 <section id="ubersicht">
-<h2>Übersicht<a class="headerlink" href="#ubersicht" title="Permalink to this heading">#</a></h2>
+<h2>Übersicht<a class="headerlink" href="#ubersicht" title="Link to this heading">#</a></h2>
 <p>In vielen praktischen Anwendungen werden Polynome als Basisfunktionen der Modellfunktion angenommen. Vorteile von Polynomen:</p>
 <ul class="simple">
 <li><p>Polynome sind leicht zu differenzieren und integrieren</p></li>
@@ -593,7 +615,7 @@ document.write(`
 \[\sf \phi_1(x)=1,\quad \phi_2(x)=x,\quad \phi_3(x)=x^2,\quad \cdots,\quad \phi_m =x^{m-1} \]</div>
 </section>
 <section id="polynome">
-<h2>Polynome<a class="headerlink" href="#polynome" title="Permalink to this heading">#</a></h2>
+<h2>Polynome<a class="headerlink" href="#polynome" title="Link to this heading">#</a></h2>
 <p>Polynome <span class="math notranslate nohighlight">\(\sf P(x)\)</span> sind Funktionen in Form einer Summe von Potenzfunktionen mit natürlichzahligen Exponenten (<span class="math notranslate nohighlight">\(\sf x^i, i \in \mathbb{N}\)</span>) mit den entsprechenden Koeffzienten <span class="math notranslate nohighlight">\(\sf a_i\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\sf P(x) = \sum_{i=0}^n a_i x^i = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0, \quad i, n \in \mathbb{N}, a_i \in \mathbb{R} \]</div>
@@ -662,7 +684,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/87211dbb346481021c691a6c2ab76d0a1c15eca17bc46c21da75cf78b81a24d5.png" src="../../../_images/87211dbb346481021c691a6c2ab76d0a1c15eca17bc46c21da75cf78b81a24d5.png" />
+<img alt="../../../_images/02f633cbf419776a3e8369cce8a9746958a6e7d7757e7af885ab8aa294532ea9.png" src="../../../_images/02f633cbf419776a3e8369cce8a9746958a6e7d7757e7af885ab8aa294532ea9.png" />
 </div>
 </div>
 <p>Um die Nullstellen eines Polynoms zu finden, kann die numpy-Funktion <code class="docutils literal notranslate"><span class="pre">np.roots</span></code> genutzt werden. Für das obige Polynom können folgende Nullstellen bestimmt werden.</p>
@@ -734,7 +756,7 @@ Koeffizienten: [ 1. -3.  2.]
 <p>Das Modul numpy stellt viele praktische Funktionen zum Umgang mit Polynomen zur Verfügung. So existieren Funktionen um Polynome auszuwerten, die Nullstellen zu finden, zu addieren, zu multiplizieren, abzuleiten oder zu integrieren. Eine Übersicht ist in der <a class="reference external" href="https://numpy.org/doc/stable/reference/routines.polynomials.poly1d.html">numpy-Dokumentation</a> gegeben.</p>
 </section>
 <section id="interpolation">
-<h2>Interpolation<a class="headerlink" href="#interpolation" title="Permalink to this heading">#</a></h2>
+<h2>Interpolation<a class="headerlink" href="#interpolation" title="Link to this heading">#</a></h2>
 <p>Interpolation ist eine Methode, um Datenpunkte zwischen gegebenen Messpunkten zu konstruieren. Dazu wird eine Funktion gesucht, die alle Messpunkte exakt abbildet, was gleichbedeutend damit ist, dass die L2-Norm zwischen Funktion und Punkten Null ist.</p>
 <p>Zwei Punkte können z.B. mit einer Geraden interpoliert werden. D.h. für zwei Messpunktpaare <span class="math notranslate nohighlight">\(\sf(x_1, y_1)\)</span> und <span class="math notranslate nohighlight">\(\sf(x_2, y_2)\)</span> mit <span class="math notranslate nohighlight">\(\sf x_1\neq x_2\)</span> existiert ein Koeffizientensatz, sodass die L2-Norm zwischen den Messpunkten und der Modellfunktion</p>
 <div class="math notranslate nohighlight">
@@ -769,7 +791,7 @@ Koeffizienten: [ 1. -3.  2.]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/7c2f34ef40cf23c9b5b17cbd95dfbed3f21e611b5c5ef2bffe48fc0f1a82253b.png" src="../../../_images/7c2f34ef40cf23c9b5b17cbd95dfbed3f21e611b5c5ef2bffe48fc0f1a82253b.png" />
+<img alt="../../../_images/d497adc04363253f1e968b029db55d1582e5631d9788b25431bf9b22dfc45416.png" src="../../../_images/d497adc04363253f1e968b029db55d1582e5631d9788b25431bf9b22dfc45416.png" />
 </div>
 </div>
 <p>Für drei Messpunkte muss ein Polynom zweiten Grades verwendet werden, um die Punkte exakt zu erfassen.</p>
@@ -804,7 +826,7 @@ Koeffizienten: [ 1. -3.  2.]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/32b729f69ae9e25b7cda6872d9e4828f7ec257d9a1a774ac2443810352a2161a.png" src="../../../_images/32b729f69ae9e25b7cda6872d9e4828f7ec257d9a1a774ac2443810352a2161a.png" />
+<img alt="../../../_images/8a3ae7ae06953eeb963b94ba29927b7903a27fbab5c09c9942a40a09f039bdee.png" src="../../../_images/8a3ae7ae06953eeb963b94ba29927b7903a27fbab5c09c9942a40a09f039bdee.png" />
 </div>
 </div>
 <p>Dies kann verallgemeinert werden: <span class="math notranslate nohighlight">\(\sf n\)</span> Messpunkte können exakt mit einem Polynom (<span class="math notranslate nohighlight">\(\sf n-1\)</span>)-ten Grades abgebildet werden. Die Suche nach den passenden Koeffizienten ist das Lagrangesche Interpolationsproblem. Für das gesuchte Polynom <span class="math notranslate nohighlight">\(\sf P(x)\)</span> gilt:</p>
@@ -892,7 +914,7 @@ Koeffizienten: [ 1. -3.  2.]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/6979b585d3253e61a5d61173873e224d4b00ad07a629c7f25c7f06e0b68de1d0.png" src="../../../_images/6979b585d3253e61a5d61173873e224d4b00ad07a629c7f25c7f06e0b68de1d0.png" />
+<img alt="../../../_images/65dfca5936f66a5c26b075bf6b28807e099587f7f433098890339738da23f382.png" src="../../../_images/65dfca5936f66a5c26b075bf6b28807e099587f7f433098890339738da23f382.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -912,7 +934,7 @@ Koeffizienten: [ 1. -3.  2.]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/1b93d968086c61a337f3a1eddcfe3dbc2430d85edfafd3951e1b2a6d52f6a291.png" src="../../../_images/1b93d968086c61a337f3a1eddcfe3dbc2430d85edfafd3951e1b2a6d52f6a291.png" />
+<img alt="../../../_images/6be92a24c0be5608e79382cd615f509e85fd433c463351f9686d1f1913853b69.png" src="../../../_images/6be92a24c0be5608e79382cd615f509e85fd433c463351f9686d1f1913853b69.png" />
 </div>
 </div>
 <p>Die Interpolation erfüllt immer die geforderte Bedingung <span class="math notranslate nohighlight">\(\sf y(x_i) = y_i\)</span>. Jedoch führen Polynome mit einem hohen Grad oft zu nicht sinnvollen Ergebnissen. Es entstehen starke Überschwinger, welche mit zunehmendem Grad immer stärker werden. Eine alternative Interpolationsmethode stellen Splines dar, welche mehrere, niedrige Polynome zur Interpolation vieler Punkte verwenden.</p>
@@ -944,11 +966,10 @@ Koeffizienten: [ 1. -3.  2.]
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="033_modellierung.html"
@@ -968,10 +989,7 @@ Koeffizienten: [ 1. -3.  2.]
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -979,6 +997,7 @@ Koeffizienten: [ 1. -3.  2.]
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1006,6 +1025,7 @@ Koeffizienten: [ 1. -3.  2.]
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1033,8 +1053,8 @@ Koeffizienten: [ 1. -3.  2.]
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
