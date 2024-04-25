@@ -570,8 +570,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenstellung">Aufgabenstellung</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweise">Lösungshinweise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweise">Lösungshinweise</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungsvorschlag</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -590,7 +597,7 @@ document.write(`
 <p>Die Intervallschachtelung ist ein einfacher Algorithmus um Nullstellen einer Funktion zu finden. In dieser Aufgabe wird der Algorithmus formal vorgestellt und auf eine nicht-lineare Funktion angewendet.</p>
 <section id="aufgabenstellung">
 <h2>Aufgabenstellung<a class="headerlink" href="#aufgabenstellung" title="Link to this heading">#</a></h2>
-<p>Gegeben sei eine Funktion <span class="math notranslate nohighlight">\(\sf f(x) = \sin(x) - 0.5\)</span>. Finden Sie die Nullstelle auf dem Intervall <span class="math notranslate nohighlight">\(\sf [0;\pi/2]\)</span> indem Sie den nachfolgenden Algorithmus der Intervallschachtelung Schritt für Schritt ausführen.</p>
+<p>Der nachfolgende Algorithmus beschreibt das Prinzip der Intervallschachtelung Schritt für Schritt.</p>
 <p>Die linke Intervallgrenze bezeichnen wir folgend mit <span class="math notranslate nohighlight">\(\sf a\)</span>, die rechte mit <span class="math notranslate nohighlight">\(\sf b\)</span>. Starten Sie mit <span class="math notranslate nohighlight">\(\sf a=0\)</span> und <span class="math notranslate nohighlight">\(\sf b=\pi/2\)</span>.
 Wiederholen sie die folgenden Punkte, bis <span class="math notranslate nohighlight">\(\sf |a-b| &lt; 0.1\)</span> ist:</p>
 <ul class="simple">
@@ -599,21 +606,23 @@ Wiederholen sie die folgenden Punkte, bis <span class="math notranslate nohighli
 <li><p>falls <span class="math notranslate nohighlight">\(\sf f(c) &gt; 0\)</span> ist, setzen Sie die neue rechte Intervallgrenze <span class="math notranslate nohighlight">\(\sf (b)\)</span> gleich <span class="math notranslate nohighlight">\(\sf c\)</span></p></li>
 <li><p>falls nicht, setzen Sie die neue linke Intervallgrenze <span class="math notranslate nohighlight">\(\sf (a)\)</span> gleich <span class="math notranslate nohighlight">\(\sf c\)</span></p></li>
 </ul>
-<p>Geben Sie bitte für jede Wiederholung das aktuelle Intervall <span class="math notranslate nohighlight">\(\sf [a;b]\)</span> an.</p>
-<p>Erstellen Sie ein Flussdiagramm, welches den gegebenen Algorithmus visuell darstellt.</p>
+<section id="aufgabenteil-a">
+<h3>Aufgabenteil A<a class="headerlink" href="#aufgabenteil-a" title="Link to this heading">#</a></h3>
+<p>Gegeben sei eine Funktion <span class="math notranslate nohighlight">\(\sf f(x) = \sin(x) - 0.5\)</span>. Finden Sie die Nullstelle an der Stelle <span class="math notranslate nohighlight">\(c\)</span> auf dem Intervall <span class="math notranslate nohighlight">\(\sf [0;\pi/2]\)</span> indem Sie den Algorithmus der Intervallschachtelung anwenden. Geben Sie bitte für jede Wiederholung das aktuelle Intervall <span class="math notranslate nohighlight">\(\sf [a;b]\)</span> an.</p>
 <section id="losungshinweise">
-<h3>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Link to this heading">#</a></h3>
+<h4>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Link to this heading">#</a></h4>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ergebnis der letzten Iteration:
 a = 0.49087, b = 0.58905
+Die Nullstelle liegt bei c = 0.49087
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="losungsvorschlag">
-<h3>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Link to this heading">#</a></h3>
+<h4>Lösungsvorschlag<a class="headerlink" href="#losungsvorschlag" title="Link to this heading">#</a></h4>
 <div class="cell tag_remove_input tag_loesung tag_hide-cell docutils container">
 <details class="hide above-output">
 <summary aria-label="Toggle hidden content">
@@ -630,6 +639,13 @@ a = 0.49087, b = 0.58905
 </div>
 </details>
 </div>
+</section>
+</section>
+<section id="aufgabenteil-b">
+<h3>Aufgabenteil B<a class="headerlink" href="#aufgabenteil-b" title="Link to this heading">#</a></h3>
+<p>Erstellen Sie ein Flussdiagramm, welches den gegebenen Algorithmus visuell darstellt. Dabei stellen die Variablen <span class="math notranslate nohighlight">\(a\)</span> und <span class="math notranslate nohighlight">\(b\)</span> die Eingagnsgrößen und die Variable <span class="math notranslate nohighlight">\(c\)</span> die zu berechnende Zielgröße dar.</p>
+<section id="id1">
+<h4>Lösungsvorschlag<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="toggle docutils container">
 <figure class="align-default" id="fig-intervallschachtelung">
 <a class="reference internal image-reference" href="../../../../_images/intervallschachtelung.svg"><img alt="../../../../_images/intervallschachtelung.svg" src="../../../../_images/intervallschachtelung.svg" width="60%" /></a>
@@ -640,6 +656,7 @@ a = 0.49087, b = 0.58905
 </div>
 <div class="docutils">
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -709,8 +726,15 @@ a = 0.49087, b = 0.58905
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenstellung">Aufgabenstellung</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweise">Lösungshinweise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-a">Aufgabenteil A</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losungshinweise">Lösungshinweise</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losungsvorschlag">Lösungsvorschlag</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgabenteil-b">Aufgabenteil B</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Lösungsvorschlag</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
