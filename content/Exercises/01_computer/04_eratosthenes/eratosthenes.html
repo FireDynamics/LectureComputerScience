@@ -609,6 +609,7 @@ document.write(`
 <p>Erstellen Sie eine Liste mit den Zahlen von 2 bis 100 und wenden Sie den Algorithmus auf diese Liste an</p>
 <section id="losungshinweise">
 <h4>Lösungshinweise<a class="headerlink" href="#losungshinweise" title="Link to this heading">#</a></h4>
+<p>Die Primzahlen von 2 bis 100 sind:</p>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2,  3,  5,  7, 11, 13, 17, 19, 23, 29, 
@@ -663,7 +664,6 @@ Addiert man alle Überprüfungen zusammen, erhält man</p>
 Der Algorithmus kann noch weiter optimiert werden, wenn man berücksichtigt, dass jede Zahl als Produkt von Primzahlen darstellbar ist. Nach den ersten <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> Zahlen wurden alle Zahlen aus der Liste gestrichen, deren Primfaktorzerlegung mindestens eine der darin enthaltenen Primzahlen enthällt. Das bedeutet aber, dass die Primfaktorzerlegungen aller folgenden, nicht gestrichenen Zahlen nur aus Primzahlen größer als <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> bestehen können. Da jedoch das Produkt von zwei dieser Zahlen immer größer als <span class="math notranslate nohighlight">\(n\)</span> ist, muss jede noch nicht gestrichene Zahl in der Liste eine Primzahl sein. Folglich kann der Algorithmus beendet werden, sobald die Vielfachen der Zahlen kleiner-gleich <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> überprüft wurden. Für die Komplexität heißt dies:</p>
 <p><span class="math notranslate nohighlight">\(\mathcal{O}(n \cdot \ln(\sqrt{n})).\)</span></p>
 </div>
-<p>Die Primzahlen von 2 bis 100 sind:</p>
 </section>
 </section>
 </section>
