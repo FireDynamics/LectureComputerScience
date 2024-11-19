@@ -9,7 +9,7 @@
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.9.0, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -39,17 +39,17 @@ z
    <g id="line2d_1">
     <path d="M 57.6 131.310495 
 L 414.72 131.310495 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke: #808080; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke: #808080; stroke-width: 1.5; stroke-linecap: round"/>
    </g>
    <g id="LineCollection_1">
     <path d="M 371.432727 131.310495 
 L 371.432727 60.6355 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #808080; stroke-opacity: 0.3; stroke-width: 1.5"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #808080; stroke-opacity: 0.3; stroke-width: 1.5"/>
    </g>
    <g id="LineCollection_2">
     <path d="M 100.887273 131.310495 
 L 100.887273 271.504945 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #808080; stroke-width: 1.5"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke-dasharray: 1.5,2.475; stroke-dashoffset: 0; stroke: #808080; stroke-width: 1.5"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -632,17 +632,17 @@ L 388.649256 57.03948
 L 391.928595 56.560861 
 L 395.207934 56.148857 
 L 398.487273 55.803647 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke: #4c72b0; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke: #4c72b0; stroke-width: 1.5; stroke-linecap: round"/>
    </g>
    <g id="line2d_16">
     <path d="M 73.832727 138.377995 
 L 398.487273 53.568 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke: #808080; stroke-opacity: 0.3; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke: #808080; stroke-opacity: 0.3; stroke-width: 1.5; stroke-linecap: round"/>
    </g>
    <g id="line2d_17">
     <path d="M 73.832727 295.488 
 L 286.090861 107.32744 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke: #c44e52; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke: #c44e52; stroke-width: 1.5; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 57.6 307.584 
@@ -678,7 +678,7 @@ C -1.55874 2.683901 -0.795609 3 0 3
 z
 " style="stroke: #808080; stroke-opacity: 0.3"/>
     </defs>
-    <g clip-path="url(#p4cef0f4379)">
+    <g clip-path="url(#p7db598a84e)">
      <use xlink:href="#m2970a6cede" x="371.432727" y="131.310495" style="fill: #808080; fill-opacity: 0.3; stroke: #808080; stroke-opacity: 0.3"/>
     </g>
    </g>
@@ -696,14 +696,14 @@ C -1.55874 2.683901 -0.795609 3 0 3
 z
 " style="stroke: #c44e52"/>
     </defs>
-    <g clip-path="url(#p4cef0f4379)">
+    <g clip-path="url(#p7db598a84e)">
      <use xlink:href="#m5759629060" x="100.887273" y="131.310495" style="fill: #c44e52; stroke: #c44e52"/>
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p4cef0f4379">
+  <clipPath id="p7db598a84e">
    <rect x="57.6" y="41.472" width="357.12" height="266.112"/>
   </clipPath>
  </defs>

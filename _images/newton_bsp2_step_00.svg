@@ -9,7 +9,7 @@
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.9.0, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -39,7 +39,7 @@ z
    <g id="line2d_1">
     <path d="M 57.6 130.123414 
 L 414.72 130.123414 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke: #808080; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke: #808080; stroke-width: 1.5; stroke-linecap: round"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -622,7 +622,7 @@ L 388.649256 54.820995
 L 391.928595 54.33573 
 L 395.207934 53.918004 
 L 398.487273 53.568 
-" clip-path="url(#p4cef0f4379)" style="fill: none; stroke: #4c72b0; stroke-width: 1.5; stroke-linecap: round"/>
+" clip-path="url(#p7db598a84e)" style="fill: none; stroke: #4c72b0; stroke-width: 1.5; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 57.6 307.584 
@@ -647,7 +647,7 @@ L 414.72 41.472
   </g>
  </g>
  <defs>
-  <clipPath id="p4cef0f4379">
+  <clipPath id="p7db598a84e">
    <rect x="57.6" y="41.472" width="357.12" height="266.112"/>
   </clipPath>
  </defs>

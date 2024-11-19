@@ -16,37 +16,40 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4.4. Ableitung und Genauigkeit" href="../04_abl_num/abl_num.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -143,6 +136,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../../Overview/uebersicht.html">
   
@@ -156,21 +151,17 @@
     
     
     <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
-    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
+    <img src="../../../../_static/cce_logo.png" class="logo__image only-dark pst-js-only" alt="Vorlesung Ingenieurinformatik - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
@@ -387,9 +378,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -529,27 +520,19 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -676,7 +659,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;x&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/d583c453a7ec72d4e9cb73e85d8bbbe75041279f4d6aa76d9d261031183bd36c.png" src="../../../../_images/d583c453a7ec72d4e9cb73e85d8bbbe75041279f4d6aa76d9d261031183bd36c.png" />
+<img alt="../../../../_images/48f5905653cf631ed13285cda5b44f707626684fe637b67a286bbed277e6c20a.png" src="../../../../_images/48f5905653cf631ed13285cda5b44f707626684fe637b67a286bbed277e6c20a.png" />
 </div>
 </details>
 </div>
@@ -727,7 +710,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/6c9d87e1955a0cb30b3b97a45329e62e8a55a732bf6a1b318ade3eb78c2c1222.png" src="../../../../_images/6c9d87e1955a0cb30b3b97a45329e62e8a55a732bf6a1b318ade3eb78c2c1222.png" />
+<img alt="../../../../_images/cddbd55e0f88b9d545fbb60b0e9c9a5d97cefa0a10206aa79b37e6daf9312798.png" src="../../../../_images/cddbd55e0f88b9d545fbb60b0e9c9a5d97cefa0a10206aa79b37e6daf9312798.png" />
 </div>
 </details>
 </div>
@@ -769,7 +752,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/010d40295e1430253ea3c5a00dcafa43c21200bb2fafabca42e21ebce27f9072.png" src="../../../../_images/010d40295e1430253ea3c5a00dcafa43c21200bb2fafabca42e21ebce27f9072.png" />
+<img alt="../../../../_images/7054d773563b21791a678b2c5bd3a1f0cb4bb52104ad3003a252b84825258480.png" src="../../../../_images/7054d773563b21791a678b2c5bd3a1f0cb4bb52104ad3003a252b84825258480.png" />
 </div>
 </details>
 </div>
@@ -860,7 +843,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;numerisch - analytisch&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/10f1199f7d9369b435c07f9a5e7e11060b3c567ab9ade6a8e4183a167afda77e.png" src="../../../../_images/10f1199f7d9369b435c07f9a5e7e11060b3c567ab9ade6a8e4183a167afda77e.png" />
+<img alt="../../../../_images/ab5319460e2004b0ed29599835929cca93fe18bf92fc3fbe5777f7821aaad923.png" src="../../../../_images/ab5319460e2004b0ed29599835929cca93fe18bf92fc3fbe5777f7821aaad923.png" />
 </div>
 </details>
 </div>
@@ -888,7 +871,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;numerisch - analytisch&#39;)
 </pre></div>
 </div>
-<img alt="../../../../_images/9d2732b479a547cac1781b06c90bea7b4ff3d058d7ec073632467307d282b599.png" src="../../../../_images/9d2732b479a547cac1781b06c90bea7b4ff3d058d7ec073632467307d282b599.png" />
+<img alt="../../../../_images/2e8b65bf9ca09cad9bec4540061b2572bad92bebf2262121bec8b40ffabd22a7.png" src="../../../../_images/2e8b65bf9ca09cad9bec4540061b2572bad92bebf2262121bec8b40ffabd22a7.png" />
 </div>
 </details>
 </div>
@@ -914,7 +897,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/fa879b318a6cd682498125ec7adf73167925cea4a11f3dd099e6e5bc593b94f8.png" src="../../../../_images/fa879b318a6cd682498125ec7adf73167925cea4a11f3dd099e6e5bc593b94f8.png" />
+<img alt="../../../../_images/ff42fbae6756e246e7fe5bf33a962e74a292b2e3c41b95034e4a5d082f24570b.png" src="../../../../_images/ff42fbae6756e246e7fe5bf33a962e74a292b2e3c41b95034e4a5d082f24570b.png" />
 </div>
 </details>
 </div>
@@ -1014,7 +997,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/ee324d6676f348727a857b67af0a92c62147bc83f73e44f5b2c3b9a4e861cec9.png" src="../../../../_images/ee324d6676f348727a857b67af0a92c62147bc83f73e44f5b2c3b9a4e861cec9.png" />
+<img alt="../../../../_images/65fe91f1c6d6606260b6c8e611e5f17ee5a48bec62f9e5bb337760851aae8d8c.png" src="../../../../_images/65fe91f1c6d6606260b6c8e611e5f17ee5a48bec62f9e5bb337760851aae8d8c.png" />
 </div>
 </details>
 </div>
@@ -1046,7 +1029,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/9ead6e22d5dd44ea754c89c75e69c8e92cf5c7c822689a21e8c384acb3dc938e.png" src="../../../../_images/9ead6e22d5dd44ea754c89c75e69c8e92cf5c7c822689a21e8c384acb3dc938e.png" />
+<img alt="../../../../_images/29a4d663aa7f40c74e5f53f3b74fbbff3f909020fe158172b4045ba62be1e783.png" src="../../../../_images/29a4d663aa7f40c74e5f53f3b74fbbff3f909020fe158172b4045ba62be1e783.png" />
 </div>
 </details>
 </div>
@@ -1109,7 +1092,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1187,8 +1171,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
