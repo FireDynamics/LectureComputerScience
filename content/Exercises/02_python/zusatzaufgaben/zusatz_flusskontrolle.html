@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
@@ -71,7 +68,6 @@
     <link rel="prev" title="Grundlagen" href="zusatz_grundlagen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
-    <img src="../../../../_static/cce_logo.png" class="logo__image only-dark pst-js-only" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
@@ -520,16 +531,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -678,7 +697,7 @@
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ist_schaltjahr</span><span class="p">(</span><span class="n">jahr</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ist_schaltjahr</span><span class="p">(</span><span class="n">jahr</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">jahr</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">jahr</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">jahr</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -708,7 +727,7 @@
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">datum_valide</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">monat</span><span class="p">,</span> <span class="n">jahr</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">datum_valide</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">monat</span><span class="p">,</span> <span class="n">jahr</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">tag</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">monat</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">monat</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
 
@@ -746,7 +765,7 @@
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">berechne_wechselgeld</span><span class="p">(</span><span class="n">preis</span><span class="p">,</span> <span class="n">bezahlt</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">berechne_wechselgeld</span><span class="p">(</span><span class="n">preis</span><span class="p">,</span> <span class="n">bezahlt</span><span class="p">):</span>
     <span class="n">wechselgeld</span> <span class="o">=</span> <span class="n">bezahlt</span> <span class="o">-</span> <span class="n">preis</span>
     <span class="k">for</span> <span class="n">banknote</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">banknote</span><span class="si">:</span><span class="s1">3d</span><span class="si">}</span><span class="s1">€:&#39;</span><span class="p">,</span> <span class="n">wechselgeld</span> <span class="o">//</span> <span class="n">banknote</span><span class="p">)</span>
@@ -784,7 +803,7 @@
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">zaehl_ziffern</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">zaehl_ziffern</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;Berechnet die Anzahl der Ziffern des übergebenen Integers&#39;&#39;&#39;</span>
     <span class="n">ziffern_anzahl</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">zahl</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
@@ -792,7 +811,7 @@
         <span class="n">ziffern_anzahl</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">ziffern_anzahl</span>
 
-<span class="k">def</span> <span class="nf">quersumme</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">quersumme</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
     <span class="n">quersumme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">ziffern_anzahl</span> <span class="o">=</span> <span class="n">zaehl_ziffern</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">dezimalstelle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ziffern_anzahl</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
@@ -800,14 +819,14 @@
         <span class="n">zahl</span> <span class="o">%=</span> <span class="mi">10</span><span class="o">**</span><span class="n">dezimalstelle</span>
     <span class="k">return</span> <span class="n">quersumme</span>
     
-<span class="k">def</span> <span class="nf">einstellige_quersumme</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">einstellige_quersumme</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
     <span class="n">einst_quersumme</span> <span class="o">=</span> <span class="n">zahl</span>
     <span class="k">while</span> <span class="n">einst_quersumme</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">:</span>
         <span class="n">einst_quersumme</span> <span class="o">=</span> <span class="n">quersumme</span><span class="p">(</span><span class="n">einst_quersumme</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">einst_quersumme</span>
 
 <span class="c1"># manche Probleme können auch rekursiv gelöst werden, was bedeutet, dass die ausführende Funktion sich selbst aufruft:</span>
-<span class="k">def</span> <span class="nf">einstellige_quersumme_rekursiv</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">einstellige_quersumme_rekursiv</span><span class="p">(</span><span class="n">zahl</span><span class="p">):</span>
     <span class="n">einst_quersumme</span> <span class="o">=</span> <span class="n">quersumme</span><span class="p">(</span><span class="n">zahl</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">einst_quersumme</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">:</span>
         <span class="n">einst_quersumme</span> <span class="o">=</span> <span class="n">einstellige_quersumme_rekursiv</span><span class="p">(</span><span class="n">einst_quersumme</span><span class="p">)</span>
@@ -822,8 +841,8 @@
 <section id="pythagoras">
 <h2>Pythagoras<a class="headerlink" href="#pythagoras" title="Link to this heading">#</a></h2>
 <p>Schreiben Sie ein Programm, dass alle Integer Triplets <span class="math notranslate nohighlight">\(a, b, c\)</span> zwichen 1 und einer beliebigen Grenze findet, die die Gleichung</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93ac4c3a-a2f2-415c-aa0b-8023045746d8">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-93ac4c3a-a2f2-415c-aa0b-8023045746d8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9653f89b-bea6-4ef2-af23-ba97cfacd69c">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-9653f89b-bea6-4ef2-af23-ba97cfacd69c" title="Permalink to this equation">#</a></span>\[\begin{equation}
     a² + b² =c²
 \end{equation}\]</div>
 <p>erfüllen.
@@ -837,7 +856,7 @@ Was ist die Komplexität des Algorithmus? Spielen Sie ein bisschen mit der Grenz
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ist_pythagoreisches_trippel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ist_pythagoreisches_trippel</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
@@ -902,7 +921,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">obere_streckgrenze</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">obere_streckgrenze</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
     <span class="n">s1</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sigma</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">s1</span><span class="p">:</span>
@@ -938,7 +957,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">relevante_werte</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">relevante_werte</span><span class="p">(</span><span class="n">sigma</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
     <span class="n">s1</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
@@ -1034,7 +1053,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paeckchen</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">paeckchen</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="n">P</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">N</span>
     
@@ -1078,7 +1097,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadrat</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">quadrat</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]:</span>
         <span class="k">if</span> <span class="n">v</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">p</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">v</span>
@@ -1114,7 +1133,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rest</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rest</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">q</span> <span class="o">*</span> <span class="mi">20</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">r</span> <span class="o">//</span> <span class="n">v</span>
     
@@ -1154,7 +1173,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Wurzel</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">Wurzel</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="n">P</span> <span class="o">=</span> <span class="n">paeckchen</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 
     <span class="n">p</span> <span class="o">=</span> <span class="n">P</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1254,8 +1273,7 @@ Dabei sind volgende Stellen von Bedeutung:</p>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1356,8 +1374,8 @@ Dabei sind volgende Stellen von Bedeutung:</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

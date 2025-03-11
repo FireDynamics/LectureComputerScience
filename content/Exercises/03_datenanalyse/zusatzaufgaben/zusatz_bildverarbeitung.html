@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
@@ -71,7 +68,6 @@
     <link rel="prev" title="Modellierung" href="zusatz_modellierung.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
-    <img src="../../../../_static/cce_logo.png" class="logo__image only-dark pst-js-only" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
@@ -520,16 +531,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -614,7 +633,8 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <p>Beachten Sie, dass die Funktion <code class="docutils literal notranslate"><span class="pre">matplotlib.imshow</span></code> lediglich die Ausgabe von RGB Bildern mit Integerwerten, also Ganzzahlen erlaubt. Floatwerte (Fließkommazahlen) müssen vorab entsprechend gerundet bzw. konvertiert werden.</p>
 </div>
 <figure class="align-default" id="fig-weiszabgleich">
-<a class="reference internal image-reference" href="../../../../_images/weissabgleich.jpg"><img alt="../../../../_images/weissabgleich.jpg" src="../../../../_images/weissabgleich.jpg" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/weissabgleich.jpg"><img alt="../../../../_images/weissabgleich.jpg" src="../../../../_images/weissabgleich.jpg" style="width: 100%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Foto mit falschem Weißabgleich und starkem Blaustich</span><a class="headerlink" href="#fig-weiszabgleich" title="Link to this image">#</a></p>
 </figcaption>
@@ -636,9 +656,9 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <span class="expanded">Hide code cell content</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Laden der Bilddateie als Numpy.array</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;bilder/Weissabgleich.jpg&#39;</span><span class="p">)</span>
@@ -667,40 +687,40 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Laden der Bilddateie als Numpy.array</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">image</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;bilder/Weissabgleich.jpg&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Auslesen der Farbwerte eines Referenzpixels</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3900</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages/matplotlib/pyplot.py:2597,</span> in <span class="ni">imread</span><span class="nt">(fname, format)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2593</span> <span class="nd">@_copy_docstring_and_deprecators</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">imread</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2594</span> <span class="k">def</span> <span class="nf">imread</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">2595</span>         <span class="n">fname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">2596</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2597</span>     <span class="k">return</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/matplotlib/pyplot.py:2607,</span> in <span class="ni">imread</span><span class="nt">(fname, format)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2603</span> <span class="nd">@_copy_docstring_and_deprecators</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">imread</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2604</span> <span class="k">def</span><span class="w"> </span><span class="nf">imread</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2605</span>         <span class="n">fname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">2606</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2607</span>     <span class="k">return</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages/matplotlib/image.py:1544,</span> in <span class="ni">imread</span><span class="nt">(fname, format)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1537</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span><span class="o">.</span><span class="n">scheme</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1538</span>     <span class="c1"># Pillow doesn&#39;t handle URLs directly.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1539</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1540</span>         <span class="s2">&quot;Please open the URL for reading and pass the &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1541</span>         <span class="s2">&quot;result to Pillow, e.g. with &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1542</span>         <span class="s2">&quot;``np.array(PIL.Image.open(urllib.request.urlopen(url)))``.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1543</span>         <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1544</span> <span class="k">with</span> <span class="n">img_open</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">image</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1545</span>     <span class="k">return</span> <span class="p">(</span><span class="n">_pil_png_to_float_array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1546</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">PIL</span><span class="o">.</span><span class="n">PngImagePlugin</span><span class="o">.</span><span class="n">PngImageFile</span><span class="p">)</span> <span class="k">else</span>
-<span class="g g-Whitespace">   </span><span class="mi">1547</span>             <span class="n">pil_to_array</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/matplotlib/image.py:1512,</span> in <span class="ni">imread</span><span class="nt">(fname, format)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1505</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span><span class="o">.</span><span class="n">scheme</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1506</span>     <span class="c1"># Pillow doesn&#39;t handle URLs directly.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1507</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1508</span>         <span class="s2">&quot;Please open the URL for reading and pass the &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1509</span>         <span class="s2">&quot;result to Pillow, e.g. with &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1510</span>         <span class="s2">&quot;``np.array(PIL.Image.open(urllib.request.urlopen(url)))``.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1511</span>         <span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1512</span> <span class="k">with</span> <span class="n">img_open</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">image</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1513</span>     <span class="k">return</span> <span class="p">(</span><span class="n">_pil_png_to_float_array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1514</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">PIL</span><span class="o">.</span><span class="n">PngImagePlugin</span><span class="o">.</span><span class="n">PngImageFile</span><span class="p">)</span> <span class="k">else</span>
+<span class="g g-Whitespace">   </span><span class="mi">1515</span>             <span class="n">pil_to_array</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.15/x64/lib/python3.10/site-packages/PIL/Image.py:3469,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3466</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fp</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">3468</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3469</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3470</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">3471</span> <span class="k">else</span><span class="p">:</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.16/x64/lib/python3.10/site-packages/PIL/Image.py:3465,</span> in <span class="ni">open</span><span class="nt">(fp, mode, formats)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3462</span>     <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3464</span> <span class="k">if</span> <span class="n">filename</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3465</span>     <span class="n">fp</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3466</span>     <span class="n">exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">3467</span> <span class="k">else</span><span class="p">:</span>
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/home/runner/work/LectureComputerScience/LectureComputerScience/book/content/Exercises/03_datenanalyse/zusatzaufgaben/bilder/Weissabgleich.jpg&#39;
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;bilder/Weissabgleich.jpg&#39;
 </pre></div>
 </div>
 </div>
@@ -713,7 +733,8 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <p>Der Begriff “Image Stacking” bezeichnet allgemein das Überlagern von Bildern um unterschiedliche Effekte und Wirkungen zu erzielen. Neben dem Erzeugen von künstlerischen Effekten können auf diese Weise auch bewegte Objekte aus einer Bildserie des selben Bildausschnittes entfernt werden.</p>
 <p>Für diese Aufgabe benötigen Sie die Bilder “Image_stackig_1.jpg” - “Image_stacking_5.jpg”</p>
 <figure class="align-default" id="fig-image-stacking">
-<a class="reference internal image-reference" href="../../../../_images/Stacking_bildserie.jpg"><img alt="../../../../_images/Stacking_bildserie.jpg" src="../../../../_images/Stacking_bildserie.jpg" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/Stacking_bildserie.jpg"><img alt="../../../../_images/Stacking_bildserie.jpg" src="../../../../_images/Stacking_bildserie.jpg" style="width: 800px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Bildserie des selben Bildauschnittes mit “bewegtem” Objekt</span><a class="headerlink" href="#fig-image-stacking" title="Link to this image">#</a></p>
 </figcaption>
@@ -823,7 +844,8 @@ Die Bilder befinden sich ebenfalls auf dem JupyterHub zur Vorlesung und können 
 <li><p>Weisen Sie den maskierten Pixeln die entsprechenden Pixel mit den selben Koordinaten aus dem Bild “Freistellen_hintergrund.jpg” zu.</p></li>
 </ol>
 <figure class="align-default" id="fig-image-freistellen">
-<a class="reference internal image-reference" href="../../../../_images/Freistellen_bildserie.jpg"><img alt="../../../../_images/Freistellen_bildserie.jpg" src="../../../../_images/Freistellen_bildserie.jpg" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/Freistellen_bildserie.jpg"><img alt="../../../../_images/Freistellen_bildserie.jpg" src="../../../../_images/Freistellen_bildserie.jpg" style="width: 80%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Objekt und Hintergrund</span><a class="headerlink" href="#fig-image-freistellen" title="Link to this image">#</a></p>
 </figcaption>
@@ -904,7 +926,8 @@ und
 </ol>
 <p>Verwenden Sie das nachfolgende Bild “Gammakorrektur.jpg” für diese Aufgabe:</p>
 <figure class="align-default" id="fig-image-gammakorrektur">
-<a class="reference internal image-reference" href="../../../../_images/Gammakorrektur.jpg"><img alt="../../../../_images/Gammakorrektur.jpg" src="../../../../_images/Gammakorrektur.jpg" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/Gammakorrektur.jpg"><img alt="../../../../_images/Gammakorrektur.jpg" src="../../../../_images/Gammakorrektur.jpg" style="width: 100%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Bild mit falscher Gammakorrektur.</span><a class="headerlink" href="#fig-image-gammakorrektur" title="Link to this image">#</a></p>
 </figcaption>
@@ -1057,8 +1080,7 @@ und
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1134,8 +1156,8 @@ und
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
@@ -71,7 +68,6 @@
     <link rel="prev" title="Bildverarbeitung" href="zusatz_bildverarbeitung.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="../../../../_static/cce_logo.png" class="logo__image only-light" alt="Vorlesung Ingenieurinformatik - Home"/>
-    <img src="../../../../_static/cce_logo.png" class="logo__image only-dark pst-js-only" alt="Vorlesung Ingenieurinformatik - Home"/>
+    <script>document.write(`<img src="../../../../_static/cce_logo.png" class="logo__image only-dark" alt="Vorlesung Ingenieurinformatik - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ingenieurinformatik</span></p>
@@ -520,16 +531,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -595,8 +614,8 @@
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input above-output-prompt docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="c1">#Laden der Datei und separieren von Zeit (t) und zurückgelegter Wegstrecke ($U(t)$) </span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;periodische_daten.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Zeit</span>
@@ -617,7 +636,7 @@
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/3f5162f2de4a5d1c7b1910fa896ef1ba6afd952ef836be028813106495dcc72d.png" src="../../../../_images/3f5162f2de4a5d1c7b1910fa896ef1ba6afd952ef836be028813106495dcc72d.png" />
+<img alt="../../../../_images/767dce0a1cb073febe3bc42ca7244e1a25c8c293d2b841b21f8f35dc7a45dc1e.png" src="../../../../_images/767dce0a1cb073febe3bc42ca7244e1a25c8c293d2b841b21f8f35dc7a45dc1e.png" />
 </div>
 </details>
 </div>
@@ -656,7 +675,7 @@
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/9da55d499df621adf267d78e1e28c213619f7434aadd29e98e010bca2a711be2.png" src="../../../../_images/9da55d499df621adf267d78e1e28c213619f7434aadd29e98e010bca2a711be2.png" />
+<img alt="../../../../_images/c4e719f9250619c4993d74d31667c5364c57d963ec508e5775f496bb74a14a00.png" src="../../../../_images/c4e719f9250619c4993d74d31667c5364c57d963ec508e5775f496bb74a14a00.png" />
 </div>
 </details>
 </div>
@@ -700,7 +719,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/cbdc069bba0e6232ff16a452249ca613cf80b546d840bdcd761f299960f40e4a.png" src="../../../../_images/cbdc069bba0e6232ff16a452249ca613cf80b546d840bdcd761f299960f40e4a.png" />
+<img alt="../../../../_images/ee4c192ad717f96f1e8d779ccee6f133d8c2f724cc4f1dc9c34445c8090ab9d3.png" src="../../../../_images/ee4c192ad717f96f1e8d779ccee6f133d8c2f724cc4f1dc9c34445c8090ab9d3.png" />
 </div>
 </details>
 </div>
@@ -736,7 +755,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/5a9a22c2683c222e26e6df92f5bb34f89108d835163cb03d07b556be2acd8588.png" src="../../../../_images/5a9a22c2683c222e26e6df92f5bb34f89108d835163cb03d07b556be2acd8588.png" />
+<img alt="../../../../_images/6553f13b6bdd79d821e712dd20272e2dca38fc36a944f8fa4b11665531bb8d5f.png" src="../../../../_images/6553f13b6bdd79d821e712dd20272e2dca38fc36a944f8fa4b11665531bb8d5f.png" />
 </div>
 </details>
 </div>
@@ -754,7 +773,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 </summary>
 <div class="cell_input above-output-prompt docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition der Funktion &#39;moving_average&#39; zur Berechnung des gleitenden Durschschnitts</span>
-<span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">x_werte</span><span class="p">,</span> <span class="n">y_werte</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">moving_average</span><span class="p">(</span><span class="n">x_werte</span><span class="p">,</span> <span class="n">y_werte</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="n">window</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
     <span class="n">y_average</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">y_werte</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;valid&#39;</span><span class="p">)</span>
     <span class="n">x_average</span> <span class="o">=</span> <span class="n">x_werte</span><span class="p">[</span><span class="nb">int</span><span class="p">((</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span><span class="o">-</span><span class="nb">int</span><span class="p">((</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span> 
@@ -781,7 +800,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/42efd0ad5e57e14d2435318c5e316c6e709409f5a94fc777d54a8406960585b2.png" src="../../../../_images/42efd0ad5e57e14d2435318c5e316c6e709409f5a94fc777d54a8406960585b2.png" />
+<img alt="../../../../_images/8c7c826129373ec83a2991ae79cf07229f2701c052ee5b84ed64eb2ee921f1ab.png" src="../../../../_images/8c7c826129373ec83a2991ae79cf07229f2701c052ee5b84ed64eb2ee921f1ab.png" />
 </div>
 </details>
 </div>
@@ -814,7 +833,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
 <span class="expanded">Hide code cell output</span>
 </summary>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/cc699928c9910c62b400fcb1a46696623e3812f425cf4deaddf29657bd3b4499.png" src="../../../../_images/cc699928c9910c62b400fcb1a46696623e3812f425cf4deaddf29657bd3b4499.png" />
+<img alt="../../../../_images/f8bc976dd4c3c3cfd2256dfd27f41f043d481a1c51a07ece2b3ab87ce49a24dc.png" src="../../../../_images/f8bc976dd4c3c3cfd2256dfd27f41f043d481a1c51a07ece2b3ab87ce49a24dc.png" />
 </div>
 </details>
 </div>
@@ -877,8 +896,7 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -946,8 +964,8 @@ Tip: Plotten sie als Hilfestellung die Daten für <span class="math notranslate 
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
